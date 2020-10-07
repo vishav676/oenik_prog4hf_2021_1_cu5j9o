@@ -56,7 +56,7 @@
             Event morisonParty = new Event()
             {
                 Id = 2,
-                Name = "Boat Party",
+                Name = "Morison Party",
                 StartDate = "5 Oct 2020",
                 EndDate = "7 Oct 2020",
                 OganizarName = "Vishav",
