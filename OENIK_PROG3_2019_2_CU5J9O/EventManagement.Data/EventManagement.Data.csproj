@@ -4,6 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Users\Vishav\Documents\oenik_prog3_2020_2_cu5j9o\OENIK_PROG3_2019_2_CU5J9O\EventManagement.Data\EventManagement.Data.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Remove="EventDb.mdf" />
     <None Remove="EventDb_log.ldf" />
