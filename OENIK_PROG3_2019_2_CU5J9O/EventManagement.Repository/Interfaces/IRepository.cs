@@ -10,6 +10,8 @@ namespace EventManagement.Repository
 
         void Insert(T entity);
 
+        bool Remove(int id);
+
         bool Remove(T entity);
     }
 }

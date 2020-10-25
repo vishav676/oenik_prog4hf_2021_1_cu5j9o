@@ -25,13 +25,20 @@ namespace EventManagement.Repository
         public void Insert(T entity)
         {
             this.ctx.Set<T>().Add(entity);
+            this.ctx.SaveChanges();
         }
 
         public abstract bool Remove(int id);
 
         public bool Remove(T entity)
         {
-            throw new NotImplementedException();
+            if (GetAll().Contains(entity))
+            {
+                this.ctx.Remove(entity);
+                this.ctx.SaveChanges();
+                return true;
+            }
+            return false;
         }
     }
 }

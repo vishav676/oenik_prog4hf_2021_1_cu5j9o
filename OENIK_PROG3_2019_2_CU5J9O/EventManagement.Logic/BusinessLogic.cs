@@ -7,14 +7,17 @@
     using EventManagement.Data.Models;
     using EventManagement.Repository;
 
-    public class BusinessLogic : ILogic
+    public class BusinessLogic : IEventLogic, ILogic
     {
 
         ITicketRepository ticketRepo;
+        IGuestRepository guestRepo;
+        IEventRepository eventRepository;
 
-        public BusinessLogic(ITicketRepository ticketRepo)
+        public BusinessLogic(ITicketRepository ticketRepo, IEventRepository eventRepository)
         {
             this.ticketRepo = ticketRepo;
+            this.eventRepository = eventRepository;
         }
 
         public void ChangeTicketDiscount(int id, int newDiscount)
@@ -46,6 +49,21 @@
         public Ticket GetOneTicket(int id)
         {
             return ticketRepo.GetOne(id);
+        }
+
+        public void add(Event entity)
+        {
+            eventRepository.Insert(entity);
+        }
+
+        public IList<Event> getAllEvent()
+        {
+            return eventRepository.GetAll().ToList();
+        }
+
+        public bool remove(int id)
+        {
+            return eventRepository.Remove(id);
         }
     }
 }

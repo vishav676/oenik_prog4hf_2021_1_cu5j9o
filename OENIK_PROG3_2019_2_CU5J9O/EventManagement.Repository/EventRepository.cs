@@ -1,24 +1,27 @@
-﻿using EventManagement.Data.Models;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace EventManagement.Repository
+﻿namespace EventManagement.Repository
 {
-    class EventRepository : Repository<Event>, IEventRepository
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using EventManagement.Data.Models;
+    using Microsoft.EntityFrameworkCore;
+
+    public class EventRepository : Repository<Event>, IEventRepository
     {
 
         public EventRepository(DbContext ctx) : base(ctx) { }
 
         public override Event GetOne(int id)
         {
-            throw new NotImplementedException();
+            return GetAll().SingleOrDefault(x => x.Id == id);
         }
 
         public override bool Remove(int id)
         {
-            throw new NotImplementedException();
+            var removeEvent = GetOne(id);
+            return Remove(removeEvent);
+
         }
     }
 }

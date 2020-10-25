@@ -7,5 +7,6 @@ namespace EventManagement.Repository
 {
     public interface IEventRepository : IRepository<Event>
     {
+        
     }
 }
