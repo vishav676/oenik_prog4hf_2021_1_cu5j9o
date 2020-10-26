@@ -1,11 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace EventManagement.Repository
+﻿namespace EventManagement.Repository
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using Microsoft.EntityFrameworkCore;
+
     public abstract class Repository<T> : IRepository<T> where T: class
     {
         protected DbContext ctx;

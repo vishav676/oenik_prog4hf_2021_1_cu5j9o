@@ -9,6 +9,7 @@
 
     /// <summary>
     /// This class connects the Repository class to our main program file.
+    /// This class implements IEventLogic and ILogic interfaces.
     /// </summary>
     public class BusinessLogic : IEventLogic, ILogic
     {

@@ -5,19 +5,45 @@
     using System.Text;
     using Microsoft.EntityFrameworkCore;
 
+    /// <summary>
+    /// This class will act as database Context for application.
+    /// This class extends <see cref = "DbContext"/> class.
+    /// </summary>
     public partial class EventDbContext : DbContext
     {
-        public virtual DbSet<Event> Events { get; set; }
-
-        public virtual DbSet<Ticket> Tickets { get; set; }
-
-        public virtual DbSet<Guest> Guest { get; set; }
-
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EventDbContext"/> class.
+        /// This will ensure if Database is created.
+        /// </summary>
         public EventDbContext()
         {
             this.Database.EnsureCreated();
         }
 
+        /// <summary>
+        /// Gets or Sets the DbSet of the <see cref="Event"/> class.
+        /// This is a virtual property.
+        /// </summary>
+        public virtual DbSet<Event> Events { get; set; }
+
+        /// <summary>
+        /// Gets or Sets the DbSet of the <see cref="Ticket"/> class.
+        /// This is a virtual property.
+        /// </summary>
+        public virtual DbSet<Ticket> Tickets { get; set; }
+
+        /// <summary>
+        /// Gets or Sets the DbSet of the <see cref="Guest"/> class.
+        /// This is a virtual property.
+        /// </summary>
+        public virtual DbSet<Guest> Guest { get; set; }
+
+        /// <summary>
+        /// This method will configure the Database, using Data Source
+        /// Data Source is of Relative path which ensure it will
+        /// work in every computer.
+        /// </summary>
+        /// <param name="optionsBuilder">It of <see cref="DbContextOptionsBuilder"/> type.</param>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -28,6 +54,11 @@
             }
         }
 
+        /// <summary>
+        /// This method will create the models in the Database.
+        /// And provide the connection between the tables of Database.
+        /// </summary>
+        /// <param name="modelBuilder">It of <see cref="ModelBuilder"/> type.</param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Ticket>(entity =>
