@@ -1,21 +1,27 @@
 var indexSectionsWithContent =
 {
-  0: "eop",
-  1: "ep",
-  2: "o"
+  0: "abcdeginoprstu",
+  1: "bcegiprt",
+  2: "eo",
+  3: "abcegortu",
+  4: "cdeginopst"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "classes",
-  2: "namespaces"
+  2: "namespaces",
+  3: "functions",
+  4: "properties"
 };
 
 var indexSectionLabels =
 {
   0: "All",
   1: "Classes",
-  2: "Namespaces"
+  2: "Namespaces",
+  3: "Functions",
+  4: "Properties"
 };
 
