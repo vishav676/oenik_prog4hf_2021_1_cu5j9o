@@ -26,7 +26,6 @@
             menu.Show();
         }
 
-
         static void TicketMenu(ILogic logic)
         {
             var menu = new ConsoleMenu()
