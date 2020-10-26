@@ -7,6 +7,6 @@ namespace EventManagement.Repository
 {
     public interface IEventRepository : IRepository<Event>
     {
-        
+        void ChangePlace(int id, string newPlace);
     }
 }

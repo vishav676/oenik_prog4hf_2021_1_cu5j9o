@@ -42,6 +42,7 @@
                 .Add("Add new Event", () => addEvent(logic))
                 .Add("Get Event Info", () => AllEvent(logic))
                 .Add("Delete Event", () => RemoveEvent(logic))
+                .Add("Update Event Place", () => UpdatePlace(logic))
                 .Add("Quit", ConsoleMenu.Close);
             menu.Show();
         }
@@ -105,9 +106,9 @@
         static void AllEvent(IEventLogic logic)
         {
            var events = logic.getAllEvent();
-           foreach(var item in events)
+           foreach (var item in events)
            {
-                Console.WriteLine(item.Id + " "+ item.Name);
+                Console.WriteLine(item.Id + " "+ item.Name + " "+ item.Place);
            }
 
            Console.ReadKey();
@@ -118,7 +119,7 @@
             Console.WriteLine("Enter Event Id: ");
             int id = int.Parse(Console.ReadLine());
 
-            if(logic.remove(id))
+            if (logic.remove(id))
             {
                 Console.WriteLine("Event has been Deleted");
             }
@@ -126,6 +127,19 @@
             {
                 Console.WriteLine("No such event exists");
             }
+
+            Console.ReadKey();
+        }
+
+        static void UpdatePlace(IEventLogic logic)
+        {
+            Console.WriteLine("Enter Event Id");
+            int id = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter new Event Place");
+            string place = Console.ReadLine();
+
+            logic.updatePlace(id, place);
         }
     }
 }

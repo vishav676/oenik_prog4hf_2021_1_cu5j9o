@@ -14,5 +14,7 @@ namespace EventManagement.Logic
 
         bool remove(int id);
 
+        void updatePlace(int id, string newPlace);
+
     }
 }

@@ -23,5 +23,13 @@
             return Remove(removeEvent);
 
         }
+
+        public void ChangePlace(int id, string newPlace)
+        {
+            var myEvent = GetOne(id);
+            if (myEvent == null) throw new InvalidOperationException();
+            myEvent.Place = newPlace;
+            ctx.SaveChanges();
+        }
     }
 }
