@@ -99,5 +99,10 @@
         /// </summary>
         [NotMapped]
         public virtual Guest Guest { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Id} {Guest.Name}";
+        }
     }
 }

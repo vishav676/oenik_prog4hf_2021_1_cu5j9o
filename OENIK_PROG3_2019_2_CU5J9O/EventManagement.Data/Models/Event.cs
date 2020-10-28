@@ -81,5 +81,10 @@
         [MaxLength(50)]
         [Required]
         public string EndDate { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Name} {Place} {OganizarName}";
+        }
     }
 }

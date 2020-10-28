@@ -14,5 +14,6 @@ namespace EventManagement.Logic
         IList<Ticket> GetAllTickets();
 
         IList<TotalEventSale> GetEventSale();
+        
     }
 }

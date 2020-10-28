@@ -13,9 +13,10 @@
         public static void Main(string[] args)
         {
             EventDbContext eventDb = new EventDbContext();
+            GuestRepository guestRepository = new GuestRepository(eventDb);
             TicketRepository ticketRepository = new TicketRepository(eventDb);
             EventRepository eventRepository = new EventRepository(eventDb);
-            BusinessLogic logic = new BusinessLogic(ticketRepository,eventRepository);
+            BusinessLogic logic = new BusinessLogic(ticketRepository,eventRepository, guestRepository);
 
             var menu = new ConsoleMenu().
                 Add("Tickets", () => TicketMenu(logic)).
@@ -31,6 +32,7 @@
             var menu = new ConsoleMenu()
                 .Add("Add new Ticket", () => getTicketInfo(logic))
                 .Add("Get Ticket Info", () => getTicketInfo(logic))
+                .Add("Get All Tickets", () => GetAllTickets(logic))
                 .Add("Quit", ConsoleMenu.Close);
             menu.Show();
         }
@@ -46,11 +48,12 @@
             menu.Show();
         }
 
-        static void GuestMenu(ILogic logic)
+        static void GuestMenu(IGuestLogic logic)
         {
             var menu = new ConsoleMenu()
-                .Add("Add new Guest", () => getTicketInfo(logic))
-                .Add("Get Guest Info", () => getTicketInfo(logic))
+                .Add("Add new Guest", () => { Console.WriteLine("Not Ready"); Console.ReadKey(); })
+                .Add("Get Guest Info", () => { Console.WriteLine("Not Ready"); Console.ReadKey(); })
+                .Add("Get All Guests", () => getAllGuests(logic))
                 .Add("Quit", ConsoleMenu.Close);
             menu.Show();
         }
@@ -105,12 +108,7 @@
         static void AllEvent(IEventLogic logic)
         {
            var events = logic.getAllEvent();
-           foreach (var item in events)
-           {
-                Console.WriteLine(item.Id + " "+ item.Name + " "+ item.Place);
-           }
-
-           Console.ReadKey();
+           events.ToConsole("All Events");
         }
 
         static void RemoveEvent(IEventLogic logic)
@@ -139,6 +137,18 @@
             string place = Console.ReadLine();
 
             logic.updatePlace(id, place);
+        }
+
+        static void GetAllTickets(ILogic logic)
+        {
+            var q = logic.GetAllTickets();
+            q.ToConsole("Tickets");
+        }
+
+        static void getAllGuests(IGuestLogic logic)
+        {
+            var q = logic.GetAllGuests();
+            q.ToConsole("All guests");
         }
     }
 }

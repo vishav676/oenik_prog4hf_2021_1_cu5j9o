@@ -80,5 +80,10 @@
         /// </summary>
         [NotMapped]
         public virtual ICollection<Ticket> Tickets { get; }
+
+        public override string ToString()
+        {
+            return $"{Name} {Gender} {City} {Email}";
+        }
     }
 }

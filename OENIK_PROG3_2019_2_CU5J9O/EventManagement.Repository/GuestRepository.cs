@@ -6,7 +6,7 @@ using System.Text;
 
 namespace EventManagement.Repository
 {
-    class GuestRepository : Repository<Guest>, IGuestRepository
+    public class GuestRepository : Repository<Guest>, IGuestRepository
     {
         public GuestRepository(DbContext ctx)
             : base(ctx)

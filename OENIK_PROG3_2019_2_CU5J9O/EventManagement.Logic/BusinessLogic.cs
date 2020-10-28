@@ -11,10 +11,11 @@
     /// This class connects the Repository class to our main program file.
     /// This class implements IEventLogic and ILogic interfaces.
     /// </summary>
-    public class BusinessLogic : IEventLogic, ILogic
+    public class BusinessLogic : IEventLogic, ILogic, IGuestLogic
     {
         private ITicketRepository ticketRepo;
         private IEventRepository eventRepository;
+        private IGuestRepository guestRepository;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BusinessLogic"/> class.
@@ -22,10 +23,11 @@
         /// </summary>
         /// <param name="ticketRepo">instance of Ticket Repository.</param>
         /// <param name="eventRepository">instance of Event Repository.</param>
-        public BusinessLogic(ITicketRepository ticketRepo, IEventRepository eventRepository)
+        public BusinessLogic(ITicketRepository ticketRepo, IEventRepository eventRepository, IGuestRepository guestRepository)
         {
             this.ticketRepo = ticketRepo;
             this.eventRepository = eventRepository;
+            this.guestRepository = guestRepository;
         }
 
         /// <summary>
@@ -114,6 +116,11 @@
         public void updatePlace(int id, string newPlace)
         {
             this.eventRepository.ChangePlace(id, newPlace);
+        }
+
+        public IList<Guest> GetAllGuests()
+        {
+            return this.guestRepository.GetAll().ToList();
         }
     }
 }

@@ -63,5 +63,187 @@
             This is manadatory property and it's Max Length can be 50.
             </summary>
         </member>
+        <member name="T:EventManagement.Data.Models.EventDbContext">
+            <summary>
+            This class will act as database Context for application.
+            This class extends <see cref = "T:Microsoft.EntityFrameworkCore.DbContext"/> class.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Data.Models.EventDbContext.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.Data.Models.EventDbContext"/> class.
+            This will ensure if Database is created.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.EventDbContext.Events">
+            <summary>
+            Gets or Sets the DbSet of the <see cref="T:EventManagement.Data.Models.Event"/> class.
+            This is a virtual property.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.EventDbContext.Tickets">
+            <summary>
+            Gets or Sets the DbSet of the <see cref="T:EventManagement.Data.Models.Ticket"/> class.
+            This is a virtual property.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.EventDbContext.Guest">
+            <summary>
+            Gets or Sets the DbSet of the <see cref="P:EventManagement.Data.Models.EventDbContext.Guest"/> class.
+            This is a virtual property.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Data.Models.EventDbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            This method will configure the Database, using Data Source
+            Data Source is of Relative path which ensure it will
+            work in every computer.
+            </summary>
+            <param name="optionsBuilder">It of <see cref="T:Microsoft.EntityFrameworkCore.DbContextOptionsBuilder"/> type.</param>
+        </member>
+        <member name="M:EventManagement.Data.Models.EventDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            This method will create the models in the Database.
+            And provide the connection between the tables of Database.
+            </summary>
+            <param name="modelBuilder">It of <see cref="T:Microsoft.EntityFrameworkCore.ModelBuilder"/> type.</param>
+        </member>
+        <member name="T:EventManagement.Data.Models.Guest">
+            <summary>
+            This class represents a table of name guests in the Database..
+            </summary>
+        </member>
+        <member name="M:EventManagement.Data.Models.Guest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.Data.Models.Guest"/> class.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.Guest.ID">
+            <summary>
+            Gets or sets Id.
+            this property of Class represents Id for table guests.
+            It is unique for every instance and is automatically generated.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.Guest.Name">
+            <summary>
+            Gets or Sets Name attribute of the class.
+            This field stores the Guest Name for the Event.
+            This is manadatory property and it's Max Length can be 50.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.Guest.Contact">
+            <summary>
+            Gets or Sets Contact attribute of the class.
+            This field stores the Contact Info of the Guest.
+            This is manadatory property and it's Max Length can be 50.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.Guest.City">
+            <summary>
+            Gets or Sets City attribute of the class.
+            This field stores the City Name where the Guest is from.
+            This is manadatory property and it's Max Length can be 50.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.Guest.Email">
+            <summary>
+            Gets or Sets Email attribute of the class.
+            This field stores the Email Id of the Guest.
+            This is manadatory property and it's Max Length can be 50.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.Guest.Gender">
+            <summary>
+            Gets or Sets Gender attribute of the class.
+            This field stores the Gender of the Guest.
+            This is manadatory property and it's Max Length can be 50.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.Guest.Tickets">
+            <summary>
+            Gets Tickets attribute of the class.
+            This virtual field stores the collection of tickets purchased by Guest.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Data.Models.Ticket">
+            <summary>
+            This class is represents table in the Database.
+            Name of the table is tickets.
+            which store the info related to tickets of the Events.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Data.Models.Ticket.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.Data.Models.Ticket"/> class.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.Ticket.Id">
+            <summary>
+            Gets or sets Id.
+            this property of Class represents Id for table tickets.
+            It is unique for every instance and is automatically generated.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.Ticket.Type">
+            <summary>
+            Gets or Sets Type attribute of the class.
+            This field stores the type of the Ticket.
+            This is manadatory property and it's Max Length can be 50.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.Ticket.Price">
+            <summary>
+            Gets or Sets Price attribute of the class.
+            This field stores the Price of the Ticket.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.Ticket.Expiry">
+            <summary>
+            Gets or Sets Expiry attribute of the class.
+            This field stores Expiration Date of the Ticket.
+            This is manadatory property.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.Ticket.OrderInfo">
+            <summary>
+            Gets or Sets Order Info attribute of the class.
+            This field stores any information related to Ticket Sold.
+            This is manadatory property and it's Max Length can be 50.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.Ticket.Discount">
+            <summary>
+            Gets or Sets Discount attribute of the class.
+            This field stores infomation about the discount given to Guest when Ticket was Sold.
+            This is manadatory property and it's Max Length can be 50.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.Ticket.EventId">
+            <summary>
+            Gets or Sets Event Id attribute of the class.
+            This field is a foriegn key to the id of Event in events Table.
+            This will store for which event the ticket was sold.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.Ticket.Event">
+            <summary>
+            Gets or Sets Event attribute of the class.
+            This field will act as navigaton property to get the infomation of the Event.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.Ticket.GuestId">
+            <summary>
+            Gets or Sets Guest Id attribute of the class.
+            This field is a foriegn key to the id of Guest in guestss Table.
+            This will store to whom the ticket was sold.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.Ticket.Guest">
+            <summary>
+            Gets or Sets Guest attribute of the class.
+            This field will act as navigaton property to get the infomation of the Guest.
+            </summary>
+        </member>
     </members>
 </doc>
