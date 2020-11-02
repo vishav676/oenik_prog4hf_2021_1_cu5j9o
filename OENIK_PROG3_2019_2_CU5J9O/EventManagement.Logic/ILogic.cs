@@ -7,13 +7,11 @@ namespace EventManagement.Logic
 {
     public interface ILogic
     {
-        Ticket GetOneTicket(int id);
-
-        void ChangeTicketDiscount(int id, int newDiscount);
-
-        IList<Ticket> GetAllTickets();
-
-        IList<TotalEventSale> GetEventSale();
+        void add(Ticket ticket);
         
+        void add(Guest guest);
+        IList<Guest> search(String name);
+
+        IList<Event> searchEvent(String name);
     }
 }

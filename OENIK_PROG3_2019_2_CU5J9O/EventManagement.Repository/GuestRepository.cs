@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace EventManagement.Repository
@@ -20,7 +21,15 @@ namespace EventManagement.Repository
 
         public override bool Remove(int id)
         {
-            throw new NotImplementedException();
+            var removeGuest = GetOne(id);
+            return Remove(removeGuest);
+        }
+        public IList<Guest> search(String name)
+        {
+            var q = from item in GetAll()
+                    where item.Name == name
+                    select item;
+            return q.ToList();
         }
     }
 }

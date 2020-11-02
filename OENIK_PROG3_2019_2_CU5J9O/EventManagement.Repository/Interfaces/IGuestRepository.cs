@@ -7,5 +7,6 @@ namespace EventManagement.Repository
 {
     public interface IGuestRepository: IRepository<Guest>
     {
+        IList<Guest> search(String name);
     }
 }

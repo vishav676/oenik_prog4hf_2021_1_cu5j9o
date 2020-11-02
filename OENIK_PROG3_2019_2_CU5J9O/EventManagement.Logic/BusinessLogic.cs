@@ -11,7 +11,7 @@
     /// This class connects the Repository class to our main program file.
     /// This class implements IEventLogic and ILogic interfaces.
     /// </summary>
-    public class BusinessLogic : IEventLogic, ILogic, IGuestLogic
+    public class BusinessLogic :  ILogic, IGuestLogic
     {
         private ITicketRepository ticketRepo;
         private IEventRepository eventRepository;
@@ -89,6 +89,16 @@
             this.eventRepository.Insert(entity);
         }
 
+        public void add(Ticket ticket)
+        {
+            this.ticketRepo.Insert(ticket);
+        }
+
+        public void add(Guest guest)
+        {
+            this.guestRepository.Insert(guest);
+        }
+
         /// <summary>
         /// This method gives all the Events in the Database.
         /// </summary>
@@ -122,5 +132,21 @@
         {
             return this.guestRepository.GetAll().ToList();
         }
+
+        public IList<Guest> search(string name)
+        {
+            return this.guestRepository.search(name);
+        }
+
+        public bool removeGuest(int id)
+        {
+            return this.eventRepository.Remove(id);
+        }
+
+        public IList<Event> searchEvent(String name)
+        {
+            return this.eventRepository.search(name);
+        }
+
     }
 }

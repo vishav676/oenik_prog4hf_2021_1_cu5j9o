@@ -31,5 +31,13 @@
             myEvent.Place = newPlace;
             ctx.SaveChanges();
         }
+
+        public IList<Event> search(String name)
+        {
+            var q = from item in GetAll()
+                    where item.Name == name
+                    select item;
+            return q.ToList();
+        }
     }
 }

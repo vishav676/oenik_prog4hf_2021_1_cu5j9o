@@ -75,26 +75,26 @@
             This is interface which store the methods related the Events table.
             </summary>
         </member>
-        <member name="M:EventManagement.Logic.IEventLogic.add(EventManagement.Data.Models.Event)">
+        <member name="M:EventManagement.Logic.IGuestLogic.add(EventManagement.Data.Models.Event)">
             <summary>
             This method will add the new Event to the table.
             </summary>
             <param name="enitity">parameter of type <see cref="T:EventManagement.Data.Models.Event"/></param>
         </member>
-        <member name="M:EventManagement.Logic.IEventLogic.getAllEvent">
+        <member name="M:EventManagement.Logic.IGuestLogic.getAllEvent">
             <summary>
             This method gets all the events present in the Database.
             </summary>
             <returns>List of type Event</returns>
         </member>
-        <member name="M:EventManagement.Logic.IEventLogic.remove(System.Int32)">
+        <member name="M:EventManagement.Logic.IGuestLogic.remove(System.Int32)">
             <summary>
             This method gets the Event Id which needs to be remove.
             </summary>
             <param name="id">Event Id</param>
             <returns>bool value if event is deleted or not.</returns>
         </member>
-        <member name="M:EventManagement.Logic.IEventLogic.updatePlace(System.Int32,System.String)">
+        <member name="M:EventManagement.Logic.IGuestLogic.updatePlace(System.Int32,System.String)">
             <summary>
             This method will update the Place of the Event.
             </summary>
