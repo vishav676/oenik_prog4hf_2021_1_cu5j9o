@@ -6,7 +6,7 @@
 
     public static class Extensions
     {
-        public static void ToConsole<T>(this IEnumerable<T> input, string str)
+        public static void ToConsole<T>(this IEnumerable<T> input)
         {
             Console.WriteLine("****BEGIN****");
             foreach (T item in input)

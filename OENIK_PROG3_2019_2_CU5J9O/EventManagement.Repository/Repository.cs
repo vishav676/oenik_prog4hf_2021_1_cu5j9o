@@ -6,7 +6,8 @@
     using System.Text;
     using Microsoft.EntityFrameworkCore;
 
-    public abstract class Repository<T> : IRepository<T> where T: class
+    public abstract class Repository<T> : IRepository<T>
+        where T : class
     {
         protected DbContext ctx;
 
@@ -32,7 +33,7 @@
 
         public bool Remove(T entity)
         {
-            if (GetAll().Contains(entity))
+            if (this.GetAll().Contains(entity))
             {
                 this.ctx.Remove(entity);
                 this.ctx.SaveChanges();

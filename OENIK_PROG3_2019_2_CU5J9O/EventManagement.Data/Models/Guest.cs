@@ -81,9 +81,13 @@
         [NotMapped]
         public virtual ICollection<Ticket> Tickets { get; }
 
+        /// <summary>
+        /// Override public function to generate string from object data.
+        /// </summary>
+        /// <returns> String.</returns>
         public override string ToString()
         {
-            return $"{Name} {Gender} {City} {Email}";
+            return $"{this.Name} {this.Gender} {this.City} {this.Email}";
         }
     }
 }

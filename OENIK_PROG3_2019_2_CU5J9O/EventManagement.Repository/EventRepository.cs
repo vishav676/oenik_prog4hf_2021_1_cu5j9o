@@ -9,32 +9,38 @@
 
     public class EventRepository : Repository<Event>, IEventRepository
     {
-
-        public EventRepository(DbContext ctx) : base(ctx) { }
+        public EventRepository(DbContext ctx)
+            : base(ctx)
+        {
+        }
 
         public override Event GetOne(int id)
         {
-            return GetAll().SingleOrDefault(x => x.Id == id);
+            return this.GetAll().SingleOrDefault(x => x.Id == id);
         }
 
         public override bool Remove(int id)
         {
-            var removeEvent = GetOne(id);
-            return Remove(removeEvent);
+            var removeEvent = this.GetOne(id);
+            return this.Remove(removeEvent);
 
         }
 
         public void ChangePlace(int id, string newPlace)
         {
-            var myEvent = GetOne(id);
-            if (myEvent == null) throw new InvalidOperationException();
+            var myEvent = this.GetOne(id);
+            if (myEvent == null)
+            {
+                throw new InvalidOperationException();
+            }
+
             myEvent.Place = newPlace;
-            ctx.SaveChanges();
+            this.ctx.SaveChanges();
         }
 
-        public IList<Event> search(String name)
+        public IList<Event> Search(string name)
         {
-            var q = from item in GetAll()
+            var q = from item in this.GetAll()
                     where item.Name == name
                     select item;
             return q.ToList();

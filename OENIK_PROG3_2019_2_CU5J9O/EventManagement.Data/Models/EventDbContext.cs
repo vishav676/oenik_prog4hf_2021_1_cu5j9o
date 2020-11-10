@@ -46,6 +46,11 @@
         /// <param name="optionsBuilder">It of <see cref="DbContextOptionsBuilder"/> type.</param>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            if (optionsBuilder == null)
+            {
+                throw new ArgumentNullException(nameof(optionsBuilder));
+            }
+
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.
@@ -61,9 +66,14 @@
         /// <param name="modelBuilder">It of <see cref="ModelBuilder"/> type.</param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            if (modelBuilder == null)
+            {
+                throw new ArgumentNullException(nameof(modelBuilder));
+            }
+
             modelBuilder.Entity<Ticket>(entity =>
             {
-                entity.HasOne(ticket => ticket.Event).WithMany(Event => Event.Tickets)
+                entity.HasOne(ticket => ticket.Event).WithMany(events => events.Tickets)
                 .HasForeignKey(ticket => ticket.EventId)
                 .OnDelete(DeleteBehavior.ClientSetNull);
             });
@@ -119,7 +129,7 @@
             Guest sanam = new Guest()
             {
                 ID = 1,
-                Name = "Sanam",
+                Name = "Piyush",
                 City = "Dhuri",
                 Contact = "XXXXXXXXXXX",
                 Email = "XXX@GMAIL.COM",

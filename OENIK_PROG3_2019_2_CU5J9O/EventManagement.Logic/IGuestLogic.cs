@@ -1,10 +1,10 @@
-﻿using EventManagement.Data.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace EventManagement.Logic
+﻿namespace EventManagement.Logic
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using EventManagement.Data.Models;
+
     public interface IGuestLogic
     {
         public IList<Guest> GetAllGuests();
@@ -20,31 +20,31 @@ namespace EventManagement.Logic
         /// <summary>
         /// This method will add the new Event to the table.
         /// </summary>
-        /// <param name="enitity">parameter of type <see cref="Event"/></param>
-        void add(Event enitity);
-
+        /// <param name="enitity">parameter of type <see cref="Event"/>.</param>
+        void Add(Event enitity);
 
         /// <summary>
         /// This method gets all the events present in the Database.
         /// </summary>
-        /// <returns>List of type Event</returns>
-        public IList<Event> getAllEvent();
+        /// <returns>List of type Event.</returns>
+        public IList<Event> GetAllEvent();
 
         /// <summary>
         /// This method gets the Event Id which needs to be remove.
         /// </summary>
-        /// <param name="id">Event Id</param>
+        /// <param name="id">Event Id.</param>
         /// <returns>bool value if event is deleted or not.</returns>
-        bool remove(int id);
-
+        bool Remove(int id);
 
         /// <summary>
         /// This method will update the Place of the Event.
         /// </summary>
         /// <param name="id">Event Id.</param>
         /// <param name="newPlace">New place name.</param>
-        void updatePlace(int id, string newPlace);
+        void UpdatePlace(int id, string newPlace);
 
-        bool removeGuest(int id);
+        void ChangeName(int id, string newName);
+
+        bool RemoveGuest(int id);
     }
 }

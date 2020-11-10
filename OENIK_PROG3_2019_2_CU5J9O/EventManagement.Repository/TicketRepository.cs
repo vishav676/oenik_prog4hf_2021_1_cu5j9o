@@ -18,21 +18,25 @@
         // TODO : make new exception
         public void ChangeDiscount(int id, int newDiscount)
         {
-            var ticket = GetOne(id);
-            if (ticket == null) throw new InvalidOperationException();
+            var ticket = this.GetOne(id);
+            if (ticket == null)
+            {
+                throw new InvalidOperationException();
+            }
+
             ticket.Discount = newDiscount;
-            ctx.SaveChanges();
+            this.ctx.SaveChanges();
         }
 
         public override Ticket GetOne(int id)
         {
-            return GetAll().SingleOrDefault(x => x.Id == id);
+            return this.GetAll().SingleOrDefault(x => x.Id == id);
         }
 
         public override bool Remove(int id)
         {
-            var ticket = GetOne(id);
-            throw new NotImplementedException();
+            var ticket = this.GetOne(id);
+            return this.Remove(ticket);
         }
     }
 }

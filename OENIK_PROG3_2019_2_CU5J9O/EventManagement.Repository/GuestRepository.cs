@@ -1,12 +1,12 @@
-﻿using EventManagement.Data.Models;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace EventManagement.Repository
+﻿namespace EventManagement.Repository
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using EventManagement.Data.Models;
+    using Microsoft.EntityFrameworkCore;
+
     public class GuestRepository : Repository<Guest>, IGuestRepository
     {
         public GuestRepository(DbContext ctx)
@@ -14,19 +14,32 @@ namespace EventManagement.Repository
         {
         }
 
+        public void ChangeName(int id, string newName)
+        {
+            var guest = this.GetOne(id);
+            if (guest == null)
+            {
+                throw new InvalidOperationException();
+            }
+
+            guest.Name = newName;
+            this.ctx.SaveChanges();
+        }
+
         public override Guest GetOne(int id)
         {
-            throw new NotImplementedException();
+            return this.GetAll().SingleOrDefault(x => x.ID == id);
         }
 
         public override bool Remove(int id)
         {
-            var removeGuest = GetOne(id);
-            return Remove(removeGuest);
+            var removeGuest = this.GetOne(id);
+            return this.Remove(removeGuest);
         }
-        public IList<Guest> search(String name)
+
+        public IList<Guest> Search(string name)
         {
-            var q = from item in GetAll()
+            var q = from item in this.GetAll()
                     where item.Name == name
                     select item;
             return q.ToList();

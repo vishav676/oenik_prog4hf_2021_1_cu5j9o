@@ -70,11 +70,6 @@
             <param name="id">Event Id of type Integer.</param>
             <param name="newPlace">Name of New Place of Type String.</param>
         </member>
-        <member name="T:EventManagement.Logic.IEventLogic">
-            <summary>
-            This is interface which store the methods related the Events table.
-            </summary>
-        </member>
         <member name="M:EventManagement.Logic.IGuestLogic.add(EventManagement.Data.Models.Event)">
             <summary>
             This method will add the new Event to the table.

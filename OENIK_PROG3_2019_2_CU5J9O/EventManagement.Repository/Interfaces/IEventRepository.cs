@@ -1,13 +1,14 @@
-﻿using EventManagement.Data.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace EventManagement.Repository
+﻿namespace EventManagement.Repository
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using EventManagement.Data.Models;
+
     public interface IEventRepository : IRepository<Event>
     {
         void ChangePlace(int id, string newPlace);
-        IList<Event> search(string name);
+
+        IList<Event> Search(string name);
     }
 }

@@ -11,7 +11,7 @@
     /// This class connects the Repository class to our main program file.
     /// This class implements IEventLogic and ILogic interfaces.
     /// </summary>
-    public class BusinessLogic :  ILogic, IGuestLogic
+    public class BusinessLogic : ILogic, IGuestLogic
     {
         private ITicketRepository ticketRepo;
         private IEventRepository eventRepository;
@@ -23,6 +23,7 @@
         /// </summary>
         /// <param name="ticketRepo">instance of Ticket Repository.</param>
         /// <param name="eventRepository">instance of Event Repository.</param>
+        /// <param name="guestRepository">instance of Guest Repository.</param>
         public BusinessLogic(ITicketRepository ticketRepo, IEventRepository eventRepository, IGuestRepository guestRepository)
         {
             this.ticketRepo = ticketRepo;
@@ -84,17 +85,17 @@
         /// This method allow the user to add new Event to its Database.
         /// </summary>
         /// <param name="entity">Instance of Type Event.</param>
-        public void add(Event entity)
+        public void Add(Event entity)
         {
             this.eventRepository.Insert(entity);
         }
 
-        public void add(Ticket ticket)
+        public void Add(Ticket ticket)
         {
             this.ticketRepo.Insert(ticket);
         }
 
-        public void add(Guest guest)
+        public void Add(Guest guest)
         {
             this.guestRepository.Insert(guest);
         }
@@ -103,7 +104,7 @@
         /// This method gives all the Events in the Database.
         /// </summary>
         /// <returns>List of the type Event.</returns>
-        public IList<Event> getAllEvent()
+        public IList<Event> GetAllEvent()
         {
             return this.eventRepository.GetAll().ToList();
         }
@@ -113,7 +114,7 @@
         /// </summary>
         /// <param name="id">Id of the Event of type Integer.</param>
         /// <returns>Boolean Value if Event is deleted or not.</returns>
-        public bool remove(int id)
+        public bool Remove(int id)
         {
             return this.eventRepository.Remove(id);
         }
@@ -123,7 +124,7 @@
         /// </summary>
         /// <param name="id">Event Id of type Integer.</param>
         /// <param name="newPlace">Name of New Place of Type String.</param>
-        public void updatePlace(int id, string newPlace)
+        public void UpdatePlace(int id, string newPlace)
         {
             this.eventRepository.ChangePlace(id, newPlace);
         }
@@ -133,20 +134,44 @@
             return this.guestRepository.GetAll().ToList();
         }
 
-        public IList<Guest> search(string name)
+        public IList<Guest> Search(string name)
         {
-            return this.guestRepository.search(name);
+            return this.guestRepository.Search(name);
         }
 
-        public bool removeGuest(int id)
+        public bool RemoveGuest(int id)
         {
-            return this.eventRepository.Remove(id);
+            return this.guestRepository.Remove(id);
         }
 
-        public IList<Event> searchEvent(String name)
+        public IList<Event> SearchEvent(string name)
         {
-            return this.eventRepository.search(name);
+            return this.eventRepository.Search(name);
         }
 
+        public void ChangeName(int id, string newName)
+        {
+            this.guestRepository.ChangeName(id, newName);
+        }
+
+        public bool RemoveTicket(int id)
+        {
+            return this.ticketRepo.Remove(id);
+        }
+
+        /*public IList<Ticket> searchTickets(int guestId)
+        {
+
+
+            var q = from item in ticketRepo.GetAll()
+                    group item by item.GuestId into guestTickets
+                    where guestTickets.Key == guestId
+                    select new
+                    {
+                        key = guestTickets.Key
+                    }
+
+            return q.ToList();
+        }*/
     }
 }

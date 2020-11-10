@@ -100,9 +100,13 @@
         [NotMapped]
         public virtual Guest Guest { get; set; }
 
+        /// <summary>
+        /// Override public function to generate string from object data.
+        /// </summary>
+        /// <returns> String.</returns>
         public override string ToString()
         {
-            return $"{Id} {Guest.Name}";
+            return $"{this.Id} {this.Guest.Name}";
         }
     }
 }

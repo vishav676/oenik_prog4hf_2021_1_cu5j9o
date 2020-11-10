@@ -82,9 +82,13 @@
         [Required]
         public string EndDate { get; set; }
 
+        /// <summary>
+        /// Override public function to generate string from object data.
+        /// </summary>
+        /// <returns> String.</returns>
         public override string ToString()
         {
-            return $"{Name} {Place} {OganizarName}";
+            return $"{this.Name} {this.Place} {this.OganizarName}";
         }
     }
 }

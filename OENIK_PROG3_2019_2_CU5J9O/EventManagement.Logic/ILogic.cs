@@ -1,17 +1,22 @@
-﻿using EventManagement.Data.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace EventManagement.Logic
+﻿namespace EventManagement.Logic
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using EventManagement.Data.Models;
+
     public interface ILogic
     {
-        void add(Ticket ticket);
-        
-        void add(Guest guest);
-        IList<Guest> search(String name);
+        void Add(Ticket ticket);
 
-        IList<Event> searchEvent(String name);
+        void Add(Guest guest);
+
+        IList<Guest> Search(string name);
+
+        IList<Event> SearchEvent(string name);
+
+        bool RemoveTicket(int id);
+
+        // IList<Ticket> searchTickets(int guestId);
     }
 }

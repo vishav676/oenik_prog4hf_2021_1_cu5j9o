@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace EventManagement.Logic
+﻿namespace EventManagement.Logic
 {
+    using System;
+
     public class TotalEventSale
     {
         public string EventName { get; set; }
@@ -10,7 +10,7 @@ namespace EventManagement.Logic
 
         public override string ToString()
         {
-            return $"Event = {EventName} ; Total = {TicketPrice}";
+            return $"Event = {this.EventName} ; Total = {rhis.TicketPrice}";
         }
 
         public override bool Equals(object obj)
@@ -20,12 +20,15 @@ namespace EventManagement.Logic
                 TotalEventSale other = obj as TotalEventSale;
                 return this.EventName == other.EventName && this.TicketPrice == other.TicketPrice;
             }
-            else return false;
+            else
+            {
+                return false;
+            }
         }
 
         public override int GetHashCode()
         {
-            return (int)TicketPrice + EventName.GetHashCode();
+            return (int)this.TicketPrice + this.EventName.GetHashCode();
         }
     }
 }

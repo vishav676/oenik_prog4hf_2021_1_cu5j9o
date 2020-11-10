@@ -1,8 +1,9 @@
-﻿using System.Linq;
-
-namespace EventManagement.Repository
+﻿namespace EventManagement.Repository
 {
-    public interface IRepository<T> where T : class
+    using System.Linq;
+
+    public interface IRepository<T>
+        where T : class
     {
         IQueryable<T> GetAll();
 

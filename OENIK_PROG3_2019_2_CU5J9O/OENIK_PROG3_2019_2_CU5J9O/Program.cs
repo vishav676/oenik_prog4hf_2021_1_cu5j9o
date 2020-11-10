@@ -1,13 +1,13 @@
 ﻿namespace OENIK_PROG3_2020_2_CU5J9O
 {
-    using ConsoleTools;
-    using EventManagement.Data.Models;
-    using EventManagement.Logic;
-    using EventManagement.Repository;
     using System;
     using System.Collections.Generic;
     using System.Globalization;
     using System.Linq;
+    using ConsoleTools;
+    using EventManagement.Data.Models;
+    using EventManagement.Logic;
+    using EventManagement.Repository;
 
     public class Program
     {
@@ -17,41 +17,37 @@
             GuestRepository guestRepository = new GuestRepository(eventDb);
             TicketRepository ticketRepository = new TicketRepository(eventDb);
             EventRepository eventRepository = new EventRepository(eventDb);
-            BusinessLogic logic = new BusinessLogic(ticketRepository,eventRepository, guestRepository);
+            BusinessLogic logic = new BusinessLogic(ticketRepository, eventRepository, guestRepository);
 
             var menu = new ConsoleMenu().
-                Add("Sell Tickets", () => sellTicket(logic)).
-                Add("Sold Tickets", () => GetAllTickets(logic)).
-                Add("Remove Ticket", () => GetAllTickets(logic)).
-                Add("Update Ticket", () => GetAllTickets(logic)).
-                Add("Get Ticket Info", () => getTicketInfo(logic)).
-                Add("View Events", () => AllEvent(logic)).
-                Add("Remove Event", () => RemoveEvent(logic)).
-                Add("Update Event", () => UpdatePlace(logic)).
-                Add("Add New Event", () => addEvent(logic)).
-                Add("All Guests", () => getAllGuests(logic)).
-                Add("Guest Info", () => getGuestInfo(logic)).
-                Add("Remove Guest", () => RemoveGuest(logic)).
-                Add("Update Guest", () => RemoveGuest(logic)).
+                Add("Tickets", () => TicketMenu(logic)).
+                Add("Guests", () => GuestMenu(logic)).
+                Add("Events", () => EventMenu(logic)).
                 Add("Quit", ConsoleMenu.Close);
 
             menu.Show();
         }
 
-        /*static void TicketMenu(ILogic logic)
+        public static void TicketMenu(BusinessLogic logic)
         {
-            var menu = new ConsoleMenu()
-                .Add("Add new Ticket", () => getTicketInfo(logic))
-                .Add("Get Ticket Info", () => getTicketInfo(logic))
-                .Add("Get All Tickets", () => GetAllTickets(logic))
+            var menu = new ConsoleMenu().
+                Add("Sell Tickets", () => SellTicket(logic)).
+                Add("Sold Tickets", () => GetAllTickets(logic)).
+                Add("Remove Ticket", () => RemoveTicket(logic)).
+                Add("Update Ticket", () =>
+                {
+                    Console.WriteLine("Not Ready");
+                    Console.ReadKey();
+                }).
+                Add("Get Ticket Info", () => GetTicketInfo(logic))
                 .Add("Quit", ConsoleMenu.Close);
             menu.Show();
         }
 
-        static void EventMenu(IEventLogic logic)
+        public static void EventMenu(BusinessLogic logic)
         {
             var menu = new ConsoleMenu()
-                .Add("Add new Event", () => addEvent(logic))
+                .Add("Add new Event", () => AddEvent(logic))
                 .Add("Get Event Info", () => AllEvent(logic))
                 .Add("Delete Event", () => RemoveEvent(logic))
                 .Add("Update Event Place", () => UpdatePlace(logic))
@@ -59,27 +55,42 @@
             menu.Show();
         }
 
-        static void GuestMenu(IGuestLogic logic)
+        public static void GuestMenu(BusinessLogic logic)
         {
-            var menu = new ConsoleMenu()
-                .Add("Add new Guest", () => addGuest(logic))
-                .Add("Get Guest Info", () => getGuestInfo(logic))
-                .Add("Get All Guests", () => getAllGuests(logic))
+            var menu = new ConsoleMenu().
+                Add("All Guests", () => GetAllGuests(logic)).
+                Add("Add Guest", () => addGuest(logic)).
+                Add("Guest Info", () => GetGuestInfo(logic)).
+                Add("Remove Guest", () => RemoveGuest(logic)).
+                Add("Update Guest", () => UpdateName(logic))
                 .Add("Quit", ConsoleMenu.Close);
             menu.Show();
-        }*/
+        }
 
-        static void getTicketInfo(IGuestLogic logic)
+        public static void GetTicketInfo(IGuestLogic logic)
         {
+            if (logic == null)
+            {
+                throw new ArgumentNullException(nameof(logic));
+            }
+
             Console.WriteLine("Enter Ticket Id: ");
             int id = int.Parse(Console.ReadLine());
-            var item = logic.GetOneTicket(id);
-            Console.WriteLine(item.Id + "\t" + item.Guest.Name + "\t" + item.OrderInfo);
+            Ticket item = logic.GetOneTicket(id);
+            if (item != null)
+                Console.WriteLine(item.Id + "\t" + item.Guest.Name + "\t" + item.OrderInfo);
+            else
+                Console.WriteLine("No ticket found with this ID");
             Console.ReadKey();
         }
 
-        static void ListSale(IGuestLogic logic)
+        public static void ListSale(IGuestLogic logic)
         {
+            if (logic == null)
+            {
+                throw new ArgumentNullException(nameof(logic));
+            }
+
             foreach (var item in logic.GetEventSale())
             {
                 Console.WriteLine(item);
@@ -87,8 +98,14 @@
 
             Console.ReadLine();
         }
-        static void addGuest(ILogic logic)
+
+        public static void addGuest(ILogic logic)
         {
+            if (logic == null)
+            {
+                throw new ArgumentNullException(nameof(logic));
+            }
+
             Console.WriteLine("Enter Name: ");
             string name = Console.ReadLine();
 
@@ -112,12 +129,17 @@
                 Email = email,
                 Gender = gender,
             };
-            logic.add(guest);
+            logic.Add(guest);
 
         }
  
-        static void addEvent(IGuestLogic logic)
+        public static void AddEvent(IGuestLogic logic)
         {
+            if (logic == null)
+            {
+                throw new ArgumentNullException(nameof(logic));
+            }
+
             Console.WriteLine("Enter Event Name: ");
             string name = Console.ReadLine();
 
@@ -141,12 +163,17 @@
                 StartDate = StartDate,
                 Place = place,
             };
-            logic.add(g);
+            logic.Add(g);
         }
 
-        static void sellTicket(ILogic logic)
+        public static void SellTicket(ILogic logic)
         {
-            Boolean done = false;
+            if (logic == null)
+            {
+                throw new ArgumentNullException(nameof(logic));
+            }
+
+            bool done = false;
             int guestId = 0, eventId = 0;
             Console.WriteLine("Enter Ticket Type ");
             string type = Console.ReadLine();
@@ -167,7 +194,7 @@
             {
                 Console.WriteLine("Guest Name: ");
                 string name = Console.ReadLine();
-                var q1 = logic.search(name);
+                var q1 = logic.Search(name);
                 if (q1.Count() == 0)
                 {
                     Console.WriteLine("Guest profile doesn't exits");
@@ -177,14 +204,14 @@
 
                     menu.Show();
                 }
-                else if(q1.Count == 1)
+                else if (q1.Count == 1)
                 {
                     guestId = q1.FirstOrDefault().ID;
                     done = true;
                 }
                 else if (q1.Count > 1)
                 {
-                    q1.ToConsole("Guests");
+                    q1.ToConsole();
                     Console.WriteLine("Enter Guest ID");
                     int id = int.Parse(Console.ReadLine());
                     done = true;
@@ -192,8 +219,8 @@
             }
 
             Console.WriteLine("Event Name: ");
-            string EventName = Console.ReadLine();
-            var q = logic.searchEvent(EventName);
+            string eventName = Console.ReadLine();
+            var q = logic.SearchEvent(eventName);
             if (q.Count == 1)
             {
                 eventId = q.FirstOrDefault().Id;
@@ -216,21 +243,31 @@
                 EventId = eventId,
             };
 
-            logic.add(ticket);
+            logic.Add(ticket);
         }
 
-        static void AllEvent(IGuestLogic logic)
+        public static void AllEvent(IGuestLogic logic)
         {
-           var events = logic.getAllEvent();
-           events.ToConsole("All Events");
+            if (logic == null)
+            {
+                throw new ArgumentNullException(nameof(logic));
+            }
+
+            var events = logic.GetAllEvent();
+           events.ToConsole();
         }
 
-        static void RemoveEvent(IGuestLogic logic)
+        public static void RemoveEvent(IGuestLogic logic)
         {
+            if (logic == null)
+            {
+                throw new ArgumentNullException(nameof(logic));
+            }
+
             Console.WriteLine("Enter Event Id: ");
             int id = int.Parse(Console.ReadLine());
 
-            if (logic.remove(id))
+            if (logic.Remove(id))
             {
                 Console.WriteLine("Event has been Deleted");
             }
@@ -242,12 +279,17 @@
             Console.ReadKey();
         }
 
-        static void RemoveGuest(IGuestLogic logic)
+        public static void RemoveGuest(IGuestLogic logic)
         {
+            if (logic == null)
+            {
+                throw new ArgumentNullException(nameof(logic));
+            }
+
             Console.WriteLine("Enter Guest Id: ");
             int id = int.Parse(Console.ReadLine());
 
-            if (logic.removeGuest(id))
+            if (logic.RemoveGuest(id))
             {
                 Console.WriteLine("Guest has been removed.");
             }
@@ -259,35 +301,93 @@
             Console.ReadKey();
         }
 
-        static void UpdatePlace(IGuestLogic logic)
+        public static void UpdatePlace(IGuestLogic logic)
         {
+            if (logic == null)
+            {
+                throw new ArgumentNullException(nameof(logic));
+            }
+
             Console.WriteLine("Enter Event Id");
             int id = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Enter new Event Place");
             string place = Console.ReadLine();
 
-            logic.updatePlace(id, place);
+            logic.UpdatePlace(id, place);
         }
 
-        static void GetAllTickets(IGuestLogic logic)
+        public static void GetAllTickets(IGuestLogic logic)
         {
+            if (logic == null)
+            {
+                throw new ArgumentNullException(nameof(logic));
+            }
+
             var q = logic.GetAllTickets();
-            q.ToConsole("Tickets");
+            q.ToConsole();
         }
 
-        static void getAllGuests(IGuestLogic logic)
+        public static void GetAllGuests(IGuestLogic logic)
         {
+            if (logic == null)
+            {
+                throw new ArgumentNullException(nameof(logic));
+            }
+
             var q = logic.GetAllGuests();
-            q.ToConsole("All guests");
+            q.ToConsole();
         }
 
-        static void getGuestInfo(ILogic logic)
+        public static void GetGuestInfo(ILogic logic)
         {
+            if (logic == null)
+            {
+                throw new ArgumentNullException(nameof(logic));
+            }
+
             Console.WriteLine("Enter Guest Name to Search: ");
-            String name = Console.ReadLine();
-            var q = logic.search(name);
-            q.ToConsole("Guests");
+            string name = Console.ReadLine();
+            var q = logic.Search(name);
+            q.ToConsole();
+        }
+
+        public static void UpdateName(IGuestLogic logic)
+        {
+            if (logic == null)
+            {
+                throw new ArgumentNullException(nameof(logic));
+            }
+
+            Console.WriteLine("Enter Guest Id:  ");
+            int id = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter New Guest Name: ");
+            string name = Console.ReadLine();
+
+            logic.ChangeName(id, name);
+        }
+
+        public static void RemoveTicket(ILogic logic)
+        {
+            if (logic == null)
+            {
+                throw new ArgumentNullException(nameof(logic));
+            }
+
+            Console.WriteLine("Enter Ticket Id: ");
+            int id = int.Parse(Console.ReadLine());
+
+            if (logic.RemoveTicket(id))
+            {
+                Console.WriteLine("Ticket has been Deleted");
+            }
+            else
+            {
+                Console.WriteLine("Ticket Doesn't exits.");
+            }
+
+            Console.ReadKey();
         }
     }
 }
