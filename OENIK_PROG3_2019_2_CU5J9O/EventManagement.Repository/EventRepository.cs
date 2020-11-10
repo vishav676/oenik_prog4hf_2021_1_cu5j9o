@@ -7,24 +7,18 @@
     using EventManagement.Data.Models;
     using Microsoft.EntityFrameworkCore;
 
-    public class EventRepository : Repository<Event>, IEventRepository
+    public class EventRepository : Repository<Events>, IEventRepository
     {
         public EventRepository(DbContext ctx)
             : base(ctx)
         {
         }
 
-        public override Event GetOne(int id)
+        public override Events GetOne(int id)
         {
             return this.GetAll().SingleOrDefault(x => x.Id == id);
         }
 
-        public override bool Remove(int id)
-        {
-            var removeEvent = this.GetOne(id);
-            return this.Remove(removeEvent);
-
-        }
 
         public void ChangePlace(int id, string newPlace)
         {
@@ -38,12 +32,12 @@
             this.ctx.SaveChanges();
         }
 
-        public IList<Event> Search(string name)
+        public IQueryable<Events> Search(string name)
         {
             var q = from item in this.GetAll()
                     where item.Name == name
                     select item;
-            return q.ToList();
+            return q;
         }
     }
 }

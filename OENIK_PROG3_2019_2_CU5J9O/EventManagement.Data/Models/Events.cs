@@ -11,12 +11,12 @@
     /// This represents events Table in local Database.
     /// </summary>
     [Table("events")]
-    public class Event
+    public class Events
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Event"/> class.
+        /// Initializes a new instance of the <see cref="Events"/> class.
         /// </summary>
-        public Event()
+        public Events()
         {
             this.Tickets = new HashSet<Ticket>();
         }

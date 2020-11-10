@@ -83,7 +83,7 @@
         /// This field will act as navigaton property to get the infomation of the Event.
         /// </summary>
         [NotMapped]
-        public virtual Event Event { get; set; }
+        public virtual Events Event { get; set; }
 
         /// <summary>
         /// Gets or Sets Guest Id attribute of the class.
@@ -106,7 +106,7 @@
         /// <returns> String.</returns>
         public override string ToString()
         {
-            return $"{this.Id} {this.Guest.Name}";
+            return $"{this.Id} {this.Guest.Name} {this.Discount}";
         }
     }
 }

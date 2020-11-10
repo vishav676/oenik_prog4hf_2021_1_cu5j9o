@@ -29,7 +29,16 @@
             this.ctx.SaveChanges();
         }
 
-        public abstract bool Remove(int id);
+        public bool Remove(int id)
+        {
+            var q = this.GetOne(id);
+            if (q != null)
+            {
+                this.Remove(q);
+                return true;
+            }
+            return false;
+        }
 
         public bool Remove(T entity)
         {

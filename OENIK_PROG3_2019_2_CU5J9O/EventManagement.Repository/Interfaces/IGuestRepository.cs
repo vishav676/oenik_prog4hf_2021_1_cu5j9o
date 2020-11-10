@@ -2,12 +2,13 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Text;
     using EventManagement.Data.Models;
 
     public interface IGuestRepository : IRepository<Guest>
     {
-        IList<Guest> Search(string name);
+        IQueryable<Guest> Search(string name);
 
         void ChangeName(int id, string newName);
     }

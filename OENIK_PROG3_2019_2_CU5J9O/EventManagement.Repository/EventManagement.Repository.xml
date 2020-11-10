@@ -4,5 +4,17 @@
         <name>EventManagement.Repository</name>
     </assembly>
     <members>
+        <member name="T:EventManagement.Repository.ITicketRepository">
+            <summary>
+            This interface stores functions related to Ticket table.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Repository.ITicketRepository.ChangeDiscount(System.Int32,System.Int32)">
+            <summary>
+            This method is used to update the discount value in the table of specific ticket.
+            </summary>
+            <param name="id">ID of the ticket.</param>
+            <param name="newDiscount">new discount value.</param>
+        </member>
     </members>
 </doc>

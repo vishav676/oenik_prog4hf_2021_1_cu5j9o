@@ -21,10 +21,10 @@
         }
 
         /// <summary>
-        /// Gets or Sets the DbSet of the <see cref="Event"/> class.
+        /// Gets or Sets the DbSet of the <see cref="Models.Events"/> class.
         /// This is a virtual property.
         /// </summary>
-        public virtual DbSet<Event> Events { get; set; }
+        public virtual DbSet<Events> Events { get; set; }
 
         /// <summary>
         /// Gets or Sets the DbSet of the <see cref="Ticket"/> class.
@@ -85,7 +85,7 @@
                 .OnDelete(DeleteBehavior.ClientSetNull);
             });
 
-            Event boatParty = new Event()
+            Events boatParty = new Events()
             {
                 Id = 1,
                 Name = "Boat Party",
@@ -94,7 +94,7 @@
                 OganizarName = "Vishav",
                 Place = "Chain Bridge",
             };
-            Event morisonParty = new Event()
+            Events morisonParty = new Events()
             {
                 Id = 2,
                 Name = "Morison Party",
@@ -147,7 +147,7 @@
 
             modelBuilder.Entity<Guest>().HasData(sanam, vishav);
             modelBuilder.Entity<Ticket>().HasData(ticket1, ticket2);
-            modelBuilder.Entity<Event>().HasData(boatParty, morisonParty);
+            modelBuilder.Entity<Events>().HasData(boatParty, morisonParty);
         }
     }
 }

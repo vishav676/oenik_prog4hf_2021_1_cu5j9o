@@ -33,10 +33,5 @@
             return this.GetAll().SingleOrDefault(x => x.Id == id);
         }
 
-        public override bool Remove(int id)
-        {
-            var ticket = this.GetOne(id);
-            return this.Remove(ticket);
-        }
     }
 }

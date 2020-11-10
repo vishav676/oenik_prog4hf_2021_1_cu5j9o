@@ -13,61 +13,66 @@
     {
         public static void Main(string[] args)
         {
-            EventDbContext eventDb = new EventDbContext();
-            GuestRepository guestRepository = new GuestRepository(eventDb);
-            TicketRepository ticketRepository = new TicketRepository(eventDb);
-            EventRepository eventRepository = new EventRepository(eventDb);
-            BusinessLogic logic = new BusinessLogic(ticketRepository, eventRepository, guestRepository);
+            FactoryLogic logicGenerator = new FactoryLogic();
 
             var menu = new ConsoleMenu().
-                Add("Tickets", () => TicketMenu(logic)).
-                Add("Guests", () => GuestMenu(logic)).
-                Add("Events", () => EventMenu(logic)).
+                Add("Front Office", () => FrontOfficeMenu(logicGenerator.GetFrontOfficeLogic())).
+                Add("Adminstration Office", () => AdmistartionMenu(logicGenerator.GetAdminstratorLogic())).
                 Add("Quit", ConsoleMenu.Close);
 
             menu.Show();
         }
 
-        public static void TicketMenu(BusinessLogic logic)
+        public static void AdmistartionMenu(AdminstratorLogic logic)
         {
             var menu = new ConsoleMenu().
-                Add("Sell Tickets", () => SellTicket(logic)).
-                Add("Sold Tickets", () => GetAllTickets(logic)).
-                Add("Remove Ticket", () => RemoveTicket(logic)).
-                Add("Update Ticket", () =>
-                {
-                    Console.WriteLine("Not Ready");
-                    Console.ReadKey();
-                }).
-                Add("Get Ticket Info", () => GetTicketInfo(logic))
-                .Add("Quit", ConsoleMenu.Close);
-            menu.Show();
-        }
-
-        public static void EventMenu(BusinessLogic logic)
-        {
-            var menu = new ConsoleMenu()
-                .Add("Add new Event", () => AddEvent(logic))
-                .Add("Get Event Info", () => AllEvent(logic))
-                .Add("Delete Event", () => RemoveEvent(logic))
-                .Add("Update Event Place", () => UpdatePlace(logic))
-                .Add("Quit", ConsoleMenu.Close);
-            menu.Show();
-        }
-
-        public static void GuestMenu(BusinessLogic logic)
-        {
-            var menu = new ConsoleMenu().
-                Add("All Guests", () => GetAllGuests(logic)).
-                Add("Add Guest", () => addGuest(logic)).
-                Add("Guest Info", () => GetGuestInfo(logic)).
+                Add("Add Event", () => AddEvent(logic)).
+                Add("Remove Event", () => RemoveEvent(logic)).
+                Add("Update Event Place", () => UpdatePlace(logic)).
+                Add("Update Ticket Discount", () => ChangeDiscount(logic)).
+                Add("Change Guest Name", () => UpdateName(logic)).
                 Add("Remove Guest", () => RemoveGuest(logic)).
-                Add("Update Guest", () => UpdateName(logic))
+                Add("Remove Ticket", () => RemoveTicket(logic))
+                .Add("Get Event Sale",() => ListSale(logic))
+                .Add("Get No Sale", () => NoOfMalesFemales(logic))
+                .Add("Tickets by Guest",() => TicketsByGuest(logic))
                 .Add("Quit", ConsoleMenu.Close);
             menu.Show();
         }
 
-        public static void GetTicketInfo(IGuestLogic logic)
+        public static void FrontOfficeMenu(FrontOfficeLogic logic)
+        {
+
+            var menu = new ConsoleMenu().
+                Add("Sell Ticket", () => SellTicket(logic)).
+                Add("Add Guest", () => addGuest(logic)).
+                Add("Search Guest", () => GetGuestInfo(logic)).
+                Add("Search Event", () => { Console.WriteLine("Not Ready"); }).
+                Add("List of Guests", () => GetAllGuests(logic)).
+                Add("Get Ticket Info", () => GetTicketInfo(logic)).
+                Add("Sold Tickets", () => GetAllTickets(logic)).
+                Add("List Of All Events", () => AllEvent(logic)).
+                Add("Quit", ConsoleMenu.Close);
+            menu.Show();
+        }
+
+
+        public static void ChangeDiscount(IAdminstratorLogic logic)
+        {
+            if (logic == null)
+            {
+                throw new ArgumentNullException(nameof(logic));
+            }
+
+            Console.WriteLine("Enter ticket ID: ");
+            int id = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the new Discount Value: ");
+            int value = int.Parse(Console.ReadLine());
+
+            logic.ChangeTicketDiscount(id, value);
+        }
+
+        public static void GetTicketInfo(IFrontOffice logic)
         {
             if (logic == null)
             {
@@ -84,7 +89,7 @@
             Console.ReadKey();
         }
 
-        public static void ListSale(IGuestLogic logic)
+        public static void ListSale(IAdminstratorLogic logic)
         {
             if (logic == null)
             {
@@ -99,7 +104,36 @@
             Console.ReadLine();
         }
 
-        public static void addGuest(ILogic logic)
+        public static void NoOfMalesFemales(IAdminstratorLogic logic)
+        {
+            if (logic == null)
+            {
+                throw new ArgumentNullException(nameof(logic));
+            }
+
+            foreach (var item in logic.GetNoOfMalesFemalesList())
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.ReadLine();
+        }
+        public static void TicketsByGuest(IAdminstratorLogic logic)
+        {
+            if (logic == null)
+            {
+                throw new ArgumentNullException(nameof(logic));
+            }
+
+            foreach (var item in logic.TicketsBySingleGuest())
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.ReadLine();
+        }
+
+        public static void addGuest(IFrontOffice logic)
         {
             if (logic == null)
             {
@@ -130,10 +164,9 @@
                 Gender = gender,
             };
             logic.Add(guest);
-
         }
- 
-        public static void AddEvent(IGuestLogic logic)
+
+        public static void AddEvent(IAdminstratorLogic logic)
         {
             if (logic == null)
             {
@@ -155,7 +188,7 @@
             Console.WriteLine("Enter End Date: ");
             string EndDate = Console.ReadLine();
 
-            Event g = new Event()
+            Events g = new Events()
             {
                 Name = name,
                 OganizarName = OrganizerName,
@@ -166,7 +199,7 @@
             logic.Add(g);
         }
 
-        public static void SellTicket(ILogic logic)
+        public static void SellTicket(IFrontOffice logic)
         {
             if (logic == null)
             {
@@ -194,7 +227,7 @@
             {
                 Console.WriteLine("Guest Name: ");
                 string name = Console.ReadLine();
-                var q1 = logic.Search(name);
+                var q1 = logic.SearchGuest(name);
                 if (q1.Count() == 0)
                 {
                     Console.WriteLine("Guest profile doesn't exits");
@@ -246,7 +279,7 @@
             logic.Add(ticket);
         }
 
-        public static void AllEvent(IGuestLogic logic)
+        public static void AllEvent(IFrontOffice logic)
         {
             if (logic == null)
             {
@@ -257,7 +290,7 @@
            events.ToConsole();
         }
 
-        public static void RemoveEvent(IGuestLogic logic)
+        public static void RemoveEvent(IAdminstratorLogic logic)
         {
             if (logic == null)
             {
@@ -267,7 +300,7 @@
             Console.WriteLine("Enter Event Id: ");
             int id = int.Parse(Console.ReadLine());
 
-            if (logic.Remove(id))
+            if (logic.RemoveEvent(id))
             {
                 Console.WriteLine("Event has been Deleted");
             }
@@ -279,7 +312,7 @@
             Console.ReadKey();
         }
 
-        public static void RemoveGuest(IGuestLogic logic)
+        public static void RemoveGuest(IAdminstratorLogic logic)
         {
             if (logic == null)
             {
@@ -301,7 +334,7 @@
             Console.ReadKey();
         }
 
-        public static void UpdatePlace(IGuestLogic logic)
+        public static void UpdatePlace(IAdminstratorLogic logic)
         {
             if (logic == null)
             {
@@ -317,7 +350,7 @@
             logic.UpdatePlace(id, place);
         }
 
-        public static void GetAllTickets(IGuestLogic logic)
+        public static void GetAllTickets(IFrontOffice logic)
         {
             if (logic == null)
             {
@@ -328,7 +361,7 @@
             q.ToConsole();
         }
 
-        public static void GetAllGuests(IGuestLogic logic)
+        public static void GetAllGuests(IFrontOffice logic)
         {
             if (logic == null)
             {
@@ -339,7 +372,7 @@
             q.ToConsole();
         }
 
-        public static void GetGuestInfo(ILogic logic)
+        public static void GetGuestInfo(IFrontOffice logic)
         {
             if (logic == null)
             {
@@ -348,11 +381,11 @@
 
             Console.WriteLine("Enter Guest Name to Search: ");
             string name = Console.ReadLine();
-            var q = logic.Search(name);
+            var q = logic.SearchGuest(name);
             q.ToConsole();
         }
 
-        public static void UpdateName(IGuestLogic logic)
+        public static void UpdateName(IAdminstratorLogic logic)
         {
             if (logic == null)
             {
@@ -368,7 +401,7 @@
             logic.ChangeName(id, name);
         }
 
-        public static void RemoveTicket(ILogic logic)
+        public static void RemoveTicket(IAdminstratorLogic logic)
         {
             if (logic == null)
             {

@@ -4,65 +4,6 @@
         <name>EventManagement.Data</name>
     </assembly>
     <members>
-        <member name="T:EventManagement.Data.Models.Event">
-            <summary>
-            This class is marked as table in the Database.
-            This represents events Table in local Database.
-            </summary>
-        </member>
-        <member name="M:EventManagement.Data.Models.Event.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:EventManagement.Data.Models.Event"/> class.
-            </summary>
-        </member>
-        <member name="P:EventManagement.Data.Models.Event.Id">
-            <summary>
-            Gets or sets Id.
-            this property of Class represents Id for table events.
-            It is unique for every instance and is automatically generated.
-            </summary>
-        </member>
-        <member name="P:EventManagement.Data.Models.Event.Name">
-            <summary>
-            Gets or Sets Name attribute of the class.
-            This field stores the Name of the Event.
-            This is manadatory property and it's Max Length can be 50.
-            </summary>
-        </member>
-        <member name="P:EventManagement.Data.Models.Event.Tickets">
-            <summary>
-            Gets Tickets attribute of the class.
-            This virtual field stores the collection of tickets which relates to specific Event.
-            </summary>
-        </member>
-        <member name="P:EventManagement.Data.Models.Event.Place">
-            <summary>
-            Gets or Sets Place attribute of the class.
-            This field stores the name of the Place where Event is going to be organized.
-            This is manadatory property and it's Max Length can be 50.
-            </summary>
-        </member>
-        <member name="P:EventManagement.Data.Models.Event.OganizarName">
-            <summary>
-            Gets or Sets OganizarName attribute of the class.
-            This field stores the name of the Organizer who is responsible for organize the event.
-            This is manadatory property and it's Max Length can be 50.
-            </summary>
-        </member>
-        <member name="P:EventManagement.Data.Models.Event.StartDate">
-            <summary>
-            Gets or Sets StartDate attribute of the class.
-            This field stores the date when the event start.
-            This is manadatory property and it's Max Length can be 50.
-            </summary>
-        </member>
-        <member name="P:EventManagement.Data.Models.Event.EndDate">
-            <summary>
-            Gets or Sets EndDate attribute of the class.
-            This field stores the date when the event will end.
-            This is manadatory property and it's Max Length can be 50.
-            </summary>
-        </member>
         <member name="T:EventManagement.Data.Models.EventDbContext">
             <summary>
             This class will act as database Context for application.
@@ -77,7 +18,7 @@
         </member>
         <member name="P:EventManagement.Data.Models.EventDbContext.Events">
             <summary>
-            Gets or Sets the DbSet of the <see cref="T:EventManagement.Data.Models.Event"/> class.
+            Gets or Sets the DbSet of the <see cref="T:EventManagement.Data.Models.Events"/> class.
             This is a virtual property.
             </summary>
         </member>
@@ -107,6 +48,71 @@
             And provide the connection between the tables of Database.
             </summary>
             <param name="modelBuilder">It of <see cref="T:Microsoft.EntityFrameworkCore.ModelBuilder"/> type.</param>
+        </member>
+        <member name="T:EventManagement.Data.Models.Events">
+            <summary>
+            This class is marked as table in the Database.
+            This represents events Table in local Database.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Data.Models.Events.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.Data.Models.Events"/> class.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.Events.Id">
+            <summary>
+            Gets or sets Id.
+            this property of Class represents Id for table events.
+            It is unique for every instance and is automatically generated.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.Events.Name">
+            <summary>
+            Gets or Sets Name attribute of the class.
+            This field stores the Name of the Event.
+            This is manadatory property and it's Max Length can be 50.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.Events.Tickets">
+            <summary>
+            Gets Tickets attribute of the class.
+            This virtual field stores the collection of tickets which relates to specific Event.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.Events.Place">
+            <summary>
+            Gets or Sets Place attribute of the class.
+            This field stores the name of the Place where Event is going to be organized.
+            This is manadatory property and it's Max Length can be 50.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.Events.OganizarName">
+            <summary>
+            Gets or Sets OganizarName attribute of the class.
+            This field stores the name of the Organizer who is responsible for organize the event.
+            This is manadatory property and it's Max Length can be 50.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.Events.StartDate">
+            <summary>
+            Gets or Sets StartDate attribute of the class.
+            This field stores the date when the event start.
+            This is manadatory property and it's Max Length can be 50.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Data.Models.Events.EndDate">
+            <summary>
+            Gets or Sets EndDate attribute of the class.
+            This field stores the date when the event will end.
+            This is manadatory property and it's Max Length can be 50.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Data.Models.Events.ToString">
+            <summary>
+            Override public function to generate string from object data.
+            </summary>
+            <returns> String.</returns>
         </member>
         <member name="T:EventManagement.Data.Models.Guest">
             <summary>
@@ -165,6 +171,12 @@
             Gets Tickets attribute of the class.
             This virtual field stores the collection of tickets purchased by Guest.
             </summary>
+        </member>
+        <member name="M:EventManagement.Data.Models.Guest.ToString">
+            <summary>
+            Override public function to generate string from object data.
+            </summary>
+            <returns> String.</returns>
         </member>
         <member name="T:EventManagement.Data.Models.Ticket">
             <summary>
@@ -244,6 +256,12 @@
             Gets or Sets Guest attribute of the class.
             This field will act as navigaton property to get the infomation of the Guest.
             </summary>
+        </member>
+        <member name="M:EventManagement.Data.Models.Ticket.ToString">
+            <summary>
+            Override public function to generate string from object data.
+            </summary>
+            <returns> String.</returns>
         </member>
     </members>
 </doc>

@@ -31,18 +31,13 @@
             return this.GetAll().SingleOrDefault(x => x.ID == id);
         }
 
-        public override bool Remove(int id)
-        {
-            var removeGuest = this.GetOne(id);
-            return this.Remove(removeGuest);
-        }
 
-        public IList<Guest> Search(string name)
+        public IQueryable<Guest> Search(string name)
         {
             var q = from item in this.GetAll()
                     where item.Name == name
                     select item;
-            return q.ToList();
+            return q;
         }
     }
 }

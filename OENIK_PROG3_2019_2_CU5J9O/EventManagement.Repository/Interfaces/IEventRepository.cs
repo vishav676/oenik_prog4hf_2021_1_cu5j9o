@@ -2,13 +2,14 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Text;
     using EventManagement.Data.Models;
 
-    public interface IEventRepository : IRepository<Event>
+    public interface IEventRepository : IRepository<Events>
     {
         void ChangePlace(int id, string newPlace);
 
-        IList<Event> Search(string name);
+        IQueryable<Events> Search(string name);
     }
 }

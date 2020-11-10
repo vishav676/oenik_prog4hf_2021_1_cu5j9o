@@ -10,7 +10,7 @@
 
         public override string ToString()
         {
-            return $"Event = {this.EventName} ; Total = {rhis.TicketPrice}";
+            return $"Event = {this.EventName} ; Total = {this.TicketPrice}";
         }
 
         public override bool Equals(object obj)
