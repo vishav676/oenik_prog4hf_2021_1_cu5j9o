@@ -11,7 +11,7 @@
         /// This method will add the new Event to the table.
         /// </summary>
         /// <param name="enitity">parameter of type <see cref="Events"/>.</param>
-        void Add(Events enitity);
+        void Add(string name, string organizerName, string endDate, string startDate, string place);
 
         /// <summary>
         /// This method gets the Event Id which needs to be remove.

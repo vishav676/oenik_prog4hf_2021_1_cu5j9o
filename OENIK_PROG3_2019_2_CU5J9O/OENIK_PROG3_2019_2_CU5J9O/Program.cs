@@ -33,16 +33,15 @@
                 Add("Change Guest Name", () => UpdateName(logic)).
                 Add("Remove Guest", () => RemoveGuest(logic)).
                 Add("Remove Ticket", () => RemoveTicket(logic))
-                .Add("Get Event Sale",() => ListSale(logic))
+                .Add("Get Event Sale", () => ListSale(logic))
                 .Add("Get No Sale", () => NoOfMalesFemales(logic))
-                .Add("Tickets by Guest",() => TicketsByGuest(logic))
+                .Add("Tickets by Guest", () => TicketsByGuest(logic))
                 .Add("Quit", ConsoleMenu.Close);
             menu.Show();
         }
 
         public static void FrontOfficeMenu(FrontOfficeLogic logic)
         {
-
             var menu = new ConsoleMenu().
                 Add("Sell Ticket", () => SellTicket(logic)).
                 Add("Add Guest", () => addGuest(logic)).
@@ -118,6 +117,7 @@
 
             Console.ReadLine();
         }
+
         public static void TicketsByGuest(IAdminstratorLogic logic)
         {
             if (logic == null)
@@ -154,16 +154,7 @@
 
             Console.WriteLine("Enter Gender: ");
             string gender = Console.ReadLine();
-
-            Guest guest = new Guest()
-            {
-                Name = name,
-                Contact = contact,
-                City = city,
-                Email = email,
-                Gender = gender,
-            };
-            logic.Add(guest);
+            logic.Add(name, contact, city, email, gender);
         }
 
         public static void AddEvent(IAdminstratorLogic logic)
@@ -180,23 +171,15 @@
             string place = Console.ReadLine();
 
             Console.WriteLine("Enter Organizer Name: ");
-            string OrganizerName = Console.ReadLine();
+            string organizerName = Console.ReadLine();
 
             Console.WriteLine("Enter Start Date: ");
-            string StartDate = Console.ReadLine();
+            string startDate = Console.ReadLine();
 
             Console.WriteLine("Enter End Date: ");
-            string EndDate = Console.ReadLine();
+            string endDate = Console.ReadLine();
 
-            Events g = new Events()
-            {
-                Name = name,
-                OganizarName = OrganizerName,
-                EndDate = EndDate,
-                StartDate = StartDate,
-                Place = place,
-            };
-            logic.Add(g);
+            logic.Add(name, organizerName, endDate, startDate, place);
         }
 
         public static void SellTicket(IFrontOffice logic)
@@ -265,18 +248,7 @@
                 return;
             }
 
-            Ticket ticket = new Ticket()
-            {
-                Expiry = expiry,
-                Discount = discount,
-                Type = type,
-                Price = price,
-                OrderInfo = orderInfo,
-                GuestId = guestId,
-                EventId = eventId,
-            };
-
-            logic.Add(ticket);
+            logic.Add(expiry, discount, type, price, orderInfo, guestId, eventId);
         }
 
         public static void AllEvent(IFrontOffice logic)
@@ -287,7 +259,7 @@
             }
 
             var events = logic.GetAllEvent();
-           events.ToConsole();
+            events.ToConsole();
         }
 
         public static void RemoveEvent(IAdminstratorLogic logic)

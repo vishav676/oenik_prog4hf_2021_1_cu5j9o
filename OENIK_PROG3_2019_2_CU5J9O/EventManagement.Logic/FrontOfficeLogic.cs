@@ -19,13 +19,32 @@ namespace EventManagement.Logic
             this.eventRepository = eventRepository;
             this.guestRepository = guestRepository;
         }
-        public void Add(Ticket ticket)
+
+        public void Add(string expiry, int discount, string type,int price, string orderInfo, int guestId, int eventId)
         {
+            Ticket ticket = new Ticket()
+            {
+                Expiry = expiry,
+                Discount = discount,
+                Type = type,
+                PricePaid = price,
+                OrderInfo = orderInfo,
+                GuestId = guestId,
+                EventId = eventId,
+            };
             this.ticketRepo.Insert(ticket);
         }
 
-        public void Add(Guest guest)
+        public void Add(string name, string contact, string city, string email, string gender)
         {
+            Guest guest = new Guest()
+            {
+                Name = name,
+                Contact = contact,
+                City = city,
+                Email = email,
+                Gender = gender,
+            };
             this.guestRepository.Insert(guest);
         }
 

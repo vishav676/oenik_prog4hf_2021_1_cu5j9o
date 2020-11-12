@@ -44,7 +44,7 @@
         /// This field stores the Price of the Ticket.
         /// </summary>
         [Required]
-        public int Price { get; set; }
+        public int PricePaid { get; set; }
 
         /// <summary>
         /// Gets or Sets Expiry attribute of the class.

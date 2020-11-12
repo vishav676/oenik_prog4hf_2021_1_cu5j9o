@@ -39,6 +39,9 @@
         [Required]
         public string Name { get; set; }
 
+        [Required]
+        public int EntryFee { get; set; }
+
         /// <summary>
         /// Gets Tickets attribute of the class.
         /// This virtual field stores the collection of tickets which relates to specific Event.

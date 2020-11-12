@@ -204,7 +204,7 @@
             This is manadatory property and it's Max Length can be 50.
             </summary>
         </member>
-        <member name="P:EventManagement.Data.Models.Ticket.Price">
+        <member name="P:EventManagement.Data.Models.Ticket.PricePaid">
             <summary>
             Gets or Sets Price attribute of the class.
             This field stores the Price of the Ticket.

@@ -21,9 +21,17 @@
             this.guestRepository = guestRepository;
         }
 
-        public void Add(Events enitity)
+        public void Add(string name, string organizerName, string endDate, string startDate, string place)
         {
-            this.eventRepository.Insert(enitity);
+            Events g = new Events()
+            {
+                Name = name,
+                OganizarName = organizerName,
+                EndDate = endDate,
+                StartDate = startDate,
+                Place = place,
+            };
+            this.eventRepository.Insert(g);
         }
 
         public void ChangeName(int id, string newName)
@@ -67,7 +75,7 @@
                      select new TotalEventSale
                      {
                          EventName = grp.Key.Name,
-                         TicketPrice = grp.Sum(x => x.Price),
+                         TicketPrice = grp.Sum(x => x.PricePaid),
                      };
             return q1.ToList();
         }

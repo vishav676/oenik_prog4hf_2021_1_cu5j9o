@@ -4,7 +4,7 @@
         <name>EventManagement.Logic</name>
     </assembly>
     <members>
-        <member name="M:EventManagement.Logic.IAdminstratorLogic.Add(EventManagement.Data.Models.Events)">
+        <member name="M:EventManagement.Logic.IAdminstratorLogic.Add(System.String,System.String,System.String,System.String,System.String)">
             <summary>
             This method will add the new Event to the table.
             </summary>

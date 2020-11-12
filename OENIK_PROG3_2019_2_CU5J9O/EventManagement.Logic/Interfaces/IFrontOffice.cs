@@ -8,9 +8,9 @@
     public interface IFrontOffice
     {
 
-        void Add(Ticket ticket);
+        void Add(string expiry, int discount, string type, int price, string orderInfo, int guestId, int eventId);
 
-        void Add(Guest guest);
+        void Add(string name, string contact, string city, string email, string gender);
 
         IList<Guest> SearchGuest(string name);
 
