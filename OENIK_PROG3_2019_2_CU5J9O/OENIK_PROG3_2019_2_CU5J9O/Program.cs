@@ -244,7 +244,7 @@
                 Console.ReadKey();
                 return;
             }
-            int price = logic.CalculatePricePaid(eventId,discount);
+            int price = logic.CalculatePricePaid(eventId, discount);
 
             logic.Add(expiry, discount, type, price, orderInfo, guestId, eventId);
         }

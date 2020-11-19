@@ -4,11 +4,207 @@
         <name>EventManagement.Logic</name>
     </assembly>
     <members>
+        <member name="T:EventManagement.Logic.AdminstratorLogic">
+            <summary>
+            Public class implementing <see cref="T:EventManagement.Logic.IAdminstratorLogic"/> interface.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Logic.AdminstratorLogic.#ctor(EventManagement.Repository.ITicketRepository,EventManagement.Repository.IEventRepository,EventManagement.Repository.IGuestRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.Logic.AdminstratorLogic"/> class.
+            </summary>
+            <param name="ticketRepo">Ticket Repository.</param>
+            <param name="eventRepository">Event Repository.</param>
+            <param name="guestRepository">Guest Repository.</param>
+        </member>
+        <member name="M:EventManagement.Logic.AdminstratorLogic.Add(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Implementation of Add method for Event from <see cref="T:EventManagement.Logic.IAdminstratorLogic"/> interface.
+            </summary>
+            <param name="name">Event Name.</param>
+            <param name="organizerName">Organizer Name.</param>
+            <param name="endDate">End Date.</param>
+            <param name="startDate">Start Date.</param>
+            <param name="place">Venue.</param>
+        </member>
+        <member name="M:EventManagement.Logic.AdminstratorLogic.ChangeName(System.Int32,System.String)">
+            <summary>
+            method to change the name of the Guest.
+            </summary>
+            <param name="id">Guest Id.</param>
+            <param name="newName">Updated Name.</param>
+        </member>
+        <member name="M:EventManagement.Logic.AdminstratorLogic.ChangeTicketDiscount(System.Int32,System.Int32)">
+            <summary>
+            method to change the discount on the ticket.
+            </summary>
+            <param name="id">Ticket ID.</param>
+            <param name="newDiscount">New Discount Value.</param>
+        </member>
+        <member name="M:EventManagement.Logic.AdminstratorLogic.GetNoOfMalesFemalesList">
+            <summary>
+            Method to get the number of males and females in the Event.
+            </summary>
+            <returns>Ilist of <see cref="T:EventManagement.Logic.NoOfMalesFemalesInEvent"/>.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.AdminstratorLogic.GetEventSale">
+            <summary>
+            Method to get the total sale of the Event.
+            </summary>
+            <returns>Ilist of <see cref="T:EventManagement.Logic.TotalEventSale"/>.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.AdminstratorLogic.TicketsBySingleGuest">
+            <summary>
+            Method to get the tickets brought by single guest.
+            </summary>
+            <returns>Ilist of <see cref="T:EventManagement.Logic.TicketsByGuest"/>.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.AdminstratorLogic.RemoveEvent(System.Int32)">
+            <summary>
+            Mehtod to remove the event from the database.
+            </summary>
+            <param name="id">Event Id.</param>
+            <returns>Boolean Value.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.AdminstratorLogic.RemoveGuest(System.Int32)">
+            <summary>
+            Mehtod to remove the guest from the database.
+            </summary>
+            <param name="id">Guest Id.</param>
+            <returns>Boolean Value.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.AdminstratorLogic.RemoveTicket(System.Int32)">
+            <summary>
+            Mehtod to remove the ticket from the database.
+            </summary>
+            <param name="id">ticket Id.</param>
+            <returns>Boolean Value.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.AdminstratorLogic.UpdatePlace(System.Int32,System.String)">
+            <summary>
+            method to change the venue of the Event.
+            </summary>
+            <param name="id">Event ID.</param>
+            <param name="newPlace">New Place.</param>
+        </member>
+        <member name="T:EventManagement.Logic.FactoryLogic">
+            <summary>
+            This logic class will generate the specific logic as required.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Logic.FactoryLogic.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.Logic.FactoryLogic"/> class.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Logic.FactoryLogic.GetAdminstratorLogic">
+            <summary>
+            This method generate the logic instance of type <see cref="T:EventManagement.Logic.AdminstratorLogic"/>.
+            </summary>
+            <returns>Instance of <see cref="T:EventManagement.Logic.AdminstratorLogic"/>.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.FactoryLogic.GetFrontOfficeLogic">
+            <summary>
+            This method generate the logic instance of type <see cref="T:EventManagement.Logic.FrontOfficeLogic"/>.
+            </summary>
+            <returns>Instance of <see cref="T:EventManagement.Logic.FrontOfficeLogic"/>.</returns>
+        </member>
+        <member name="T:EventManagement.Logic.FrontOfficeLogic">
+            <summary>
+            Public class implementing <see cref="T:EventManagement.Logic.IFrontOffice"/> interface.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Logic.FrontOfficeLogic.#ctor(EventManagement.Repository.ITicketRepository,EventManagement.Repository.IEventRepository,EventManagement.Repository.IGuestRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.Logic.FrontOfficeLogic"/> class.
+            </summary>
+            <param name="ticketRepo">Ticket Repository.</param>
+            <param name="eventRepository">Event Repository.</param>
+            <param name="guestRepository">Guest Repository.</param>
+        </member>
+        <member name="M:EventManagement.Logic.FrontOfficeLogic.Add(System.String,System.Int32,System.String,System.Int32,System.String,System.Int32,System.Int32)">
+            <summary>
+            Implementation of Add method for Guest from <see cref="T:EventManagement.Logic.IFrontOffice"/> interface.
+            </summary>
+            <param name="expiry">Expiry of ticket.</param>
+            <param name="discount">Discount Value.</param>
+            <param name="type">Type of the ticket.</param>
+            <param name="price">Price Paid for the ticekt.</param>
+            <param name="orderInfo">Order Info.</param>
+            <param name="guestId">Guest Id.</param>
+            <param name="eventId">Event Id.</param>
+        </member>
+        <member name="M:EventManagement.Logic.FrontOfficeLogic.Add(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Implementation of Add method for Guest from <see cref="T:EventManagement.Logic.IFrontOffice"/> interface.
+            </summary>
+            <param name="name">Guest Name.</param>
+            <param name="contact">Contact No.</param>
+            <param name="city">City of Guest.</param>
+            <param name="email">Email Id.</param>
+            <param name="gender">Gender.</param>
+        </member>
+        <member name="M:EventManagement.Logic.FrontOfficeLogic.GetAllEvent">
+            <summary>
+            Method will return the list of the all Events in the Database.
+            </summary>
+            <returns>Ilist.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.FrontOfficeLogic.GetAllGuests">
+            <summary>
+            Method will return the list of the all Guests. in the Database.
+            </summary>
+            <returns>Ilist.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.FrontOfficeLogic.GetAllTickets">
+            <summary>
+            Method will return the list of the all Tickets in the Database.
+            </summary>
+            <returns>Ilist.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.FrontOfficeLogic.GetOneTicket(System.Int32)">
+            <summary>
+            This mehtod will return the Ticket with specific ticket id.
+            </summary>
+            <param name="id">Ticket ID.</param>
+            <returns>instance of <see cref="T:EventManagement.Data.Models.Ticket"/>.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.FrontOfficeLogic.SearchGuest(System.String)">
+            <summary>
+            This method will search the Guest with the given name.
+            </summary>
+            <param name="name">Guest Name.</param>
+            <returns>Ilist of Guests.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.FrontOfficeLogic.SearchEvent(System.String)">
+            <summary>
+            This method will search the Event with the given name.
+            </summary>
+            <param name="name">Event Name.</param>
+            <returns>Ilist of Events.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.FrontOfficeLogic.CalculatePricePaid(System.Int32,System.Int32)">
+            <summary>
+            This method will calculate the Price paid for the ticket after the discount.
+            </summary>
+            <param name="eventId">Event Id.</param>
+            <param name="discount">Discount Value.</param>
+            <returns>Price to be Paid.</returns>
+        </member>
+        <member name="T:EventManagement.Logic.IAdminstratorLogic">
+            <summary>
+            This public interface contains all the methods that will be implemented for the Adminstrator office.
+            </summary>
+        </member>
         <member name="M:EventManagement.Logic.IAdminstratorLogic.Add(System.String,System.String,System.String,System.String,System.String)">
             <summary>
-            This method will add the new Event to the table.
+            This method will insert the ticket to the Ticket Table.
             </summary>
-            <param name="enitity">parameter of type <see cref="T:EventManagement.Data.Models.Events"/>.</param>
+            <param name="name">Event Name.</param>
+            <param name="organizerName">Organizer Name.</param>
+            <param name="endDate">End Date.</param>
+            <param name="startDate">Start Date.</param>
+            <param name="place">Venue.</param>
         </member>
         <member name="M:EventManagement.Logic.IAdminstratorLogic.RemoveEvent(System.Int32)">
             <summary>
@@ -24,11 +220,249 @@
             <param name="id">Event Id.</param>
             <param name="newPlace">New place name.</param>
         </member>
+        <member name="M:EventManagement.Logic.IAdminstratorLogic.ChangeName(System.Int32,System.String)">
+            <summary>
+            This method will update Guest Name.
+            </summary>
+            <param name="id">Event Id.</param>
+            <param name="newName">Updated Guest name.</param>
+        </member>
+        <member name="M:EventManagement.Logic.IAdminstratorLogic.RemoveGuest(System.Int32)">
+            <summary>
+            This method will remove the Guest of specific Id.
+            </summary>
+            <param name="id">Guest Id.</param>
+            <returns>boolean value.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.IAdminstratorLogic.RemoveTicket(System.Int32)">
+            <summary>
+            This method will remove the Ticket of specific Id.
+            </summary>
+            <param name="id">Ticket Id.</param>
+            <returns>boolean value.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.IAdminstratorLogic.GetEventSale">
+            <summary>
+            This mehtod will calculate total event sale.
+            </summary>
+            <returns>List of Event Sale.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.IAdminstratorLogic.TicketsBySingleGuest">
+            <summary>
+            This method will return the tickets brought by single Guest.
+            </summary>
+            <returns>List of Tickets by Guest.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.IAdminstratorLogic.GetNoOfMalesFemalesList">
+            <summary>
+            This method will return the no of males and females in the Event.
+            </summary>
+            <returns>List containing the number of males and females..</returns>
+        </member>
+        <member name="M:EventManagement.Logic.IAdminstratorLogic.ChangeTicketDiscount(System.Int32,System.Int32)">
+            <summary>
+            This is allow the administrator to change the discount for the specific Ticket.
+            </summary>
+            <param name="id">Ticket Id.</param>
+            <param name="newDiscount">New Discount Value.</param>
+        </member>
+        <member name="T:EventManagement.Logic.IFactoryLogic">
+            <summary>
+            This inteface will contains methods to generate specific logics.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Logic.IFactoryLogic.GetFrontOfficeLogic">
+            <summary>
+            This method generate the logic instance of type <see cref="T:EventManagement.Logic.FrontOfficeLogic"/>.
+            </summary>
+            <returns>Instance of <see cref="T:EventManagement.Logic.FrontOfficeLogic"/>.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.IFactoryLogic.GetAdminstratorLogic">
+            <summary>
+            This method generate the logic instance of type <see cref="T:EventManagement.Logic.AdminstratorLogic"/>.
+            </summary>
+            <returns>Instance of <see cref="T:EventManagement.Logic.AdminstratorLogic"/>.</returns>
+        </member>
+        <member name="T:EventManagement.Logic.IFrontOffice">
+            <summary>
+            This public interface contains all the methods that will be implemented for the front office.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Logic.IFrontOffice.Add(System.String,System.Int32,System.String,System.Int32,System.String,System.Int32,System.Int32)">
+            <summary>
+            This method will insert the ticket to the Ticket Table.
+            </summary>
+            <param name="expiry">Expiry Date of Ticket.</param>
+            <param name="discount">Discount applied.</param>
+            <param name="type">Type.</param>
+            <param name="price">Price.</param>
+            <param name="orderInfo">Order Info.</param>
+            <param name="guestId">Guest Id who is buying the ticket.</param>
+            <param name="eventId">Event Id for which ticket is being sold.</param>
+        </member>
+        <member name="M:EventManagement.Logic.IFrontOffice.Add(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            This method will insert the guest to the Guest Table.
+            </summary>
+            <param name="name">Name of the Guest.</param>
+            <param name="contact">Contact Number.</param>
+            <param name="city">City from which Guest Belongs.</param>
+            <param name="email">Email address.</param>
+            <param name="gender">Gender.</param>
+        </member>
+        <member name="M:EventManagement.Logic.IFrontOffice.SearchGuest(System.String)">
+            <summary>
+            This method will search the Guest from the database.
+            </summary>
+            <param name="name">Guest Name.</param>
+            <returns>List of Guests with Given Name.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.IFrontOffice.SearchEvent(System.String)">
+            <summary>
+            This method will search the Event from the database.
+            </summary>
+            <param name="name">Event Name.</param>
+            <returns>List of Events with Given Name.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.IFrontOffice.GetAllGuests">
+            <summary>
+            This mehtod will provide list of Guests in the Database.
+            </summary>
+            <returns>Ilist of Guests.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.IFrontOffice.GetOneTicket(System.Int32)">
+            <summary>
+            This method will return ticket with specifc Id.
+            </summary>
+            <param name="id">Ticket Id.</param>
+            <returns>Ticket.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.IFrontOffice.GetAllTickets">
+            <summary>
+            This mehtod will provide list of Tickets in the Database.
+            </summary>
+            <returns>Ilist of Tickets.</returns>
+        </member>
         <member name="M:EventManagement.Logic.IFrontOffice.GetAllEvent">
             <summary>
             This method gets all the events present in the Database.
             </summary>
             <returns>List of type Event.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.IFrontOffice.CalculatePricePaid(System.Int32,System.Int32)">
+            <summary>
+            This method will apply discount on the ticket.
+            </summary>
+            <param name="eventId">Event ID.</param>
+            <param name="discount">Discount Value.</param>
+            <returns>Price Paid of type int.</returns>
+        </member>
+        <member name="T:EventManagement.Logic.NoOfMalesFemalesInEvent">
+            <summary>
+            public class to store the no of males and females in the event.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Logic.NoOfMalesFemalesInEvent.EventName">
+            <summary>
+            Gets or sets event Name.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Logic.NoOfMalesFemalesInEvent.NoOfMales">
+            <summary>
+            Gets or sets no of males.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Logic.NoOfMalesFemalesInEvent.NoOfFemales">
+            <summary>
+            Gets or sets no of females.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Logic.NoOfMalesFemalesInEvent.Equals(System.Object)">
+            <summary>
+            Override equals method to check whether two objects are equal.
+            </summary>
+            <param name="obj">other Object.</param>
+            <returns>Boolean Value.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.NoOfMalesFemalesInEvent.GetHashCode">
+            <summary>
+            Override GetHashCode method to generate the hash code based on object.
+            </summary>
+            <returns>int value (HashCode).</returns>
+        </member>
+        <member name="M:EventManagement.Logic.NoOfMalesFemalesInEvent.ToString">
+            <summary>
+            Override toString to generate the string value from the object.
+            </summary>
+            <returns>String.</returns>
+        </member>
+        <member name="T:EventManagement.Logic.TicketsByGuest">
+            <summary>
+            public class to store the tickets brought by single User.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Logic.TicketsByGuest.GuestName">
+            <summary>
+            Gets or sets guest Name.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Logic.TicketsByGuest.Tickets">
+            <summary>
+            Gets tickets List.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Logic.TicketsByGuest.Equals(System.Object)">
+            <summary>
+            Override equals method to check whether two objects are equal.
+            </summary>
+            <param name="obj">other Object.</param>
+            <returns>Boolean Value.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.TicketsByGuest.GetHashCode">
+            <summary>
+            Override GetHashCode method to generate the hash code based on object.
+            </summary>
+            <returns>int value (HashCode).</returns>
+        </member>
+        <member name="M:EventManagement.Logic.TicketsByGuest.ToString">
+            <summary>
+            Override toString to generate the string value from the object.
+            </summary>
+            <returns>String.</returns>
+        </member>
+        <member name="T:EventManagement.Logic.TotalEventSale">
+            <summary>
+            public class to store the total Event sale of the Event.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Logic.TotalEventSale.EventName">
+            <summary>
+            Gets or sets event Name.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Logic.TotalEventSale.TicketPrice">
+            <summary>
+            Gets or sets ticket price.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Logic.TotalEventSale.ToString">
+            <summary>
+            Override toString to generate the string value from the object.
+            </summary>
+            <returns>String.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.TotalEventSale.Equals(System.Object)">
+            <summary>
+            Override equals method to check whether two objects are equal.
+            </summary>
+            <param name="obj">other Object.</param>
+            <returns>Boolean Value.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.TotalEventSale.GetHashCode">
+            <summary>
+            Override GetHashCode method to generate the hash code based on object.
+            </summary>
+            <returns>int value (HashCode).</returns>
         </member>
     </members>
 </doc>

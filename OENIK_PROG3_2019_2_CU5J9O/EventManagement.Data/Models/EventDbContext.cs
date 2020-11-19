@@ -73,7 +73,7 @@
 
             modelBuilder.Entity<Ticket>(entity =>
             {
-                entity.HasOne(ticket => ticket.Event).WithMany(events => events.Tickets)
+                entity.HasOne(ticket => ticket.Events).WithMany(events => events.Tickets)
                 .HasForeignKey(ticket => ticket.EventId)
                 .OnDelete(DeleteBehavior.ClientSetNull);
             });

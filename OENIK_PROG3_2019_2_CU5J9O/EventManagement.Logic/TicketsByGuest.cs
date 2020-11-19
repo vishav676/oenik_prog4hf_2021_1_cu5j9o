@@ -19,7 +19,7 @@
         /// <summary>
         /// Gets tickets List.
         /// </summary>
-        public IList<Ticket> Tickets { get; }
+        public IList<Ticket> Tickets { get; set; }
 
         /// <summary>
         /// Override equals method to check whether two objects are equal.

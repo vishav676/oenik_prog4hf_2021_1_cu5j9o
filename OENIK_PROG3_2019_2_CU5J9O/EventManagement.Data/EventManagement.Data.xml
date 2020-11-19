@@ -74,6 +74,13 @@
             This is manadatory property and it's Max Length can be 50.
             </summary>
         </member>
+        <member name="P:EventManagement.Data.Models.Events.EntryFee">
+            <summary>
+            Gets or Sets EntryFee attribute of the class.
+            This field stores the ticket price for an Event.
+            This is manadotory field.
+            </summary>
+        </member>
         <member name="P:EventManagement.Data.Models.Events.Tickets">
             <summary>
             Gets Tickets attribute of the class.
@@ -238,7 +245,7 @@
             This will store for which event the ticket was sold.
             </summary>
         </member>
-        <member name="P:EventManagement.Data.Models.Ticket.Event">
+        <member name="P:EventManagement.Data.Models.Ticket.Events">
             <summary>
             Gets or Sets Event attribute of the class.
             This field will act as navigaton property to get the infomation of the Event.
