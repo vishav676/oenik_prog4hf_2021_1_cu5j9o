@@ -567,8 +567,7 @@
                 ticket11,
                 ticket12,
                 ticket13,
-                ticket14
-                );
+                ticket14);
             modelBuilder.Entity<Events>().HasData(
                 boatParty,
                 morisonParty,

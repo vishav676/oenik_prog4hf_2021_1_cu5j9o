@@ -194,9 +194,6 @@
             Console.WriteLine("Enter Ticket Type ");
             string type = Console.ReadLine();
 
-            Console.WriteLine("Enter ticket price ");
-            int price = int.Parse(Console.ReadLine());
-
             Console.WriteLine("Ticket Expiry ");
             string expiry = Console.ReadLine();
 
@@ -211,7 +208,7 @@
                 Console.WriteLine("Guest Name: ");
                 string name = Console.ReadLine();
                 var q1 = logic.SearchGuest(name);
-                if (q1.Count() == 0)
+                if (q1.Count == 0)
                 {
                     Console.WriteLine("Guest profile doesn't exits");
                     var menu = new ConsoleMenu()
@@ -247,6 +244,7 @@
                 Console.ReadKey();
                 return;
             }
+            int price = logic.CalculatePricePaid(eventId,discount);
 
             logic.Add(expiry, discount, type, price, orderInfo, guestId, eventId);
         }

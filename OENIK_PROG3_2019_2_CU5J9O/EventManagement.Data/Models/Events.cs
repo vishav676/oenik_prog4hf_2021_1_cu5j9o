@@ -39,6 +39,11 @@
         [Required]
         public string Name { get; set; }
 
+        /// <summary>
+        /// Gets or Sets EntryFee attribute of the class.
+        /// This field stores the ticket price for an Event.
+        /// This is manadotory field.
+        /// </summary>
         [Required]
         public int EntryFee { get; set; }
 

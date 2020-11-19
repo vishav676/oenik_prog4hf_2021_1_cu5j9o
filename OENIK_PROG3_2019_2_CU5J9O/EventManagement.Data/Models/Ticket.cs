@@ -75,7 +75,7 @@
         /// This field is a foriegn key to the id of Event in events Table.
         /// This will store for which event the ticket was sold.
         /// </summary>
-        [ForeignKey(nameof(Event))]
+        [ForeignKey(nameof(Events))]
         public int EventId { get; set; }
 
         /// <summary>
@@ -83,7 +83,7 @@
         /// This field will act as navigaton property to get the infomation of the Event.
         /// </summary>
         [NotMapped]
-        public virtual Events Event { get; set; }
+        public virtual Events Events { get; set; }
 
         /// <summary>
         /// Gets or Sets Guest Id attribute of the class.
