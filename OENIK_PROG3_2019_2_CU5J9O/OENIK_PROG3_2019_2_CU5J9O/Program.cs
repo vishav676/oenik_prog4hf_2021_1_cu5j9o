@@ -9,9 +9,15 @@
     using EventManagement.Logic;
     using EventManagement.Repository;
 
-    public class Program
+    /// <summary>
+    /// This class contains the main function which will initiate the program.
+    /// </summary>
+    public static class Program
     {
-        public static void Main(string[] args)
+        /// <summary>
+        /// This is the main method. This will show the menu to user and wait for the choice.
+        /// </summary>
+        public static void Main()
         {
             FactoryLogic logicGenerator = new FactoryLogic();
 
@@ -23,6 +29,10 @@
             menu.Show();
         }
 
+        /// <summary>
+        /// This mehtod will generate the administrator menu to be shown to user.
+        /// </summary>
+        /// <param name="logic">Adminstrator logic.</param>
         public static void AdmistartionMenu(AdminstratorLogic logic)
         {
             var menu = new ConsoleMenu().
@@ -40,11 +50,15 @@
             menu.Show();
         }
 
+        /// <summary>
+        /// This mehtod will generate the Front Office menu to be shown to user.
+        /// </summary>
+        /// <param name="logic">Front Office Menu logic.</param>
         public static void FrontOfficeMenu(FrontOfficeLogic logic)
         {
             var menu = new ConsoleMenu().
                 Add("Sell Ticket", () => SellTicket(logic)).
-                Add("Add Guest", () => addGuest(logic)).
+                Add("Add Guest", () => AddGuest(logic)).
                 Add("Search Guest", () => GetGuestInfo(logic)).
                 Add("Search Event", () => { Console.WriteLine("Not Ready"); }).
                 Add("List of Guests", () => GetAllGuests(logic)).
@@ -55,7 +69,10 @@
             menu.Show();
         }
 
-
+        /// <summary>
+        /// This method will ask for the input to change the discount on the ticket.
+        /// </summary>
+        /// <param name="logic"><see cref="IAdminstratorLogic"/>.</param>
         public static void ChangeDiscount(IAdminstratorLogic logic)
         {
             if (logic == null)
@@ -71,6 +88,10 @@
             logic.ChangeTicketDiscount(id, value);
         }
 
+        /// <summary>
+        /// This method will ask the user for the ticket id and will show the result.
+        /// </summary>
+        /// <param name="logic"><see cref="IFrontOffice"/>.</param>
         public static void GetTicketInfo(IFrontOffice logic)
         {
             if (logic == null)
@@ -82,12 +103,21 @@
             int id = int.Parse(Console.ReadLine());
             Ticket item = logic.GetOneTicket(id);
             if (item != null)
+            {
                 Console.WriteLine(item.Id + "\t" + item.Guest.Name + "\t" + item.OrderInfo);
+            }
             else
+            {
                 Console.WriteLine("No ticket found with this ID");
+            }
+
             Console.ReadKey();
         }
 
+        /// <summary>
+        /// This function will list the total event sales to console.
+        /// </summary>
+        /// <param name="logic"><see cref="IAdminstratorLogic"/>.</param>
         public static void ListSale(IAdminstratorLogic logic)
         {
             if (logic == null)
@@ -103,6 +133,10 @@
             Console.ReadLine();
         }
 
+        /// <summary>
+        /// This method will list the no of males and females in the event.
+        /// </summary>
+        /// <param name="logic"><see cref="IAdminstratorLogic"/>.</param>
         public static void NoOfMalesFemales(IAdminstratorLogic logic)
         {
             if (logic == null)
@@ -118,6 +152,10 @@
             Console.ReadLine();
         }
 
+        /// <summary>
+        /// This method will generate the result with list of tickets brought by single guest.
+        /// </summary>
+        /// <param name="logic"><see cref="IAdminstratorLogic"/>.</param>
         public static void TicketsByGuest(IAdminstratorLogic logic)
         {
             if (logic == null)
@@ -133,7 +171,11 @@
             Console.ReadLine();
         }
 
-        public static void addGuest(IFrontOffice logic)
+        /// <summary>
+        /// This method will ask the Guest info from the user.
+        /// </summary>
+        /// <param name="logic"><see cref="IFrontOffice"/>.</param>
+        public static void AddGuest(IFrontOffice logic)
         {
             if (logic == null)
             {
@@ -157,6 +199,10 @@
             logic.Add(name, contact, city, email, gender);
         }
 
+        /// <summary>
+        /// This method will ask the event info from the user.
+        /// </summary>
+        /// <param name="logic"><see cref="IAdminstratorLogic"/>.</param>
         public static void AddEvent(IAdminstratorLogic logic)
         {
             if (logic == null)
@@ -182,6 +228,10 @@
             logic.Add(name, organizerName, endDate, startDate, place);
         }
 
+        /// <summary>
+        /// This method will allow user to sell the ticket to guest for particular event.
+        /// </summary>
+        /// <param name="logic"><see cref="IFrontOffice"/>.</param>
         public static void SellTicket(IFrontOffice logic)
         {
             if (logic == null)
@@ -212,7 +262,11 @@
                 {
                     Console.WriteLine("Guest profile doesn't exits");
                     var menu = new ConsoleMenu()
-                    .Add("Add new Guest", () => { addGuest(logic); done = true; })
+                    .Add("Add new Guest", () =>
+                    {
+                        AddGuest(logic);
+                        done = true;
+                    })
                     .Add("Quit", ConsoleMenu.Close);
 
                     menu.Show();
@@ -244,11 +298,16 @@
                 Console.ReadKey();
                 return;
             }
+
             int price = logic.CalculatePricePaid(eventId, discount);
 
             logic.Add(expiry, discount, type, price, orderInfo, guestId, eventId);
         }
 
+        /// <summary>
+        /// This method will list all the events in the database to the console.
+        /// </summary>
+        /// <param name="logic"><see cref="IAdminstratorLogic"/>.</param>
         public static void AllEvent(IFrontOffice logic)
         {
             if (logic == null)
@@ -260,6 +319,10 @@
             events.ToConsole();
         }
 
+        /// <summary>
+        /// This method will ask the user Event Id which needs to be removed.
+        /// </summary>
+        /// <param name="logic"><see cref="IAdminstratorLogic"/>.</param>
         public static void RemoveEvent(IAdminstratorLogic logic)
         {
             if (logic == null)
@@ -282,6 +345,10 @@
             Console.ReadKey();
         }
 
+        /// <summary>
+        /// This method will ask the user Guest Id which needs to be removed.
+        /// </summary>
+        /// <param name="logic"><see cref="IAdminstratorLogic"/>.</param>
         public static void RemoveGuest(IAdminstratorLogic logic)
         {
             if (logic == null)
@@ -304,6 +371,10 @@
             Console.ReadKey();
         }
 
+        /// <summary>
+        /// This method will ask the user Event Id and Place name which needs to be updated..
+        /// </summary>
+        /// <param name="logic"><see cref="IAdminstratorLogic"/>.</param>
         public static void UpdatePlace(IAdminstratorLogic logic)
         {
             if (logic == null)
@@ -320,6 +391,10 @@
             logic.UpdatePlace(id, place);
         }
 
+        /// <summary>
+        /// This will show the all the sold tickets.
+        /// </summary>
+        /// <param name="logic"><see cref="IFrontOffice"/>.</param>
         public static void GetAllTickets(IFrontOffice logic)
         {
             if (logic == null)
@@ -331,6 +406,10 @@
             q.ToConsole();
         }
 
+        /// <summary>
+        /// This will list all the Guest present in the Database.
+        /// </summary>
+        /// <param name="logic"><see cref="IFrontOffice"/>.</param>
         public static void GetAllGuests(IFrontOffice logic)
         {
             if (logic == null)
@@ -342,6 +421,10 @@
             q.ToConsole();
         }
 
+        /// <summary>
+        /// This method will display the guest info with specfic name.
+        /// </summary>
+        /// <param name="logic"><see cref="IFrontOffice"/>.</param>
         public static void GetGuestInfo(IFrontOffice logic)
         {
             if (logic == null)
@@ -355,6 +438,10 @@
             q.ToConsole();
         }
 
+        /// <summary>
+        /// This method will ask the user Guest Id and Guest name which needs to be updated..
+        /// </summary>
+        /// <param name="logic"><see cref="IAdminstratorLogic"/>.</param>
         public static void UpdateName(IAdminstratorLogic logic)
         {
             if (logic == null)
@@ -371,6 +458,10 @@
             logic.ChangeName(id, name);
         }
 
+        /// <summary>
+        /// This method will ask the user Ticket Id which needs to be removed.
+        /// </summary>
+        /// <param name="logic"><see cref="IAdminstratorLogic"/>.</param>
         public static void RemoveTicket(IAdminstratorLogic logic)
         {
             if (logic == null)
