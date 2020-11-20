@@ -8,9 +8,9 @@
     using Microsoft.EntityFrameworkCore;
 
     /// <summary>
-    /// This class store the implementation of Interface <see cref="IGuestRepository"/> and extends class Repository of type Events.
+    /// This class store the implementation of Interface <see cref="IGuestRepository"/> and extends class Repo of type Events.
     /// </summary>
-    public class GuestRepository : Repository<Guest>, IGuestRepository
+    public class GuestRepository : Repo<Guest>, IGuestRepository
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GuestRepository"/> class.
@@ -39,7 +39,7 @@
         }
 
         /// <summary>
-        /// This is overriden method from <see cref="Repository{T}"/> class.
+        /// This is overriden method from <see cref="Repo{T}"/> class.
         /// </summary>
         /// <param name="id">Get the Guest Id.</param>
         /// <returns>Return Guest corresponding to particular id.</returns>

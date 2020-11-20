@@ -19,9 +19,9 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="FrontOfficeLogic"/> class.
         /// </summary>
-        /// <param name="ticketRepo">Ticket Repository.</param>
-        /// <param name="eventRepository">Event Repository.</param>
-        /// <param name="guestRepository">Guest Repository.</param>
+        /// <param name="ticketRepo">Ticket Repo.</param>
+        /// <param name="eventRepository">Event Repo.</param>
+        /// <param name="guestRepository">Guest Repo.</param>
         public FrontOfficeLogic(ITicketRepository ticketRepo, IEventRepository eventRepository, IGuestRepository guestRepository)
         {
             this.ticketRepo = ticketRepo;

@@ -13,9 +13,9 @@
             <summary>
             Initializes a new instance of the <see cref="T:EventManagement.Logic.AdminstratorLogic"/> class.
             </summary>
-            <param name="ticketRepo">Ticket Repository.</param>
-            <param name="eventRepository">Event Repository.</param>
-            <param name="guestRepository">Guest Repository.</param>
+            <param name="ticketRepo">Ticket Repo.</param>
+            <param name="eventRepository">Event Repo.</param>
+            <param name="guestRepository">Guest Repo.</param>
         </member>
         <member name="M:EventManagement.Logic.AdminstratorLogic.Add(System.String,System.String,System.String,System.String,System.String)">
             <summary>
@@ -118,9 +118,9 @@
             <summary>
             Initializes a new instance of the <see cref="T:EventManagement.Logic.FrontOfficeLogic"/> class.
             </summary>
-            <param name="ticketRepo">Ticket Repository.</param>
-            <param name="eventRepository">Event Repository.</param>
-            <param name="guestRepository">Guest Repository.</param>
+            <param name="ticketRepo">Ticket Repo.</param>
+            <param name="eventRepository">Event Repo.</param>
+            <param name="guestRepository">Guest Repo.</param>
         </member>
         <member name="M:EventManagement.Logic.FrontOfficeLogic.Add(System.String,System.Int32,System.String,System.Int32,System.String,System.Int32,System.Int32)">
             <summary>
@@ -408,7 +408,7 @@
         </member>
         <member name="P:EventManagement.Logic.TicketsByGuest.Tickets">
             <summary>
-            Gets tickets List.
+            Gets or sets tickets List.
             </summary>
         </member>
         <member name="M:EventManagement.Logic.TicketsByGuest.Equals(System.Object)">

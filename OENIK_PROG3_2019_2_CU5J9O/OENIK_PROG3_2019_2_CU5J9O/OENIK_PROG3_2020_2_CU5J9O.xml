@@ -9,5 +9,136 @@
             This class contains the main function which will initiate the program.
             </summary>
         </member>
+        <member name="M:OENIK_PROG3_2020_2_CU5J9O.Program.Main">
+            <summary>
+            This is the main method. This will show the menu to user and wait for the choice.
+            </summary>
+        </member>
+        <member name="M:OENIK_PROG3_2020_2_CU5J9O.Program.AdmistartionMenu(EventManagement.Logic.AdminstratorLogic)">
+            <summary>
+            This mehtod will generate the administrator menu to be shown to user.
+            </summary>
+            <param name="logic">Adminstrator logic.</param>
+        </member>
+        <member name="M:OENIK_PROG3_2020_2_CU5J9O.Program.FrontOfficeMenu(EventManagement.Logic.FrontOfficeLogic)">
+            <summary>
+            This mehtod will generate the Front Office menu to be shown to user.
+            </summary>
+            <param name="logic">Front Office Menu logic.</param>
+        </member>
+        <member name="M:OENIK_PROG3_2020_2_CU5J9O.Program.ChangeDiscount(EventManagement.Logic.IAdminstratorLogic)">
+            <summary>
+            This method will ask for the input to change the discount on the ticket.
+            </summary>
+            <param name="logic"><see cref="T:EventManagement.Logic.IAdminstratorLogic"/>.</param>
+        </member>
+        <member name="M:OENIK_PROG3_2020_2_CU5J9O.Program.GetTicketInfo(EventManagement.Logic.IFrontOffice)">
+            <summary>
+            This method will ask the user for the ticket id and will show the result.
+            </summary>
+            <param name="logic"><see cref="T:EventManagement.Logic.IFrontOffice"/>.</param>
+        </member>
+        <member name="M:OENIK_PROG3_2020_2_CU5J9O.Program.ListSale(EventManagement.Logic.IAdminstratorLogic)">
+            <summary>
+            This function will list the total event sales to console.
+            </summary>
+            <param name="logic"><see cref="T:EventManagement.Logic.IAdminstratorLogic"/>.</param>
+        </member>
+        <member name="M:OENIK_PROG3_2020_2_CU5J9O.Program.NoOfMalesFemales(EventManagement.Logic.IAdminstratorLogic)">
+            <summary>
+            This method will list the no of males and females in the event.
+            </summary>
+            <param name="logic"><see cref="T:EventManagement.Logic.IAdminstratorLogic"/>.</param>
+        </member>
+        <member name="M:OENIK_PROG3_2020_2_CU5J9O.Program.TicketsByGuest(EventManagement.Logic.IAdminstratorLogic)">
+            <summary>
+            This method will generate the result with list of tickets brought by single guest.
+            </summary>
+            <param name="logic"><see cref="T:EventManagement.Logic.IAdminstratorLogic"/>.</param>
+        </member>
+        <member name="M:OENIK_PROG3_2020_2_CU5J9O.Program.AddGuest(EventManagement.Logic.IFrontOffice)">
+            <summary>
+            This method will ask the Guest info from the user.
+            </summary>
+            <param name="logic"><see cref="T:EventManagement.Logic.IFrontOffice"/>.</param>
+        </member>
+        <member name="M:OENIK_PROG3_2020_2_CU5J9O.Program.AddEvent(EventManagement.Logic.IAdminstratorLogic)">
+            <summary>
+            This method will ask the event info from the user.
+            </summary>
+            <param name="logic"><see cref="T:EventManagement.Logic.IAdminstratorLogic"/>.</param>
+        </member>
+        <member name="M:OENIK_PROG3_2020_2_CU5J9O.Program.SellTicket(EventManagement.Logic.IFrontOffice)">
+            <summary>
+            This method will allow user to sell the ticket to guest for particular event.
+            </summary>
+            <param name="logic"><see cref="T:EventManagement.Logic.IFrontOffice"/>.</param>
+        </member>
+        <member name="M:OENIK_PROG3_2020_2_CU5J9O.Program.AllEvent(EventManagement.Logic.IFrontOffice)">
+            <summary>
+            This method will list all the events in the database to the console.
+            </summary>
+            <param name="logic"><see cref="T:EventManagement.Logic.IAdminstratorLogic"/>.</param>
+        </member>
+        <member name="M:OENIK_PROG3_2020_2_CU5J9O.Program.RemoveEvent(EventManagement.Logic.IAdminstratorLogic)">
+            <summary>
+            This method will ask the user Event Id which needs to be removed.
+            </summary>
+            <param name="logic"><see cref="T:EventManagement.Logic.IAdminstratorLogic"/>.</param>
+        </member>
+        <member name="M:OENIK_PROG3_2020_2_CU5J9O.Program.RemoveGuest(EventManagement.Logic.IAdminstratorLogic)">
+            <summary>
+            This method will ask the user Guest Id which needs to be removed.
+            </summary>
+            <param name="logic"><see cref="T:EventManagement.Logic.IAdminstratorLogic"/>.</param>
+        </member>
+        <member name="M:OENIK_PROG3_2020_2_CU5J9O.Program.UpdatePlace(EventManagement.Logic.IAdminstratorLogic)">
+            <summary>
+            This method will ask the user Event Id and Place name which needs to be updated..
+            </summary>
+            <param name="logic"><see cref="T:EventManagement.Logic.IAdminstratorLogic"/>.</param>
+        </member>
+        <member name="M:OENIK_PROG3_2020_2_CU5J9O.Program.GetAllTickets(EventManagement.Logic.IFrontOffice)">
+            <summary>
+            This will show the all the sold tickets.
+            </summary>
+            <param name="logic"><see cref="T:EventManagement.Logic.IFrontOffice"/>.</param>
+        </member>
+        <member name="M:OENIK_PROG3_2020_2_CU5J9O.Program.GetAllGuests(EventManagement.Logic.IFrontOffice)">
+            <summary>
+            This will list all the Guest present in the Database.
+            </summary>
+            <param name="logic"><see cref="T:EventManagement.Logic.IFrontOffice"/>.</param>
+        </member>
+        <member name="M:OENIK_PROG3_2020_2_CU5J9O.Program.GetGuestInfo(EventManagement.Logic.IFrontOffice)">
+            <summary>
+            This method will display the guest info with specfic name.
+            </summary>
+            <param name="logic"><see cref="T:EventManagement.Logic.IFrontOffice"/>.</param>
+        </member>
+        <member name="M:OENIK_PROG3_2020_2_CU5J9O.Program.UpdateName(EventManagement.Logic.IAdminstratorLogic)">
+            <summary>
+            This method will ask the user Guest Id and Guest name which needs to be updated..
+            </summary>
+            <param name="logic"><see cref="T:EventManagement.Logic.IAdminstratorLogic"/>.</param>
+        </member>
+        <member name="M:OENIK_PROG3_2020_2_CU5J9O.Program.RemoveTicket(EventManagement.Logic.IAdminstratorLogic)">
+            <summary>
+            This method will ask the user Ticket Id which needs to be removed.
+            </summary>
+            <param name="logic"><see cref="T:EventManagement.Logic.IAdminstratorLogic"/>.</param>
+        </member>
+        <member name="T:OENIK_PROG3_2020_2_CU5J9O.SolutionExtensions">
+            <summary>
+            This class contain static method to display the content.
+            </summary>
+        </member>
+        <member name="M:OENIK_PROG3_2020_2_CU5J9O.SolutionExtensions.ToConsole``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            This method will get the list and will display the content.
+            </summary>
+            <typeparam name="T">List of type T.</typeparam>
+            <param name="input">List.</param>
+        </member>
     </members>
 </doc>

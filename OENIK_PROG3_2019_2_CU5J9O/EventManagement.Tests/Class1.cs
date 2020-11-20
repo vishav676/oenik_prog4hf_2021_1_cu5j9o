@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace EventManagement.Tests
+﻿namespace EventManagement.Tests
 {
     public class Class1
     {

@@ -6,7 +6,7 @@
     <members>
         <member name="T:EventManagement.Repository.EventRepository">
             <summary>
-            This class store the implementation of Interface <see cref="T:EventManagement.Repository.IEventRepository"/> and extends class Repository of type Events.
+            This class store the implementation of Interface <see cref="T:EventManagement.Repository.IEventRepository"/> and extends class Repo of type Events.
             </summary>
         </member>
         <member name="M:EventManagement.Repository.EventRepository.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
@@ -17,7 +17,7 @@
         </member>
         <member name="M:EventManagement.Repository.EventRepository.GetOne(System.Int32)">
             <summary>
-            This is overriden method from <see cref="T:EventManagement.Repository.Repository`1"/> class.
+            This is overriden method from <see cref="T:EventManagement.Repository.Repo`1"/> class.
             </summary>
             <param name="id">Get the Event Id.</param>
             <returns>Return Event corresponding to particular id.</returns>
@@ -38,7 +38,7 @@
         </member>
         <member name="T:EventManagement.Repository.GuestRepository">
             <summary>
-            This class store the implementation of Interface <see cref="T:EventManagement.Repository.IGuestRepository"/> and extends class Repository of type Events.
+            This class store the implementation of Interface <see cref="T:EventManagement.Repository.IGuestRepository"/> and extends class Repo of type Events.
             </summary>
         </member>
         <member name="M:EventManagement.Repository.GuestRepository.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
@@ -56,7 +56,7 @@
         </member>
         <member name="M:EventManagement.Repository.GuestRepository.GetOne(System.Int32)">
             <summary>
-            This is overriden method from <see cref="T:EventManagement.Repository.Repository`1"/> class.
+            This is overriden method from <see cref="T:EventManagement.Repository.Repo`1"/> class.
             </summary>
             <param name="id">Get the Guest Id.</param>
             <returns>Return Guest corresponding to particular id.</returns>
@@ -159,50 +159,50 @@
             <param name="id">ID of the ticket.</param>
             <param name="newDiscount">new discount value.</param>
         </member>
-        <member name="T:EventManagement.Repository.Repository`1">
+        <member name="T:EventManagement.Repository.Repo`1">
             <summary>
             This class store the implementation of Interface <see cref="T:EventManagement.Repository.IRepository`1"/>.
             </summary>
             <typeparam name="T">Class Type.</typeparam>
         </member>
-        <member name="F:EventManagement.Repository.Repository`1.ctx">
+        <member name="F:EventManagement.Repository.Repo`1.ctx">
             <summary>
             ctx is protected object of the DbCntext.
             </summary>
         </member>
-        <member name="M:EventManagement.Repository.Repository`1.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+        <member name="M:EventManagement.Repository.Repo`1.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
             <summary>
-            Initializes a new instance of the <see cref="T:EventManagement.Repository.Repository`1"/> class.
+            Initializes a new instance of the <see cref="T:EventManagement.Repository.Repo`1"/> class.
             </summary>
             <param name="ctx">DbContext object.</param>
         </member>
-        <member name="M:EventManagement.Repository.Repository`1.GetAll">
+        <member name="M:EventManagement.Repository.Repo`1.GetAll">
             <summary>
             This method return all the entries of type T.
             </summary>
             <returns>IQueryable List.</returns>
         </member>
-        <member name="M:EventManagement.Repository.Repository`1.GetOne(System.Int32)">
+        <member name="M:EventManagement.Repository.Repo`1.GetOne(System.Int32)">
             <summary>
             This is an abstract method which will be overriden in child classes as needed.
             </summary>
             <param name="id">id of type int.</param>
             <returns>Instance of type T.</returns>
         </member>
-        <member name="M:EventManagement.Repository.Repository`1.Insert(`0)">
+        <member name="M:EventManagement.Repository.Repo`1.Insert(`0)">
             <summary>
             This method insert the type T into the specific table.
             </summary>
             <param name="entity">entity of Type T.</param>
         </member>
-        <member name="M:EventManagement.Repository.Repository`1.Remove(System.Int32)">
+        <member name="M:EventManagement.Repository.Repo`1.Remove(System.Int32)">
             <summary>
             This method removes the entry with specific Id from the particular table.
             </summary>
             <param name="id">Entry Id of type int.</param>
             <returns>boolean value whether deletion is successful or not.</returns>
         </member>
-        <member name="M:EventManagement.Repository.Repository`1.Remove(`0)">
+        <member name="M:EventManagement.Repository.Repo`1.Remove(`0)">
             <summary>
             This method removes the specific model from the particular table.
             </summary>
@@ -211,7 +211,7 @@
         </member>
         <member name="T:EventManagement.Repository.TicketRepository">
             <summary>
-            This class store the implementation of Interface <see cref="T:EventManagement.Repository.ITicketRepository"/> and extends class Repository of type Events.
+            This class store the implementation of Interface <see cref="T:EventManagement.Repository.ITicketRepository"/> and extends class Repo of type Events.
             </summary>
         </member>
         <member name="M:EventManagement.Repository.TicketRepository.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
@@ -229,7 +229,7 @@
         </member>
         <member name="M:EventManagement.Repository.TicketRepository.GetOne(System.Int32)">
             <summary>
-            This is overriden method from <see cref="T:EventManagement.Repository.Repository`1"/> class.
+            This is overriden method from <see cref="T:EventManagement.Repository.Repo`1"/> class.
             </summary>
             <param name="id">Get the Ticket Id.</param>
             <returns>Return Event corresponding to particular id.</returns>

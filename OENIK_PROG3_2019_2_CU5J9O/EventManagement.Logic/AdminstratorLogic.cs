@@ -20,9 +20,9 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="AdminstratorLogic"/> class.
         /// </summary>
-        /// <param name="ticketRepo">Ticket Repository.</param>
-        /// <param name="eventRepository">Event Repository.</param>
-        /// <param name="guestRepository">Guest Repository.</param>
+        /// <param name="ticketRepo">Ticket Repo.</param>
+        /// <param name="eventRepository">Event Repo.</param>
+        /// <param name="guestRepository">Guest Repo.</param>
         public AdminstratorLogic(ITicketRepository ticketRepo, IEventRepository eventRepository, IGuestRepository guestRepository)
         {
             this.ticketRepo = ticketRepo;

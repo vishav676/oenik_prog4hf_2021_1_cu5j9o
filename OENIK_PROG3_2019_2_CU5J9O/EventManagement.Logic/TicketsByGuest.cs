@@ -17,7 +17,7 @@
         public string GuestName { get; set; }
 
         /// <summary>
-        /// Gets tickets List.
+        /// Gets or sets tickets List.
         /// </summary>
         public IList<Ticket> Tickets { get; set; }
 

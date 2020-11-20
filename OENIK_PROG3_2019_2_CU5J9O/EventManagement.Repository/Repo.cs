@@ -10,7 +10,7 @@
     /// This class store the implementation of Interface <see cref="IRepository{T}"/>.
     /// </summary>
     /// <typeparam name="T">Class Type.</typeparam>
-    public abstract class Repository<T> : IRepository<T>
+    public abstract class Repo<T> : IRepository<T>
         where T : class
     {
         /// <summary>
@@ -19,10 +19,10 @@
         protected DbContext ctx;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Repository{T}"/> class.
+        /// Initializes a new instance of the <see cref="Repo{T}"/> class.
         /// </summary>
         /// <param name="ctx">DbContext object.</param>
-        public Repository(DbContext ctx)
+        public Repo(DbContext ctx)
         {
             this.ctx = ctx;
         }
