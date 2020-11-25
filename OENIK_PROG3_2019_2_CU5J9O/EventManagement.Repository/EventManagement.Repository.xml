@@ -167,7 +167,7 @@
         </member>
         <member name="F:EventManagement.Repository.Repo`1.ctx">
             <summary>
-            ctx is protected object of the DbCntext.
+            ctx is protected object of the DbContext.
             </summary>
         </member>
         <member name="M:EventManagement.Repository.Repo`1.#ctor(Microsoft.EntityFrameworkCore.DbContext)">

@@ -40,14 +40,14 @@
             Data Source is of Relative path which ensure it will
             work in every computer.
             </summary>
-            <param name="optionsBuilder">It of <see cref="T:Microsoft.EntityFrameworkCore.DbContextOptionsBuilder"/> type.</param>
+            <param name="optionsBuilder">It is of <see cref="T:Microsoft.EntityFrameworkCore.DbContextOptionsBuilder"/> type.</param>
         </member>
         <member name="M:EventManagement.Data.Models.EventDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <summary>
             This method will create the models in the Database.
             And provide the connection between the tables of Database.
             </summary>
-            <param name="modelBuilder">It of <see cref="T:Microsoft.EntityFrameworkCore.ModelBuilder"/> type.</param>
+            <param name="modelBuilder">It is of <see cref="T:Microsoft.EntityFrameworkCore.ModelBuilder"/> type.</param>
         </member>
         <member name="T:EventManagement.Data.Models.Events">
             <summary>

@@ -14,7 +14,7 @@
         where T : class
     {
         /// <summary>
-        /// ctx is protected object of the DbCntext.
+        /// ctx is protected object of the DbContext.
         /// </summary>
         protected DbContext ctx;
 

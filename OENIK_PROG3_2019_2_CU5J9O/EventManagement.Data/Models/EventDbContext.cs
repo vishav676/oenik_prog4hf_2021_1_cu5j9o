@@ -43,7 +43,7 @@
         /// Data Source is of Relative path which ensure it will
         /// work in every computer.
         /// </summary>
-        /// <param name="optionsBuilder">It of <see cref="DbContextOptionsBuilder"/> type.</param>
+        /// <param name="optionsBuilder">It is of <see cref="DbContextOptionsBuilder"/> type.</param>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (optionsBuilder == null)
@@ -63,7 +63,7 @@
         /// This method will create the models in the Database.
         /// And provide the connection between the tables of Database.
         /// </summary>
-        /// <param name="modelBuilder">It of <see cref="ModelBuilder"/> type.</param>
+        /// <param name="modelBuilder">It is of <see cref="ModelBuilder"/> type.</param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             if (modelBuilder == null)
