@@ -234,5 +234,15 @@
 
             Assert.That(actualResult, Is.EquivalentTo(expectedTickets));
         }
+
+        [Test]
+        public void TestNoOfMalesAndFemales()
+        {
+            var logic = CreateLogic();
+
+            var actualResult = logic.TicketsBySingleGuest();
+
+            Assert.That(actualResult, Is.EquivalentTo(expectedTickets));
+        }
     }
 }
