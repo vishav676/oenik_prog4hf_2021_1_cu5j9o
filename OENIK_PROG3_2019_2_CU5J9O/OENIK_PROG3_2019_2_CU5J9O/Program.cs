@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Globalization;
     using System.Linq;
+    using System.Threading.Tasks;
     using ConsoleTools;
     using EventManagement.Data.Models;
     using EventManagement.Logic;
@@ -163,6 +164,7 @@
                 throw new ArgumentNullException(nameof(logic));
             }
 
+            var result = new Task<IList<TicketsByGuest>>(() => logic.TicketsBySingleGuest()).Result;
             foreach (var item in logic.TicketsBySingleGuest())
             {
                 Console.WriteLine(item);
