@@ -264,7 +264,7 @@
             This field will act as navigaton property to get the infomation of the Guest.
             </summary>
         </member>
-        <member name="M:EventManagement.Data.Models.Ticket.ToString">
+        <member name="M:EventManagement.Data.Models.Ticket.Equals(System.Object)">
             <summary>
             Override public function to generate string from object data.
             </summary>

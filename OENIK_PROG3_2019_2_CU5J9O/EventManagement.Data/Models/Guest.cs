@@ -89,5 +89,24 @@
         {
             return $"{this.Name} {this.Gender} {this.City} {this.Email}";
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Guest)
+            {
+                Guest other = obj as Guest;
+                return this.Name == other.Name && this.City == other.City
+                    && this.Gender == other.Gender && this.Email == other.Email;
+
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public override int GetHashCode()
+        {
+            return this.ID + this.Gender.GetHashCode() + this.Email.GetHashCode();
+        }
     }
 }

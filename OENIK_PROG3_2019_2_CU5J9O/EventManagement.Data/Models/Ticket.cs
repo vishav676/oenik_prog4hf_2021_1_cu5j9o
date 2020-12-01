@@ -104,6 +104,27 @@
         /// Override public function to generate string from object data.
         /// </summary>
         /// <returns> String.</returns>
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Ticket)
+            {
+                Ticket other = obj as Ticket;
+                return this.Type == other.Type && this.PricePaid == other.PricePaid
+                    && this.GuestId == other.GuestId && this.EventId == other.EventId
+                    && this.Discount == other.Discount && this.OrderInfo == other.OrderInfo;
+
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public override int GetHashCode()
+        {
+            return this.Id + this.PricePaid + this.Discount;
+        }
         public override string ToString()
         {
             return $"{this.Id} {this.Guest.Name} {this.Discount}";

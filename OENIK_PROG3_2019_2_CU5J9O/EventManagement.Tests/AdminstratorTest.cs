@@ -27,7 +27,7 @@
 
             AdminstratorLogic logic = new AdminstratorLogic(ticketRepo.Object, eventRepo.Object, guestRepo.Object);
             logic.Add(testEvent.Name, testEvent.OganizarName, testEvent.EndDate, testEvent.StartDate, testEvent.Place);
-            eventRepo.Verify(repo => repo.Insert(testEvent));
+            eventRepo.Verify(repo => repo.Insert(It.IsAny<Events>()));
         }
 
         [Test]
@@ -122,51 +122,15 @@
         Mock<IGuestRepository> guestRepo;
         List<TotalEventSale> expectedSales;
         List<TicketsByGuest> expectedTickets;
-
+        List<NoOfMalesFemalesInEvent> expectedMales;
+        
         private AdminstratorLogic CreateLogic()
         {
             guestRepo = new Mock<IGuestRepository>();
             ticketRepo = new Mock<ITicketRepository>();
             eventRepo = new Mock<IEventRepository>();
 
-            Guest piyush = new Guest()
-            {
-                ID = 1,
-                Name = "Piyush",
-                City = "Dhuri",
-                Contact = "264446658",
-                Email = "piyush@GMAIL.COM",
-                Gender = "Male",
-            };
-            Guest vishav = new Guest()
-            {
-                ID = 2,
-                Name = "Vishav",
-                City = "Dhuri",
-                Contact = "684323565",
-                Email = "vishav@GMAIL.COM",
-                Gender = "Male",
-            };
-            Events boatParty = new Events()
-            {
-                Id = 1,
-                Name = "Boat Party",
-                StartDate = "5 Oct 2020",
-                EndDate = "7 Oct 2020",
-                OganizarName = "Vishav",
-                EntryFee = 500,
-                Place = "Chain Bridge",
-            };
-            Events morisonParty = new Events()
-            {
-                Id = 2,
-                Name = "Morison Party",
-                StartDate = "5 Oct 2020",
-                EndDate = "7 Oct 2020",
-                EntryFee = 500,
-                OganizarName = "Vishav",
-                Place = "Morisson 2",
-            };
+
             Ticket ticket1 = new Ticket()
             {
                 Id = 1,
@@ -189,50 +153,126 @@
                 EventId = 2,
                 GuestId = 2,
             };
-
-            List<Guest> guests = new List<Guest> { piyush, vishav };
+            Events boatParty = new Events()
+            {
+                Id = 1,
+                Name = "Boat Party",
+                StartDate = "5 Oct 2020",
+                EndDate = "7 Oct 2020",
+                OganizarName = "Vishav",
+                EntryFee = 500,
+                Place = "Chain Bridge",
+                Tickets = { ticket1 },
+            };
+            Events morisonParty = new Events()
+            {
+                Id = 2,
+                Name = "Morison Party",
+                StartDate = "5 Oct 2020",
+                EndDate = "7 Oct 2020",
+                EntryFee = 500,
+                OganizarName = "Vishav",
+                Place = "Morisson 2",
+                Tickets = { ticket2 },
+            };
+            ticket1.Events = boatParty;
+            ticket2.Events = morisonParty;
+            
+            Guest piyush = new Guest()
+            {
+                ID = 1,
+                Name = "Piyush",
+                City = "Dhuri",
+                Contact = "264446658",
+                Email = "piyush@GMAIL.COM",
+                Gender = "Male",
+                Tickets = { ticket1},
+            };
+            Guest vishav = new Guest()
+            {
+                ID = 2,
+                Name = "Vishav",
+                City = "Dhuri",
+                Contact = "684323565",
+                Email = "vishav@GMAIL.COM",
+                Gender = "Male",
+                Tickets = { ticket2},
+            };
+            
+            List<Guest> guests = new List<Guest> {piyush, vishav };
+            List<Events> events = new List<Events> { morisonParty, boatParty };
             List<Ticket> tickets = new List<Ticket> { ticket1, ticket2 };
-            List<Events> events = new List<Events> { boatParty, morisonParty };
 
-            expectedSales = new List<TotalEventSale>()
+            this.expectedSales = new List<TotalEventSale>()
             {
-                new TotalEventSale(){EventName = "Boat Party", TicketPrice = 500},
-                new TotalEventSale(){EventName = "Morison Party", TicketPrice = 500},
+                new TotalEventSale() { EventName = "Boat Party", TicketPrice = 500 },
+                new TotalEventSale() { EventName = "Morison Party", TicketPrice = 500 },
             };
 
-            expectedTickets = new List<TicketsByGuest>()
+            this.expectedTickets = new List<TicketsByGuest>()
             {
-                new TicketsByGuest(){ GuestName = "Vishav", Tickets = { ticket2 } },
-                new TicketsByGuest(){ GuestName = "Piyush", Tickets = { ticket1 } }
+                new TicketsByGuest() { GuestName = "Piyush", Tickets = new List<Ticket>()
+                {
+                    new Ticket()
+                    {
+                        Id = 1,
+                        Expiry = "7 Oct 2020",
+                        Discount = 0,
+                        OrderInfo = "No discount",
+                        PricePaid = 500,
+                        Type = "VIP",
+                        EventId = 1,
+                        GuestId = 1,
+                    },
+                },
+                },
+                new TicketsByGuest() { GuestName = "Vishav", Tickets = new List<Ticket>() { new Ticket()
+                    {
+                        Id = 2,
+                        Expiry = "7 Oct 2020",
+                        Discount = 0,
+                        OrderInfo = "No discount",
+                        PricePaid = 500,
+                        Type = "VIP",
+                        EventId = 2,
+                        GuestId = 2,
+                    },
+                },
+                },
             };
 
-            ticketRepo.Setup(repo => repo.GetAll()).Returns(tickets.AsQueryable());
-            guestRepo.Setup(repo => repo.GetAll()).Returns(guests.AsQueryable());
-            eventRepo.Setup(repo => repo.GetAll()).Returns(events.AsQueryable());
+            this.expectedMales = new List<NoOfMalesFemalesInEvent>() { new NoOfMalesFemalesInEvent() { EventName = "Morison Party", NoOfFemales = 0, NoOfMales = 0},
+            new NoOfMalesFemalesInEvent() { EventName = "Boat Party", NoOfFemales = 0, NoOfMales = 0},};
 
-            return new AdminstratorLogic(ticketRepo.Object, eventRepo.Object, guestRepo.Object);
+            this.ticketRepo.Setup(repo => repo.GetAll()).Returns(tickets.AsQueryable());
+            this.guestRepo.Setup(repo => repo.GetAll()).Returns(guests.AsQueryable());
+            this.eventRepo.Setup(repo => repo.GetAll()).Returns(events.AsQueryable());
+
+            return new AdminstratorLogic(this.ticketRepo.Object, this.eventRepo.Object, this.guestRepo.Object);
 
         }
 
-        [Test]
+       [Test]
         public void TestEventSale()
         {
-            var logic = CreateLogic();
+            var logic = this.CreateLogic();
 
             var actualEventSales = logic.GetEventSale();
 
-            //Assert.That(actualEventSales, Is.EquivalentTo(expectedSales));
-            ticketRepo.Verify(repo => repo.GetAll(), Times.Once);
+            Assert.That(actualEventSales, Is.EquivalentTo(expectedSales));
         }
-        
+
         [Test]
         public void TicketsBySingleGuestTest()
         {
-            var logic = CreateLogic();
+            var logic = this.CreateLogic();
 
             var actualResult = logic.TicketsBySingleGuest();
 
-            Assert.That(actualResult, Is.EquivalentTo(expectedTickets));
+            for (int i = 0; i < actualResult.ToList().Count; i++)
+            {
+                Assert.That(actualResult.ToList()[i].GuestName == expectedTickets[i].GuestName);
+            }
         }
 
         [Test]
@@ -240,9 +280,14 @@
         {
             var logic = CreateLogic();
 
-            var actualResult = logic.TicketsBySingleGuest();
+            var actualResult = logic.GetNoOfMalesFemalesList();
 
-            Assert.That(actualResult, Is.EquivalentTo(expectedTickets));
+            for(int i = 0;i<actualResult.ToList().Count; i++)
+            {
+                Assert.That(actualResult.ToList()[i].EventName == expectedMales[i].EventName);
+                Assert.That(actualResult.ToList()[1].NoOfMales == expectedMales[i].NoOfMales);
+                Assert.That(actualResult.ToList()[1].NoOfFemales == expectedMales[i].NoOfFemales);
+            }
         }
     }
 }
