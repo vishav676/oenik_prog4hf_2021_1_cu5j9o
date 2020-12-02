@@ -17,7 +17,7 @@
             <param name="eventRepository">Event Repo.</param>
             <param name="guestRepository">Guest Repo.</param>
         </member>
-        <member name="M:EventManagement.Logic.AdminstratorLogic.Add(System.String,System.String,System.String,System.String,System.String)">
+        <member name="M:EventManagement.Logic.AdminstratorLogic.Add(System.String,System.String,System.String,System.String,System.String,System.Int32)">
             <summary>
             Implementation of Add method for Event from <see cref="T:EventManagement.Logic.IAdminstratorLogic"/> interface.
             </summary>
@@ -26,6 +26,7 @@
             <param name="endDate">End Date.</param>
             <param name="startDate">Start Date.</param>
             <param name="place">Venue.</param>
+            <param name="fee">Entry Fee.</param>
         </member>
         <member name="M:EventManagement.Logic.AdminstratorLogic.ChangeName(System.Int32,System.String)">
             <summary>
@@ -196,7 +197,7 @@
             This public interface contains all the methods that will be implemented for the Adminstrator office.
             </summary>
         </member>
-        <member name="M:EventManagement.Logic.IAdminstratorLogic.Add(System.String,System.String,System.String,System.String,System.String)">
+        <member name="M:EventManagement.Logic.IAdminstratorLogic.Add(System.String,System.String,System.String,System.String,System.String,System.Int32)">
             <summary>
             This method will insert the ticket to the Ticket Table.
             </summary>
@@ -205,6 +206,7 @@
             <param name="endDate">End Date.</param>
             <param name="startDate">Start Date.</param>
             <param name="place">Venue.</param>
+            <param name="entryFee">Entry Fee.</param>
         </member>
         <member name="M:EventManagement.Logic.IAdminstratorLogic.RemoveEvent(System.Int32)">
             <summary>

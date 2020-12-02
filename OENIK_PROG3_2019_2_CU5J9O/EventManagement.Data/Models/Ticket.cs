@@ -104,7 +104,16 @@
         /// Override public function to generate string from object data.
         /// </summary>
         /// <returns> String.</returns>
+        public override string ToString()
+        {
+            return $"{this.Id} {this.Guest.Name} {this.Discount}";
+        }
 
+        /// <summary>
+        /// Override equals method to check whether two objects are equal.
+        /// </summary>
+        /// <param name="obj">other Object.</param>
+        /// <returns>Boolean Value.</returns>
         public override bool Equals(object obj)
         {
             if (obj is Ticket)
@@ -113,7 +122,6 @@
                 return this.Type == other.Type && this.PricePaid == other.PricePaid
                     && this.GuestId == other.GuestId && this.EventId == other.EventId
                     && this.Discount == other.Discount && this.OrderInfo == other.OrderInfo;
-
             }
             else
             {
@@ -121,13 +129,13 @@
             }
         }
 
+        /// <summary>
+        /// Override GetHashCode method to generate the hash code based on object.
+        /// </summary>
+        /// <returns>int value (HashCode).</returns>
         public override int GetHashCode()
         {
             return this.Id + this.PricePaid + this.Discount;
-        }
-        public override string ToString()
-        {
-            return $"{this.Id} {this.Guest.Name} {this.Discount}";
         }
     }
 }

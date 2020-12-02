@@ -185,6 +185,19 @@
             </summary>
             <returns> String.</returns>
         </member>
+        <member name="M:EventManagement.Data.Models.Guest.Equals(System.Object)">
+            <summary>
+            Override equals method to check whether two objects are equal.
+            </summary>
+            <param name="obj">other Object.</param>
+            <returns>Boolean Value.</returns>
+        </member>
+        <member name="M:EventManagement.Data.Models.Guest.GetHashCode">
+            <summary>
+            Override GetHashCode method to generate the hash code based on object.
+            </summary>
+            <returns>int value (HashCode).</returns>
+        </member>
         <member name="T:EventManagement.Data.Models.Ticket">
             <summary>
             This class is represents table in the Database.
@@ -264,11 +277,24 @@
             This field will act as navigaton property to get the infomation of the Guest.
             </summary>
         </member>
-        <member name="M:EventManagement.Data.Models.Ticket.Equals(System.Object)">
+        <member name="M:EventManagement.Data.Models.Ticket.ToString">
             <summary>
             Override public function to generate string from object data.
             </summary>
             <returns> String.</returns>
+        </member>
+        <member name="M:EventManagement.Data.Models.Ticket.Equals(System.Object)">
+            <summary>
+            Override equals method to check whether two objects are equal.
+            </summary>
+            <param name="obj">other Object.</param>
+            <returns>Boolean Value.</returns>
+        </member>
+        <member name="M:EventManagement.Data.Models.Ticket.GetHashCode">
+            <summary>
+            Override GetHashCode method to generate the hash code based on object.
+            </summary>
+            <returns>int value (HashCode).</returns>
         </member>
     </members>
 </doc>

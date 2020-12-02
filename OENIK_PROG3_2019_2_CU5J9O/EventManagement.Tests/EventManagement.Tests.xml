@@ -4,5 +4,52 @@
         <name>EventManagement.Tests</name>
     </assembly>
     <members>
+        <member name="T:EventManagement.Tests.AdminstratorTest">
+            <summary>
+            This is a Test Class, hence will test all the functionality of the Application.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Tests.AdminstratorTest.TestEventAdd">
+            <summary>
+            This test will verify if the Event Add method is working correctly.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Tests.AdminstratorTest.TestGetOne">
+            <summary>
+            This test will verify if the Ticket Get One method is working correctly.
+            </summary>
+            <param name="id">id for which test is conducted.</param>
+        </member>
+        <member name="M:EventManagement.Tests.AdminstratorTest.TestGetAll">
+            <summary>
+            This test will verify if the Ticket GetAll method is working correctly.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Tests.AdminstratorTest.TestRemove(System.Int32)">
+            <summary>
+            This test will verify if <see cref="M:EventManagement.Repository.IRepository`1.Remove(System.Int32)"/> method is working correctly.
+            </summary>
+            <param name="id">ID for which Test is conducted.</param>
+        </member>
+        <member name="M:EventManagement.Tests.AdminstratorTest.TestUpdate">
+            <summary>
+            This test will verify if <see cref="M:EventManagement.Repository.IGuestRepository.ChangeName(System.Int32,System.String)"/> method is working correctly.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Tests.AdminstratorTest.TestEventSale">
+            <summary>
+            This test will verify that that <see cref="M:EventManagement.Logic.AdminstratorLogic.GetEventSale"/> is working correctly.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Tests.AdminstratorTest.TicketsBySingleGuestTest">
+            <summary>
+            This test will verify that that <see cref="M:EventManagement.Logic.AdminstratorLogic.TicketsBySingleGuest"/> is working correctly.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Tests.AdminstratorTest.TestNoOfMalesAndFemales">
+            <summary>
+            This test will verify that that <see cref="M:EventManagement.Logic.AdminstratorLogic.GetNoOfMalesFemalesList"/> is working correctly.
+            </summary>
+        </member>
     </members>
 </doc>

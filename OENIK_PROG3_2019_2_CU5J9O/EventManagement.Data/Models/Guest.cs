@@ -90,6 +90,11 @@
             return $"{this.Name} {this.Gender} {this.City} {this.Email}";
         }
 
+        /// <summary>
+        /// Override equals method to check whether two objects are equal.
+        /// </summary>
+        /// <param name="obj">other Object.</param>
+        /// <returns>Boolean Value.</returns>
         public override bool Equals(object obj)
         {
             if (obj is Guest)
@@ -97,13 +102,17 @@
                 Guest other = obj as Guest;
                 return this.Name == other.Name && this.City == other.City
                     && this.Gender == other.Gender && this.Email == other.Email;
-
             }
             else
             {
                 return false;
             }
         }
+
+        /// <summary>
+        /// Override GetHashCode method to generate the hash code based on object.
+        /// </summary>
+        /// <returns>int value (HashCode).</returns>
         public override int GetHashCode()
         {
             return this.ID + this.Gender.GetHashCode() + this.Email.GetHashCode();

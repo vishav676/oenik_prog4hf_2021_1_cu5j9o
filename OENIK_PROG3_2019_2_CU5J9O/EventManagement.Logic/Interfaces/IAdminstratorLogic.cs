@@ -18,7 +18,8 @@
         /// <param name="endDate">End Date.</param>
         /// <param name="startDate">Start Date.</param>
         /// <param name="place">Venue.</param>
-        void Add(string name, string organizerName, string endDate, string startDate, string place);
+        /// <param name="entryFee">Entry Fee.</param>
+        void Add(string name, string organizerName, string endDate, string startDate, string place, int entryFee);
 
         /// <summary>
         /// This method gets the Event Id which needs to be remove.

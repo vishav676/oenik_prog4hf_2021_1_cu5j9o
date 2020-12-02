@@ -38,7 +38,8 @@
         /// <param name="endDate">End Date.</param>
         /// <param name="startDate">Start Date.</param>
         /// <param name="place">Venue.</param>
-        public void Add(string name, string organizerName, string endDate, string startDate, string place)
+        /// <param name="fee">Entry Fee.</param>
+        public void Add(string name, string organizerName, string endDate, string startDate, string place, int fee)
         {
             Events g = new Events()
             {
@@ -47,6 +48,7 @@
                 EndDate = endDate,
                 StartDate = startDate,
                 Place = place,
+                EntryFee = fee,
             };
             this.eventRepository.Insert(g);
         }

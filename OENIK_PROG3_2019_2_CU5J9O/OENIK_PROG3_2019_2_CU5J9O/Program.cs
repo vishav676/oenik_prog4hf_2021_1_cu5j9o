@@ -126,6 +126,7 @@
                 throw new ArgumentNullException(nameof(logic));
             }
 
+            var result = new Task<IList<TotalEventSale>>(() => logic.GetEventSale()).Result;
             foreach (var item in logic.GetEventSale())
             {
                 Console.WriteLine(item);
@@ -145,6 +146,7 @@
                 throw new ArgumentNullException(nameof(logic));
             }
 
+            var result = new Task<IList<NoOfMalesFemalesInEvent>>(() => logic.GetNoOfMalesFemalesList()).Result;
             foreach (var item in logic.GetNoOfMalesFemalesList())
             {
                 Console.WriteLine(item);
@@ -227,7 +229,10 @@
             Console.WriteLine("Enter End Date: ");
             string endDate = Console.ReadLine();
 
-            logic.Add(name, organizerName, endDate, startDate, place);
+            Console.WriteLine("Enter the Entry Fee: ");
+            int entryFee = int.Parse(Console.ReadLine());
+
+            logic.Add(name, organizerName, endDate, startDate, place, entryFee);
         }
 
         /// <summary>
@@ -267,7 +272,6 @@
                     .Add("Add new Guest", () =>
                     {
                         AddGuest(logic);
-                        done = true;
                     })
                     .Add("Quit", ConsoleMenu.Close);
 
