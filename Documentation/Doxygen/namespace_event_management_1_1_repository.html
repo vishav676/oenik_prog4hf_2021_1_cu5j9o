@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Planning: EventManagement.Repository Namespace Reference</title>
+<title>Event Management: EventManagement.Repository Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,10 +25,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Planning
-   &#160;<span id="projectnumber">1.0</span>
+   <div id="projectname">Event Management
+   &#160;<span id="projectnumber">1.0.0</span>
    </div>
-   <div id="projectbrief">This project is the part of Advance Development Techniques course. I, hereby, developed an Event Management Application which could manage the Event, Tickets and the Guest list. All the data is stored in the local Database.</div>
+   <div id="projectbrief">This application is built using C# and Sql Database. This application strictly follows the SOLID principle and apply All Basic CRUDS opertions. Various Advanced Sql Queries are also implemented.</div>
   </td>
  </tr>
  </tbody>
@@ -93,20 +93,28 @@ $(document).ready(function(){initNavTree('namespace_event_management_1_1_reposit
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_repository_1_1_event_repository.html">EventRepository</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class store the implementation of Interface <a class="el" href="interface_event_management_1_1_repository_1_1_i_event_repository.html" title="This interface store the queries related to Event Table It extends IRepository interface.">IEventRepository</a> and extends class <a class="el" href="class_event_management_1_1_repository_1_1_repo.html" title="This class store the implementation of Interface IRepository&lt;T&gt;.">Repo</a> of type Events.  <a href="class_event_management_1_1_repository_1_1_event_repository.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_repository_1_1_guest_repository.html">GuestRepository</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class store the implementation of Interface <a class="el" href="interface_event_management_1_1_repository_1_1_i_guest_repository.html" title="This interface store the queries related to Guest Table It extends IRepository interface.">IGuestRepository</a> and extends class <a class="el" href="class_event_management_1_1_repository_1_1_repo.html" title="This class store the implementation of Interface IRepository&lt;T&gt;.">Repo</a> of type Events.  <a href="class_event_management_1_1_repository_1_1_guest_repository.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_event_management_1_1_repository_1_1_i_event_repository.html">IEventRepository</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This interface store the queries related to Event Table It extends <a class="el" href="interface_event_management_1_1_repository_1_1_i_repository.html" title="This is general interface which contains all the generic methods for all Tables of the Database.">IRepository</a> interface.  <a href="interface_event_management_1_1_repository_1_1_i_event_repository.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_event_management_1_1_repository_1_1_i_guest_repository.html">IGuestRepository</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This interface store the queries related to Guest Table It extends <a class="el" href="interface_event_management_1_1_repository_1_1_i_repository.html" title="This is general interface which contains all the generic methods for all Tables of the Database.">IRepository</a> interface.  <a href="interface_event_management_1_1_repository_1_1_i_guest_repository.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_event_management_1_1_repository_1_1_i_repository.html">IRepository</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is general interface which contains all the generic methods for all Tables of the Database.  <a href="interface_event_management_1_1_repository_1_1_i_repository.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_event_management_1_1_repository_1_1_i_ticket_repository.html">ITicketRepository</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This interface stores functions related to Ticket table.  <a href="interface_event_management_1_1_repository_1_1_i_ticket_repository.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_repository_1_1_repository.html">Repository</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_repository_1_1_repo.html">Repo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class store the implementation of Interface IRepository&lt;T&gt;.  <a href="class_event_management_1_1_repository_1_1_repo.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_repository_1_1_ticket_repository.html">TicketRepository</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class store the implementation of Interface <a class="el" href="interface_event_management_1_1_repository_1_1_i_ticket_repository.html" title="This interface stores functions related to Ticket table.">ITicketRepository</a> and extends class <a class="el" href="class_event_management_1_1_repository_1_1_repo.html" title="This class store the implementation of Interface IRepository&lt;T&gt;.">Repo</a> of type Events.  <a href="class_event_management_1_1_repository_1_1_ticket_repository.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

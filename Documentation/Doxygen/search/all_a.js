@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['remove_49',['remove',['../class_event_management_1_1_logic_1_1_business_logic.html#ab4d6435486bd6899daa3d9c7a1309df5',1,'EventManagement.Logic.BusinessLogic.remove()'],['../interface_event_management_1_1_logic_1_1_i_event_logic.html#a1a2c478195be9065775cf83ad6da33d8',1,'EventManagement.Logic.IEventLogic.remove()']]],
-  ['repository_50',['Repository',['../class_event_management_1_1_repository_1_1_repository.html',1,'EventManagement::Repository']]],
-  ['repository_3c_20event_20_3e_51',['Repository&lt; Event &gt;',['../class_event_management_1_1_repository_1_1_repository.html',1,'EventManagement::Repository']]],
-  ['repository_3c_20guest_20_3e_52',['Repository&lt; Guest &gt;',['../class_event_management_1_1_repository_1_1_repository.html',1,'EventManagement::Repository']]],
-  ['repository_3c_20ticket_20_3e_53',['Repository&lt; Ticket &gt;',['../class_event_management_1_1_repository_1_1_repository.html',1,'EventManagement::Repository']]]
+  ['oenik_5fprog3_5f2020_5f2_5fcu5j9o_73',['OENIK_PROG3_2020_2_CU5J9O',['../namespace_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o.html',1,'']]],
+  ['oganizarname_74',['OganizarName',['../class_event_management_1_1_data_1_1_models_1_1_events.html#aa8e954c55863387d43fe535df78109c1',1,'EventManagement::Data::Models::Events']]],
+  ['onconfiguring_75',['OnConfiguring',['../class_event_management_1_1_data_1_1_models_1_1_event_db_context.html#afd2ffdbe0643f2ac45541d04cf1a5e8e',1,'EventManagement::Data::Models::EventDbContext']]],
+  ['onmodelcreating_76',['OnModelCreating',['../class_event_management_1_1_data_1_1_models_1_1_event_db_context.html#a97fdc964e7499071fe259048c825e401',1,'EventManagement::Data::Models::EventDbContext']]],
+  ['orderinfo_77',['OrderInfo',['../class_event_management_1_1_data_1_1_models_1_1_ticket.html#ae3f334b86421f581168c838b3d652b2c',1,'EventManagement::Data::Models::Ticket']]]
 ];

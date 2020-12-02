@@ -11,18 +11,17 @@
         </member>
         <member name="M:EventManagement.Tests.AdminstratorTest.TestEventAdd">
             <summary>
-            This test will verify if the Event Add method is working correctly.
+            This test will verify if the <see cref="M:EventManagement.Repository.IRepository`1.Insert(`0)"/> method is working correctly.
             </summary>
         </member>
         <member name="M:EventManagement.Tests.AdminstratorTest.TestGetOne">
             <summary>
-            This test will verify if the Ticket Get One method is working correctly.
+            This test will verify if <see cref="M:EventManagement.Repository.IRepository`1.GetOne(System.Int32)"/> One method is working correctly.
             </summary>
-            <param name="id">id for which test is conducted.</param>
         </member>
         <member name="M:EventManagement.Tests.AdminstratorTest.TestGetAll">
             <summary>
-            This test will verify if the Ticket GetAll method is working correctly.
+            This test will verify if the <see cref="M:EventManagement.Repository.IRepository`1.GetAll"/> method is working correctly.
             </summary>
         </member>
         <member name="M:EventManagement.Tests.AdminstratorTest.TestRemove(System.Int32)">

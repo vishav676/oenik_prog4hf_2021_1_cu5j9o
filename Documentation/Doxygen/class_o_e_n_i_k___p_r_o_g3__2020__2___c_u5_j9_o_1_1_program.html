@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Planning: OENIK_PROG3_2020_2_CU5J9O.Program Class Reference</title>
+<title>Event Management: OENIK_PROG3_2020_2_CU5J9O.Program Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,10 +25,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Planning
-   &#160;<span id="projectnumber">1.0</span>
+   <div id="projectname">Event Management
+   &#160;<span id="projectnumber">1.0.0</span>
    </div>
-   <div id="projectbrief">This project is the part of Advance Development Techniques course. I, hereby, developed an Event Management Application which could manage the Event, Tickets and the Guest list. All the data is stored in the local Database.</div>
+   <div id="projectbrief">This application is built using C# and Sql Database. This application strictly follows the SOLID principle and apply All Basic CRUDS opertions. Various Advanced Sql Queries are also implemented.</div>
   </td>
  </tr>
  </tbody>
@@ -90,18 +90,832 @@ $(document).ready(function(){initNavTree('class_o_e_n_i_k___p_r_o_g3__2020__2___
 <div class="title">OENIK_PROG3_2020_2_CU5J9O.Program Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class contains the main function which will initiate the program.  
+ <a href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a3673aadf087a2c4ce575b7ab0bf29bd0"><td class="memItemLeft" align="right" valign="top"><a id="a3673aadf087a2c4ce575b7ab0bf29bd0"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>Main</b> (string[] args)</td></tr>
-<tr class="separator:a3673aadf087a2c4ce575b7ab0bf29bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee337c27639d141d2c8793ce645083bc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#aee337c27639d141d2c8793ce645083bc">Main</a> ()</td></tr>
+<tr class="memdesc:aee337c27639d141d2c8793ce645083bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the main method. This will show the menu to user and wait for the choice.  <a href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#aee337c27639d141d2c8793ce645083bc">More...</a><br /></td></tr>
+<tr class="separator:aee337c27639d141d2c8793ce645083bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b2f7a8d9a346eb50db46ef478e96f78"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a2b2f7a8d9a346eb50db46ef478e96f78">AdmistartionMenu</a> (<a class="el" href="class_event_management_1_1_logic_1_1_adminstrator_logic.html">AdminstratorLogic</a> logic)</td></tr>
+<tr class="memdesc:a2b2f7a8d9a346eb50db46ef478e96f78"><td class="mdescLeft">&#160;</td><td class="mdescRight">This mehtod will generate the administrator menu to be shown to user.  <a href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a2b2f7a8d9a346eb50db46ef478e96f78">More...</a><br /></td></tr>
+<tr class="separator:a2b2f7a8d9a346eb50db46ef478e96f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8252e73df41d685c9fc4d2fce7b435fb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a8252e73df41d685c9fc4d2fce7b435fb">FrontOfficeMenu</a> (<a class="el" href="class_event_management_1_1_logic_1_1_front_office_logic.html">FrontOfficeLogic</a> logic)</td></tr>
+<tr class="memdesc:a8252e73df41d685c9fc4d2fce7b435fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This mehtod will generate the Front Office menu to be shown to user.  <a href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a8252e73df41d685c9fc4d2fce7b435fb">More...</a><br /></td></tr>
+<tr class="separator:a8252e73df41d685c9fc4d2fce7b435fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a067420718073dbda5fc306e6d4b14fd3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a067420718073dbda5fc306e6d4b14fd3">ChangeDiscount</a> (<a class="el" href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html">IAdminstratorLogic</a> logic)</td></tr>
+<tr class="memdesc:a067420718073dbda5fc306e6d4b14fd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will ask for the input to change the discount on the ticket.  <a href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a067420718073dbda5fc306e6d4b14fd3">More...</a><br /></td></tr>
+<tr class="separator:a067420718073dbda5fc306e6d4b14fd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcbe887bfc7a7c190b06f0e4898eadf0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#abcbe887bfc7a7c190b06f0e4898eadf0">GetTicketInfo</a> (<a class="el" href="interface_event_management_1_1_logic_1_1_i_front_office.html">IFrontOffice</a> logic)</td></tr>
+<tr class="memdesc:abcbe887bfc7a7c190b06f0e4898eadf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will ask the user for the ticket id and will show the result.  <a href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#abcbe887bfc7a7c190b06f0e4898eadf0">More...</a><br /></td></tr>
+<tr class="separator:abcbe887bfc7a7c190b06f0e4898eadf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d5cfd3eaa90db0644327f5da011c87e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a4d5cfd3eaa90db0644327f5da011c87e">ListSale</a> (<a class="el" href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html">IAdminstratorLogic</a> logic)</td></tr>
+<tr class="memdesc:a4d5cfd3eaa90db0644327f5da011c87e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will list the total event sales to console.  <a href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a4d5cfd3eaa90db0644327f5da011c87e">More...</a><br /></td></tr>
+<tr class="separator:a4d5cfd3eaa90db0644327f5da011c87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa34b587ffdeb3b63347a6764f9c4025f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#aa34b587ffdeb3b63347a6764f9c4025f">NoOfMalesFemales</a> (<a class="el" href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html">IAdminstratorLogic</a> logic)</td></tr>
+<tr class="memdesc:aa34b587ffdeb3b63347a6764f9c4025f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will list the no of males and females in the event.  <a href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#aa34b587ffdeb3b63347a6764f9c4025f">More...</a><br /></td></tr>
+<tr class="separator:aa34b587ffdeb3b63347a6764f9c4025f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3be143ce07deb68b490e152ab05ba0be"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a3be143ce07deb68b490e152ab05ba0be">TicketsByGuest</a> (<a class="el" href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html">IAdminstratorLogic</a> logic)</td></tr>
+<tr class="memdesc:a3be143ce07deb68b490e152ab05ba0be"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will generate the result with list of tickets brought by single guest.  <a href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a3be143ce07deb68b490e152ab05ba0be">More...</a><br /></td></tr>
+<tr class="separator:a3be143ce07deb68b490e152ab05ba0be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d8b283cd7a52d09f73d8fb324b49747"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a5d8b283cd7a52d09f73d8fb324b49747">AddGuest</a> (<a class="el" href="interface_event_management_1_1_logic_1_1_i_front_office.html">IFrontOffice</a> logic)</td></tr>
+<tr class="memdesc:a5d8b283cd7a52d09f73d8fb324b49747"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will ask the Guest info from the user.  <a href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a5d8b283cd7a52d09f73d8fb324b49747">More...</a><br /></td></tr>
+<tr class="separator:a5d8b283cd7a52d09f73d8fb324b49747"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d9e61ea99b44ca9de19d8438075a30a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a4d9e61ea99b44ca9de19d8438075a30a">AddEvent</a> (<a class="el" href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html">IAdminstratorLogic</a> logic)</td></tr>
+<tr class="memdesc:a4d9e61ea99b44ca9de19d8438075a30a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will ask the event info from the user.  <a href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a4d9e61ea99b44ca9de19d8438075a30a">More...</a><br /></td></tr>
+<tr class="separator:a4d9e61ea99b44ca9de19d8438075a30a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada71d7995f1cd379c984109242b66f8e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#ada71d7995f1cd379c984109242b66f8e">SellTicket</a> (<a class="el" href="interface_event_management_1_1_logic_1_1_i_front_office.html">IFrontOffice</a> logic)</td></tr>
+<tr class="memdesc:ada71d7995f1cd379c984109242b66f8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will allow user to sell the ticket to guest for particular event.  <a href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#ada71d7995f1cd379c984109242b66f8e">More...</a><br /></td></tr>
+<tr class="separator:ada71d7995f1cd379c984109242b66f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1901860bc36dd427e430465e17217a34"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a1901860bc36dd427e430465e17217a34">AllEvent</a> (<a class="el" href="interface_event_management_1_1_logic_1_1_i_front_office.html">IFrontOffice</a> logic)</td></tr>
+<tr class="memdesc:a1901860bc36dd427e430465e17217a34"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will list all the events in the database to the console.  <a href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a1901860bc36dd427e430465e17217a34">More...</a><br /></td></tr>
+<tr class="separator:a1901860bc36dd427e430465e17217a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69a1a9e69099a654ff8c6e95525a0b08"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a69a1a9e69099a654ff8c6e95525a0b08">RemoveEvent</a> (<a class="el" href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html">IAdminstratorLogic</a> logic)</td></tr>
+<tr class="memdesc:a69a1a9e69099a654ff8c6e95525a0b08"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will ask the user Event Id which needs to be removed.  <a href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a69a1a9e69099a654ff8c6e95525a0b08">More...</a><br /></td></tr>
+<tr class="separator:a69a1a9e69099a654ff8c6e95525a0b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23ba47e085b89e53b71b7f8476dfc745"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a23ba47e085b89e53b71b7f8476dfc745">RemoveGuest</a> (<a class="el" href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html">IAdminstratorLogic</a> logic)</td></tr>
+<tr class="memdesc:a23ba47e085b89e53b71b7f8476dfc745"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will ask the user Guest Id which needs to be removed.  <a href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a23ba47e085b89e53b71b7f8476dfc745">More...</a><br /></td></tr>
+<tr class="separator:a23ba47e085b89e53b71b7f8476dfc745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcbfa02ef1fb8542132ebf98fb6d9af0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#adcbfa02ef1fb8542132ebf98fb6d9af0">UpdatePlace</a> (<a class="el" href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html">IAdminstratorLogic</a> logic)</td></tr>
+<tr class="memdesc:adcbfa02ef1fb8542132ebf98fb6d9af0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will ask the user Event Id and Place name which needs to be updated..  <a href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#adcbfa02ef1fb8542132ebf98fb6d9af0">More...</a><br /></td></tr>
+<tr class="separator:adcbfa02ef1fb8542132ebf98fb6d9af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3706bc74e3fdac2068eec09cd2142cfe"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a3706bc74e3fdac2068eec09cd2142cfe">GetAllTickets</a> (<a class="el" href="interface_event_management_1_1_logic_1_1_i_front_office.html">IFrontOffice</a> logic)</td></tr>
+<tr class="memdesc:a3706bc74e3fdac2068eec09cd2142cfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">This will show the all the sold tickets.  <a href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a3706bc74e3fdac2068eec09cd2142cfe">More...</a><br /></td></tr>
+<tr class="separator:a3706bc74e3fdac2068eec09cd2142cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a873cb6f997fa3d0e7c46c4509049a951"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a873cb6f997fa3d0e7c46c4509049a951">GetAllGuests</a> (<a class="el" href="interface_event_management_1_1_logic_1_1_i_front_office.html">IFrontOffice</a> logic)</td></tr>
+<tr class="memdesc:a873cb6f997fa3d0e7c46c4509049a951"><td class="mdescLeft">&#160;</td><td class="mdescRight">This will list all the Guest present in the Database.  <a href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a873cb6f997fa3d0e7c46c4509049a951">More...</a><br /></td></tr>
+<tr class="separator:a873cb6f997fa3d0e7c46c4509049a951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae12b8292720dff8d30a96538c5e326ba"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#ae12b8292720dff8d30a96538c5e326ba">GetGuestInfo</a> (<a class="el" href="interface_event_management_1_1_logic_1_1_i_front_office.html">IFrontOffice</a> logic)</td></tr>
+<tr class="memdesc:ae12b8292720dff8d30a96538c5e326ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will display the guest info with specfic name.  <a href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#ae12b8292720dff8d30a96538c5e326ba">More...</a><br /></td></tr>
+<tr class="separator:ae12b8292720dff8d30a96538c5e326ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63110d941f1c5ad17c3ec91b0aed2e7d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a63110d941f1c5ad17c3ec91b0aed2e7d">GetEventInfo</a> (<a class="el" href="interface_event_management_1_1_logic_1_1_i_front_office.html">IFrontOffice</a> logic)</td></tr>
+<tr class="memdesc:a63110d941f1c5ad17c3ec91b0aed2e7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will display the Event info with specfic name.  <a href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a63110d941f1c5ad17c3ec91b0aed2e7d">More...</a><br /></td></tr>
+<tr class="separator:a63110d941f1c5ad17c3ec91b0aed2e7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa859afacfa4199fc6e3307591c7a1bbe"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#aa859afacfa4199fc6e3307591c7a1bbe">UpdateName</a> (<a class="el" href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html">IAdminstratorLogic</a> logic)</td></tr>
+<tr class="memdesc:aa859afacfa4199fc6e3307591c7a1bbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will ask the user Guest Id and Guest name which needs to be updated..  <a href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#aa859afacfa4199fc6e3307591c7a1bbe">More...</a><br /></td></tr>
+<tr class="separator:aa859afacfa4199fc6e3307591c7a1bbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe80fd9222b66b742a65b3558e55aa2a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#abe80fd9222b66b742a65b3558e55aa2a">RemoveTicket</a> (<a class="el" href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html">IAdminstratorLogic</a> logic)</td></tr>
+<tr class="memdesc:abe80fd9222b66b742a65b3558e55aa2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will ask the user Ticket Id which needs to be removed.  <a href="class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#abe80fd9222b66b742a65b3558e55aa2a">More...</a><br /></td></tr>
+<tr class="separator:abe80fd9222b66b742a65b3558e55aa2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_program_8cs_source.html#l00011">11</a> of file <a class="el" href="_program_8cs_source.html">Program.cs</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>OENIK_PROG3_2019_2_CU5J9O/OENIK_PROG3_2019_2_CU5J9O/<a class="el" href="_program_8cs_source.html">Program.cs</a></li>
+<div class="textblock"><p>This class contains the main function which will initiate the program. </p>
+
+<p class="definition">Definition at line <a class="el" href="_program_8cs_source.html#l00016">16</a> of file <a class="el" href="_program_8cs_source.html">Program.cs</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4d9e61ea99b44ca9de19d8438075a30a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d9e61ea99b44ca9de19d8438075a30a">&#9670;&nbsp;</a></span>AddEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void OENIK_PROG3_2020_2_CU5J9O.Program.AddEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html">IAdminstratorLogic</a>&#160;</td>
+          <td class="paramname"><em>logic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method will ask the event info from the user. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logic</td><td>IAdminstratorLogic.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_program_8cs_source.html#l00210">210</a> of file <a class="el" href="_program_8cs_source.html">Program.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5d8b283cd7a52d09f73d8fb324b49747"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d8b283cd7a52d09f73d8fb324b49747">&#9670;&nbsp;</a></span>AddGuest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void OENIK_PROG3_2020_2_CU5J9O.Program.AddGuest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_event_management_1_1_logic_1_1_i_front_office.html">IFrontOffice</a>&#160;</td>
+          <td class="paramname"><em>logic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method will ask the Guest info from the user. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logic</td><td>IFrontOffice.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_program_8cs_source.html#l00182">182</a> of file <a class="el" href="_program_8cs_source.html">Program.cs</a>.</p>
+
+</div>
+</div>
+<a id="a2b2f7a8d9a346eb50db46ef478e96f78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b2f7a8d9a346eb50db46ef478e96f78">&#9670;&nbsp;</a></span>AdmistartionMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void OENIK_PROG3_2020_2_CU5J9O.Program.AdmistartionMenu </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_event_management_1_1_logic_1_1_adminstrator_logic.html">AdminstratorLogic</a>&#160;</td>
+          <td class="paramname"><em>logic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This mehtod will generate the administrator menu to be shown to user. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logic</td><td>Adminstrator logic.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_program_8cs_source.html#l00037">37</a> of file <a class="el" href="_program_8cs_source.html">Program.cs</a>.</p>
+
+</div>
+</div>
+<a id="a1901860bc36dd427e430465e17217a34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1901860bc36dd427e430465e17217a34">&#9670;&nbsp;</a></span>AllEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void OENIK_PROG3_2020_2_CU5J9O.Program.AllEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_event_management_1_1_logic_1_1_i_front_office.html">IFrontOffice</a>&#160;</td>
+          <td class="paramname"><em>logic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method will list all the events in the database to the console. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logic</td><td>IAdminstratorLogic.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_program_8cs_source.html#l00317">317</a> of file <a class="el" href="_program_8cs_source.html">Program.cs</a>.</p>
+
+</div>
+</div>
+<a id="a067420718073dbda5fc306e6d4b14fd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a067420718073dbda5fc306e6d4b14fd3">&#9670;&nbsp;</a></span>ChangeDiscount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void OENIK_PROG3_2020_2_CU5J9O.Program.ChangeDiscount </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html">IAdminstratorLogic</a>&#160;</td>
+          <td class="paramname"><em>logic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method will ask for the input to change the discount on the ticket. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logic</td><td>IAdminstratorLogic.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_program_8cs_source.html#l00077">77</a> of file <a class="el" href="_program_8cs_source.html">Program.cs</a>.</p>
+
+</div>
+</div>
+<a id="a8252e73df41d685c9fc4d2fce7b435fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8252e73df41d685c9fc4d2fce7b435fb">&#9670;&nbsp;</a></span>FrontOfficeMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void OENIK_PROG3_2020_2_CU5J9O.Program.FrontOfficeMenu </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_event_management_1_1_logic_1_1_front_office_logic.html">FrontOfficeLogic</a>&#160;</td>
+          <td class="paramname"><em>logic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This mehtod will generate the Front Office menu to be shown to user. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logic</td><td>Front Office Menu logic.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_program_8cs_source.html#l00058">58</a> of file <a class="el" href="_program_8cs_source.html">Program.cs</a>.</p>
+
+</div>
+</div>
+<a id="a873cb6f997fa3d0e7c46c4509049a951"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a873cb6f997fa3d0e7c46c4509049a951">&#9670;&nbsp;</a></span>GetAllGuests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void OENIK_PROG3_2020_2_CU5J9O.Program.GetAllGuests </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_event_management_1_1_logic_1_1_i_front_office.html">IFrontOffice</a>&#160;</td>
+          <td class="paramname"><em>logic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This will list all the Guest present in the Database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logic</td><td>IFrontOffice.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_program_8cs_source.html#l00419">419</a> of file <a class="el" href="_program_8cs_source.html">Program.cs</a>.</p>
+
+</div>
+</div>
+<a id="a3706bc74e3fdac2068eec09cd2142cfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3706bc74e3fdac2068eec09cd2142cfe">&#9670;&nbsp;</a></span>GetAllTickets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void OENIK_PROG3_2020_2_CU5J9O.Program.GetAllTickets </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_event_management_1_1_logic_1_1_i_front_office.html">IFrontOffice</a>&#160;</td>
+          <td class="paramname"><em>logic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This will show the all the sold tickets. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logic</td><td>IFrontOffice.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_program_8cs_source.html#l00404">404</a> of file <a class="el" href="_program_8cs_source.html">Program.cs</a>.</p>
+
+</div>
+</div>
+<a id="a63110d941f1c5ad17c3ec91b0aed2e7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63110d941f1c5ad17c3ec91b0aed2e7d">&#9670;&nbsp;</a></span>GetEventInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void OENIK_PROG3_2020_2_CU5J9O.Program.GetEventInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_event_management_1_1_logic_1_1_i_front_office.html">IFrontOffice</a>&#160;</td>
+          <td class="paramname"><em>logic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method will display the Event info with specfic name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logic</td><td>IFrontOffice.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_program_8cs_source.html#l00451">451</a> of file <a class="el" href="_program_8cs_source.html">Program.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae12b8292720dff8d30a96538c5e326ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae12b8292720dff8d30a96538c5e326ba">&#9670;&nbsp;</a></span>GetGuestInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void OENIK_PROG3_2020_2_CU5J9O.Program.GetGuestInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_event_management_1_1_logic_1_1_i_front_office.html">IFrontOffice</a>&#160;</td>
+          <td class="paramname"><em>logic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method will display the guest info with specfic name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logic</td><td>IFrontOffice.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_program_8cs_source.html#l00434">434</a> of file <a class="el" href="_program_8cs_source.html">Program.cs</a>.</p>
+
+</div>
+</div>
+<a id="abcbe887bfc7a7c190b06f0e4898eadf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcbe887bfc7a7c190b06f0e4898eadf0">&#9670;&nbsp;</a></span>GetTicketInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void OENIK_PROG3_2020_2_CU5J9O.Program.GetTicketInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_event_management_1_1_logic_1_1_i_front_office.html">IFrontOffice</a>&#160;</td>
+          <td class="paramname"><em>logic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method will ask the user for the ticket id and will show the result. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logic</td><td>IFrontOffice.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_program_8cs_source.html#l00096">96</a> of file <a class="el" href="_program_8cs_source.html">Program.cs</a>.</p>
+
+</div>
+</div>
+<a id="a4d5cfd3eaa90db0644327f5da011c87e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d5cfd3eaa90db0644327f5da011c87e">&#9670;&nbsp;</a></span>ListSale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void OENIK_PROG3_2020_2_CU5J9O.Program.ListSale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html">IAdminstratorLogic</a>&#160;</td>
+          <td class="paramname"><em>logic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This function will list the total event sales to console. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logic</td><td>IAdminstratorLogic.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_program_8cs_source.html#l00122">122</a> of file <a class="el" href="_program_8cs_source.html">Program.cs</a>.</p>
+
+</div>
+</div>
+<a id="aee337c27639d141d2c8793ce645083bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee337c27639d141d2c8793ce645083bc">&#9670;&nbsp;</a></span>Main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void OENIK_PROG3_2020_2_CU5J9O.Program.Main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This is the main method. This will show the menu to user and wait for the choice. </p>
+
+<p class="definition">Definition at line <a class="el" href="_program_8cs_source.html#l00021">21</a> of file <a class="el" href="_program_8cs_source.html">Program.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa34b587ffdeb3b63347a6764f9c4025f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa34b587ffdeb3b63347a6764f9c4025f">&#9670;&nbsp;</a></span>NoOfMalesFemales()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void OENIK_PROG3_2020_2_CU5J9O.Program.NoOfMalesFemales </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html">IAdminstratorLogic</a>&#160;</td>
+          <td class="paramname"><em>logic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method will list the no of males and females in the event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logic</td><td>IAdminstratorLogic.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_program_8cs_source.html#l00142">142</a> of file <a class="el" href="_program_8cs_source.html">Program.cs</a>.</p>
+
+</div>
+</div>
+<a id="a69a1a9e69099a654ff8c6e95525a0b08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69a1a9e69099a654ff8c6e95525a0b08">&#9670;&nbsp;</a></span>RemoveEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void OENIK_PROG3_2020_2_CU5J9O.Program.RemoveEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html">IAdminstratorLogic</a>&#160;</td>
+          <td class="paramname"><em>logic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method will ask the user Event Id which needs to be removed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logic</td><td>IAdminstratorLogic.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_program_8cs_source.html#l00332">332</a> of file <a class="el" href="_program_8cs_source.html">Program.cs</a>.</p>
+
+</div>
+</div>
+<a id="a23ba47e085b89e53b71b7f8476dfc745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23ba47e085b89e53b71b7f8476dfc745">&#9670;&nbsp;</a></span>RemoveGuest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void OENIK_PROG3_2020_2_CU5J9O.Program.RemoveGuest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html">IAdminstratorLogic</a>&#160;</td>
+          <td class="paramname"><em>logic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method will ask the user Guest Id which needs to be removed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logic</td><td>IAdminstratorLogic.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_program_8cs_source.html#l00358">358</a> of file <a class="el" href="_program_8cs_source.html">Program.cs</a>.</p>
+
+</div>
+</div>
+<a id="abe80fd9222b66b742a65b3558e55aa2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe80fd9222b66b742a65b3558e55aa2a">&#9670;&nbsp;</a></span>RemoveTicket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void OENIK_PROG3_2020_2_CU5J9O.Program.RemoveTicket </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html">IAdminstratorLogic</a>&#160;</td>
+          <td class="paramname"><em>logic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method will ask the user Ticket Id which needs to be removed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logic</td><td>IAdminstratorLogic.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_program_8cs_source.html#l00488">488</a> of file <a class="el" href="_program_8cs_source.html">Program.cs</a>.</p>
+
+</div>
+</div>
+<a id="ada71d7995f1cd379c984109242b66f8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada71d7995f1cd379c984109242b66f8e">&#9670;&nbsp;</a></span>SellTicket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void OENIK_PROG3_2020_2_CU5J9O.Program.SellTicket </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_event_management_1_1_logic_1_1_i_front_office.html">IFrontOffice</a>&#160;</td>
+          <td class="paramname"><em>logic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method will allow user to sell the ticket to guest for particular event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logic</td><td>IFrontOffice.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_program_8cs_source.html#l00242">242</a> of file <a class="el" href="_program_8cs_source.html">Program.cs</a>.</p>
+
+</div>
+</div>
+<a id="a3be143ce07deb68b490e152ab05ba0be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3be143ce07deb68b490e152ab05ba0be">&#9670;&nbsp;</a></span>TicketsByGuest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void OENIK_PROG3_2020_2_CU5J9O.Program.TicketsByGuest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html">IAdminstratorLogic</a>&#160;</td>
+          <td class="paramname"><em>logic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method will generate the result with list of tickets brought by single guest. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logic</td><td>IAdminstratorLogic.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_program_8cs_source.html#l00162">162</a> of file <a class="el" href="_program_8cs_source.html">Program.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa859afacfa4199fc6e3307591c7a1bbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa859afacfa4199fc6e3307591c7a1bbe">&#9670;&nbsp;</a></span>UpdateName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void OENIK_PROG3_2020_2_CU5J9O.Program.UpdateName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html">IAdminstratorLogic</a>&#160;</td>
+          <td class="paramname"><em>logic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method will ask the user Guest Id and Guest name which needs to be updated.. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logic</td><td>IAdminstratorLogic.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_program_8cs_source.html#l00468">468</a> of file <a class="el" href="_program_8cs_source.html">Program.cs</a>.</p>
+
+</div>
+</div>
+<a id="adcbfa02ef1fb8542132ebf98fb6d9af0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcbfa02ef1fb8542132ebf98fb6d9af0">&#9670;&nbsp;</a></span>UpdatePlace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void OENIK_PROG3_2020_2_CU5J9O.Program.UpdatePlace </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html">IAdminstratorLogic</a>&#160;</td>
+          <td class="paramname"><em>logic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method will ask the user Event Id and Place name which needs to be updated.. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logic</td><td>IAdminstratorLogic.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_program_8cs_source.html#l00384">384</a> of file <a class="el" href="_program_8cs_source.html">Program.cs</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>C:/Users/Vishav/Documents/oenik_prog3_2020_2_cu5j9o/OENIK_PROG3_2019_2_CU5J9O/OENIK_PROG3_2019_2_CU5J9O/<a class="el" href="_program_8cs_source.html">Program.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

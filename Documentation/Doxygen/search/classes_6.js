@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['repository_79',['Repository',['../class_event_management_1_1_repository_1_1_repository.html',1,'EventManagement::Repository']]],
-  ['repository_3c_20event_20_3e_80',['Repository&lt; Event &gt;',['../class_event_management_1_1_repository_1_1_repository.html',1,'EventManagement::Repository']]],
-  ['repository_3c_20guest_20_3e_81',['Repository&lt; Guest &gt;',['../class_event_management_1_1_repository_1_1_repository.html',1,'EventManagement::Repository']]],
-  ['repository_3c_20ticket_20_3e_82',['Repository&lt; Ticket &gt;',['../class_event_management_1_1_repository_1_1_repository.html',1,'EventManagement::Repository']]]
+  ['program_135',['Program',['../class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html',1,'OENIK_PROG3_2020_2_CU5J9O']]]
 ];

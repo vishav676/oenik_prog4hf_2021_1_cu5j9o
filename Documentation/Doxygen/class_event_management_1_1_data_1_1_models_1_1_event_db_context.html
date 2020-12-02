@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Planning: EventManagement.Data.Models.EventDbContext Class Reference</title>
+<title>Event Management: EventManagement.Data.Models.EventDbContext Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,10 +25,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Planning
-   &#160;<span id="projectnumber">1.0</span>
+   <div id="projectname">Event Management
+   &#160;<span id="projectnumber">1.0.0</span>
    </div>
-   <div id="projectbrief">This project is the part of Advance Development Techniques course. I, hereby, developed an Event Management Application which could manage the Event, Tickets and the Guest list. All the data is stored in the local Database.</div>
+   <div id="projectbrief">This application is built using C# and Sql Database. This application strictly follows the SOLID principle and apply All Basic CRUDS opertions. Various Advanced Sql Queries are also implemented.</div>
   </td>
  </tr>
  </tbody>
@@ -119,9 +119,9 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:aaa6827488cc465e259e6b9af7cbb8dde"><td class="memItemLeft" align="right" valign="top">virtual DbSet&lt; <a class="el" href="class_event_management_1_1_data_1_1_models_1_1_event.html">Event</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_data_1_1_models_1_1_event_db_context.html#aaa6827488cc465e259e6b9af7cbb8dde">Events</a><code> [get, set]</code></td></tr>
-<tr class="memdesc:aaa6827488cc465e259e6b9af7cbb8dde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets or Sets the DbSet of the <a class="el" href="class_event_management_1_1_data_1_1_models_1_1_event.html" title="This class is marked as table in the Database. This represents events Table in local Database.">Event</a> class. This is a virtual property.  <a href="class_event_management_1_1_data_1_1_models_1_1_event_db_context.html#aaa6827488cc465e259e6b9af7cbb8dde">More...</a><br /></td></tr>
-<tr class="separator:aaa6827488cc465e259e6b9af7cbb8dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22716961548cc2292a195ce438c6d52e"><td class="memItemLeft" align="right" valign="top">virtual DbSet&lt; <a class="el" href="class_event_management_1_1_data_1_1_models_1_1_events.html">Events</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_data_1_1_models_1_1_event_db_context.html#a22716961548cc2292a195ce438c6d52e">Events</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a22716961548cc2292a195ce438c6d52e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets or Sets the DbSet of the <a class="el" href="class_event_management_1_1_data_1_1_models_1_1_events.html" title="This class is marked as table in the Database. This represents events Table in local Database.">Models.Events</a> class. This is a virtual property.  <a href="class_event_management_1_1_data_1_1_models_1_1_event_db_context.html#a22716961548cc2292a195ce438c6d52e">More...</a><br /></td></tr>
+<tr class="separator:a22716961548cc2292a195ce438c6d52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3eee54848fe9e767b967f0c318e7dd7"><td class="memItemLeft" align="right" valign="top">virtual DbSet&lt; <a class="el" href="class_event_management_1_1_data_1_1_models_1_1_ticket.html">Ticket</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_data_1_1_models_1_1_event_db_context.html#af3eee54848fe9e767b967f0c318e7dd7">Tickets</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:af3eee54848fe9e767b967f0c318e7dd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets or Sets the DbSet of the <a class="el" href="class_event_management_1_1_data_1_1_models_1_1_ticket.html" title="This class is represents table in the Database. Name of the table is tickets. which store the info re...">Ticket</a> class. This is a virtual property.  <a href="class_event_management_1_1_data_1_1_models_1_1_event_db_context.html#af3eee54848fe9e767b967f0c318e7dd7">More...</a><br /></td></tr>
 <tr class="separator:af3eee54848fe9e767b967f0c318e7dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -183,7 +183,7 @@ Properties</h2></td></tr>
 <p>This method will configure the Database, using <a class="el" href="namespace_event_management_1_1_data.html">Data</a> Source <a class="el" href="namespace_event_management_1_1_data.html">Data</a> Source is of Relative path which ensure it will work in every computer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">optionsBuilder</td><td>It of DbContextOptionsBuilder type.</td></tr>
+    <tr><td class="paramname">optionsBuilder</td><td>It is of DbContextOptionsBuilder type.</td></tr>
   </table>
   </dd>
 </dl>
@@ -219,18 +219,18 @@ Properties</h2></td></tr>
 <p>This method will create the models in the Database. And provide the connection between the tables of Database. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">modelBuilder</td><td>It of ModelBuilder type.</td></tr>
+    <tr><td class="paramname">modelBuilder</td><td>It is of ModelBuilder type.</td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_event_db_context_8cs_source.html#l00062">62</a> of file <a class="el" href="_event_db_context_8cs_source.html">EventDbContext.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_event_db_context_8cs_source.html#l00067">67</a> of file <a class="el" href="_event_db_context_8cs_source.html">EventDbContext.cs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
-<a id="aaa6827488cc465e259e6b9af7cbb8dde"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa6827488cc465e259e6b9af7cbb8dde">&#9670;&nbsp;</a></span>Events</h2>
+<a id="a22716961548cc2292a195ce438c6d52e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22716961548cc2292a195ce438c6d52e">&#9670;&nbsp;</a></span>Events</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -239,7 +239,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual DbSet&lt;<a class="el" href="class_event_management_1_1_data_1_1_models_1_1_event.html">Event</a>&gt; EventManagement.Data.Models.EventDbContext.Events</td>
+          <td class="memname">virtual DbSet&lt;<a class="el" href="class_event_management_1_1_data_1_1_models_1_1_events.html">Events</a>&gt; EventManagement.Data.Models.EventDbContext.Events</td>
         </tr>
       </table>
   </td>
@@ -249,7 +249,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Gets or Sets the DbSet of the <a class="el" href="class_event_management_1_1_data_1_1_models_1_1_event.html" title="This class is marked as table in the Database. This represents events Table in local Database.">Event</a> class. This is a virtual property. </p>
+<p>Gets or Sets the DbSet of the <a class="el" href="class_event_management_1_1_data_1_1_models_1_1_events.html" title="This class is marked as table in the Database. This represents events Table in local Database.">Models.Events</a> class. This is a virtual property. </p>
 
 <p class="definition">Definition at line <a class="el" href="_event_db_context_8cs_source.html#l00027">27</a> of file <a class="el" href="_event_db_context_8cs_source.html">EventDbContext.cs</a>.</p>
 
@@ -308,7 +308,7 @@ Properties</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>OENIK_PROG3_2019_2_CU5J9O/EventManagement.Data/Models/<a class="el" href="_event_db_context_8cs_source.html">EventDbContext.cs</a></li>
+<li>C:/Users/Vishav/Documents/oenik_prog3_2020_2_cu5j9o/OENIK_PROG3_2019_2_CU5J9O/EventManagement.Data/Models/<a class="el" href="_event_db_context_8cs_source.html">EventDbContext.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

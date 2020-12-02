@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "Planning", "index.html", [
+  [ "Event Management", "index.html", [
     [ "Packages", "namespaces.html", [
       [ "Packages", "namespaces.html", "namespaces_dup" ]
     ] ],
@@ -35,6 +35,7 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ],
         [ "Properties", "functions_prop.html", null ]
       ] ]
     ] ],
@@ -46,7 +47,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_business_logic_8cs_source.html"
+"_adminstrator_logic_8cs_source.html",
+"interface_event_management_1_1_repository_1_1_i_guest_repository.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

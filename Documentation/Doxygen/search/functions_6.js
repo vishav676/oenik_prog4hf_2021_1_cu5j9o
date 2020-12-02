@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['remove_105',['remove',['../class_event_management_1_1_logic_1_1_business_logic.html#ab4d6435486bd6899daa3d9c7a1309df5',1,'EventManagement.Logic.BusinessLogic.remove()'],['../interface_event_management_1_1_logic_1_1_i_event_logic.html#a1a2c478195be9065775cf83ad6da33d8',1,'EventManagement.Logic.IEventLogic.remove()']]]
+  ['listsale_187',['ListSale',['../class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#a4d5cfd3eaa90db0644327f5da011c87e',1,'OENIK_PROG3_2020_2_CU5J9O::Program']]]
 ];

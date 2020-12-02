@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Planning: OENIK_PROG3_2019_2_CU5J9O/EventManagement.Logic/TotalEventSale.cs Source File</title>
+<title>Event Management: C:/Users/Vishav/Documents/oenik_prog3_2020_2_cu5j9o/OENIK_PROG3_2019_2_CU5J9O/EventManagement.Logic/TotalEventSale.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,10 +25,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Planning
-   &#160;<span id="projectnumber">1.0</span>
+   <div id="projectname">Event Management
+   &#160;<span id="projectnumber">1.0.0</span>
    </div>
-   <div id="projectbrief">This project is the part of Advance Development Techniques course. I, hereby, developed an Event Management Application which could manage the Event, Tickets and the Guest list. All the data is stored in the local Database.</div>
+   <div id="projectbrief">This application is built using C# and Sql Database. This application strictly follows the SOLID principle and apply All Basic CRUDS opertions. Various Advanced Sql Queries are also implemented.</div>
   </td>
  </tr>
  </tbody>
@@ -87,45 +87,53 @@ $(document).ready(function(){initNavTree('_total_event_sale_8cs_source.html','')
 <div class="title">TotalEventSale.cs</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_event_management_1_1_logic.html">EventManagement.Logic</a></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_event_management_1_1_logic_1_1_total_event_sale.html">    5</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_event_management_1_1_logic_1_1_total_event_sale.html">TotalEventSale</a></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    {</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> EventName { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> TicketPrice { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">string</span> ToString()</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <span class="keywordflow">return</span> $<span class="stringliteral">&quot;Event = {EventName} ; Total = {TicketPrice}&quot;</span>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        }</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> Equals(<span class="keywordtype">object</span> obj)</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordflow">if</span> (obj is <a class="code" href="class_event_management_1_1_logic_1_1_total_event_sale.html">TotalEventSale</a>)</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                <a class="code" href="class_event_management_1_1_logic_1_1_total_event_sale.html">TotalEventSale</a> other = obj as <a class="code" href="class_event_management_1_1_logic_1_1_total_event_sale.html">TotalEventSale</a>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                <span class="keywordflow">return</span> this.EventName == other.EventName &amp;&amp; this.TicketPrice == other.TicketPrice;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> GetHashCode()</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)TicketPrice + EventName.GetHashCode();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_event_management_1_1_logic.html">EventManagement.Logic</a></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;{</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="keyword">using</span> System;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_event_management_1_1_logic_1_1_total_event_sale.html">    8</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_event_management_1_1_logic_1_1_total_event_sale.html">TotalEventSale</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_event_management_1_1_logic_1_1_total_event_sale.html#aaa39c42ede47b708f414977109717b90">   13</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_event_management_1_1_logic_1_1_total_event_sale.html#aaa39c42ede47b708f414977109717b90">EventName</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_event_management_1_1_logic_1_1_total_event_sale.html#a86545f6f1d4fd4b302767afd7add929f">   18</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="class_event_management_1_1_logic_1_1_total_event_sale.html#a86545f6f1d4fd4b302767afd7add929f">TicketPrice</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_event_management_1_1_logic_1_1_total_event_sale.html#a962dcd1af6ce75314fd994cfbc2d0173">   24</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code" href="class_event_management_1_1_logic_1_1_total_event_sale.html#a962dcd1af6ce75314fd994cfbc2d0173">ToString</a>()</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">return</span> $<span class="stringliteral">&quot;Event = {this.EventName} ; Total = {this.TicketPrice}&quot;</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_event_management_1_1_logic_1_1_total_event_sale.html#aab38ecb3d81e7b1f523d2d5fe3f76a6c">   34</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="class_event_management_1_1_logic_1_1_total_event_sale.html#aab38ecb3d81e7b1f523d2d5fe3f76a6c">Equals</a>(<span class="keywordtype">object</span> obj)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">if</span> (obj is <a class="code" href="class_event_management_1_1_logic_1_1_total_event_sale.html">TotalEventSale</a>)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <a class="code" href="class_event_management_1_1_logic_1_1_total_event_sale.html">TotalEventSale</a> other = obj as <a class="code" href="class_event_management_1_1_logic_1_1_total_event_sale.html">TotalEventSale</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="keywordflow">return</span> this.<a class="code" href="class_event_management_1_1_logic_1_1_total_event_sale.html#aaa39c42ede47b708f414977109717b90">EventName</a> == other.<a class="code" href="class_event_management_1_1_logic_1_1_total_event_sale.html#aaa39c42ede47b708f414977109717b90">EventName</a> &amp;&amp; this.<a class="code" href="class_event_management_1_1_logic_1_1_total_event_sale.html#a86545f6f1d4fd4b302767afd7add929f">TicketPrice</a> == other.<a class="code" href="class_event_management_1_1_logic_1_1_total_event_sale.html#a86545f6f1d4fd4b302767afd7add929f">TicketPrice</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_event_management_1_1_logic_1_1_total_event_sale.html#a8a149b640555c22d88b71d98b341252f">   51</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">int</span> <a class="code" href="class_event_management_1_1_logic_1_1_total_event_sale.html#a8a149b640555c22d88b71d98b341252f">GetHashCode</a>()</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)this.<a class="code" href="class_event_management_1_1_logic_1_1_total_event_sale.html#a86545f6f1d4fd4b302767afd7add929f">TicketPrice</a> + this.<a class="code" href="class_event_management_1_1_logic_1_1_total_event_sale.html#aaa39c42ede47b708f414977109717b90">EventName</a>.GetHashCode();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_event_management_1_1_logic_1_1_total_event_sale_html"><div class="ttname"><a href="class_event_management_1_1_logic_1_1_total_event_sale.html">EventManagement.Logic.TotalEventSale</a></div><div class="ttdef"><b>Definition:</b> <a href="_total_event_sale_8cs_source.html#l00005">TotalEventSale.cs:6</a></div></div>
-<div class="ttc" id="anamespace_event_management_1_1_logic_html"><div class="ttname"><a href="namespace_event_management_1_1_logic.html">EventManagement.Logic</a></div><div class="ttdef"><b>Definition:</b> <a href="_business_logic_8cs_source.html#l00001">BusinessLogic.cs:2</a></div></div>
+<div class="ttc" id="aclass_event_management_1_1_logic_1_1_total_event_sale_html_aab38ecb3d81e7b1f523d2d5fe3f76a6c"><div class="ttname"><a href="class_event_management_1_1_logic_1_1_total_event_sale.html#aab38ecb3d81e7b1f523d2d5fe3f76a6c">EventManagement.Logic.TotalEventSale.Equals</a></div><div class="ttdeci">override bool Equals(object obj)</div><div class="ttdoc">Override equals method to check whether two objects are equal.</div><div class="ttdef"><b>Definition:</b> <a href="_total_event_sale_8cs_source.html#l00034">TotalEventSale.cs:34</a></div></div>
+<div class="ttc" id="aclass_event_management_1_1_logic_1_1_total_event_sale_html_a962dcd1af6ce75314fd994cfbc2d0173"><div class="ttname"><a href="class_event_management_1_1_logic_1_1_total_event_sale.html#a962dcd1af6ce75314fd994cfbc2d0173">EventManagement.Logic.TotalEventSale.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdoc">Override toString to generate the string value from the object.</div><div class="ttdef"><b>Definition:</b> <a href="_total_event_sale_8cs_source.html#l00024">TotalEventSale.cs:24</a></div></div>
+<div class="ttc" id="aclass_event_management_1_1_logic_1_1_total_event_sale_html_a8a149b640555c22d88b71d98b341252f"><div class="ttname"><a href="class_event_management_1_1_logic_1_1_total_event_sale.html#a8a149b640555c22d88b71d98b341252f">EventManagement.Logic.TotalEventSale.GetHashCode</a></div><div class="ttdeci">override int GetHashCode()</div><div class="ttdoc">Override GetHashCode method to generate the hash code based on object.</div><div class="ttdef"><b>Definition:</b> <a href="_total_event_sale_8cs_source.html#l00051">TotalEventSale.cs:51</a></div></div>
+<div class="ttc" id="aclass_event_management_1_1_logic_1_1_total_event_sale_html_aaa39c42ede47b708f414977109717b90"><div class="ttname"><a href="class_event_management_1_1_logic_1_1_total_event_sale.html#aaa39c42ede47b708f414977109717b90">EventManagement.Logic.TotalEventSale.EventName</a></div><div class="ttdeci">string EventName</div><div class="ttdoc">Gets or sets event Name.</div><div class="ttdef"><b>Definition:</b> <a href="_total_event_sale_8cs_source.html#l00013">TotalEventSale.cs:13</a></div></div>
+<div class="ttc" id="aclass_event_management_1_1_logic_1_1_total_event_sale_html"><div class="ttname"><a href="class_event_management_1_1_logic_1_1_total_event_sale.html">EventManagement.Logic.TotalEventSale</a></div><div class="ttdoc">public class to store the total Event sale of the Event.</div><div class="ttdef"><b>Definition:</b> <a href="_total_event_sale_8cs_source.html#l00008">TotalEventSale.cs:9</a></div></div>
+<div class="ttc" id="aclass_event_management_1_1_logic_1_1_total_event_sale_html_a86545f6f1d4fd4b302767afd7add929f"><div class="ttname"><a href="class_event_management_1_1_logic_1_1_total_event_sale.html#a86545f6f1d4fd4b302767afd7add929f">EventManagement.Logic.TotalEventSale.TicketPrice</a></div><div class="ttdeci">int TicketPrice</div><div class="ttdoc">Gets or sets ticket price.</div><div class="ttdef"><b>Definition:</b> <a href="_total_event_sale_8cs_source.html#l00018">TotalEventSale.cs:18</a></div></div>
+<div class="ttc" id="anamespace_event_management_1_1_logic_html"><div class="ttname"><a href="namespace_event_management_1_1_logic.html">EventManagement.Logic</a></div><div class="ttdef"><b>Definition:</b> <a href="_adminstrator_logic_8cs_source.html#l00001">AdminstratorLogic.cs:2</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_229ee1184438649560921d240cbe4ad3.html">OENIK_PROG3_2019_2_CU5J9O</a></li><li class="navelem"><a class="el" href="dir_524c55401e9630bb1e745eef74260a49.html">EventManagement.Logic</a></li><li class="navelem"><b>TotalEventSale.cs</b></li>
+    <li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_b79084257f006c7d5cd10b3cfda44881.html">Vishav</a></li><li class="navelem"><a class="el" href="dir_d4c1802c2c52b80a7ac976ea4fdd3b88.html">Documents</a></li><li class="navelem"><a class="el" href="dir_eb88bd11b68c8e95af0ed24b8c9be70c.html">oenik_prog3_2020_2_cu5j9o</a></li><li class="navelem"><a class="el" href="dir_9ce6caf0c5c53d99776562bb576f96a8.html">OENIK_PROG3_2019_2_CU5J9O</a></li><li class="navelem"><a class="el" href="dir_83d9897835ce878ec22ec097b865753d.html">EventManagement.Logic</a></li><li class="navelem"><b>TotalEventSale.cs</b></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

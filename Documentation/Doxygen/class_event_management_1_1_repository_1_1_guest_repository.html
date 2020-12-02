@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Planning: EventManagement.Repository.GuestRepository Class Reference</title>
+<title>Event Management: EventManagement.Repository.GuestRepository Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,10 +25,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Planning
-   &#160;<span id="projectnumber">1.0</span>
+   <div id="projectname">Event Management
+   &#160;<span id="projectnumber">1.0.0</span>
    </div>
-   <div id="projectbrief">This project is the part of Advance Development Techniques course. I, hereby, developed an Event Management Application which could manage the Event, Tickets and the Guest list. All the data is stored in the local Database.</div>
+   <div id="projectbrief">This application is built using C# and Sql Database. This application strictly follows the SOLID principle and apply All Basic CRUDS opertions. Various Advanced Sql Queries are also implemented.</div>
   </td>
  </tr>
  </tbody>
@@ -90,71 +90,222 @@ $(document).ready(function(){initNavTree('class_event_management_1_1_repository_
 <div class="title">EventManagement.Repository.GuestRepository Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class store the implementation of Interface <a class="el" href="interface_event_management_1_1_repository_1_1_i_guest_repository.html" title="This interface store the queries related to Guest Table It extends IRepository interface.">IGuestRepository</a> and extends class <a class="el" href="class_event_management_1_1_repository_1_1_repo.html" title="This class store the implementation of Interface IRepository&lt;T&gt;.">Repo</a> of type Events.  
+ <a href="class_event_management_1_1_repository_1_1_guest_repository.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for EventManagement.Repository.GuestRepository:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_event_management_1_1_repository_1_1_guest_repository.png" usemap="#EventManagement.Repository.GuestRepository_map" alt=""/>
   <map id="EventManagement.Repository.GuestRepository_map" name="EventManagement.Repository.GuestRepository_map">
-<area href="class_event_management_1_1_repository_1_1_repository.html" alt="EventManagement.Repository.Repository&lt; Guest &gt;" shape="rect" coords="0,56,303,80"/>
-<area href="interface_event_management_1_1_repository_1_1_i_guest_repository.html" alt="EventManagement.Repository.IGuestRepository" shape="rect" coords="313,56,616,80"/>
+<area href="class_event_management_1_1_repository_1_1_repo.html" alt="EventManagement.Repository.Repo&lt; Guest &gt;" shape="rect" coords="0,56,303,80"/>
+<area href="interface_event_management_1_1_repository_1_1_i_guest_repository.html" title="This interface store the queries related to Guest Table It extends IRepository interface." alt="EventManagement.Repository.IGuestRepository" shape="rect" coords="313,56,616,80"/>
 <area href="interface_event_management_1_1_repository_1_1_i_repository.html" alt="EventManagement.Repository.IRepository&lt; Guest &gt;" shape="rect" coords="313,0,616,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a20d68d49a5dbb6ed7e72945b6ce62cdb"><td class="memItemLeft" align="right" valign="top"><a id="a20d68d49a5dbb6ed7e72945b6ce62cdb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>GuestRepository</b> (DbContext ctx)</td></tr>
+<tr class="memitem:a20d68d49a5dbb6ed7e72945b6ce62cdb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_repository_1_1_guest_repository.html#a20d68d49a5dbb6ed7e72945b6ce62cdb">GuestRepository</a> (DbContext <a class="el" href="class_event_management_1_1_repository_1_1_repo.html#ac963b4c7f8a28ccc62ffe11ce0f141f4">ctx</a>)</td></tr>
+<tr class="memdesc:a20d68d49a5dbb6ed7e72945b6ce62cdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the <a class="el" href="class_event_management_1_1_repository_1_1_guest_repository.html" title="This class store the implementation of Interface IGuestRepository and extends class Repo of type Even...">GuestRepository</a> class.  <a href="class_event_management_1_1_repository_1_1_guest_repository.html#a20d68d49a5dbb6ed7e72945b6ce62cdb">More...</a><br /></td></tr>
 <tr class="separator:a20d68d49a5dbb6ed7e72945b6ce62cdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c2819ead81c6cc27c7857f915cc8278"><td class="memItemLeft" align="right" valign="top"><a id="a2c2819ead81c6cc27c7857f915cc8278"></a>
-override <a class="el" href="class_event_management_1_1_data_1_1_models_1_1_guest.html">Guest</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetOne</b> (int id)</td></tr>
+<tr class="memitem:a93729a4edfc1532a4005937f4ef0c3fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_repository_1_1_guest_repository.html#a93729a4edfc1532a4005937f4ef0c3fb">ChangeName</a> (int id, string newName)</td></tr>
+<tr class="memdesc:a93729a4edfc1532a4005937f4ef0c3fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the implementation of the method from the <a class="el" href="interface_event_management_1_1_repository_1_1_i_guest_repository.html" title="This interface store the queries related to Guest Table It extends IRepository interface.">IGuestRepository</a>.  <a href="class_event_management_1_1_repository_1_1_guest_repository.html#a93729a4edfc1532a4005937f4ef0c3fb">More...</a><br /></td></tr>
+<tr class="separator:a93729a4edfc1532a4005937f4ef0c3fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c2819ead81c6cc27c7857f915cc8278"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="class_event_management_1_1_data_1_1_models_1_1_guest.html">Guest</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_repository_1_1_guest_repository.html#a2c2819ead81c6cc27c7857f915cc8278">GetOne</a> (int id)</td></tr>
+<tr class="memdesc:a2c2819ead81c6cc27c7857f915cc8278"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is overriden method from <a class="el" href="class_event_management_1_1_repository_1_1_repo.html#a3dbc444e913084fadb9a087bd1fe8436" title="Initializes a new instance of the Repo&lt;T&gt; class.">Repo&lt;T&gt;</a> class.  <a href="class_event_management_1_1_repository_1_1_guest_repository.html#a2c2819ead81c6cc27c7857f915cc8278">More...</a><br /></td></tr>
 <tr class="separator:a2c2819ead81c6cc27c7857f915cc8278"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9f91b8d8dc43154325a088f03cfc702"><td class="memItemLeft" align="right" valign="top"><a id="ae9f91b8d8dc43154325a088f03cfc702"></a>
-override bool&#160;</td><td class="memItemRight" valign="bottom"><b>Remove</b> (int id)</td></tr>
-<tr class="separator:ae9f91b8d8dc43154325a088f03cfc702"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_event_management_1_1_repository_1_1_repository"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_event_management_1_1_repository_1_1_repository')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_event_management_1_1_repository_1_1_repository.html">EventManagement.Repository.Repository&lt; Guest &gt;</a></td></tr>
-<tr class="memitem:a8574b73e9549e80fc2b66587c5668458 inherit pub_methods_class_event_management_1_1_repository_1_1_repository"><td class="memItemLeft" align="right" valign="top"><a id="a8574b73e9549e80fc2b66587c5668458"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Repository</b> (DbContext ctx)</td></tr>
-<tr class="separator:a8574b73e9549e80fc2b66587c5668458 inherit pub_methods_class_event_management_1_1_repository_1_1_repository"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46b4f8cf41f89c0010205a5f93b23c02 inherit pub_methods_class_event_management_1_1_repository_1_1_repository"><td class="memItemLeft" align="right" valign="top"><a id="a46b4f8cf41f89c0010205a5f93b23c02"></a>
-IQueryable&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetAll</b> ()</td></tr>
-<tr class="separator:a46b4f8cf41f89c0010205a5f93b23c02 inherit pub_methods_class_event_management_1_1_repository_1_1_repository"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bd38fa41aab40cb8bb0f72a37769206 inherit pub_methods_class_event_management_1_1_repository_1_1_repository"><td class="memItemLeft" align="right" valign="top"><a id="a9bd38fa41aab40cb8bb0f72a37769206"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Insert</b> (T entity)</td></tr>
-<tr class="separator:a9bd38fa41aab40cb8bb0f72a37769206 inherit pub_methods_class_event_management_1_1_repository_1_1_repository"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1f056c7befc42597696d58f9ed15c33 inherit pub_methods_class_event_management_1_1_repository_1_1_repository"><td class="memItemLeft" align="right" valign="top"><a id="ac1f056c7befc42597696d58f9ed15c33"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Remove</b> (T entity)</td></tr>
-<tr class="separator:ac1f056c7befc42597696d58f9ed15c33 inherit pub_methods_class_event_management_1_1_repository_1_1_repository"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab38d9c8ce5dd5a0494d1da77eb522bea"><td class="memItemLeft" align="right" valign="top">IQueryable&lt; <a class="el" href="class_event_management_1_1_data_1_1_models_1_1_guest.html">Guest</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_repository_1_1_guest_repository.html#ab38d9c8ce5dd5a0494d1da77eb522bea">Search</a> (string name)</td></tr>
+<tr class="memdesc:ab38d9c8ce5dd5a0494d1da77eb522bea"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the implementation of the method from <a class="el" href="interface_event_management_1_1_repository_1_1_i_guest_repository.html" title="This interface store the queries related to Guest Table It extends IRepository interface.">IGuestRepository</a> interface.  <a href="class_event_management_1_1_repository_1_1_guest_repository.html#ab38d9c8ce5dd5a0494d1da77eb522bea">More...</a><br /></td></tr>
+<tr class="separator:ab38d9c8ce5dd5a0494d1da77eb522bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_event_management_1_1_repository_1_1_repo"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_event_management_1_1_repository_1_1_repo')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_event_management_1_1_repository_1_1_repo.html">EventManagement.Repository.Repo&lt; Guest &gt;</a></td></tr>
+<tr class="memitem:a3dbc444e913084fadb9a087bd1fe8436 inherit pub_methods_class_event_management_1_1_repository_1_1_repo"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_repository_1_1_repo.html#a3dbc444e913084fadb9a087bd1fe8436">Repo</a> (DbContext <a class="el" href="class_event_management_1_1_repository_1_1_repo.html#ac963b4c7f8a28ccc62ffe11ce0f141f4">ctx</a>)</td></tr>
+<tr class="memdesc:a3dbc444e913084fadb9a087bd1fe8436 inherit pub_methods_class_event_management_1_1_repository_1_1_repo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new instance of the <a class="el" href="class_event_management_1_1_repository_1_1_repo.html#a3dbc444e913084fadb9a087bd1fe8436" title="Initializes a new instance of the Repo&lt;T&gt; class.">Repo&lt;T&gt;</a> class.  <a href="class_event_management_1_1_repository_1_1_repo.html#a3dbc444e913084fadb9a087bd1fe8436">More...</a><br /></td></tr>
+<tr class="separator:a3dbc444e913084fadb9a087bd1fe8436 inherit pub_methods_class_event_management_1_1_repository_1_1_repo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b855b593fcb4e5d19c02ddf1b5707b6 inherit pub_methods_class_event_management_1_1_repository_1_1_repo"><td class="memItemLeft" align="right" valign="top">IQueryable&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_repository_1_1_repo.html#a2b855b593fcb4e5d19c02ddf1b5707b6">GetAll</a> ()</td></tr>
+<tr class="memdesc:a2b855b593fcb4e5d19c02ddf1b5707b6 inherit pub_methods_class_event_management_1_1_repository_1_1_repo"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method return all the entries of type T.  <a href="class_event_management_1_1_repository_1_1_repo.html#a2b855b593fcb4e5d19c02ddf1b5707b6">More...</a><br /></td></tr>
+<tr class="separator:a2b855b593fcb4e5d19c02ddf1b5707b6 inherit pub_methods_class_event_management_1_1_repository_1_1_repo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ba1bf13f06c61cded434ef11903c253 inherit pub_methods_class_event_management_1_1_repository_1_1_repo"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_repository_1_1_repo.html#a1ba1bf13f06c61cded434ef11903c253">Insert</a> (T entity)</td></tr>
+<tr class="memdesc:a1ba1bf13f06c61cded434ef11903c253 inherit pub_methods_class_event_management_1_1_repository_1_1_repo"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method insert the type T into the specific table.  <a href="class_event_management_1_1_repository_1_1_repo.html#a1ba1bf13f06c61cded434ef11903c253">More...</a><br /></td></tr>
+<tr class="separator:a1ba1bf13f06c61cded434ef11903c253 inherit pub_methods_class_event_management_1_1_repository_1_1_repo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcb3e634a52dff1837759fe905cef771 inherit pub_methods_class_event_management_1_1_repository_1_1_repo"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_repository_1_1_repo.html#afcb3e634a52dff1837759fe905cef771">Remove</a> (int id)</td></tr>
+<tr class="memdesc:afcb3e634a52dff1837759fe905cef771 inherit pub_methods_class_event_management_1_1_repository_1_1_repo"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method removes the entry with specific Id from the particular table.  <a href="class_event_management_1_1_repository_1_1_repo.html#afcb3e634a52dff1837759fe905cef771">More...</a><br /></td></tr>
+<tr class="separator:afcb3e634a52dff1837759fe905cef771 inherit pub_methods_class_event_management_1_1_repository_1_1_repo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f74ac5a054ebd9b441ddb04c24124a9 inherit pub_methods_class_event_management_1_1_repository_1_1_repo"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_repository_1_1_repo.html#a3f74ac5a054ebd9b441ddb04c24124a9">Remove</a> (T entity)</td></tr>
+<tr class="memdesc:a3f74ac5a054ebd9b441ddb04c24124a9 inherit pub_methods_class_event_management_1_1_repository_1_1_repo"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method removes the specific model from the particular table.  <a href="class_event_management_1_1_repository_1_1_repo.html#a3f74ac5a054ebd9b441ddb04c24124a9">More...</a><br /></td></tr>
+<tr class="separator:a3f74ac5a054ebd9b441ddb04c24124a9 inherit pub_methods_class_event_management_1_1_repository_1_1_repo"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_interface_event_management_1_1_repository_1_1_i_repository"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_interface_event_management_1_1_repository_1_1_i_repository')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="interface_event_management_1_1_repository_1_1_i_repository.html">EventManagement.Repository.IRepository&lt; Guest &gt;</a></td></tr>
-<tr class="memitem:a881167e28bb187b1271461218460ed42 inherit pub_methods_interface_event_management_1_1_repository_1_1_i_repository"><td class="memItemLeft" align="right" valign="top"><a id="a881167e28bb187b1271461218460ed42"></a>
-IQueryable&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetAll</b> ()</td></tr>
+<tr class="memitem:a881167e28bb187b1271461218460ed42 inherit pub_methods_interface_event_management_1_1_repository_1_1_i_repository"><td class="memItemLeft" align="right" valign="top">IQueryable&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_event_management_1_1_repository_1_1_i_repository.html#a881167e28bb187b1271461218460ed42">GetAll</a> ()</td></tr>
+<tr class="memdesc:a881167e28bb187b1271461218460ed42 inherit pub_methods_interface_event_management_1_1_repository_1_1_i_repository"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will return all the entries present in particular table.  <a href="interface_event_management_1_1_repository_1_1_i_repository.html#a881167e28bb187b1271461218460ed42">More...</a><br /></td></tr>
 <tr class="separator:a881167e28bb187b1271461218460ed42 inherit pub_methods_interface_event_management_1_1_repository_1_1_i_repository"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6221fda6de3fcab3443e92ccae1554aa inherit pub_methods_interface_event_management_1_1_repository_1_1_i_repository"><td class="memItemLeft" align="right" valign="top"><a id="a6221fda6de3fcab3443e92ccae1554aa"></a>
-T&#160;</td><td class="memItemRight" valign="bottom"><b>GetOne</b> (int id)</td></tr>
+<tr class="memitem:a6221fda6de3fcab3443e92ccae1554aa inherit pub_methods_interface_event_management_1_1_repository_1_1_i_repository"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_event_management_1_1_repository_1_1_i_repository.html#a6221fda6de3fcab3443e92ccae1554aa">GetOne</a> (int id)</td></tr>
+<tr class="memdesc:a6221fda6de3fcab3443e92ccae1554aa inherit pub_methods_interface_event_management_1_1_repository_1_1_i_repository"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will return the entry with specific id from the particular table.  <a href="interface_event_management_1_1_repository_1_1_i_repository.html#a6221fda6de3fcab3443e92ccae1554aa">More...</a><br /></td></tr>
 <tr class="separator:a6221fda6de3fcab3443e92ccae1554aa inherit pub_methods_interface_event_management_1_1_repository_1_1_i_repository"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a275d6bff6a085a9e52fbc9533ee331a5 inherit pub_methods_interface_event_management_1_1_repository_1_1_i_repository"><td class="memItemLeft" align="right" valign="top"><a id="a275d6bff6a085a9e52fbc9533ee331a5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Insert</b> (T entity)</td></tr>
+<tr class="memitem:a275d6bff6a085a9e52fbc9533ee331a5 inherit pub_methods_interface_event_management_1_1_repository_1_1_i_repository"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_event_management_1_1_repository_1_1_i_repository.html#a275d6bff6a085a9e52fbc9533ee331a5">Insert</a> (T entity)</td></tr>
+<tr class="memdesc:a275d6bff6a085a9e52fbc9533ee331a5 inherit pub_methods_interface_event_management_1_1_repository_1_1_i_repository"><td class="mdescLeft">&#160;</td><td class="mdescRight">This methods will not return anything but will help to insert the data in the table.  <a href="interface_event_management_1_1_repository_1_1_i_repository.html#a275d6bff6a085a9e52fbc9533ee331a5">More...</a><br /></td></tr>
 <tr class="separator:a275d6bff6a085a9e52fbc9533ee331a5 inherit pub_methods_interface_event_management_1_1_repository_1_1_i_repository"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfc0d0aeef7156786482a6e0a1180fe3 inherit pub_methods_interface_event_management_1_1_repository_1_1_i_repository"><td class="memItemLeft" align="right" valign="top"><a id="adfc0d0aeef7156786482a6e0a1180fe3"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Remove</b> (int id)</td></tr>
+<tr class="memitem:adfc0d0aeef7156786482a6e0a1180fe3 inherit pub_methods_interface_event_management_1_1_repository_1_1_i_repository"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_event_management_1_1_repository_1_1_i_repository.html#adfc0d0aeef7156786482a6e0a1180fe3">Remove</a> (int id)</td></tr>
+<tr class="memdesc:adfc0d0aeef7156786482a6e0a1180fe3 inherit pub_methods_interface_event_management_1_1_repository_1_1_i_repository"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will delete the entry with particular Id.  <a href="interface_event_management_1_1_repository_1_1_i_repository.html#adfc0d0aeef7156786482a6e0a1180fe3">More...</a><br /></td></tr>
 <tr class="separator:adfc0d0aeef7156786482a6e0a1180fe3 inherit pub_methods_interface_event_management_1_1_repository_1_1_i_repository"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9fbf2854e09a73804387ccd972089db inherit pub_methods_interface_event_management_1_1_repository_1_1_i_repository"><td class="memItemLeft" align="right" valign="top"><a id="ac9fbf2854e09a73804387ccd972089db"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Remove</b> (T entity)</td></tr>
+<tr class="memitem:ac9fbf2854e09a73804387ccd972089db inherit pub_methods_interface_event_management_1_1_repository_1_1_i_repository"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_event_management_1_1_repository_1_1_i_repository.html#ac9fbf2854e09a73804387ccd972089db">Remove</a> (T entity)</td></tr>
+<tr class="memdesc:ac9fbf2854e09a73804387ccd972089db inherit pub_methods_interface_event_management_1_1_repository_1_1_i_repository"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will delete the data model from the table.  <a href="interface_event_management_1_1_repository_1_1_i_repository.html#ac9fbf2854e09a73804387ccd972089db">More...</a><br /></td></tr>
 <tr class="separator:ac9fbf2854e09a73804387ccd972089db inherit pub_methods_interface_event_management_1_1_repository_1_1_i_repository"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_attribs_class_event_management_1_1_repository_1_1_repository"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_event_management_1_1_repository_1_1_repository')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_event_management_1_1_repository_1_1_repository.html">EventManagement.Repository.Repository&lt; Guest &gt;</a></td></tr>
-<tr class="memitem:aa5ea3abd3e5506b52daddd90dced2d27 inherit pro_attribs_class_event_management_1_1_repository_1_1_repository"><td class="memItemLeft" align="right" valign="top"><a id="aa5ea3abd3e5506b52daddd90dced2d27"></a>
-DbContext&#160;</td><td class="memItemRight" valign="bottom"><b>ctx</b></td></tr>
-<tr class="separator:aa5ea3abd3e5506b52daddd90dced2d27 inherit pro_attribs_class_event_management_1_1_repository_1_1_repository"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_event_management_1_1_repository_1_1_repo"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_event_management_1_1_repository_1_1_repo')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_event_management_1_1_repository_1_1_repo.html">EventManagement.Repository.Repo&lt; Guest &gt;</a></td></tr>
+<tr class="memitem:ac963b4c7f8a28ccc62ffe11ce0f141f4 inherit pro_attribs_class_event_management_1_1_repository_1_1_repo"><td class="memItemLeft" align="right" valign="top">DbContext&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_repository_1_1_repo.html#ac963b4c7f8a28ccc62ffe11ce0f141f4">ctx</a></td></tr>
+<tr class="memdesc:ac963b4c7f8a28ccc62ffe11ce0f141f4 inherit pro_attribs_class_event_management_1_1_repository_1_1_repo"><td class="mdescLeft">&#160;</td><td class="mdescRight">ctx is protected object of the DbContext.  <a href="class_event_management_1_1_repository_1_1_repo.html#ac963b4c7f8a28ccc62ffe11ce0f141f4">More...</a><br /></td></tr>
+<tr class="separator:ac963b4c7f8a28ccc62ffe11ce0f141f4 inherit pro_attribs_class_event_management_1_1_repository_1_1_repo"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_guest_repository_8cs_source.html#l00009">9</a> of file <a class="el" href="_guest_repository_8cs_source.html">GuestRepository.cs</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>OENIK_PROG3_2019_2_CU5J9O/EventManagement.Repository/<a class="el" href="_guest_repository_8cs_source.html">GuestRepository.cs</a></li>
+<div class="textblock"><p>This class store the implementation of Interface <a class="el" href="interface_event_management_1_1_repository_1_1_i_guest_repository.html" title="This interface store the queries related to Guest Table It extends IRepository interface.">IGuestRepository</a> and extends class <a class="el" href="class_event_management_1_1_repository_1_1_repo.html" title="This class store the implementation of Interface IRepository&lt;T&gt;.">Repo</a> of type Events. </p>
+
+<p class="definition">Definition at line <a class="el" href="_guest_repository_8cs_source.html#l00013">13</a> of file <a class="el" href="_guest_repository_8cs_source.html">GuestRepository.cs</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a20d68d49a5dbb6ed7e72945b6ce62cdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20d68d49a5dbb6ed7e72945b6ce62cdb">&#9670;&nbsp;</a></span>GuestRepository()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">EventManagement.Repository.GuestRepository.GuestRepository </td>
+          <td>(</td>
+          <td class="paramtype">DbContext&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes a new instance of the <a class="el" href="class_event_management_1_1_repository_1_1_guest_repository.html" title="This class store the implementation of Interface IGuestRepository and extends class Repo of type Even...">GuestRepository</a> class. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>Database context as parameter of super class.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_guest_repository_8cs_source.html#l00019">19</a> of file <a class="el" href="_guest_repository_8cs_source.html">GuestRepository.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a93729a4edfc1532a4005937f4ef0c3fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93729a4edfc1532a4005937f4ef0c3fb">&#9670;&nbsp;</a></span>ChangeName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EventManagement.Repository.GuestRepository.ChangeName </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>newName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This is the implementation of the method from the <a class="el" href="interface_event_management_1_1_repository_1_1_i_guest_repository.html" title="This interface store the queries related to Guest Table It extends IRepository interface.">IGuestRepository</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Guest Id.</td></tr>
+    <tr><td class="paramname">newName</td><td>New Guest Name.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="interface_event_management_1_1_repository_1_1_i_guest_repository.html#a8e43d4935c46aa372b2d3862b2c07d39">EventManagement.Repository.IGuestRepository</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_guest_repository_8cs_source.html#l00029">29</a> of file <a class="el" href="_guest_repository_8cs_source.html">GuestRepository.cs</a>.</p>
+
+</div>
+</div>
+<a id="a2c2819ead81c6cc27c7857f915cc8278"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c2819ead81c6cc27c7857f915cc8278">&#9670;&nbsp;</a></span>GetOne()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override <a class="el" href="class_event_management_1_1_data_1_1_models_1_1_guest.html">Guest</a> EventManagement.Repository.GuestRepository.GetOne </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This is overriden method from <a class="el" href="class_event_management_1_1_repository_1_1_repo.html#a3dbc444e913084fadb9a087bd1fe8436" title="Initializes a new instance of the Repo&lt;T&gt; class.">Repo&lt;T&gt;</a> class. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Get the Guest Id.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return Guest corresponding to particular id.</dd></dl>
+
+<p>Implements <a class="el" href="class_event_management_1_1_repository_1_1_repo.html#a6bb3396f232ee894b14c4ea3eb503507">EventManagement.Repository.Repo&lt; Guest &gt;</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_guest_repository_8cs_source.html#l00046">46</a> of file <a class="el" href="_guest_repository_8cs_source.html">GuestRepository.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab38d9c8ce5dd5a0494d1da77eb522bea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab38d9c8ce5dd5a0494d1da77eb522bea">&#9670;&nbsp;</a></span>Search()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IQueryable&lt;<a class="el" href="class_event_management_1_1_data_1_1_models_1_1_guest.html">Guest</a>&gt; EventManagement.Repository.GuestRepository.Search </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This is the implementation of the method from <a class="el" href="interface_event_management_1_1_repository_1_1_i_guest_repository.html" title="This interface store the queries related to Guest Table It extends IRepository interface.">IGuestRepository</a> interface. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Guest Name to be Searched.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return IQueryable List.</dd></dl>
+
+<p>Implements <a class="el" href="interface_event_management_1_1_repository_1_1_i_guest_repository.html#a7a71ce9f8734ca4ce68a273ce1d743ec">EventManagement.Repository.IGuestRepository</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_guest_repository_8cs_source.html#l00056">56</a> of file <a class="el" href="_guest_repository_8cs_source.html">GuestRepository.cs</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>C:/Users/Vishav/Documents/oenik_prog3_2020_2_cu5j9o/OENIK_PROG3_2019_2_CU5J9O/EventManagement.Repository/<a class="el" href="_guest_repository_8cs_source.html">GuestRepository.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Planning: EventManagement.Repository.IRepository&lt; T &gt; Interface Template Reference</title>
+<title>Event Management: EventManagement.Repository.IRepository&lt; T &gt; Interface Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,10 +25,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Planning
-   &#160;<span id="projectnumber">1.0</span>
+   <div id="projectname">Event Management
+   &#160;<span id="projectnumber">1.0.0</span>
    </div>
-   <div id="projectbrief">This project is the part of Advance Development Techniques course. I, hereby, developed an Event Management Application which could manage the Event, Tickets and the Guest list. All the data is stored in the local Database.</div>
+   <div id="projectbrief">This application is built using C# and Sql Database. This application strictly follows the SOLID principle and apply All Basic CRUDS opertions. Various Advanced Sql Queries are also implemented.</div>
   </td>
  </tr>
  </tbody>
@@ -90,36 +90,46 @@ $(document).ready(function(){initNavTree('interface_event_management_1_1_reposit
 <div class="title">EventManagement.Repository.IRepository&lt; T &gt; Interface Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This is general interface which contains all the generic methods for all Tables of the Database.  
+ <a href="interface_event_management_1_1_repository_1_1_i_repository.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for EventManagement.Repository.IRepository&lt; T &gt;:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="interface_event_management_1_1_repository_1_1_i_repository.png" usemap="#EventManagement.Repository.IRepository_3C_20T_20_3E_map" alt=""/>
   <map id="EventManagement.Repository.IRepository_3C_20T_20_3E_map" name="EventManagement.Repository.IRepository_3C_20T_20_3E_map">
-<area href="class_event_management_1_1_repository_1_1_repository.html" alt="EventManagement.Repository.Repository&lt; T &gt;" shape="rect" coords="0,56,278,80"/>
+<area href="class_event_management_1_1_repository_1_1_repo.html" title="This class store the implementation of Interface IRepository&lt;T&gt;." alt="EventManagement.Repository.Repo&lt; T &gt;" shape="rect" coords="0,56,278,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a881167e28bb187b1271461218460ed42"><td class="memItemLeft" align="right" valign="top"><a id="a881167e28bb187b1271461218460ed42"></a>
-IQueryable&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetAll</b> ()</td></tr>
+<tr class="memitem:a881167e28bb187b1271461218460ed42"><td class="memItemLeft" align="right" valign="top">IQueryable&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_event_management_1_1_repository_1_1_i_repository.html#a881167e28bb187b1271461218460ed42">GetAll</a> ()</td></tr>
+<tr class="memdesc:a881167e28bb187b1271461218460ed42"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will return all the entries present in particular table.  <a href="interface_event_management_1_1_repository_1_1_i_repository.html#a881167e28bb187b1271461218460ed42">More...</a><br /></td></tr>
 <tr class="separator:a881167e28bb187b1271461218460ed42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6221fda6de3fcab3443e92ccae1554aa"><td class="memItemLeft" align="right" valign="top"><a id="a6221fda6de3fcab3443e92ccae1554aa"></a>
-T&#160;</td><td class="memItemRight" valign="bottom"><b>GetOne</b> (int id)</td></tr>
+<tr class="memitem:a6221fda6de3fcab3443e92ccae1554aa"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_event_management_1_1_repository_1_1_i_repository.html#a6221fda6de3fcab3443e92ccae1554aa">GetOne</a> (int id)</td></tr>
+<tr class="memdesc:a6221fda6de3fcab3443e92ccae1554aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will return the entry with specific id from the particular table.  <a href="interface_event_management_1_1_repository_1_1_i_repository.html#a6221fda6de3fcab3443e92ccae1554aa">More...</a><br /></td></tr>
 <tr class="separator:a6221fda6de3fcab3443e92ccae1554aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a275d6bff6a085a9e52fbc9533ee331a5"><td class="memItemLeft" align="right" valign="top"><a id="a275d6bff6a085a9e52fbc9533ee331a5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Insert</b> (T entity)</td></tr>
+<tr class="memitem:a275d6bff6a085a9e52fbc9533ee331a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_event_management_1_1_repository_1_1_i_repository.html#a275d6bff6a085a9e52fbc9533ee331a5">Insert</a> (T entity)</td></tr>
+<tr class="memdesc:a275d6bff6a085a9e52fbc9533ee331a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">This methods will not return anything but will help to insert the data in the table.  <a href="interface_event_management_1_1_repository_1_1_i_repository.html#a275d6bff6a085a9e52fbc9533ee331a5">More...</a><br /></td></tr>
 <tr class="separator:a275d6bff6a085a9e52fbc9533ee331a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfc0d0aeef7156786482a6e0a1180fe3"><td class="memItemLeft" align="right" valign="top"><a id="adfc0d0aeef7156786482a6e0a1180fe3"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Remove</b> (int id)</td></tr>
+<tr class="memitem:adfc0d0aeef7156786482a6e0a1180fe3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_event_management_1_1_repository_1_1_i_repository.html#adfc0d0aeef7156786482a6e0a1180fe3">Remove</a> (int id)</td></tr>
+<tr class="memdesc:adfc0d0aeef7156786482a6e0a1180fe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will delete the entry with particular Id.  <a href="interface_event_management_1_1_repository_1_1_i_repository.html#adfc0d0aeef7156786482a6e0a1180fe3">More...</a><br /></td></tr>
 <tr class="separator:adfc0d0aeef7156786482a6e0a1180fe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9fbf2854e09a73804387ccd972089db"><td class="memItemLeft" align="right" valign="top"><a id="ac9fbf2854e09a73804387ccd972089db"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Remove</b> (T entity)</td></tr>
+<tr class="memitem:ac9fbf2854e09a73804387ccd972089db"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_event_management_1_1_repository_1_1_i_repository.html#ac9fbf2854e09a73804387ccd972089db">Remove</a> (T entity)</td></tr>
+<tr class="memdesc:ac9fbf2854e09a73804387ccd972089db"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will delete the data model from the table.  <a href="interface_event_management_1_1_repository_1_1_i_repository.html#ac9fbf2854e09a73804387ccd972089db">More...</a><br /></td></tr>
 <tr class="separator:ac9fbf2854e09a73804387ccd972089db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="typeconstraint">
+<div class="textblock"><p>This is general interface which contains all the generic methods for all Tables of the Database. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Class Type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="typeconstraint">
 <dl><dt><b>Type Constraints</b></dt><dd>
 <table border="0" cellspacing="2" cellpadding="0">
 <tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
@@ -128,9 +138,147 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>Remove</b> (T entity)
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_i_repository_8cs_source.html#l00005">5</a> of file <a class="el" href="_i_repository_8cs_source.html">IRepository.cs</a>.</p>
-</div><hr/>The documentation for this interface was generated from the following file:<ul>
-<li>OENIK_PROG3_2019_2_CU5J9O/EventManagement.Repository/Interfaces/<a class="el" href="_i_repository_8cs_source.html">IRepository.cs</a></li>
+<p class="definition">Definition at line <a class="el" href="_i_repository_8cs_source.html#l00009">9</a> of file <a class="el" href="_i_repository_8cs_source.html">IRepository.cs</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a881167e28bb187b1271461218460ed42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a881167e28bb187b1271461218460ed42">&#9670;&nbsp;</a></span>GetAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IQueryable&lt;T&gt; <a class="el" href="interface_event_management_1_1_repository_1_1_i_repository.html">EventManagement.Repository.IRepository</a>&lt; T &gt;.GetAll </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method will return all the entries present in particular table. </p>
+<dl class="section return"><dt>Returns</dt><dd>IQueryable list.</dd></dl>
+
+<p>Implemented in <a class="el" href="class_event_management_1_1_repository_1_1_repo.html#a2b855b593fcb4e5d19c02ddf1b5707b6">EventManagement.Repository.Repo&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a6221fda6de3fcab3443e92ccae1554aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6221fda6de3fcab3443e92ccae1554aa">&#9670;&nbsp;</a></span>GetOne()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="interface_event_management_1_1_repository_1_1_i_repository.html">EventManagement.Repository.IRepository</a>&lt; T &gt;.GetOne </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method will return the entry with specific id from the particular table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td><a class="el" href="namespace_event_management_1_1_data.html">Data</a> Id which needs to be returned from table.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return entry of Type T.</dd></dl>
+
+<p>Implemented in <a class="el" href="class_event_management_1_1_repository_1_1_repo.html#a6bb3396f232ee894b14c4ea3eb503507">EventManagement.Repository.Repo&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a275d6bff6a085a9e52fbc9533ee331a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a275d6bff6a085a9e52fbc9533ee331a5">&#9670;&nbsp;</a></span>Insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="interface_event_management_1_1_repository_1_1_i_repository.html">EventManagement.Repository.IRepository</a>&lt; T &gt;.Insert </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>entity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This methods will not return anything but will help to insert the data in the table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td>data model which need to be inserted.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_event_management_1_1_repository_1_1_repo.html#a1ba1bf13f06c61cded434ef11903c253">EventManagement.Repository.Repo&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="adfc0d0aeef7156786482a6e0a1180fe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfc0d0aeef7156786482a6e0a1180fe3">&#9670;&nbsp;</a></span>Remove() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="interface_event_management_1_1_repository_1_1_i_repository.html">EventManagement.Repository.IRepository</a>&lt; T &gt;.Remove </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method will delete the entry with particular Id. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Entry Id which needs to be deleted.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Boolean value whether deletion is successful or not.</dd></dl>
+
+<p>Implemented in <a class="el" href="class_event_management_1_1_repository_1_1_repo.html#afcb3e634a52dff1837759fe905cef771">EventManagement.Repository.Repo&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="ac9fbf2854e09a73804387ccd972089db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9fbf2854e09a73804387ccd972089db">&#9670;&nbsp;</a></span>Remove() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="interface_event_management_1_1_repository_1_1_i_repository.html">EventManagement.Repository.IRepository</a>&lt; T &gt;.Remove </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>entity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method will delete the data model from the table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td>entry which will get deleted.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Boolean value whether deletion is successful or not.</dd></dl>
+
+<p>Implemented in <a class="el" href="class_event_management_1_1_repository_1_1_repo.html#a3f74ac5a054ebd9b441ddb04c24124a9">EventManagement.Repository.Repo&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this interface was generated from the following file:<ul>
+<li>C:/Users/Vishav/Documents/oenik_prog3_2020_2_cu5j9o/OENIK_PROG3_2019_2_CU5J9O/EventManagement.Repository/Interfaces/<a class="el" href="_i_repository_8cs_source.html">IRepository.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -22,7 +22,7 @@
         private List<NoOfMalesFemalesInEvent> expectedMales;
 
         /// <summary>
-        /// This test will verify if the Event Add method is working correctly.
+        /// This test will verify if the <see cref="IRepository{T}.Insert(T)"/> method is working correctly.
         /// </summary>
         [Test]
         public void TestEventAdd()
@@ -44,7 +44,7 @@
         }
 
         /// <summary>
-        /// This test will verify if the Ticket Get One method is working correctly.
+        /// This test will verify if <see cref="IRepository{T}.GetOne(int)"/> method is working correctly.
         /// </summary>
         [Test]
         public void TestGetOne()
@@ -71,11 +71,11 @@
             IFrontOffice li = new FrontOfficeLogic(ticketRepo.Object, eventRepo.Object, guestRepo.Object);
 
             Ticket temp = li.GetOneTicket(1);
-            ticketRepo.Verify(x => x.GetOne(1));
+            ticketRepo.Verify(x => x.GetOne(1), Times.Once);
         }
 
         /// <summary>
-        /// This test will verify if the Ticket GetAll method is working correctly.
+        /// This test will verify if the <see cref="IRepository{T}.GetAll()"/> method is working correctly.
         /// </summary>
         [Test]
         public void TestGetAll()

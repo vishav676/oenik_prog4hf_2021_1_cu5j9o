@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Planning: EventManagement.Logic Namespace Reference</title>
+<title>Event Management: EventManagement.Logic Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,10 +25,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Planning
-   &#160;<span id="projectnumber">1.0</span>
+   <div id="projectname">Event Management
+   &#160;<span id="projectnumber">1.0.0</span>
    </div>
-   <div id="projectbrief">This project is the part of Advance Development Techniques course. I, hereby, developed an Event Management Application which could manage the Event, Tickets and the Guest list. All the data is stored in the local Database.</div>
+   <div id="projectbrief">This application is built using C# and Sql Database. This application strictly follows the SOLID principle and apply All Basic CRUDS opertions. Various Advanced Sql Queries are also implemented.</div>
   </td>
  </tr>
  </tbody>
@@ -92,15 +92,32 @@ $(document).ready(function(){initNavTree('namespace_event_management_1_1_logic.h
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_logic_1_1_business_logic.html">BusinessLogic</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class connects the <a class="el" href="namespace_event_management_1_1_repository.html">Repository</a> class to our main program file. This class implements <a class="el" href="interface_event_management_1_1_logic_1_1_i_event_logic.html" title="This is interface which store the methods related the Events table.">IEventLogic</a> and <a class="el" href="interface_event_management_1_1_logic_1_1_i_logic.html">ILogic</a> interfaces.  <a href="class_event_management_1_1_logic_1_1_business_logic.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_logic_1_1_adminstrator_logic.html">AdminstratorLogic</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Public class implementing <a class="el" href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html" title="This public interface contains all the methods that will be implemented for the Adminstrator office.">IAdminstratorLogic</a> interface.  <a href="class_event_management_1_1_logic_1_1_adminstrator_logic.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_event_management_1_1_logic_1_1_i_event_logic.html">IEventLogic</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is interface which store the methods related the Events table.  <a href="interface_event_management_1_1_logic_1_1_i_event_logic.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_logic_1_1_factory_logic.html">FactoryLogic</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This logic class will generate the specific logic as required.  <a href="class_event_management_1_1_logic_1_1_factory_logic.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_event_management_1_1_logic_1_1_i_logic.html">ILogic</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_logic_1_1_front_office_logic.html">FrontOfficeLogic</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Public class implementing <a class="el" href="interface_event_management_1_1_logic_1_1_i_front_office.html" title="This public interface contains all the methods that will be implemented for the front office.">IFrontOffice</a> interface.  <a href="class_event_management_1_1_logic_1_1_front_office_logic.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html">IAdminstratorLogic</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This public interface contains all the methods that will be implemented for the Adminstrator office.  <a href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_event_management_1_1_logic_1_1_i_factory_logic.html">IFactoryLogic</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This inteface will contains methods to generate specific logics.  <a href="interface_event_management_1_1_logic_1_1_i_factory_logic.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_event_management_1_1_logic_1_1_i_front_office.html">IFrontOffice</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This public interface contains all the methods that will be implemented for the front office.  <a href="interface_event_management_1_1_logic_1_1_i_front_office.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_logic_1_1_no_of_males_females_in_event.html">NoOfMalesFemalesInEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">public class to store the no of males and females in the event.  <a href="class_event_management_1_1_logic_1_1_no_of_males_females_in_event.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_logic_1_1_tickets_by_guest.html">TicketsByGuest</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">public class to store the tickets brought by single User.  <a href="class_event_management_1_1_logic_1_1_tickets_by_guest.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_logic_1_1_total_event_sale.html">TotalEventSale</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">public class to store the total Event sale of the Event.  <a href="class_event_management_1_1_logic_1_1_total_event_sale.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

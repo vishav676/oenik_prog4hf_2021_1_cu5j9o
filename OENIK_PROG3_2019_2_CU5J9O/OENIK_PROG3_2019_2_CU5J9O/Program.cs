@@ -61,7 +61,7 @@
                 Add("Sell Ticket", () => SellTicket(logic)).
                 Add("Add Guest", () => AddGuest(logic)).
                 Add("Search Guest", () => GetGuestInfo(logic)).
-                Add("Search Event", () => { Console.WriteLine("Not Ready"); }).
+                Add("Search Event", () => GetEventInfo(logic)).
                 Add("List of Guests", () => GetAllGuests(logic)).
                 Add("Get Ticket Info", () => GetTicketInfo(logic)).
                 Add("Sold Tickets", () => GetAllTickets(logic)).
@@ -441,6 +441,23 @@
             Console.WriteLine("Enter Guest Name to Search: ");
             string name = Console.ReadLine();
             var q = logic.SearchGuest(name);
+            q.ToConsole();
+        }
+
+        /// <summary>
+        /// This method will display the Event info with specfic name.
+        /// </summary>
+        /// <param name="logic"><see cref="IFrontOffice"/>.</param>
+        public static void GetEventInfo(IFrontOffice logic)
+        {
+            if (logic == null)
+            {
+                throw new ArgumentNullException(nameof(logic));
+            }
+
+            Console.WriteLine("Enter Event Name to Search: ");
+            string name = Console.ReadLine();
+            var q = logic.SearchEvent(name);
             q.ToConsole();
         }
 

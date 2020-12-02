@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Planning: OENIK_PROG3_2019_2_CU5J9O/EventManagement.Repository/Interfaces/IRepository.cs Source File</title>
+<title>Event Management: C:/Users/Vishav/Documents/oenik_prog3_2020_2_cu5j9o/OENIK_PROG3_2019_2_CU5J9O/EventManagement.Repository/Interfaces/IRepository.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,10 +25,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Planning
-   &#160;<span id="projectnumber">1.0</span>
+   <div id="projectname">Event Management
+   &#160;<span id="projectnumber">1.0.0</span>
    </div>
-   <div id="projectbrief">This project is the part of Advance Development Techniques course. I, hereby, developed an Event Management Application which could manage the Event, Tickets and the Guest list. All the data is stored in the local Database.</div>
+   <div id="projectbrief">This application is built using C# and Sql Database. This application strictly follows the SOLID principle and apply All Basic CRUDS opertions. Various Advanced Sql Queries are also implemented.</div>
   </td>
  </tr>
  </tbody>
@@ -87,31 +87,38 @@ $(document).ready(function(){initNavTree('_i_repository_8cs_source.html',''); in
 <div class="title">IRepository.cs</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System.Linq;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_event_management_1_1_repository.html">EventManagement.Repository</a></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="interface_event_management_1_1_repository_1_1_i_repository.html">    5</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code" href="interface_event_management_1_1_repository_1_1_i_repository.html">IRepository</a>&lt;T&gt; where T : class</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    {</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        IQueryable&lt;T&gt; GetAll();</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        T GetOne(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keywordtype">void</span> Insert(T entity);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordtype">bool</span> Remove(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">bool</span> Remove(T entity);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    }</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_event_management_1_1_repository.html">EventManagement.Repository</a></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;{</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="keyword">using</span> System.<a class="code" href="namespace_system_1_1_linq.html">Linq</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="interface_event_management_1_1_repository_1_1_i_repository.html">    9</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code" href="interface_event_management_1_1_repository_1_1_i_repository.html">IRepository</a>&lt;T&gt;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        where T : class</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="interface_event_management_1_1_repository_1_1_i_repository.html#a881167e28bb187b1271461218460ed42">   16</a></span>&#160;        IQueryable&lt;T&gt; <a class="code" href="interface_event_management_1_1_repository_1_1_i_repository.html#a881167e28bb187b1271461218460ed42">GetAll</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="interface_event_management_1_1_repository_1_1_i_repository.html#a6221fda6de3fcab3443e92ccae1554aa">   23</a></span>&#160;        T <a class="code" href="interface_event_management_1_1_repository_1_1_i_repository.html#a6221fda6de3fcab3443e92ccae1554aa">GetOne</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="interface_event_management_1_1_repository_1_1_i_repository.html#a275d6bff6a085a9e52fbc9533ee331a5">   29</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="interface_event_management_1_1_repository_1_1_i_repository.html#a275d6bff6a085a9e52fbc9533ee331a5">Insert</a>(T entity);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="interface_event_management_1_1_repository_1_1_i_repository.html#adfc0d0aeef7156786482a6e0a1180fe3">   36</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="interface_event_management_1_1_repository_1_1_i_repository.html#adfc0d0aeef7156786482a6e0a1180fe3">Remove</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="interface_event_management_1_1_repository_1_1_i_repository.html#ac9fbf2854e09a73804387ccd972089db">   43</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="interface_event_management_1_1_repository_1_1_i_repository.html#ac9fbf2854e09a73804387ccd972089db">Remove</a>(T entity);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="ainterface_event_management_1_1_repository_1_1_i_repository_html"><div class="ttname"><a href="interface_event_management_1_1_repository_1_1_i_repository.html">EventManagement.Repository.IRepository</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_repository_8cs_source.html#l00005">IRepository.cs:6</a></div></div>
+<div class="ttc" id="ainterface_event_management_1_1_repository_1_1_i_repository_html"><div class="ttname"><a href="interface_event_management_1_1_repository_1_1_i_repository.html">EventManagement.Repository.IRepository</a></div><div class="ttdoc">This is general interface which contains all the generic methods for all Tables of the Database.</div><div class="ttdef"><b>Definition:</b> <a href="_i_repository_8cs_source.html#l00009">IRepository.cs:11</a></div></div>
+<div class="ttc" id="ainterface_event_management_1_1_repository_1_1_i_repository_html_adfc0d0aeef7156786482a6e0a1180fe3"><div class="ttname"><a href="interface_event_management_1_1_repository_1_1_i_repository.html#adfc0d0aeef7156786482a6e0a1180fe3">EventManagement.Repository.IRepository.Remove</a></div><div class="ttdeci">bool Remove(int id)</div><div class="ttdoc">This method will delete the entry with particular Id.</div></div>
+<div class="ttc" id="ainterface_event_management_1_1_repository_1_1_i_repository_html_ac9fbf2854e09a73804387ccd972089db"><div class="ttname"><a href="interface_event_management_1_1_repository_1_1_i_repository.html#ac9fbf2854e09a73804387ccd972089db">EventManagement.Repository.IRepository.Remove</a></div><div class="ttdeci">bool Remove(T entity)</div><div class="ttdoc">This method will delete the data model from the table.</div></div>
+<div class="ttc" id="anamespace_system_1_1_linq_html"><div class="ttname"><a href="namespace_system_1_1_linq.html">Linq</a></div></div>
+<div class="ttc" id="ainterface_event_management_1_1_repository_1_1_i_repository_html_a6221fda6de3fcab3443e92ccae1554aa"><div class="ttname"><a href="interface_event_management_1_1_repository_1_1_i_repository.html#a6221fda6de3fcab3443e92ccae1554aa">EventManagement.Repository.IRepository.GetOne</a></div><div class="ttdeci">T GetOne(int id)</div><div class="ttdoc">This method will return the entry with specific id from the particular table.</div></div>
+<div class="ttc" id="ainterface_event_management_1_1_repository_1_1_i_repository_html_a275d6bff6a085a9e52fbc9533ee331a5"><div class="ttname"><a href="interface_event_management_1_1_repository_1_1_i_repository.html#a275d6bff6a085a9e52fbc9533ee331a5">EventManagement.Repository.IRepository.Insert</a></div><div class="ttdeci">void Insert(T entity)</div><div class="ttdoc">This methods will not return anything but will help to insert the data in the table.</div></div>
+<div class="ttc" id="ainterface_event_management_1_1_repository_1_1_i_repository_html_a881167e28bb187b1271461218460ed42"><div class="ttname"><a href="interface_event_management_1_1_repository_1_1_i_repository.html#a881167e28bb187b1271461218460ed42">EventManagement.Repository.IRepository.GetAll</a></div><div class="ttdeci">IQueryable&lt; T &gt; GetAll()</div><div class="ttdoc">This method will return all the entries present in particular table.</div></div>
 <div class="ttc" id="anamespace_event_management_1_1_repository_html"><div class="ttname"><a href="namespace_event_management_1_1_repository.html">EventManagement.Repository</a></div><div class="ttdef"><b>Definition:</b> <a href="_event_repository_8cs_source.html#l00001">EventRepository.cs:2</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_229ee1184438649560921d240cbe4ad3.html">OENIK_PROG3_2019_2_CU5J9O</a></li><li class="navelem"><a class="el" href="dir_73c3f258d3c62f0753fb8ef4a3aeed10.html">EventManagement.Repository</a></li><li class="navelem"><a class="el" href="dir_03332d57770cd899de750f2f30e15da0.html">Interfaces</a></li><li class="navelem"><b>IRepository.cs</b></li>
+    <li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_b79084257f006c7d5cd10b3cfda44881.html">Vishav</a></li><li class="navelem"><a class="el" href="dir_d4c1802c2c52b80a7ac976ea4fdd3b88.html">Documents</a></li><li class="navelem"><a class="el" href="dir_eb88bd11b68c8e95af0ed24b8c9be70c.html">oenik_prog3_2020_2_cu5j9o</a></li><li class="navelem"><a class="el" href="dir_9ce6caf0c5c53d99776562bb576f96a8.html">OENIK_PROG3_2019_2_CU5J9O</a></li><li class="navelem"><a class="el" href="dir_97ad0f8c1f48aed9e0f1c3676bf45708.html">EventManagement.Repository</a></li><li class="navelem"><a class="el" href="dir_cbb5b3ae94e7e3382ee174bcc235df65.html">Interfaces</a></li><li class="navelem"><b>IRepository.cs</b></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

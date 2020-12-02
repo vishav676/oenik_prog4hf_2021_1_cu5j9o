@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['onconfiguring_103',['OnConfiguring',['../class_event_management_1_1_data_1_1_models_1_1_event_db_context.html#afd2ffdbe0643f2ac45541d04cf1a5e8e',1,'EventManagement::Data::Models::EventDbContext']]],
-  ['onmodelcreating_104',['OnModelCreating',['../class_event_management_1_1_data_1_1_models_1_1_event_db_context.html#a97fdc964e7499071fe259048c825e401',1,'EventManagement::Data::Models::EventDbContext']]]
+  ['insert_186',['Insert',['../interface_event_management_1_1_repository_1_1_i_repository.html#a275d6bff6a085a9e52fbc9533ee331a5',1,'EventManagement.Repository.IRepository.Insert()'],['../class_event_management_1_1_repository_1_1_repo.html#a1ba1bf13f06c61cded434ef11903c253',1,'EventManagement.Repository.Repo.Insert()']]]
 ];

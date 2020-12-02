@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Planning: OENIK_PROG3_2019_2_CU5J9O/EventManagement.Repository/EventRepository.cs Source File</title>
+<title>Event Management: C:/Users/Vishav/Documents/oenik_prog3_2020_2_cu5j9o/OENIK_PROG3_2019_2_CU5J9O/EventManagement.Repository/EventRepository.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,10 +25,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Planning
-   &#160;<span id="projectnumber">1.0</span>
+   <div id="projectname">Event Management
+   &#160;<span id="projectnumber">1.0.0</span>
    </div>
-   <div id="projectbrief">This project is the part of Advance Development Techniques course. I, hereby, developed an Event Management Application which could manage the Event, Tickets and the Guest list. All the data is stored in the local Database.</div>
+   <div id="projectbrief">This application is built using C# and Sql Database. This application strictly follows the SOLID principle and apply All Basic CRUDS opertions. Various Advanced Sql Queries are also implemented.</div>
   </td>
  </tr>
  </tbody>
@@ -96,48 +96,61 @@ $(document).ready(function(){initNavTree('_event_repository_8cs_source.html','')
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">using</span> <a class="code" href="namespace_event_management.html">EventManagement</a>.<a class="code" href="namespace_event_management_1_1_data.html">Data</a>.<a class="code" href="namespace_event_management_1_1_data_1_1_models.html">Models</a>;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">using</span> Microsoft.<a class="code" href="class_microsoft_1_1_entity_framework_core.html">EntityFrameworkCore</a>;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_event_management_1_1_repository_1_1_event_repository.html">   10</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_event_management_1_1_repository_1_1_event_repository.html">EventRepository</a> : <a class="code" href="class_event_management_1_1_repository_1_1_repository.html">Repository</a>&lt;Event&gt;, <a class="code" href="interface_event_management_1_1_repository_1_1_i_event_repository.html">IEventRepository</a></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keyword">public</span> <a class="code" href="class_event_management_1_1_repository_1_1_event_repository.html">EventRepository</a>(DbContext ctx) : base(ctx) { }</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <a class="code" href="class_event_management_1_1_data_1_1_models_1_1_event.html">Event</a> GetOne(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keywordflow">return</span> GetAll().SingleOrDefault(x =&gt; x.Id == <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        }</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> Remove(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_event_management_1_1_repository_1_1_event_repository.html">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_event_management_1_1_repository_1_1_event_repository.html">EventRepository</a> : <a class="code" href="class_event_management_1_1_repository_1_1_repo.html">Repo</a>&lt;Events&gt;, <a class="code" href="interface_event_management_1_1_repository_1_1_i_event_repository.html">IEventRepository</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_event_management_1_1_repository_1_1_event_repository.html#a9a54fe47a7cb3626ab05a0fc49073f46">   19</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_event_management_1_1_repository_1_1_event_repository.html#a9a54fe47a7cb3626ab05a0fc49073f46">EventRepository</a>(DbContext <a class="code" href="class_event_management_1_1_repository_1_1_repo.html#ac963b4c7f8a28ccc62ffe11ce0f141f4">ctx</a>)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            : base(<a class="code" href="class_event_management_1_1_repository_1_1_repo.html#ac963b4c7f8a28ccc62ffe11ce0f141f4">ctx</a>)</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            var removeEvent = GetOne(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">return</span> Remove(removeEvent);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> ChangePlace(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">string</span> newPlace)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            var myEvent = GetOne(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">if</span> (myEvent == <span class="keyword">null</span>) <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidOperationException();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            myEvent.Place = newPlace;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            ctx.SaveChanges();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_event_management_1_1_repository_1_1_event_repository.html#afde51042308ea4e44f010b3a4e8bfd6d">   29</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <a class="code" href="class_event_management_1_1_data_1_1_models_1_1_events.html">Events</a> <a class="code" href="class_event_management_1_1_repository_1_1_event_repository.html#afde51042308ea4e44f010b3a4e8bfd6d">GetOne</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">return</span> this.<a class="code" href="class_event_management_1_1_repository_1_1_repo.html#a2b855b593fcb4e5d19c02ddf1b5707b6">GetAll</a>().SingleOrDefault(x =&gt; x.Id == <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_event_management_1_1_repository_1_1_event_repository.html#a20492d03542a3675296a0e250ea7f83d">   39</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_event_management_1_1_repository_1_1_event_repository.html#a20492d03542a3675296a0e250ea7f83d">ChangePlace</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">string</span> newPlace)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            var myEvent = this.<a class="code" href="class_event_management_1_1_repository_1_1_event_repository.html#afde51042308ea4e44f010b3a4e8bfd6d">GetOne</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">if</span> (myEvent == <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidOperationException();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            myEvent.Place = newPlace;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            this.<a class="code" href="class_event_management_1_1_repository_1_1_repo.html#ac963b4c7f8a28ccc62ffe11ce0f141f4">ctx</a>.SaveChanges();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_event_management_1_1_repository_1_1_event_repository.html#a5f091e7ff781abc69d2bfc09f93bde8e">   56</a></span>&#160;        <span class="keyword">public</span> IQueryable&lt;Events&gt; <a class="code" href="class_event_management_1_1_repository_1_1_event_repository.html#a5f091e7ff781abc69d2bfc09f93bde8e">Search</a>(<span class="keywordtype">string</span> name)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            var q = from item in this.<a class="code" href="class_event_management_1_1_repository_1_1_repo.html#a2b855b593fcb4e5d19c02ddf1b5707b6">GetAll</a>()</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                    where item.Name == name</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                    select item;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">return</span> q;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespace_event_management_1_1_data_html"><div class="ttname"><a href="namespace_event_management_1_1_data.html">EventManagement.Data</a></div><div class="ttdef"><b>Definition:</b> <a href="_event_8cs_source.html#l00001">Event.cs:2</a></div></div>
+<div class="ttc" id="anamespace_event_management_1_1_data_html"><div class="ttname"><a href="namespace_event_management_1_1_data.html">EventManagement.Data</a></div><div class="ttdef"><b>Definition:</b> <a href="_event_db_context_8cs_source.html#l00001">EventDbContext.cs:2</a></div></div>
 <div class="ttc" id="anamespace_system_1_1_collections_1_1_generic_html"><div class="ttname"><a href="namespace_system_1_1_collections_1_1_generic.html">Generic</a></div></div>
-<div class="ttc" id="anamespace_event_management_1_1_data_1_1_models_html"><div class="ttname"><a href="namespace_event_management_1_1_data_1_1_models.html">EventManagement.Data.Models</a></div><div class="ttdef"><b>Definition:</b> <a href="_event_8cs_source.html#l00001">Event.cs:2</a></div></div>
-<div class="ttc" id="aclass_event_management_1_1_data_1_1_models_1_1_event_html"><div class="ttname"><a href="class_event_management_1_1_data_1_1_models_1_1_event.html">EventManagement.Data.Models.Event</a></div><div class="ttdoc">This class is marked as table in the Database. This represents events Table in local Database.</div><div class="ttdef"><b>Definition:</b> <a href="_event_8cs_source.html#l00014">Event.cs:15</a></div></div>
-<div class="ttc" id="anamespace_event_management_html"><div class="ttname"><a href="namespace_event_management.html">EventManagement</a></div><div class="ttdef"><b>Definition:</b> <a href="_event_8cs_source.html#l00001">Event.cs:2</a></div></div>
-<div class="ttc" id="aclass_event_management_1_1_repository_1_1_event_repository_html"><div class="ttname"><a href="class_event_management_1_1_repository_1_1_event_repository.html">EventManagement.Repository.EventRepository</a></div><div class="ttdef"><b>Definition:</b> <a href="_event_repository_8cs_source.html#l00010">EventRepository.cs:11</a></div></div>
-<div class="ttc" id="ainterface_event_management_1_1_repository_1_1_i_event_repository_html"><div class="ttname"><a href="interface_event_management_1_1_repository_1_1_i_event_repository.html">EventManagement.Repository.IEventRepository</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_event_repository_8cs_source.html#l00008">IEventRepository.cs:9</a></div></div>
-<div class="ttc" id="aclass_event_management_1_1_repository_1_1_repository_html"><div class="ttname"><a href="class_event_management_1_1_repository_1_1_repository.html">EventManagement.Repository.Repository</a></div><div class="ttdef"><b>Definition:</b> <a href="_repository_8cs_source.html#l00009">Repository.cs:10</a></div></div>
+<div class="ttc" id="anamespace_event_management_1_1_data_1_1_models_html"><div class="ttname"><a href="namespace_event_management_1_1_data_1_1_models.html">EventManagement.Data.Models</a></div><div class="ttdef"><b>Definition:</b> <a href="_event_db_context_8cs_source.html#l00001">EventDbContext.cs:2</a></div></div>
+<div class="ttc" id="aclass_event_management_1_1_repository_1_1_event_repository_html_afde51042308ea4e44f010b3a4e8bfd6d"><div class="ttname"><a href="class_event_management_1_1_repository_1_1_event_repository.html#afde51042308ea4e44f010b3a4e8bfd6d">EventManagement.Repository.EventRepository.GetOne</a></div><div class="ttdeci">override Events GetOne(int id)</div><div class="ttdoc">This is overriden method from Repo&lt;T&gt; class.</div><div class="ttdef"><b>Definition:</b> <a href="_event_repository_8cs_source.html#l00029">EventRepository.cs:29</a></div></div>
+<div class="ttc" id="anamespace_event_management_html"><div class="ttname"><a href="namespace_event_management.html">EventManagement</a></div><div class="ttdef"><b>Definition:</b> <a href="_event_db_context_8cs_source.html#l00001">EventDbContext.cs:2</a></div></div>
+<div class="ttc" id="aclass_event_management_1_1_repository_1_1_event_repository_html"><div class="ttname"><a href="class_event_management_1_1_repository_1_1_event_repository.html">EventManagement.Repository.EventRepository</a></div><div class="ttdoc">This class store the implementation of Interface IEventRepository and extends class Repo of type Even...</div><div class="ttdef"><b>Definition:</b> <a href="_event_repository_8cs_source.html#l00013">EventRepository.cs:14</a></div></div>
+<div class="ttc" id="aclass_event_management_1_1_repository_1_1_repo_html_a2b855b593fcb4e5d19c02ddf1b5707b6"><div class="ttname"><a href="class_event_management_1_1_repository_1_1_repo.html#a2b855b593fcb4e5d19c02ddf1b5707b6">EventManagement.Repository.Repo&lt; Events &gt;::GetAll</a></div><div class="ttdeci">IQueryable&lt; T &gt; GetAll()</div><div class="ttdoc">This method return all the entries of type T.</div><div class="ttdef"><b>Definition:</b> <a href="_repo_8cs_source.html#l00034">Repo.cs:34</a></div></div>
+<div class="ttc" id="aclass_event_management_1_1_repository_1_1_event_repository_html_a9a54fe47a7cb3626ab05a0fc49073f46"><div class="ttname"><a href="class_event_management_1_1_repository_1_1_event_repository.html#a9a54fe47a7cb3626ab05a0fc49073f46">EventManagement.Repository.EventRepository.EventRepository</a></div><div class="ttdeci">EventRepository(DbContext ctx)</div><div class="ttdoc">Initializes a new instance of the EventRepository class.</div><div class="ttdef"><b>Definition:</b> <a href="_event_repository_8cs_source.html#l00019">EventRepository.cs:19</a></div></div>
+<div class="ttc" id="ainterface_event_management_1_1_repository_1_1_i_event_repository_html"><div class="ttname"><a href="interface_event_management_1_1_repository_1_1_i_event_repository.html">EventManagement.Repository.IEventRepository</a></div><div class="ttdoc">This interface store the queries related to Event Table It extends IRepository interface.</div><div class="ttdef"><b>Definition:</b> <a href="_i_event_repository_8cs_source.html#l00013">IEventRepository.cs:14</a></div></div>
+<div class="ttc" id="aclass_event_management_1_1_repository_1_1_repo_html_ac963b4c7f8a28ccc62ffe11ce0f141f4"><div class="ttname"><a href="class_event_management_1_1_repository_1_1_repo.html#ac963b4c7f8a28ccc62ffe11ce0f141f4">EventManagement.Repository.Repo&lt; Events &gt;::ctx</a></div><div class="ttdeci">DbContext ctx</div><div class="ttdoc">ctx is protected object of the DbContext.</div><div class="ttdef"><b>Definition:</b> <a href="_repo_8cs_source.html#l00019">Repo.cs:19</a></div></div>
+<div class="ttc" id="aclass_event_management_1_1_repository_1_1_event_repository_html_a20492d03542a3675296a0e250ea7f83d"><div class="ttname"><a href="class_event_management_1_1_repository_1_1_event_repository.html#a20492d03542a3675296a0e250ea7f83d">EventManagement.Repository.EventRepository.ChangePlace</a></div><div class="ttdeci">void ChangePlace(int id, string newPlace)</div><div class="ttdoc">This is the implementation of the method from the IEventRepository.</div><div class="ttdef"><b>Definition:</b> <a href="_event_repository_8cs_source.html#l00039">EventRepository.cs:39</a></div></div>
+<div class="ttc" id="aclass_event_management_1_1_repository_1_1_repo_html"><div class="ttname"><a href="class_event_management_1_1_repository_1_1_repo.html">EventManagement.Repository.Repo</a></div><div class="ttdoc">This class store the implementation of Interface IRepository&lt;T&gt;.</div><div class="ttdef"><b>Definition:</b> <a href="_repo_8cs_source.html#l00013">Repo.cs:15</a></div></div>
+<div class="ttc" id="aclass_event_management_1_1_repository_1_1_event_repository_html_a5f091e7ff781abc69d2bfc09f93bde8e"><div class="ttname"><a href="class_event_management_1_1_repository_1_1_event_repository.html#a5f091e7ff781abc69d2bfc09f93bde8e">EventManagement.Repository.EventRepository.Search</a></div><div class="ttdeci">IQueryable&lt; Events &gt; Search(string name)</div><div class="ttdoc">This is the implementation of the method from IEventRepository interface.</div><div class="ttdef"><b>Definition:</b> <a href="_event_repository_8cs_source.html#l00056">EventRepository.cs:56</a></div></div>
 <div class="ttc" id="anamespace_event_management_1_1_repository_html"><div class="ttname"><a href="namespace_event_management_1_1_repository.html">EventManagement.Repository</a></div><div class="ttdef"><b>Definition:</b> <a href="_event_repository_8cs_source.html#l00001">EventRepository.cs:2</a></div></div>
+<div class="ttc" id="aclass_event_management_1_1_data_1_1_models_1_1_events_html"><div class="ttname"><a href="class_event_management_1_1_data_1_1_models_1_1_events.html">EventManagement.Data.Models.Events</a></div><div class="ttdoc">This class is marked as table in the Database. This represents events Table in local Database.</div><div class="ttdef"><b>Definition:</b> <a href="_events_8cs_source.html#l00014">Events.cs:15</a></div></div>
 <div class="ttc" id="aclass_microsoft_1_1_entity_framework_core_html"><div class="ttname"><a href="class_microsoft_1_1_entity_framework_core.html">EntityFrameworkCore</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_229ee1184438649560921d240cbe4ad3.html">OENIK_PROG3_2019_2_CU5J9O</a></li><li class="navelem"><a class="el" href="dir_73c3f258d3c62f0753fb8ef4a3aeed10.html">EventManagement.Repository</a></li><li class="navelem"><b>EventRepository.cs</b></li>
+    <li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_b79084257f006c7d5cd10b3cfda44881.html">Vishav</a></li><li class="navelem"><a class="el" href="dir_d4c1802c2c52b80a7ac976ea4fdd3b88.html">Documents</a></li><li class="navelem"><a class="el" href="dir_eb88bd11b68c8e95af0ed24b8c9be70c.html">oenik_prog3_2020_2_cu5j9o</a></li><li class="navelem"><a class="el" href="dir_9ce6caf0c5c53d99776562bb576f96a8.html">OENIK_PROG3_2019_2_CU5J9O</a></li><li class="navelem"><a class="el" href="dir_97ad0f8c1f48aed9e0f1c3676bf45708.html">EventManagement.Repository</a></li><li class="navelem"><b>EventRepository.cs</b></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
