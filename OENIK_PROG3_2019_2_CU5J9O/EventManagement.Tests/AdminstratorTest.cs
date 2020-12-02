@@ -46,7 +46,6 @@
         /// <summary>
         /// This test will verify if the Ticket Get One method is working correctly.
         /// </summary>
-        /// <param name="id">id for which test is conducted.</param>
         [Test]
         public void TestGetOne()
         {
@@ -101,7 +100,7 @@
 
             Assert.That(result.Count, Is.EqualTo(3));
             Assert.That(result, Is.EquivalentTo(expectedResult));
-            ticketRepo.Verify(repo => repo.GetAll(),Times.Once);
+            ticketRepo.Verify(repo => repo.GetAll(), Times.Once);
             ticketRepo.Verify(repo => repo.GetOne(1), Times.Never);
         }
 
