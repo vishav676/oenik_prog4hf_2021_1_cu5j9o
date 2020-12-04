@@ -91,6 +91,24 @@
             <param name="newPlace">New Place.</param>
             <returns>bool value if event is updated or not.</returns>
         </member>
+        <member name="M:EventManagement.Logic.AdminstratorLogic.GetNoOfMalesAsync">
+            <summary>
+            This is the Async version of <see cref="M:EventManagement.Logic.AdminstratorLogic.GetNoOfMalesFemalesList"/> method.
+            </summary>
+            <returns>It will return Task.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.AdminstratorLogic.GetTicketByGuestAsync">
+            <summary>
+            This is the Async version of <see cref="M:EventManagement.Logic.AdminstratorLogic.TicketsBySingleGuest"/> method.
+            </summary>
+            <returns>It will return Task.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.AdminstratorLogic.GetTotalSaleAsync">
+            <summary>
+            This is the Async version of <see cref="M:EventManagement.Logic.AdminstratorLogic.GetEventSale"/> method.
+            </summary>
+            <returns>It will return Task.</returns>
+        </member>
         <member name="T:EventManagement.Logic.FactoryLogic">
             <summary>
             This logic class will generate the specific logic as required.
@@ -273,6 +291,24 @@
             <param name="id">Ticket Id.</param>
             <param name="newDiscount">New Discount Value.</param>
             <returns>bool value if Ticket is updated or not.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.IAdminstratorLogic.GetNoOfMalesAsync">
+            <summary>
+            This is the Async version of <see cref="M:EventManagement.Logic.IAdminstratorLogic.GetNoOfMalesFemalesList"/> method.
+            </summary>
+            <returns>It will return Task.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.IAdminstratorLogic.GetTicketByGuestAsync">
+            <summary>
+            This is the Async version of <see cref="M:EventManagement.Logic.IAdminstratorLogic.TicketsBySingleGuest"/> method.
+            </summary>
+            <returns>It will return Task.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.IAdminstratorLogic.GetTotalSaleAsync">
+            <summary>
+            This is the Async version of <see cref="M:EventManagement.Logic.IAdminstratorLogic.GetEventSale"/> method.
+            </summary>
+            <returns>It will return Task.</returns>
         </member>
         <member name="T:EventManagement.Logic.IFactoryLogic">
             <summary>

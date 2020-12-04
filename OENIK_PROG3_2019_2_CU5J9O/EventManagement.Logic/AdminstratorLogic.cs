@@ -177,10 +177,34 @@
             return this.eventRepository.ChangePlace(id, newPlace);
         }
 
-        public IList<NoOfMalesFemalesInEvent> createTask()
+        /// <summary>
+        /// This is the Async version of <see cref="GetNoOfMalesFemalesList"/> method.
+        /// </summary>
+        /// <returns>It will return Task.</returns>
+        public Task<IList<NoOfMalesFemalesInEvent>> GetNoOfMalesAsync()
         {
-            var task = Task.Run(() => this.GetNoOfMalesFemalesList()).Result;
-            return task.ToList();
+            var task = Task.Run(() => this.GetNoOfMalesFemalesList());
+            return task;
+        }
+
+        /// <summary>
+        /// This is the Async version of <see cref="TicketsBySingleGuest"/> method.
+        /// </summary>
+        /// <returns>It will return Task.</returns>
+        public Task<IList<TicketsByGuest>> GetTicketByGuestAsync()
+        {
+            var task = Task.Run(() => this.TicketsBySingleGuest());
+            return task;
+        }
+
+        /// <summary>
+        /// This is the Async version of <see cref="GetEventSale"/> method.
+        /// </summary>
+        /// <returns>It will return Task.</returns>
+        public Task<IList<TotalEventSale>> GetTotalSaleAsync()
+        {
+            var task = Task.Run(() => this.GetEventSale());
+            return task;
         }
     }
 }

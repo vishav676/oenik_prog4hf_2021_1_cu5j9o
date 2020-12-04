@@ -85,6 +85,22 @@
         /// <returns>bool value if Ticket is updated or not.</returns>
         bool ChangeTicketDiscount(int id, int newDiscount);
 
-        IList<NoOfMalesFemalesInEvent> createTask();
+        /// <summary>
+        /// This is the Async version of <see cref="GetNoOfMalesFemalesList"/> method.
+        /// </summary>
+        /// <returns>It will return Task.</returns>
+        Task<IList<NoOfMalesFemalesInEvent>> GetNoOfMalesAsync();
+
+        /// <summary>
+        /// This is the Async version of <see cref="TicketsBySingleGuest"/> method.
+        /// </summary>
+        /// <returns>It will return Task.</returns>
+        Task<IList<TicketsByGuest>> GetTicketByGuestAsync();
+
+        /// <summary>
+        /// This is the Async version of <see cref="GetEventSale"/> method.
+        /// </summary>
+        /// <returns>It will return Task.</returns>
+        Task<IList<TotalEventSale>> GetTotalSaleAsync();
     }
 }

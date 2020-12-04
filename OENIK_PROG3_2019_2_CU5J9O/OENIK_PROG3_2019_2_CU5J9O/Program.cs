@@ -133,7 +133,7 @@
                 throw new ArgumentNullException(nameof(logic));
             }
 
-            var result = Task.Run(() => logic.GetEventSale()).Result;
+            var result = logic.GetTotalSaleAsync().Result;
             foreach (var item in result)
             {
                 Console.WriteLine(item);
@@ -153,9 +153,8 @@
                 throw new ArgumentNullException(nameof(logic));
             }
 
-            // var result = Task.Run(() => logic.GetNoOfMalesFemalesList()).Result;
-            var result = logic.createTask();
-            foreach (var item in result)
+            var result = logic.GetNoOfMalesAsync();
+            foreach (var item in result.Result)
             {
                 Console.WriteLine(item);
             }
@@ -174,7 +173,7 @@
                 throw new ArgumentNullException(nameof(logic));
             }
 
-            var result = Task.Run(() => logic.TicketsBySingleGuest()).Result;
+            var result = logic.GetTicketByGuestAsync().Result;
 
             foreach (var item in result)
             {

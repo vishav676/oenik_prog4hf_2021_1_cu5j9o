@@ -338,7 +338,6 @@
 
             var actualResult = logic.GetNoOfMalesFemalesList();
 
-            // Assert.That(actualResult, Is.EquivalentTo(this.expectedMales));
             for (int i = 0; i < actualResult.ToList().Count; i++)
             {
                 Assert.That(actualResult.ToList()[i].EventName == this.expectedMales[i].EventName);
