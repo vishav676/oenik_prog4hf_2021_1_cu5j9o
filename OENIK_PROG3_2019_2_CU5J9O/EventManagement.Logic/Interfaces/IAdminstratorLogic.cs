@@ -33,14 +33,16 @@
         /// </summary>
         /// <param name="id">Event Id.</param>
         /// <param name="newPlace">New place name.</param>
-        void UpdatePlace(int id, string newPlace);
+        /// <returns>bool value if event is updated or not.</returns>
+        bool UpdatePlace(int id, string newPlace);
 
         /// <summary>
         /// This method will update Guest Name.
         /// </summary>
         /// <param name="id">Event Id.</param>
         /// <param name="newName">Updated Guest name.</param>
-        void ChangeName(int id, string newName);
+        /// <returns>bool value if guest is updated or not.</returns>
+        bool ChangeName(int id, string newName);
 
         /// <summary>
         /// This method will remove the Guest of specific Id.
@@ -79,6 +81,7 @@
         /// </summary>
         /// <param name="id">Ticket Id.</param>
         /// <param name="newDiscount">New Discount Value.</param>
-        void ChangeTicketDiscount(int id, int newDiscount);
+        /// <returns>bool value if Ticket is updated or not.</returns>
+        bool ChangeTicketDiscount(int id, int newDiscount);
     }
 }

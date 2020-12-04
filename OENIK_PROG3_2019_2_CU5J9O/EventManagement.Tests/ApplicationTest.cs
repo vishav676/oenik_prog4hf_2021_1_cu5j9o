@@ -9,10 +9,10 @@
     using NUnit.Framework;
 
     /// <summary>
-    /// This is a Test Class, hence will test all the functionality of the Application.
+    /// This is a Test Class, hence will test all the functionality of the Adminstration class.
     /// </summary>
     [TestFixture]
-    public class AdminstratorTest
+    public class ApplicationTest
     {
         private Mock<IEventRepository> eventRepo;
         private Mock<ITicketRepository> ticketRepo;
@@ -68,9 +68,9 @@
                 },
             }.AsQueryable());
 
-            IFrontOffice li = new FrontOfficeLogic(ticketRepo.Object, eventRepo.Object, guestRepo.Object);
+            IFrontOffice logic = new FrontOfficeLogic(ticketRepo.Object, eventRepo.Object, guestRepo.Object);
 
-            Ticket temp = li.GetOneTicket(1);
+            Ticket temp = logic.GetOneTicket(1);
             ticketRepo.Verify(x => x.GetOne(1), Times.Once);
         }
 
@@ -135,10 +135,16 @@
             Mock<IEventRepository> eventRepo = new Mock<IEventRepository>();
             Mock<ITicketRepository> ticketRepo = new Mock<ITicketRepository>();
             Mock<IGuestRepository> guestRepo = new Mock<IGuestRepository>();
+            List<Guest> guests = new List<Guest>()
+            {
+                new Guest() { ID = 1, Name = "Tom" },
+                new Guest() { ID = 2, Name = "Cruise" },
+            };
 
-            guestRepo.Setup(repo => repo.ChangeName(It.IsAny<int>(), It.IsAny<string>()));
+            guestRepo.Setup(repo => repo.ChangeName(It.IsAny<int>(), It.IsAny<string>())).Returns(true);
             AdminstratorLogic logic = new AdminstratorLogic(ticketRepo.Object, eventRepo.Object, guestRepo.Object);
-            logic.ChangeName(1, "Vishav");
+            bool result = logic.ChangeName(1, "Vishav");
+            Assert.That(result, Is.EqualTo(true));
             guestRepo.Verify(repo => repo.ChangeName(1, "Vishav"), Times.Once);
         }
 

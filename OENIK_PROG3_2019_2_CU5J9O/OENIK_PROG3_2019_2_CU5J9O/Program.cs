@@ -45,7 +45,7 @@
                 Add("Remove Guest", () => RemoveGuest(logic)).
                 Add("Remove Ticket", () => RemoveTicket(logic))
                 .Add("Get Event Sale", () => ListSale(logic))
-                .Add("Get No Sale", () => NoOfMalesFemales(logic))
+                .Add("Get No. Of Males and Females in Event", () => NoOfMalesFemales(logic))
                 .Add("Tickets by Guest", () => TicketsByGuest(logic))
                 .Add("Quit", ConsoleMenu.Close);
             menu.Show();
@@ -86,7 +86,14 @@
             Console.WriteLine("Enter the new Discount Value: ");
             int value = int.Parse(Console.ReadLine());
 
-            logic.ChangeTicketDiscount(id, value);
+            if (logic.ChangeTicketDiscount(id, value))
+            {
+                Console.WriteLine("Updated Successfully");
+            }
+            else
+            {
+                Console.WriteLine("No ticket found with this ID.");
+            }
         }
 
         /// <summary>
@@ -126,8 +133,8 @@
                 throw new ArgumentNullException(nameof(logic));
             }
 
-            var result = new Task<IList<TotalEventSale>>(() => logic.GetEventSale()).Result;
-            foreach (var item in logic.GetEventSale())
+            var result = Task.Run(() => logic.GetEventSale()).Result;
+            foreach (var item in result)
             {
                 Console.WriteLine(item);
             }
@@ -146,8 +153,8 @@
                 throw new ArgumentNullException(nameof(logic));
             }
 
-            var result = new Task<IList<NoOfMalesFemalesInEvent>>(() => logic.GetNoOfMalesFemalesList()).Result;
-            foreach (var item in logic.GetNoOfMalesFemalesList())
+            var result = Task.Run(() => logic.GetNoOfMalesFemalesList()).Result;
+            foreach (var item in result)
             {
                 Console.WriteLine(item);
             }
@@ -166,8 +173,8 @@
                 throw new ArgumentNullException(nameof(logic));
             }
 
-            var result = new Task<IList<TicketsByGuest>>(() => logic.TicketsBySingleGuest()).Result;
-            foreach (var item in logic.TicketsBySingleGuest())
+            var result = Task.Run(() => logic.TicketsBySingleGuest()).Result;
+            foreach (var item in result)
             {
                 Console.WriteLine(item);
             }
@@ -394,7 +401,14 @@
             Console.WriteLine("Enter new Event Place");
             string place = Console.ReadLine();
 
-            logic.UpdatePlace(id, place);
+            if (logic.UpdatePlace(id, place))
+            {
+                Console.WriteLine("Updated Succesfully");
+            }
+            else
+            {
+                Console.WriteLine("No Event exits with this event Id.");
+            }
         }
 
         /// <summary>
@@ -478,7 +492,14 @@
             Console.WriteLine("Enter New Guest Name: ");
             string name = Console.ReadLine();
 
-            logic.ChangeName(id, name);
+            if (logic.ChangeName(id, name))
+            {
+                Console.WriteLine("Updated Successfully");
+            }
+            else
+            {
+                Console.WriteLine("No Guest found with this ID");
+            }
         }
 
         /// <summary>

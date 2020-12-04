@@ -27,16 +27,18 @@
         /// </summary>
         /// <param name="id">Ticket Id.</param>
         /// <param name="newDiscount">New Discount Value.</param>
-        public void ChangeDiscount(int id, int newDiscount)
+        /// <returns>bool value if ticket is updated or not.</returns>
+        public bool ChangeDiscount(int id, int newDiscount)
         {
             var ticket = this.GetOne(id);
             if (ticket == null)
             {
-                throw new InvalidOperationException();
+                return false;
             }
 
             ticket.Discount = newDiscount;
             this.ctx.SaveChanges();
+            return true;
         }
 
         /// <summary>

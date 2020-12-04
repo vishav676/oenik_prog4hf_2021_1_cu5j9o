@@ -36,16 +36,18 @@
         /// </summary>
         /// <param name="id">Event Id.</param>
         /// <param name="newPlace">New Place Name.</param>
-        public void ChangePlace(int id, string newPlace)
+        /// <returns>bool value if event is updated or not.</returns>
+        public bool ChangePlace(int id, string newPlace)
         {
             var myEvent = this.GetOne(id);
             if (myEvent == null)
             {
-                throw new InvalidOperationException();
+                return false;
             }
 
             myEvent.Place = newPlace;
             this.ctx.SaveChanges();
+            return true;
         }
 
         /// <summary>

@@ -26,16 +26,18 @@
         /// </summary>
         /// <param name="id">Guest Id.</param>
         /// <param name="newName">New Guest Name.</param>
-        public void ChangeName(int id, string newName)
+        /// <returns>bool value if guest is updated or not.</returns>
+        public bool ChangeName(int id, string newName)
         {
             var guest = this.GetOne(id);
             if (guest == null)
             {
-                throw new InvalidOperationException();
+                return false;
             }
 
             guest.Name = newName;
             this.ctx.SaveChanges();
+            return true;
         }
 
         /// <summary>

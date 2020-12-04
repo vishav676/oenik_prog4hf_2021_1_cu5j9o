@@ -15,6 +15,7 @@
         /// </summary>
         /// <param name="id">ID of the ticket.</param>
         /// <param name="newDiscount">new discount value.</param>
-        void ChangeDiscount(int id, int newDiscount);
+        /// <returns>bool value if ticket is updated or not.</returns>
+        bool ChangeDiscount(int id, int newDiscount);
     }
 }

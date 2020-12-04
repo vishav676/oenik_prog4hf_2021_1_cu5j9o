@@ -4,48 +4,48 @@
         <name>EventManagement.Tests</name>
     </assembly>
     <members>
-        <member name="T:EventManagement.Tests.AdminstratorTest">
+        <member name="T:EventManagement.Tests.ApplicationTest">
             <summary>
-            This is a Test Class, hence will test all the functionality of the Application.
+            This is a Test Class, hence will test all the functionality of the Adminstration class.
             </summary>
         </member>
-        <member name="M:EventManagement.Tests.AdminstratorTest.TestEventAdd">
+        <member name="M:EventManagement.Tests.ApplicationTest.TestEventAdd">
             <summary>
             This test will verify if the <see cref="M:EventManagement.Repository.IRepository`1.Insert(`0)"/> method is working correctly.
             </summary>
         </member>
-        <member name="M:EventManagement.Tests.AdminstratorTest.TestGetOne">
+        <member name="M:EventManagement.Tests.ApplicationTest.TestGetOne">
             <summary>
-            This test will verify if <see cref="M:EventManagement.Repository.IRepository`1.GetOne(System.Int32)"/> One method is working correctly.
+            This test will verify if <see cref="M:EventManagement.Repository.IRepository`1.GetOne(System.Int32)"/> method is working correctly.
             </summary>
         </member>
-        <member name="M:EventManagement.Tests.AdminstratorTest.TestGetAll">
+        <member name="M:EventManagement.Tests.ApplicationTest.TestGetAll">
             <summary>
             This test will verify if the <see cref="M:EventManagement.Repository.IRepository`1.GetAll"/> method is working correctly.
             </summary>
         </member>
-        <member name="M:EventManagement.Tests.AdminstratorTest.TestRemove(System.Int32)">
+        <member name="M:EventManagement.Tests.ApplicationTest.TestRemove(System.Int32)">
             <summary>
             This test will verify if <see cref="M:EventManagement.Repository.IRepository`1.Remove(System.Int32)"/> method is working correctly.
             </summary>
             <param name="id">ID for which Test is conducted.</param>
         </member>
-        <member name="M:EventManagement.Tests.AdminstratorTest.TestUpdate">
+        <member name="M:EventManagement.Tests.ApplicationTest.TestUpdate">
             <summary>
             This test will verify if <see cref="M:EventManagement.Repository.IGuestRepository.ChangeName(System.Int32,System.String)"/> method is working correctly.
             </summary>
         </member>
-        <member name="M:EventManagement.Tests.AdminstratorTest.TestEventSale">
+        <member name="M:EventManagement.Tests.ApplicationTest.TestEventSale">
             <summary>
             This test will verify that that <see cref="M:EventManagement.Logic.AdminstratorLogic.GetEventSale"/> is working correctly.
             </summary>
         </member>
-        <member name="M:EventManagement.Tests.AdminstratorTest.TicketsBySingleGuestTest">
+        <member name="M:EventManagement.Tests.ApplicationTest.TicketsBySingleGuestTest">
             <summary>
             This test will verify that that <see cref="M:EventManagement.Logic.AdminstratorLogic.TicketsBySingleGuest"/> is working correctly.
             </summary>
         </member>
-        <member name="M:EventManagement.Tests.AdminstratorTest.TestNoOfMalesAndFemales">
+        <member name="M:EventManagement.Tests.ApplicationTest.TestNoOfMalesAndFemales">
             <summary>
             This test will verify that that <see cref="M:EventManagement.Logic.AdminstratorLogic.GetNoOfMalesFemalesList"/> is working correctly.
             </summary>

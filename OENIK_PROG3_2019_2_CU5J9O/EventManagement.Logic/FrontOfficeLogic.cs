@@ -30,7 +30,7 @@
         }
 
         /// <summary>
-        /// Implementation of Add method for Guest from <see cref="IFrontOffice"/> interface.
+        /// Implementation of Add method for Ticket from <see cref="IFrontOffice"/> interface.
         /// </summary>
         /// <param name="expiry">Expiry of ticket.</param>
         /// <param name="discount">Discount Value.</param>

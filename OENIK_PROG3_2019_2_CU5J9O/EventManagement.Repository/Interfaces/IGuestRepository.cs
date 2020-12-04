@@ -24,6 +24,7 @@
         /// </summary>
         /// <param name="id">Id of the Guest.</param>
         /// <param name="newName">Updated Guest Name.</param>
-        void ChangeName(int id, string newName);
+        /// <returns>bool value if Guest is updated or not.</returns>
+        bool ChangeName(int id, string newName);
     }
 }

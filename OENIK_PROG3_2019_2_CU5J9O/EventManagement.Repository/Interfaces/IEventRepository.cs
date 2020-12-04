@@ -17,7 +17,8 @@
         /// </summary>
         /// <param name="id">Id of the Event.</param>
         /// <param name="newPlace">Updated Place Name.</param>
-        void ChangePlace(int id, string newPlace);
+        /// <returns>bool value if event is updated or not.</returns>
+        bool ChangePlace(int id, string newPlace);
 
         /// <summary>
         /// Search method is used to find particular Event from the Database.

@@ -28,6 +28,7 @@
             </summary>
             <param name="id">Event Id.</param>
             <param name="newPlace">New Place Name.</param>
+            <returns>bool value if event is updated or not.</returns>
         </member>
         <member name="M:EventManagement.Repository.EventRepository.Search(System.String)">
             <summary>
@@ -53,6 +54,7 @@
             </summary>
             <param name="id">Guest Id.</param>
             <param name="newName">New Guest Name.</param>
+            <returns>bool value if guest is updated or not.</returns>
         </member>
         <member name="M:EventManagement.Repository.GuestRepository.GetOne(System.Int32)">
             <summary>
@@ -80,6 +82,7 @@
             </summary>
             <param name="id">Id of the Event.</param>
             <param name="newPlace">Updated Place Name.</param>
+            <returns>bool value if event is updated or not.</returns>
         </member>
         <member name="M:EventManagement.Repository.IEventRepository.Search(System.String)">
             <summary>
@@ -107,6 +110,7 @@
             </summary>
             <param name="id">Id of the Guest.</param>
             <param name="newName">Updated Guest Name.</param>
+            <returns>bool value if Guest is updated or not.</returns>
         </member>
         <member name="T:EventManagement.Repository.IRepository`1">
             <summary>
@@ -158,6 +162,7 @@
             </summary>
             <param name="id">ID of the ticket.</param>
             <param name="newDiscount">new discount value.</param>
+            <returns>bool value if ticket is updated or not.</returns>
         </member>
         <member name="T:EventManagement.Repository.Repo`1">
             <summary>
@@ -226,6 +231,7 @@
             </summary>
             <param name="id">Ticket Id.</param>
             <param name="newDiscount">New Discount Value.</param>
+            <returns>bool value if ticket is updated or not.</returns>
         </member>
         <member name="M:EventManagement.Repository.TicketRepository.GetOne(System.Int32)">
             <summary>

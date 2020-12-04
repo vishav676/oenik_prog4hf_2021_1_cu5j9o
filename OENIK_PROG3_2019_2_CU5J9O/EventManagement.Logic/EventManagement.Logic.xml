@@ -34,6 +34,7 @@
             </summary>
             <param name="id">Guest Id.</param>
             <param name="newName">Updated Name.</param>
+            <returns>bool value if guest is updated or not.</returns>
         </member>
         <member name="M:EventManagement.Logic.AdminstratorLogic.ChangeTicketDiscount(System.Int32,System.Int32)">
             <summary>
@@ -41,6 +42,7 @@
             </summary>
             <param name="id">Ticket ID.</param>
             <param name="newDiscount">New Discount Value.</param>
+            <returns>bool value if Ticket is updated or not.</returns>
         </member>
         <member name="M:EventManagement.Logic.AdminstratorLogic.GetNoOfMalesFemalesList">
             <summary>
@@ -87,6 +89,7 @@
             </summary>
             <param name="id">Event ID.</param>
             <param name="newPlace">New Place.</param>
+            <returns>bool value if event is updated or not.</returns>
         </member>
         <member name="T:EventManagement.Logic.FactoryLogic">
             <summary>
@@ -125,7 +128,7 @@
         </member>
         <member name="M:EventManagement.Logic.FrontOfficeLogic.Add(System.String,System.Int32,System.String,System.Int32,System.String,System.Int32,System.Int32)">
             <summary>
-            Implementation of Add method for Guest from <see cref="T:EventManagement.Logic.IFrontOffice"/> interface.
+            Implementation of Add method for Ticket from <see cref="T:EventManagement.Logic.IFrontOffice"/> interface.
             </summary>
             <param name="expiry">Expiry of ticket.</param>
             <param name="discount">Discount Value.</param>
@@ -221,6 +224,7 @@
             </summary>
             <param name="id">Event Id.</param>
             <param name="newPlace">New place name.</param>
+            <returns>bool value if event is updated or not.</returns>
         </member>
         <member name="M:EventManagement.Logic.IAdminstratorLogic.ChangeName(System.Int32,System.String)">
             <summary>
@@ -228,6 +232,7 @@
             </summary>
             <param name="id">Event Id.</param>
             <param name="newName">Updated Guest name.</param>
+            <returns>bool value if guest is updated or not.</returns>
         </member>
         <member name="M:EventManagement.Logic.IAdminstratorLogic.RemoveGuest(System.Int32)">
             <summary>
@@ -267,6 +272,7 @@
             </summary>
             <param name="id">Ticket Id.</param>
             <param name="newDiscount">New Discount Value.</param>
+            <returns>bool value if Ticket is updated or not.</returns>
         </member>
         <member name="T:EventManagement.Logic.IFactoryLogic">
             <summary>

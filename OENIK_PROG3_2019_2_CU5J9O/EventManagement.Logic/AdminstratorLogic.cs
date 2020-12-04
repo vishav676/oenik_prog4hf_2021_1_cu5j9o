@@ -58,9 +58,10 @@
         /// </summary>
         /// <param name="id">Guest Id.</param>
         /// <param name="newName">Updated Name.</param>
-        public void ChangeName(int id, string newName)
+        /// <returns>bool value if guest is updated or not.</returns>
+        public bool ChangeName(int id, string newName)
         {
-            this.guestRepository.ChangeName(id, newName);
+            return this.guestRepository.ChangeName(id, newName);
         }
 
         /// <summary>
@@ -68,9 +69,10 @@
         /// </summary>
         /// <param name="id">Ticket ID.</param>
         /// <param name="newDiscount">New Discount Value.</param>
-        public void ChangeTicketDiscount(int id, int newDiscount)
+        /// <returns>bool value if Ticket is updated or not.</returns>
+        public bool ChangeTicketDiscount(int id, int newDiscount)
         {
-            this.ticketRepo.ChangeDiscount(id, newDiscount);
+            return this.ticketRepo.ChangeDiscount(id, newDiscount);
         }
 
         /// <summary>
@@ -168,9 +170,10 @@
         /// </summary>
         /// <param name="id">Event ID.</param>
         /// <param name="newPlace">New Place.</param>
-        public void UpdatePlace(int id, string newPlace)
+        /// <returns>bool value if event is updated or not.</returns>
+        public bool UpdatePlace(int id, string newPlace)
         {
-            this.eventRepository.ChangePlace(id, newPlace);
+            return this.eventRepository.ChangePlace(id, newPlace);
         }
     }
 }
