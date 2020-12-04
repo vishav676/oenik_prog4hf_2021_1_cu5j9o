@@ -153,7 +153,8 @@
                 throw new ArgumentNullException(nameof(logic));
             }
 
-            var result = Task.Run(() => logic.GetNoOfMalesFemalesList()).Result;
+            // var result = Task.Run(() => logic.GetNoOfMalesFemalesList()).Result;
+            var result = logic.createTask();
             foreach (var item in result)
             {
                 Console.WriteLine(item);
@@ -174,6 +175,7 @@
             }
 
             var result = Task.Run(() => logic.TicketsBySingleGuest()).Result;
+
             foreach (var item in result)
             {
                 Console.WriteLine(item);

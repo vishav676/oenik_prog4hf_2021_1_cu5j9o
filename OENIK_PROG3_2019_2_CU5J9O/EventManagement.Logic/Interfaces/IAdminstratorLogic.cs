@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Text;
+    using System.Threading.Tasks;
     using EventManagement.Data.Models;
 
     /// <summary>
@@ -83,5 +84,7 @@
         /// <param name="newDiscount">New Discount Value.</param>
         /// <returns>bool value if Ticket is updated or not.</returns>
         bool ChangeTicketDiscount(int id, int newDiscount);
+
+        IList<NoOfMalesFemalesInEvent> createTask();
     }
 }

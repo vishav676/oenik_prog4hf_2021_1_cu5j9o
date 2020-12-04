@@ -5,6 +5,7 @@
     using System.Linq;
     using System.Security.Cryptography;
     using System.Text;
+    using System.Threading.Tasks;
     using EventManagement.Data.Models;
     using EventManagement.Repository;
 
@@ -174,6 +175,12 @@
         public bool UpdatePlace(int id, string newPlace)
         {
             return this.eventRepository.ChangePlace(id, newPlace);
+        }
+
+        public IList<NoOfMalesFemalesInEvent> createTask()
+        {
+            var task = Task.Run(() => this.GetNoOfMalesFemalesList()).Result;
+            return task.ToList();
         }
     }
 }
