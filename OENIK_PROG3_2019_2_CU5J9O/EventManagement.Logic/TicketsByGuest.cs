@@ -58,7 +58,7 @@
             string s = this.GuestName + "\n";
             foreach (Ticket ticket in this.Tickets)
             {
-                s += ticket.Id + " " + ticket.Events + " " + ticket.Expiry + " " + ticket.OrderInfo + "\n";
+                s += ticket + "\n";
             }
 
             return s;

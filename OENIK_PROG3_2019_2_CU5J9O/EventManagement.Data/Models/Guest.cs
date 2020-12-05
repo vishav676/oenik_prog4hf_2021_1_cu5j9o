@@ -87,7 +87,8 @@
         /// <returns> String.</returns>
         public override string ToString()
         {
-            return $"{this.Name} {this.Gender} {this.City} {this.Email}";
+            string s = $"Guest Id: {this.ID} \nGuest Name: {this.Name}\nCity: {this.City} \nContact: {this.Contact} \nGender: {this.Gender}\n";
+            return s;
         }
 
         /// <summary>

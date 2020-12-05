@@ -112,7 +112,7 @@
             Ticket item = logic.GetOneTicket(id);
             if (item != null)
             {
-                Console.WriteLine(item.Id + "\t" + item.Guest.Name + "\t" + item.OrderInfo);
+                Console.WriteLine($"Ticket Id: {item.Id} \nPrice Paid: {item.PricePaid} \nEvent: {item.Events.Name} \nDiscount: {item.Discount}\n");
             }
             else
             {

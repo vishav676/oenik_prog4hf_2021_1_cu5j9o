@@ -106,7 +106,8 @@
         /// <returns> String.</returns>
         public override string ToString()
         {
-            return $"{this.Id} {this.Guest.Name} {this.Discount}";
+            string s = $"Ticket Id: {this.Id} \nPrice Paid: {this.PricePaid} \nEvent: {this.EventId} \nDiscount: {this.Discount}\n";
+            return s;
         }
 
         /// <summary>
@@ -135,7 +136,7 @@
         /// <returns>int value (HashCode).</returns>
         public override int GetHashCode()
         {
-            return this.Id + this.PricePaid + this.Discount;
+            return this.Id + this.PricePaid + this.Discount + this.EventId;
         }
     }
 }

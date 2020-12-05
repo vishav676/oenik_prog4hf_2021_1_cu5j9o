@@ -96,7 +96,8 @@
         /// <returns> String.</returns>
         public override string ToString()
         {
-            return $"{this.Name} {this.Place} {this.OganizarName}";
+            string s = $"Event Id: {this.Id} \nEvent Name: {this.Name} \nOrganizar Name: {this.OganizarName} \nVenue: {this.Place} \nEntry Fee: {this.EntryFee}\n";
+            return s;
         }
     }
 }
