@@ -85,6 +85,18 @@
                 .OnDelete(DeleteBehavior.ClientSetNull);
             });
 
+            AdminUser adminUser = new AdminUser()
+            {
+                Id = 1,
+                Username = "vishav",
+                Password = "vishav",
+            };
+            AdminUser adminUser1 = new AdminUser()
+            {
+                Id = 2,
+                Username = "szabo",
+                Password = "szabo",
+            };
             Events boatParty = new Events()
             {
                 Id = 1,
@@ -579,6 +591,9 @@
                 pubCrawl,
                 unoChampionShip,
                 lakeBalaton);
+
+            modelBuilder.Entity<AdminUser>().HasData(
+                adminUser, adminUser1);
         }
     }
 }

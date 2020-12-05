@@ -8,6 +8,7 @@
     using System.Threading.Tasks;
     using EventManagement.Data.Models;
     using EventManagement.Repository;
+    using EventManagement.Repository.Interfaces;
 
     /// <summary>
     /// Public class implementing <see cref="IAdminstratorLogic"/> interface.
@@ -17,6 +18,7 @@
         private ITicketRepository ticketRepo;
         private IEventRepository eventRepository;
         private IGuestRepository guestRepository;
+        private IAdminUserRepository adminRepository;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AdminstratorLogic"/> class.
@@ -24,11 +26,13 @@
         /// <param name="ticketRepo">Ticket Repo.</param>
         /// <param name="eventRepository">Event Repo.</param>
         /// <param name="guestRepository">Guest Repo.</param>
-        public AdminstratorLogic(ITicketRepository ticketRepo, IEventRepository eventRepository, IGuestRepository guestRepository)
+        /// <param name="adminRepository">Admin Repo.</param>
+        public AdminstratorLogic(ITicketRepository ticketRepo, IEventRepository eventRepository, IGuestRepository guestRepository, IAdminUserRepository adminRepository)
         {
             this.ticketRepo = ticketRepo;
             this.eventRepository = eventRepository;
             this.guestRepository = guestRepository;
+            this.adminRepository = adminRepository;
         }
 
         /// <summary>
@@ -205,6 +209,12 @@
         {
             var task = Task.Run(() => this.GetEventSale());
             return task;
+        }
+
+        /// <inheritdoc/>
+        public bool IsPasswordCorrect(string name, string password)
+        {
+            return this.adminRepository.PasswordCorrect(name, password);
         }
     }
 }

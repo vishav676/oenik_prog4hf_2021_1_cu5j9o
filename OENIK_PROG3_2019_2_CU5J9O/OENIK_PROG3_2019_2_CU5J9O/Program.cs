@@ -20,14 +20,71 @@
         /// </summary>
         public static void Main()
         {
+            bool loggedIn = false;
             FactoryLogic logicGenerator = new FactoryLogic();
-
             var menu = new ConsoleMenu().
                 Add("Front Office", () => FrontOfficeMenu(logicGenerator.GetFrontOfficeLogic())).
-                Add("Adminstration Office", () => AdmistartionMenu(logicGenerator.GetAdminstratorLogic())).
+                Add("Adminstration Office", () => IsUserLoggedIn(logicGenerator.GetAdminstratorLogic(), ref loggedIn)).
                 Add("Quit", ConsoleMenu.Close);
 
             menu.Show();
+        }
+
+        /// <summary>
+        /// This will result wheather user is loggedIn in current session.
+        /// </summary>
+        /// <param name="logic">AdminstratorLogic.</param>
+        /// <param name="loggedIn">Bool Value of login status.</param>
+        public static void IsUserLoggedIn(AdminstratorLogic logic, ref bool loggedIn)
+        {
+            if (loggedIn)
+            {
+                AdmistartionMenu(logic);
+            }
+            else
+            {
+                Login(logic, ref loggedIn);
+            }
+        }
+
+        /// <summary>
+        /// This method will allow only certain users get admin access.
+        /// </summary>
+        /// <param name="logic">AdminstatorLogic.</param>
+        /// <param name="loggedIn">Bool Value of login status.</param>
+        public static void Login(AdminstratorLogic logic, ref bool loggedIn)
+        {
+            if (logic == null)
+            {
+                throw new ArgumentNullException(nameof(logic));
+            }
+
+            Console.WriteLine("Enter the usename");
+            string username = Console.ReadLine();
+            string password = string.Empty;
+            Console.WriteLine("Enter the password");
+            while (true)
+            {
+                ConsoleKeyInfo pass = Console.ReadKey(true);
+                if (pass.Key == ConsoleKey.Enter)
+                {
+                    break;
+                }
+
+                Console.Write("*");
+                password += pass.KeyChar;
+            }
+
+            if (logic.IsPasswordCorrect(username, password))
+            {
+                loggedIn = true;
+                AdmistartionMenu(logic);
+            }
+            else
+            {
+                Console.WriteLine("\nPassword or Username is incorrect.");
+                Console.ReadKey();
+            }
         }
 
         /// <summary>

@@ -102,5 +102,13 @@
         /// </summary>
         /// <returns>It will return Task.</returns>
         Task<IList<TotalEventSale>> GetTotalSaleAsync();
+
+        /// <summary>
+        /// This method will check is the password and username and correct.
+        /// </summary>
+        /// <param name="name">Username.</param>
+        /// <param name="password">Password.</param>
+        /// <returns>Boolean Value.</returns>
+        bool IsPasswordCorrect(string name, string password);
     }
 }

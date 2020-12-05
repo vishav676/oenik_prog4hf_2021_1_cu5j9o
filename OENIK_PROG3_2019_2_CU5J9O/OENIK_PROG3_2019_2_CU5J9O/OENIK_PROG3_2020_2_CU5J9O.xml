@@ -14,6 +14,20 @@
             This is the main method. This will show the menu to user and wait for the choice.
             </summary>
         </member>
+        <member name="M:OENIK_PROG3_2020_2_CU5J9O.Program.IsUserLoggedIn(EventManagement.Logic.AdminstratorLogic,System.Boolean@)">
+            <summary>
+            This will result wheather user is loggedIn in current session.
+            </summary>
+            <param name="logic">AdminstratorLogic.</param>
+            <param name="loggedIn">Bool Value of login status.</param>
+        </member>
+        <member name="M:OENIK_PROG3_2020_2_CU5J9O.Program.Login(EventManagement.Logic.AdminstratorLogic,System.Boolean@)">
+            <summary>
+            This method will allow only certain users get admin access.
+            </summary>
+            <param name="logic">AdminstatorLogic.</param>
+            <param name="loggedIn">Bool Value of login status.</param>
+        </member>
         <member name="M:OENIK_PROG3_2020_2_CU5J9O.Program.AdmistartionMenu(EventManagement.Logic.AdminstratorLogic)">
             <summary>
             This mehtod will generate the administrator menu to be shown to user.

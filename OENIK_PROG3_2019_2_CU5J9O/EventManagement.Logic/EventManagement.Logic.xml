@@ -9,13 +9,14 @@
             Public class implementing <see cref="T:EventManagement.Logic.IAdminstratorLogic"/> interface.
             </summary>
         </member>
-        <member name="M:EventManagement.Logic.AdminstratorLogic.#ctor(EventManagement.Repository.ITicketRepository,EventManagement.Repository.IEventRepository,EventManagement.Repository.IGuestRepository)">
+        <member name="M:EventManagement.Logic.AdminstratorLogic.#ctor(EventManagement.Repository.ITicketRepository,EventManagement.Repository.IEventRepository,EventManagement.Repository.IGuestRepository,EventManagement.Repository.Interfaces.IAdminUserRepository)">
             <summary>
             Initializes a new instance of the <see cref="T:EventManagement.Logic.AdminstratorLogic"/> class.
             </summary>
             <param name="ticketRepo">Ticket Repo.</param>
             <param name="eventRepository">Event Repo.</param>
             <param name="guestRepository">Guest Repo.</param>
+            <param name="adminRepository">Admin Repo.</param>
         </member>
         <member name="M:EventManagement.Logic.AdminstratorLogic.Add(System.String,System.String,System.String,System.String,System.String,System.Int32)">
             <summary>
@@ -108,6 +109,9 @@
             This is the Async version of <see cref="M:EventManagement.Logic.AdminstratorLogic.GetEventSale"/> method.
             </summary>
             <returns>It will return Task.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.AdminstratorLogic.IsPasswordCorrect(System.String,System.String)">
+            <inheritdoc/>
         </member>
         <member name="T:EventManagement.Logic.FactoryLogic">
             <summary>
@@ -309,6 +313,14 @@
             This is the Async version of <see cref="M:EventManagement.Logic.IAdminstratorLogic.GetEventSale"/> method.
             </summary>
             <returns>It will return Task.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.IAdminstratorLogic.IsPasswordCorrect(System.String,System.String)">
+            <summary>
+            This method will check is the password and username and correct.
+            </summary>
+            <param name="name">Username.</param>
+            <param name="password">Password.</param>
+            <returns>Boolean Value.</returns>
         </member>
         <member name="T:EventManagement.Logic.IFactoryLogic">
             <summary>

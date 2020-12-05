@@ -4,6 +4,35 @@
         <name>EventManagement.Repository</name>
     </assembly>
     <members>
+        <member name="T:EventManagement.Repository.AdminUserRepository">
+            <summary>
+            This class implements all the methods that are defined in <see cref="T:EventManagement.Repository.Interfaces.IAdminUserRepository"/> and extends <see cref="T:EventManagement.Repository.Repo`1"/> class.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Repository.AdminUserRepository.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.Repository.AdminUserRepository"/> class.
+            </summary>
+            <param name="ctx"><see cref="T:Microsoft.EntityFrameworkCore.DbContext"/>.</param>
+        </member>
+        <member name="M:EventManagement.Repository.AdminUserRepository.GetOne(System.Int32)">
+            <summary>
+            This will retrieve the specific user from the database table.
+            </summary>
+            <param name="id">User id.</param>
+            <returns>Admin user.</returns>
+        </member>
+        <member name="M:EventManagement.Repository.AdminUserRepository.PasswordCorrect(System.String,System.String)">
+            <summary>
+            this method checks if the password is correct.
+            </summary>
+            <param name="name">Username.</param>
+            <param name="password">Password.</param>
+            <returns>Bool value wether password is correct or not.</returns>
+        </member>
+        <member name="M:EventManagement.Repository.AdminUserRepository.Search(System.String)">
+            <inheritdoc/>
+        </member>
         <member name="T:EventManagement.Repository.EventRepository">
             <summary>
             This class store the implementation of Interface <see cref="T:EventManagement.Repository.IEventRepository"/> and extends class Repo of type Events.
@@ -69,6 +98,27 @@
             </summary>
             <param name="name">Guest Name to be Searched.</param>
             <returns>Return IQueryable List.</returns>
+        </member>
+        <member name="T:EventManagement.Repository.Interfaces.IAdminUserRepository">
+            <summary>
+            This inteface inherits IRepository interface.
+            This contains the methods which will be implemented in the AdminUserRepository class.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Repository.Interfaces.IAdminUserRepository.Search(System.String)">
+            <summary>
+            This method will search the user whos logging in.
+            </summary>
+            <param name="name">username.</param>
+            <returns>IQueryable.</returns>
+        </member>
+        <member name="M:EventManagement.Repository.Interfaces.IAdminUserRepository.PasswordCorrect(System.String,System.String)">
+            <summary>
+            this method checks if the password is correct.
+            </summary>
+            <param name="name">Username.</param>
+            <param name="password">Password.</param>
+            <returns>Bool value wether password is correct or not.</returns>
         </member>
         <member name="T:EventManagement.Repository.IEventRepository">
             <summary>

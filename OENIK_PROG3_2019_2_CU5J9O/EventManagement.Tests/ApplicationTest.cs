@@ -5,6 +5,7 @@
     using EventManagement.Data.Models;
     using EventManagement.Logic;
     using EventManagement.Repository;
+    using EventManagement.Repository.Interfaces;
     using Moq;
     using NUnit.Framework;
 
@@ -20,6 +21,7 @@
         private List<TotalEventSale> expectedSales;
         private List<TicketsByGuest> expectedTickets;
         private List<NoOfMalesFemalesInEvent> expectedMales;
+        private Mock<IAdminUserRepository> adminRepo;
 
         /// <summary>
         /// This test will verify if the <see cref="IRepository{T}.Insert(T)"/> method is working correctly.
@@ -30,7 +32,7 @@
             Mock<IEventRepository> eventRepo = new Mock<IEventRepository>();
             Mock<ITicketRepository> ticketRepo = new Mock<ITicketRepository>();
             Mock<IGuestRepository> guestRepo = new Mock<IGuestRepository>();
-
+            Mock<IAdminUserRepository> adminRepo = new Mock<IAdminUserRepository>();
             eventRepo.Setup(m => m.Insert(It.IsAny<Events>()));
 
             Events testEvent = new Events()
@@ -38,7 +40,7 @@
                 Name = "DanceParty", OganizarName = "Sonika", StartDate = "12-12-2020", EndDate = "13-12-2020", Place = "India", EntryFee = 1000,
             };
 
-            AdminstratorLogic logic = new AdminstratorLogic(ticketRepo.Object, eventRepo.Object, guestRepo.Object);
+            AdminstratorLogic logic = new AdminstratorLogic(ticketRepo.Object, eventRepo.Object, guestRepo.Object, adminRepo.Object);
             logic.Add(testEvent.Name, testEvent.OganizarName, testEvent.EndDate, testEvent.StartDate, testEvent.Place, testEvent.EntryFee);
             eventRepo.Verify(repo => repo.Insert(It.IsAny<Events>()));
         }
@@ -115,10 +117,10 @@
             Mock<IEventRepository> eventRepo = new Mock<IEventRepository>();
             Mock<ITicketRepository> ticketRepo = new Mock<ITicketRepository>();
             Mock<IGuestRepository> guestRepo = new Mock<IGuestRepository>();
-
+            Mock<IAdminUserRepository> adminRepo = new Mock<IAdminUserRepository>();
             guestRepo.Setup(repo => repo.Remove(It.IsAny<int>())).Returns(true);
             bool expectedTrue = true;
-            AdminstratorLogic logic = new AdminstratorLogic(ticketRepo.Object, eventRepo.Object, guestRepo.Object);
+            AdminstratorLogic logic = new AdminstratorLogic(ticketRepo.Object, eventRepo.Object, guestRepo.Object, adminRepo.Object);
             bool result = logic.RemoveGuest(id);
             Assert.That(result, Is.EqualTo(expectedTrue));
 
@@ -135,6 +137,7 @@
             Mock<IEventRepository> eventRepo = new Mock<IEventRepository>();
             Mock<ITicketRepository> ticketRepo = new Mock<ITicketRepository>();
             Mock<IGuestRepository> guestRepo = new Mock<IGuestRepository>();
+            Mock<IAdminUserRepository> adminRepo = new Mock<IAdminUserRepository>();
             List<Guest> guests = new List<Guest>()
             {
                 new Guest() { ID = 1, Name = "Tom" },
@@ -142,7 +145,7 @@
             };
 
             guestRepo.Setup(repo => repo.ChangeName(It.IsAny<int>(), It.IsAny<string>())).Returns(true);
-            AdminstratorLogic logic = new AdminstratorLogic(ticketRepo.Object, eventRepo.Object, guestRepo.Object);
+            AdminstratorLogic logic = new AdminstratorLogic(ticketRepo.Object, eventRepo.Object, guestRepo.Object, adminRepo.Object);
             bool result = logic.ChangeName(1, "Vishav");
             Assert.That(result, Is.EqualTo(true));
             guestRepo.Verify(repo => repo.ChangeName(1, "Vishav"), Times.Once);
@@ -153,6 +156,7 @@
             this.guestRepo = new Mock<IGuestRepository>();
             this.ticketRepo = new Mock<ITicketRepository>();
             this.eventRepo = new Mock<IEventRepository>();
+            this.adminRepo = new Mock<IAdminUserRepository>();
 
             Ticket ticket1 = new Ticket()
             {
@@ -288,7 +292,7 @@
             this.guestRepo.Setup(repo => repo.GetAll()).Returns(guests.AsQueryable());
             this.eventRepo.Setup(repo => repo.GetAll()).Returns(events.AsQueryable());
 
-            return new AdminstratorLogic(this.ticketRepo.Object, this.eventRepo.Object, this.guestRepo.Object);
+            return new AdminstratorLogic(this.ticketRepo.Object, this.eventRepo.Object, this.guestRepo.Object, this.adminRepo.Object);
         }
 
         /// <summary>

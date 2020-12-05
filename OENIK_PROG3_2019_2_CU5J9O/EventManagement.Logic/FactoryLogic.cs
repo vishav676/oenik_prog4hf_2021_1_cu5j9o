@@ -15,6 +15,7 @@
         private GuestRepository guestRepository;
         private TicketRepository ticketRepository;
         private EventRepository eventRepository;
+        private AdminUserRepository adminUserRepository;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="FactoryLogic"/> class.
@@ -24,6 +25,7 @@
             this.eventRepository = new EventRepository(this.eventDb);
             this.ticketRepository = new TicketRepository(this.eventDb);
             this.guestRepository = new GuestRepository(this.eventDb);
+            this.adminUserRepository = new AdminUserRepository(this.eventDb);
         }
 
         /// <summary>
@@ -32,7 +34,7 @@
         /// <returns>Instance of <see cref="AdminstratorLogic"/>.</returns>
         public AdminstratorLogic GetAdminstratorLogic()
         {
-            return new AdminstratorLogic(this.ticketRepository, this.eventRepository, this.guestRepository);
+            return new AdminstratorLogic(this.ticketRepository, this.eventRepository, this.guestRepository, this.adminUserRepository);
         }
 
         /// <summary>
