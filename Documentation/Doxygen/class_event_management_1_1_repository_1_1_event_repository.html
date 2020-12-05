@@ -26,9 +26,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Event Management
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
-   <div id="projectbrief">This application is built using C# and Sql Database. This application strictly follows the SOLID principle and apply All Basic CRUDS opertions. Various Advanced Sql Queries are also implemented.</div>
+   <div id="projectbrief">For admin access password for user vishav is vishav and for user szabo is szabo.</div>
   </td>
  </tr>
  </tbody>
@@ -113,9 +113,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afde51042308ea4e44f010b3a4e8bfd6d"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="class_event_management_1_1_data_1_1_models_1_1_events.html">Events</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_repository_1_1_event_repository.html#afde51042308ea4e44f010b3a4e8bfd6d">GetOne</a> (int id)</td></tr>
 <tr class="memdesc:afde51042308ea4e44f010b3a4e8bfd6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is overriden method from <a class="el" href="class_event_management_1_1_repository_1_1_repo.html#a3dbc444e913084fadb9a087bd1fe8436" title="Initializes a new instance of the Repo&lt;T&gt; class.">Repo&lt;T&gt;</a> class.  <a href="class_event_management_1_1_repository_1_1_event_repository.html#afde51042308ea4e44f010b3a4e8bfd6d">More...</a><br /></td></tr>
 <tr class="separator:afde51042308ea4e44f010b3a4e8bfd6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20492d03542a3675296a0e250ea7f83d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_repository_1_1_event_repository.html#a20492d03542a3675296a0e250ea7f83d">ChangePlace</a> (int id, string newPlace)</td></tr>
-<tr class="memdesc:a20492d03542a3675296a0e250ea7f83d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the implementation of the method from the <a class="el" href="interface_event_management_1_1_repository_1_1_i_event_repository.html" title="This interface store the queries related to Event Table It extends IRepository interface.">IEventRepository</a>.  <a href="class_event_management_1_1_repository_1_1_event_repository.html#a20492d03542a3675296a0e250ea7f83d">More...</a><br /></td></tr>
-<tr class="separator:a20492d03542a3675296a0e250ea7f83d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21d6951339d67a27076eb38c08e4f409"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_repository_1_1_event_repository.html#a21d6951339d67a27076eb38c08e4f409">ChangePlace</a> (int id, string newPlace)</td></tr>
+<tr class="memdesc:a21d6951339d67a27076eb38c08e4f409"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the implementation of the method from the <a class="el" href="interface_event_management_1_1_repository_1_1_i_event_repository.html" title="This interface store the queries related to Event Table It extends IRepository interface.">IEventRepository</a>.  <a href="class_event_management_1_1_repository_1_1_event_repository.html#a21d6951339d67a27076eb38c08e4f409">More...</a><br /></td></tr>
+<tr class="separator:a21d6951339d67a27076eb38c08e4f409"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f091e7ff781abc69d2bfc09f93bde8e"><td class="memItemLeft" align="right" valign="top">IQueryable&lt; <a class="el" href="class_event_management_1_1_data_1_1_models_1_1_events.html">Events</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_repository_1_1_event_repository.html#a5f091e7ff781abc69d2bfc09f93bde8e">Search</a> (string name)</td></tr>
 <tr class="memdesc:a5f091e7ff781abc69d2bfc09f93bde8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the implementation of the method from <a class="el" href="interface_event_management_1_1_repository_1_1_i_event_repository.html" title="This interface store the queries related to Event Table It extends IRepository interface.">IEventRepository</a> interface.  <a href="class_event_management_1_1_repository_1_1_event_repository.html#a5f091e7ff781abc69d2bfc09f93bde8e">More...</a><br /></td></tr>
 <tr class="separator:a5f091e7ff781abc69d2bfc09f93bde8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -193,14 +193,14 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a20492d03542a3675296a0e250ea7f83d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20492d03542a3675296a0e250ea7f83d">&#9670;&nbsp;</a></span>ChangePlace()</h2>
+<a id="a21d6951339d67a27076eb38c08e4f409"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21d6951339d67a27076eb38c08e4f409">&#9670;&nbsp;</a></span>ChangePlace()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void EventManagement.Repository.EventRepository.ChangePlace </td>
+          <td class="memname">bool EventManagement.Repository.EventRepository.ChangePlace </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>id</em>, </td>
@@ -227,10 +227,11 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>bool value if event is updated or not.</dd></dl>
 
-<p>Implements <a class="el" href="interface_event_management_1_1_repository_1_1_i_event_repository.html#aba98059dc2418c56bc5065965ce7cfd1">EventManagement.Repository.IEventRepository</a>.</p>
+<p>Implements <a class="el" href="interface_event_management_1_1_repository_1_1_i_event_repository.html#ab9fd77d9771546dbc5a3411e4badaae0">EventManagement.Repository.IEventRepository</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_event_repository_8cs_source.html#l00039">39</a> of file <a class="el" href="_event_repository_8cs_source.html">EventRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_event_repository_8cs_source.html#l00040">40</a> of file <a class="el" href="_event_repository_8cs_source.html">EventRepository.cs</a>.</p>
 
 </div>
 </div>
@@ -300,7 +301,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_event_management_1_1_repository_1_1_i_event_repository.html#a1b659f4f1fbabd14a242ed3e68c83256">EventManagement.Repository.IEventRepository</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_event_repository_8cs_source.html#l00056">56</a> of file <a class="el" href="_event_repository_8cs_source.html">EventRepository.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_event_repository_8cs_source.html#l00058">58</a> of file <a class="el" href="_event_repository_8cs_source.html">EventRepository.cs</a>.</p>
 
 </div>
 </div>

@@ -1,6 +1,7 @@
 var hierarchy =
 [
-    [ "EventManagement.Tests.AdminstratorTest", "class_event_management_1_1_tests_1_1_adminstrator_test.html", null ],
+    [ "EventManagement.Data.Models.AdminUser", "class_event_management_1_1_data_1_1_models_1_1_admin_user.html", null ],
+    [ "EventManagement.Tests.ApplicationTest", "class_event_management_1_1_tests_1_1_application_test.html", null ],
     [ "DbContext", null, [
       [ "EventManagement.Data.Models.EventDbContext", "class_event_management_1_1_data_1_1_models_1_1_event_db_context.html", null ]
     ] ],
@@ -17,6 +18,11 @@ var hierarchy =
     ] ],
     [ "EventManagement.Repository.IRepository< T >", "interface_event_management_1_1_repository_1_1_i_repository.html", [
       [ "EventManagement.Repository.Repo< T >", "class_event_management_1_1_repository_1_1_repo.html", null ]
+    ] ],
+    [ "EventManagement.Repository.IRepository< AdminUser >", "interface_event_management_1_1_repository_1_1_i_repository.html", [
+      [ "EventManagement.Repository.Interfaces.IAdminUserRepository", "interface_event_management_1_1_repository_1_1_interfaces_1_1_i_admin_user_repository.html", [
+        [ "EventManagement.Repository.AdminUserRepository", "class_event_management_1_1_repository_1_1_admin_user_repository.html", null ]
+      ] ]
     ] ],
     [ "EventManagement.Repository.IRepository< Events >", "interface_event_management_1_1_repository_1_1_i_repository.html", [
       [ "EventManagement.Repository.IEventRepository", "interface_event_management_1_1_repository_1_1_i_event_repository.html", [
@@ -35,6 +41,9 @@ var hierarchy =
     ] ],
     [ "EventManagement.Logic.NoOfMalesFemalesInEvent", "class_event_management_1_1_logic_1_1_no_of_males_females_in_event.html", null ],
     [ "OENIK_PROG3_2020_2_CU5J9O.Program", "class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html", null ],
+    [ "EventManagement.Repository.Repo< AdminUser >", "class_event_management_1_1_repository_1_1_repo.html", [
+      [ "EventManagement.Repository.AdminUserRepository", "class_event_management_1_1_repository_1_1_admin_user_repository.html", null ]
+    ] ],
     [ "EventManagement.Repository.Repo< Events >", "class_event_management_1_1_repository_1_1_repo.html", [
       [ "EventManagement.Repository.EventRepository", "class_event_management_1_1_repository_1_1_event_repository.html", null ]
     ] ],

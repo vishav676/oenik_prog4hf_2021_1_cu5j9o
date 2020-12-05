@@ -1,0 +1,4 @@
+var namespace_event_management_1_1_repository_1_1_interfaces =
+[
+    [ "IAdminUserRepository", "interface_event_management_1_1_repository_1_1_interfaces_1_1_i_admin_user_repository.html", "interface_event_management_1_1_repository_1_1_interfaces_1_1_i_admin_user_repository" ]
+];

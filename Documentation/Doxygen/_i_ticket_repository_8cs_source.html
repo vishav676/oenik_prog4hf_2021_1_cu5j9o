@@ -26,9 +26,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Event Management
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
-   <div id="projectbrief">This application is built using C# and Sql Database. This application strictly follows the SOLID principle and apply All Basic CRUDS opertions. Various Advanced Sql Queries are also implemented.</div>
+   <div id="projectbrief">For admin access password for user vishav is vishav and for user szabo is szabo.</div>
   </td>
  </tr>
  </tbody>
@@ -96,19 +96,19 @@ $(document).ready(function(){initNavTree('_i_ticket_repository_8cs_source.html',
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="interface_event_management_1_1_repository_1_1_i_ticket_repository.html">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code" href="interface_event_management_1_1_repository_1_1_i_ticket_repository.html">ITicketRepository</a> : <a class="code" href="interface_event_management_1_1_repository_1_1_i_repository.html">IRepository</a>&lt;Ticket&gt;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="interface_event_management_1_1_repository_1_1_i_ticket_repository.html#a33b1c0472a6ba81fc2c5fba61c30d52d">   18</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="interface_event_management_1_1_repository_1_1_i_ticket_repository.html#a33b1c0472a6ba81fc2c5fba61c30d52d">ChangeDiscount</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">int</span> newDiscount);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="interface_event_management_1_1_repository_1_1_i_ticket_repository.html#ac963c6da19561aa160e15ff9d968da05">   19</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="interface_event_management_1_1_repository_1_1_i_ticket_repository.html#ac963c6da19561aa160e15ff9d968da05">ChangeDiscount</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">int</span> newDiscount);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespace_event_management_1_1_data_html"><div class="ttname"><a href="namespace_event_management_1_1_data.html">EventManagement.Data</a></div><div class="ttdef"><b>Definition:</b> <a href="_event_db_context_8cs_source.html#l00001">EventDbContext.cs:2</a></div></div>
+<div class="ttc" id="anamespace_event_management_1_1_data_html"><div class="ttname"><a href="namespace_event_management_1_1_data.html">EventManagement.Data</a></div><div class="ttdef"><b>Definition:</b> <a href="_admin_user_8cs_source.html#l00001">AdminUser.cs:2</a></div></div>
 <div class="ttc" id="anamespace_system_1_1_collections_1_1_generic_html"><div class="ttname"><a href="namespace_system_1_1_collections_1_1_generic.html">Generic</a></div></div>
-<div class="ttc" id="anamespace_event_management_1_1_data_1_1_models_html"><div class="ttname"><a href="namespace_event_management_1_1_data_1_1_models.html">EventManagement.Data.Models</a></div><div class="ttdef"><b>Definition:</b> <a href="_event_db_context_8cs_source.html#l00001">EventDbContext.cs:2</a></div></div>
-<div class="ttc" id="anamespace_event_management_html"><div class="ttname"><a href="namespace_event_management.html">EventManagement</a></div><div class="ttdef"><b>Definition:</b> <a href="_event_db_context_8cs_source.html#l00001">EventDbContext.cs:2</a></div></div>
-<div class="ttc" id="ainterface_event_management_1_1_repository_1_1_i_ticket_repository_html_a33b1c0472a6ba81fc2c5fba61c30d52d"><div class="ttname"><a href="interface_event_management_1_1_repository_1_1_i_ticket_repository.html#a33b1c0472a6ba81fc2c5fba61c30d52d">EventManagement.Repository.ITicketRepository.ChangeDiscount</a></div><div class="ttdeci">void ChangeDiscount(int id, int newDiscount)</div><div class="ttdoc">This method is used to update the discount value in the table of specific ticket.</div></div>
+<div class="ttc" id="anamespace_event_management_1_1_data_1_1_models_html"><div class="ttname"><a href="namespace_event_management_1_1_data_1_1_models.html">EventManagement.Data.Models</a></div><div class="ttdef"><b>Definition:</b> <a href="_admin_user_8cs_source.html#l00001">AdminUser.cs:2</a></div></div>
+<div class="ttc" id="anamespace_event_management_html"><div class="ttname"><a href="namespace_event_management.html">EventManagement</a></div><div class="ttdef"><b>Definition:</b> <a href="_admin_user_8cs_source.html#l00001">AdminUser.cs:2</a></div></div>
 <div class="ttc" id="ainterface_event_management_1_1_repository_1_1_i_repository_html"><div class="ttname"><a href="interface_event_management_1_1_repository_1_1_i_repository.html">EventManagement.Repository.IRepository</a></div><div class="ttdoc">This is general interface which contains all the generic methods for all Tables of the Database.</div><div class="ttdef"><b>Definition:</b> <a href="_i_repository_8cs_source.html#l00009">IRepository.cs:11</a></div></div>
 <div class="ttc" id="ainterface_event_management_1_1_repository_1_1_i_ticket_repository_html"><div class="ttname"><a href="interface_event_management_1_1_repository_1_1_i_ticket_repository.html">EventManagement.Repository.ITicketRepository</a></div><div class="ttdoc">This interface stores functions related to Ticket table.</div><div class="ttdef"><b>Definition:</b> <a href="_i_ticket_repository_8cs_source.html#l00011">ITicketRepository.cs:12</a></div></div>
-<div class="ttc" id="anamespace_event_management_1_1_repository_html"><div class="ttname"><a href="namespace_event_management_1_1_repository.html">EventManagement.Repository</a></div><div class="ttdef"><b>Definition:</b> <a href="_event_repository_8cs_source.html#l00001">EventRepository.cs:2</a></div></div>
+<div class="ttc" id="anamespace_event_management_1_1_repository_html"><div class="ttname"><a href="namespace_event_management_1_1_repository.html">EventManagement.Repository</a></div><div class="ttdef"><b>Definition:</b> <a href="_admin_user_repository_8cs_source.html#l00001">AdminUserRepository.cs:2</a></div></div>
+<div class="ttc" id="ainterface_event_management_1_1_repository_1_1_i_ticket_repository_html_ac963c6da19561aa160e15ff9d968da05"><div class="ttname"><a href="interface_event_management_1_1_repository_1_1_i_ticket_repository.html#ac963c6da19561aa160e15ff9d968da05">EventManagement.Repository.ITicketRepository.ChangeDiscount</a></div><div class="ttdeci">bool ChangeDiscount(int id, int newDiscount)</div><div class="ttdoc">This method is used to update the discount value in the table of specific ticket.</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

@@ -26,9 +26,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Event Management
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
-   <div id="projectbrief">This application is built using C# and Sql Database. This application strictly follows the SOLID principle and apply All Basic CRUDS opertions. Various Advanced Sql Queries are also implemented.</div>
+   <div id="projectbrief">For admin access password for user vishav is vishav and for user szabo is szabo.</div>
   </td>
  </tr>
  </tbody>
@@ -135,15 +135,16 @@ $(document).ready(function(){initNavTree('_events_8cs_source.html',''); initResi
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
 <div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_event_management_1_1_data_1_1_models_1_1_events.html#a03076660a0711bc1ad70000a5c6dc096">   97</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code" href="class_event_management_1_1_data_1_1_models_1_1_events.html#a03076660a0711bc1ad70000a5c6dc096">ToString</a>()</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">return</span> $<span class="stringliteral">&quot;{this.Name} {this.Place} {this.OganizarName}&quot;</span>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordtype">string</span> s = $<span class="stringliteral">&quot;Event Id: {this.Id} \nEvent Name: {this.Name} \nOrganizar Name: {this.OganizarName} \nVenue: {this.Place} \nEntry Fee: {this.EntryFee}\n&quot;</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">return</span> s;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_event_management_1_1_data_1_1_models_1_1_events_html_ad9b9b835a00cc8a535a572f1e14314d9"><div class="ttname"><a href="class_event_management_1_1_data_1_1_models_1_1_events.html#ad9b9b835a00cc8a535a572f1e14314d9">EventManagement.Data.Models.Events.Place</a></div><div class="ttdeci">string Place</div><div class="ttdoc">Gets or Sets Place attribute of the class. This field stores the name of the Place where Event is goi...</div><div class="ttdef"><b>Definition:</b> <a href="_events_8cs_source.html#l00064">Events.cs:64</a></div></div>
 <div class="ttc" id="anamespace_system_1_1_collections_1_1_generic_html"><div class="ttname"><a href="namespace_system_1_1_collections_1_1_generic.html">Generic</a></div></div>
-<div class="ttc" id="anamespace_event_management_1_1_data_1_1_models_html"><div class="ttname"><a href="namespace_event_management_1_1_data_1_1_models.html">EventManagement.Data.Models</a></div><div class="ttdef"><b>Definition:</b> <a href="_event_db_context_8cs_source.html#l00001">EventDbContext.cs:2</a></div></div>
+<div class="ttc" id="anamespace_event_management_1_1_data_1_1_models_html"><div class="ttname"><a href="namespace_event_management_1_1_data_1_1_models.html">EventManagement.Data.Models</a></div><div class="ttdef"><b>Definition:</b> <a href="_admin_user_8cs_source.html#l00001">AdminUser.cs:2</a></div></div>
 <div class="ttc" id="aclass_event_management_1_1_data_1_1_models_1_1_events_html_a03076660a0711bc1ad70000a5c6dc096"><div class="ttname"><a href="class_event_management_1_1_data_1_1_models_1_1_events.html#a03076660a0711bc1ad70000a5c6dc096">EventManagement.Data.Models.Events.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdoc">Override public function to generate string from object data.</div><div class="ttdef"><b>Definition:</b> <a href="_events_8cs_source.html#l00097">Events.cs:97</a></div></div>
 <div class="ttc" id="aclass_event_management_1_1_data_1_1_models_1_1_events_html_a46fc34d7f398a1d47a42a64413fbed03"><div class="ttname"><a href="class_event_management_1_1_data_1_1_models_1_1_events.html#a46fc34d7f398a1d47a42a64413fbed03">EventManagement.Data.Models.Events.EndDate</a></div><div class="ttdeci">string EndDate</div><div class="ttdoc">Gets or Sets EndDate attribute of the class. This field stores the date when the event will end....</div><div class="ttdef"><b>Definition:</b> <a href="_events_8cs_source.html#l00091">Events.cs:91</a></div></div>
 <div class="ttc" id="aclass_event_management_1_1_data_1_1_models_1_1_events_html_aa8e954c55863387d43fe535df78109c1"><div class="ttname"><a href="class_event_management_1_1_data_1_1_models_1_1_events.html#aa8e954c55863387d43fe535df78109c1">EventManagement.Data.Models.Events.OganizarName</a></div><div class="ttdeci">string OganizarName</div><div class="ttdoc">Gets or Sets OganizarName attribute of the class. This field stores the name of the Organizer who is ...</div><div class="ttdef"><b>Definition:</b> <a href="_events_8cs_source.html#l00073">Events.cs:73</a></div></div>
