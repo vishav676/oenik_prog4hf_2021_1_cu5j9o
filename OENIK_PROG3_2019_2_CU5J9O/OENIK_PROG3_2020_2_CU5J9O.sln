@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OENIK_PROG3_2020_2_CU5J9O", "OENIK_PROG3_2019_2_CU5J9O\OENIK_PROG3_2020_2_CU5J9O.csproj", "{BBE378D1-D312-4052-B8B5-6F64A91D62E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventManagement.Data", "EventManagement.Data\EventManagement.Data.csproj", "{467BA93E-DEBE-46C4-861C-91416AEBD471}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventManagement.Data", "EventManagement.Data\EventManagement.Data.csproj", "{467BA93E-DEBE-46C4-861C-91416AEBD471}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventManagement.Repository", "EventManagement.Repository\EventManagement.Repository.csproj", "{A491F221-DC08-4657-A4D7-7B9EFF79BCC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventManagement.Repository", "EventManagement.Repository\EventManagement.Repository.csproj", "{A491F221-DC08-4657-A4D7-7B9EFF79BCC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventManagement.Logic", "EventManagement.Logic\EventManagement.Logic.csproj", "{48237983-18C9-488C-BA60-434254AFB60B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventManagement.Logic", "EventManagement.Logic\EventManagement.Logic.csproj", "{48237983-18C9-488C-BA60-434254AFB60B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventManagement.Tests", "EventManagement.Tests\EventManagement.Tests.csproj", "{FD74AFFC-4C4C-4D51-B1B7-AFA50B346446}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventManagement.WPF", "EventManagement.WPF\EventManagement.WPF.csproj", "{C7668A3C-5AF6-48EC-B5BB-175FFF6FCB93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BBE378D1-D312-4052-B8B5-6F64A91D62E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BBE378D1-D312-4052-B8B5-6F64A91D62E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BBE378D1-D312-4052-B8B5-6F64A91D62E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BBE378D1-D312-4052-B8B5-6F64A91D62E8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{467BA93E-DEBE-46C4-861C-91416AEBD471}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{467BA93E-DEBE-46C4-861C-91416AEBD471}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{467BA93E-DEBE-46C4-861C-91416AEBD471}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -35,10 +29,10 @@ Global
 		{48237983-18C9-488C-BA60-434254AFB60B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48237983-18C9-488C-BA60-434254AFB60B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48237983-18C9-488C-BA60-434254AFB60B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FD74AFFC-4C4C-4D51-B1B7-AFA50B346446}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FD74AFFC-4C4C-4D51-B1B7-AFA50B346446}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FD74AFFC-4C4C-4D51-B1B7-AFA50B346446}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FD74AFFC-4C4C-4D51-B1B7-AFA50B346446}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7668A3C-5AF6-48EC-B5BB-175FFF6FCB93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7668A3C-5AF6-48EC-B5BB-175FFF6FCB93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7668A3C-5AF6-48EC-B5BB-175FFF6FCB93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7668A3C-5AF6-48EC-B5BB-175FFF6FCB93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
