@@ -4,13 +4,15 @@
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Linq;
     using System.Text;
+    using GalaSoft.MvvmLight;
 
     /// <summary>
     /// This class represents a table of name guests in the Database..
     /// </summary>
     [Table("guests")]
-    public class Guest
+    public class Guest : ObservableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Guest"/> class.
@@ -117,6 +119,13 @@
         public override int GetHashCode()
         {
             return this.ID + this.Gender.GetHashCode() + this.Email.GetHashCode();
+        }
+
+        
+        public void CopyFrom(Guest other)
+        {
+            this.GetType().GetProperties().ToList().ForEach(
+                prop => prop.SetValue(this, prop.GetValue(other)));
         }
     }
 }

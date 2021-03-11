@@ -3,10 +3,39 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:EventManagement.WPF"
+        xmlns:vm="clr-namespace:EventManagement.WPF.VM"
+        xmlns:data="clr-namespace:EventManagement.Data.Models;assembly=EventManagement.Data"
+        xmlns:ui="clr-namespace:EventManagement.WPF.UI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="329" Width="360"
+        Loaded="Window_Loaded" Closing="Window_Closing">
+    <Window.Resources>
+        <vm:MainViewModel x:Key="VM"/>
+
+        <DataTemplate x:Key="listTemplate" DataType="{x:Type data:Guest}">
+            <DockPanel>
+                <Label Content="{Binding Path=ID}" DockPanel.Dock="Top" HorizontalAlignment="Left"/>
+                <Label Content="{Binding Path=Name}" DockPanel.Dock="Top" HorizontalAlignment="Center"/>
+                <Label Content="{Binding Path=Gender}" DockPanel.Dock="Top" HorizontalAlignment="Right"/>
+                <Label Content="{Binding Path=Contact}" DockPanel.Dock="Left" HorizontalAlignment="Left"/>
+                <Label Content="{Binding Path=Email}" DockPanel.Dock="Left" HorizontalAlignment="Right"/>
+                <Label Content="{Binding Path=Contact}" DockPanel.Dock="Bottom" HorizontalAlignment="Left"/>
+                <Label></Label>
+            </DockPanel>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource VM}">
+        <ListBox ItemTemplate="{StaticResource listTemplate}"
+                 ItemsSource="{Binding Path=Guests}" SelectedItem="{Binding Path=GuestSelected}"
+                 
+                 HorizontalAlignment="Left" Height="251" Margin="10,10,10,10" VerticalAlignment="Top"
+                 Width="210"/>
+        <Button Command="{Binding Path=AddCmd}" Content="ADD" HorizontalAlignment="Left"
+                Margin="225,40,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Command="{Binding Path=DelCmd}" Content="Delete" HorizontalAlignment="Left"
+                Margin="225,90,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Command="{Binding Path=ModCmd}" Content="Modify" HorizontalAlignment="Left"
+                Margin="225,140,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>

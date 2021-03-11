@@ -7,8 +7,10 @@
     using System.Text;
     using System.Threading.Tasks;
     using EventManagement.Data.Models;
+    using EventManagement.Logic.Interfaces;
     using EventManagement.Repository;
     using EventManagement.Repository.Interfaces;
+    using GalaSoft.MvvmLight.Messaging;
 
     /// <summary>
     /// Public class implementing <see cref="IAdminstratorLogic"/> interface.
@@ -43,8 +45,8 @@
         /// <param name="endDate">End Date.</param>
         /// <param name="startDate">Start Date.</param>
         /// <param name="place">Venue.</param>
-        /// <param name="fee">Entry Fee.</param>
-        public void Add(string name, string organizerName, string endDate, string startDate, string place, int fee)
+        /// <param name="entryFee">Entry Fee.</param>
+        public void Add(string name, string organizerName, string endDate, string startDate, string place, int entryFee)
         {
             Events g = new Events()
             {
@@ -53,7 +55,7 @@
                 EndDate = endDate,
                 StartDate = startDate,
                 Place = place,
-                EntryFee = fee,
+                EntryFee = entryFee,
             };
             this.eventRepository.Insert(g);
         }

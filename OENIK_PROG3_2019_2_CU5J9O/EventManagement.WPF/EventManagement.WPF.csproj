@@ -22,6 +22,16 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="MvvmLightLibsStd10" Version="5.4.1.1" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EventManagement.Data\EventManagement.Data.csproj" />
+    <ProjectReference Include="..\EventManagement.Logic\EventManagement.Logic.csproj" />
+    <ProjectReference Include="..\EventManagement.Repository\EventManagement.Repository.csproj" />
   </ItemGroup>
 
 </Project>

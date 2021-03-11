@@ -1,0 +1,28 @@
+﻿<Window x:Class="EventManagement.WPF.UI.EditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="clr-namespace:EventManagement.WPF.UI"
+        xmlns:vm="clr-namespace:EventManagement.WPF.VM"
+        mc:Ignorable="d"
+        Title="EditorWindow" Height="363" Width="251">
+    <Window.Resources>
+        <vm:EditViewModel x:Key="VM"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource VM}">
+        <Label Content="Name" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Phone No." HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top"/>
+        <Label Content="Gender" HorizontalAlignment="Left" Margin="10,160,0,0" VerticalAlignment="Top"/>
+        <TextBox Text ="{Binding Path=Guest.Name}" HorizontalAlignment="Left" Margin="75,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Text ="{Binding Path=Guest.Contact}" HorizontalAlignment="Left" Margin="75,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Text ="{Binding Path=Guest.Email}" HorizontalAlignment="Left" Margin="75,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Text ="{Binding Path=Guest.Gender}" HorizontalAlignment="Left" Margin="75,165,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="City" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top"/>
+        <TextBox Text ="{Binding Path=Guest.City}" HorizontalAlignment="Left" Margin="75,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="OK" Click="OkClick" HorizontalAlignment="Left" Height="34" Margin="10,260,0,0" VerticalAlignment="Top" Width="81"/>
+        <Button Content="Cancel" Click="CancelClick" HorizontalAlignment="Left" Height="34" Margin="114,260,0,0" VerticalAlignment="Top" Width="81"/>
+
+    </Grid>
+</Window>
