@@ -36,11 +36,12 @@
         /// This function inserts the new guest to the database.
         /// </summary>
         /// <param name="guest">Guest type parameter.</param>
-        public void Add(Guest guest)
+        public void Add()
         {
-            if (this.editorService.EditGuest(guest) == true)
+            Guest newGuest = new Guest();
+            if (this.editorService.EditGuest(newGuest) == true)
             {
-                this.guestRepository.Insert(guest);
+                this.guestRepository.Insert(newGuest);
                 this.messengerService.Send("Add Ok");
             }
         }

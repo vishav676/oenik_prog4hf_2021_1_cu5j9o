@@ -14,6 +14,7 @@
     class EditViewModel : ViewModelBase
     {
         Guest guest;
+
         public Guest Guest
         {
             get { return guest; }

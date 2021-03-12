@@ -22,7 +22,7 @@
         /// This function inserts the new guest to the database.
         /// </summary>
         /// <param name="guest">Guest type parameter.</param>
-        void Add(Guest guest);
+        void Add();
 
         /// <summary>
         /// This function is used to delete the selected guest from the database.

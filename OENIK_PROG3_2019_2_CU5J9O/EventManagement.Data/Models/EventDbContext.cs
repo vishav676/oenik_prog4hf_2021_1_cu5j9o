@@ -543,6 +543,16 @@
                 Gender = "Female",
             };
 
+            Guest hey = new Guest()
+            {
+                ID = 22,
+                Name = "Natalie",
+                City = "Siofok",
+                Contact = "375738498",
+                Email = "natalie@gmail.com",
+                Gender = "Female",
+            };
+
             modelBuilder.Entity<Guest>().HasData(
                 piyush,
                 vishav,
@@ -564,7 +574,8 @@
                 aria,
                 mia,
                 evelyn,
-                isabella);
+                isabella,
+                hey);
             modelBuilder.Entity<Ticket>().HasData(
                 ticket1,
                 ticket2,

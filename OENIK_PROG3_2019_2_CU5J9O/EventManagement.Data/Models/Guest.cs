@@ -121,7 +121,11 @@
             return this.ID + this.Gender.GetHashCode() + this.Email.GetHashCode();
         }
 
-        
+
+        /// <summary>
+        /// This method creates the copy of the guest which needs to be edited.
+        /// </summary>
+        /// <param name="other">Guest object.</param>
         public void CopyFrom(Guest other)
         {
             this.GetType().GetProperties().ToList().ForEach(

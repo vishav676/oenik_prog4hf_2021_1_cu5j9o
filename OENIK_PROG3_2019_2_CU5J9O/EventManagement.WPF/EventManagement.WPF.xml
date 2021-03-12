@@ -34,7 +34,7 @@
         </member>
         <member name="T:EventManagement.WPF.MainWindow">
             <summary>
-            Interaction logic for MainWindow.xaml
+            Interaction logic for MainWindow.xaml.
             </summary>
             <summary>
             MainWindow
@@ -42,6 +42,7 @@
         </member>
         <member name="M:EventManagement.WPF.MainWindow.#ctor">
             <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.WPF.MainWindow"/> class.
             This constructor is called when applications runs.
             </summary>
         </member>
@@ -81,43 +82,45 @@
             </summary>
         </member>
         <member name="T:EventManagement.WPF.VM.MainViewModel">
-            <summary>
+             <summary>
             
-            </summary>
+             </summary>
         </member>
         <member name="P:EventManagement.WPF.VM.MainViewModel.GuestSelected">
             <summary>
-            This is a getter / setter for the object guestSelected. 
+            Gets or sets this is a getter / setter for the object guestSelected.
             </summary>
         </member>
         <member name="P:EventManagement.WPF.VM.MainViewModel.Guests">
             <summary>
-            This contains the list of guests which will shown to user.
+            Gets this contains the list of guests which will shown to user.
             </summary>
         </member>
         <member name="P:EventManagement.WPF.VM.MainViewModel.AddCmd">
             <summary>
-            This command will add new guest to database.
+            Gets this command will add new guest to database.
             </summary>
         </member>
         <member name="P:EventManagement.WPF.VM.MainViewModel.DelCmd">
             <summary>
-            This command will delete guest from database.
+            Gets this command will delete guest from database.
             </summary>
         </member>
         <member name="P:EventManagement.WPF.VM.MainViewModel.ModCmd">
             <summary>
-            This command will edit guest from database.
+            Gets this command will edit guest from database.
             </summary>
         </member>
         <member name="M:EventManagement.WPF.VM.MainViewModel.#ctor(EventManagement.Logic.Interfaces.IGuestLogic)">
             <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.WPF.VM.MainViewModel"/> class.
             This constructor takes a parameter of interface IGuestLogic.
             </summary>
             <param name="logic">IGuestLogic object.</param>
         </member>
         <member name="M:EventManagement.WPF.VM.MainViewModel.#ctor">
             <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.WPF.VM.MainViewModel"/> class.
             This constructor will be called when it is design mode.
             </summary>
         </member>

@@ -18,23 +18,24 @@
     using GalaSoft.MvvmLight.Messaging;
 
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MainWindow.xaml.
     /// </summary>
     public partial class MainWindow : Window
     {
         MainViewModel VM;
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="MainWindow"/> class.
         /// This constructor is called when applications runs.
         /// </summary>
         public MainWindow()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            VM = FindResource("VM") as MainViewModel;
+            this.VM = this.FindResource("VM") as MainViewModel;
             Messenger.Default.Register<string>(this, "LogicResult", (msg) =>
              {
                  MessageBox.Show(msg);
