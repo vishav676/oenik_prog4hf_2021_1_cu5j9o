@@ -21,21 +21,31 @@
     /// </summary>
     public partial class EditorWindow : Window
     {
-        EditViewModel VM;
+        private EditViewModel vm;
 
-        public Guest guest { get => this.VM.Guest; }
-
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EditorWindow"/> class.
+        /// </summary>
         public EditorWindow()
         {
             this.InitializeComponent();
-            this.VM = this.FindResource("VM") as EditViewModel;
+            this.vm = this.FindResource("VM") as EditViewModel;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EditorWindow"/> class.
+        /// </summary>
+        /// <param name="oldGuest">Guest type parameter.</param>
         public EditorWindow(Guest oldGuest)
             : this()
         {
-            this.VM.Guest = oldGuest;
+            this.vm.Guest = oldGuest;
         }
+
+        /// <summary>
+        /// Gets guest object.
+        /// </summary>
+        public Guest Guest { get => this.vm.Guest; }
 
         private void OkClick(object sender, RoutedEventArgs e)
         {

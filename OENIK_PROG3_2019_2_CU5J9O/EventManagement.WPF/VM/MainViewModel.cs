@@ -15,45 +15,13 @@
     using GalaSoft.MvvmLight.Command;
 
     /// <summary>
-    ///
+    /// This class act as viewmodel for the main window.
     /// </summary>
     public class MainViewModel : ViewModelBase
     {
         private IGuestLogic logic;
 
         private Guest guestSelected;
-
-        /// <summary>
-        /// Gets or sets this is a getter / setter for the object guestSelected.
-        /// </summary>
-        public Guest GuestSelected
-        {
-            get => this.guestSelected;
-            set => this.Set(ref this.guestSelected, value);
-        }
-
-        /// <summary>
-        /// Gets this contains the list of guests which will shown to user.
-        /// </summary>
-        public ObservableCollection<Guest> Guests
-        {
-            get; private set;
-        }
-
-        /// <summary>
-        /// Gets this command will add new guest to database.
-        /// </summary>
-        public ICommand AddCmd { get; private set; }
-
-        /// <summary>
-        /// Gets this command will delete guest from database.
-        /// </summary>
-        public ICommand DelCmd { get; private set; }
-
-        /// <summary>
-        /// Gets this command will edit guest from database.
-        /// </summary>
-        public ICommand ModCmd { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MainViewModel"/> class.
@@ -88,5 +56,37 @@
             : this(IsInDesignModeStatic ? null : ServiceLocator.Current.GetInstance<IGuestLogic>())
         {
         }
+
+        /// <summary>
+        /// Gets or sets this is a getter / setter for the object guestSelected.
+        /// </summary>
+        public Guest GuestSelected
+        {
+            get => this.guestSelected;
+            set => this.Set(ref this.guestSelected, value);
+        }
+
+        /// <summary>
+        /// Gets this contains the list of guests which will shown to user.
+        /// </summary>
+        public ObservableCollection<Guest> Guests
+        {
+            get; private set;
+        }
+
+        /// <summary>
+        /// Gets this command will add new guest to database.
+        /// </summary>
+        public ICommand AddCmd { get; private set; }
+
+        /// <summary>
+        /// Gets this command will delete guest from database.
+        /// </summary>
+        public ICommand DelCmd { get; private set; }
+
+        /// <summary>
+        /// Gets this command will edit guest from database.
+        /// </summary>
+        public ICommand ModCmd { get; private set; }
     }
 }

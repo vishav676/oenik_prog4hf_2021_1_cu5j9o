@@ -82,9 +82,22 @@
             </summary>
         </member>
         <member name="T:EventManagement.WPF.VM.MainViewModel">
-             <summary>
-            
-             </summary>
+            <summary>
+            This class act as viewmodel for the main window.
+            </summary>
+        </member>
+        <member name="M:EventManagement.WPF.VM.MainViewModel.#ctor(EventManagement.Logic.Interfaces.IGuestLogic)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.WPF.VM.MainViewModel"/> class.
+            This constructor takes a parameter of interface IGuestLogic.
+            </summary>
+            <param name="logic">IGuestLogic object.</param>
+        </member>
+        <member name="M:EventManagement.WPF.VM.MainViewModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.WPF.VM.MainViewModel"/> class.
+            This constructor will be called when it is design mode.
+            </summary>
         </member>
         <member name="P:EventManagement.WPF.VM.MainViewModel.GuestSelected">
             <summary>
@@ -109,19 +122,6 @@
         <member name="P:EventManagement.WPF.VM.MainViewModel.ModCmd">
             <summary>
             Gets this command will edit guest from database.
-            </summary>
-        </member>
-        <member name="M:EventManagement.WPF.VM.MainViewModel.#ctor(EventManagement.Logic.Interfaces.IGuestLogic)">
-            <summary>
-            Initializes a new instance of the <see cref="T:EventManagement.WPF.VM.MainViewModel"/> class.
-            This constructor takes a parameter of interface IGuestLogic.
-            </summary>
-            <param name="logic">IGuestLogic object.</param>
-        </member>
-        <member name="M:EventManagement.WPF.VM.MainViewModel.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:EventManagement.WPF.VM.MainViewModel"/> class.
-            This constructor will be called when it is design mode.
             </summary>
         </member>
         <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">

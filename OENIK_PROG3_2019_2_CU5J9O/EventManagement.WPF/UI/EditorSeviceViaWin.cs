@@ -11,7 +11,7 @@
     /// <summary>
     /// This class acts as editing service for the editing window.
     /// </summary>
-    class EditorSeviceViaWin : IEditorService
+    public class EditorSeviceViaWin : IEditorService
     {
         /// <summary>
         /// This initiate the editing window and display message accordingly.

@@ -27,7 +27,6 @@
     <Grid DataContext="{StaticResource VM}">
         <ListBox ItemTemplate="{StaticResource listTemplate}"
                  ItemsSource="{Binding Path=Guests}" SelectedItem="{Binding Path=GuestSelected}"
-                 
                  HorizontalAlignment="Left" Height="251" Margin="10,10,10,10" VerticalAlignment="Top"
                  Width="210"/>
         <Button Command="{Binding Path=AddCmd}" Content="ADD" HorizontalAlignment="Left"

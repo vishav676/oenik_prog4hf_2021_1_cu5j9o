@@ -11,25 +11,31 @@
     /// <summary>
     /// This class acts as view Model for editting window.
     /// </summary>
-    class EditViewModel : ViewModelBase
+    public class EditViewModel : ViewModelBase
     {
-        Guest guest;
+        private Guest guest;
 
-        public Guest Guest
-        {
-            get { return guest; }
-            set { Set(ref guest, value); }
-        }
-
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EditViewModel"/> class.
+        /// </summary>
         public EditViewModel()
         {
-            guest = new Guest();
+            this.guest = new Guest();
 
-            if (IsInDesignMode)
+            if (this.IsInDesignMode)
             {
-                guest.Name = "Vishav";
-                guest.Gender = "Male";
+                this.guest.Name = "Vishav";
+                this.guest.Gender = "Male";
             }
+        }
+
+        /// <summary>
+        /// Gets or sets Guest.
+        /// </summary>
+        public Guest Guest
+        {
+            get { return this.guest; }
+            set { this.Set(ref this.guest, value); }
         }
     }
 }

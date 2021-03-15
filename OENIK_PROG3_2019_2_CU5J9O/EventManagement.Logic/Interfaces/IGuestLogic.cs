@@ -21,7 +21,6 @@
         /// <summary>
         /// This function inserts the new guest to the database.
         /// </summary>
-        /// <param name="guest">Guest type parameter.</param>
         void Add();
 
         /// <summary>

@@ -22,7 +22,7 @@
     /// </summary>
     public partial class MainWindow : Window
     {
-        MainViewModel VM;
+        private MainViewModel vm;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MainWindow"/> class.
@@ -35,7 +35,7 @@
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            this.VM = this.FindResource("VM") as MainViewModel;
+            this.vm = this.FindResource("VM") as MainViewModel;
             Messenger.Default.Register<string>(this, "LogicResult", (msg) =>
              {
                  MessageBox.Show(msg);
