@@ -4,14 +4,9 @@
         <name>EventManagement.WPF</name>
     </assembly>
     <members>
-        <member name="T:EventManagement.WPF.MyIoc">
-            <summary>
-            This class mantains the singloton behaviour.
-            </summary>
-        </member>
         <member name="T:EventManagement.WPF.App">
             <summary>
-            Interaction logic for App.xaml
+            Interaction logic for App.xaml.
             </summary>
             <summary>
             App
@@ -19,6 +14,7 @@
         </member>
         <member name="M:EventManagement.WPF.App.#ctor">
             <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.WPF.App"/> class.
             This is a constructor which make the object of the required classes.
             </summary>
         </member>
@@ -51,6 +47,16 @@
             InitializeComponent
             </summary>
         </member>
+        <member name="T:EventManagement.WPF.MyIoc">
+            <summary>
+            This class mantains the singloton behaviour.
+            </summary>
+        </member>
+        <member name="P:EventManagement.WPF.MyIoc.Instance">
+            <summary>
+            Gets the instance of the object created.
+            </summary>
+        </member>
         <member name="T:EventManagement.WPF.UI.EditorSeviceViaWin">
             <summary>
             This class acts as editing service for the editing window.
@@ -71,6 +77,22 @@
             EditorWindow
             </summary>
         </member>
+        <member name="M:EventManagement.WPF.UI.EditorWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.WPF.UI.EditorWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:EventManagement.WPF.UI.EditorWindow.#ctor(EventManagement.Data.Models.Guest)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.WPF.UI.EditorWindow"/> class.
+            </summary>
+            <param name="oldGuest">Guest type parameter.</param>
+        </member>
+        <member name="P:EventManagement.WPF.UI.EditorWindow.Guest">
+            <summary>
+            Gets guest object.
+            </summary>
+        </member>
         <member name="M:EventManagement.WPF.UI.EditorWindow.InitializeComponent">
             <summary>
             InitializeComponent
@@ -79,6 +101,16 @@
         <member name="T:EventManagement.WPF.VM.EditViewModel">
             <summary>
             This class acts as view Model for editting window.
+            </summary>
+        </member>
+        <member name="M:EventManagement.WPF.VM.EditViewModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.WPF.VM.EditViewModel"/> class.
+            </summary>
+        </member>
+        <member name="P:EventManagement.WPF.VM.EditViewModel.Guest">
+            <summary>
+            Gets or sets Guest.
             </summary>
         </member>
         <member name="T:EventManagement.WPF.VM.MainViewModel">
@@ -122,36 +154,6 @@
         <member name="P:EventManagement.WPF.VM.MainViewModel.ModCmd">
             <summary>
             Gets this command will edit guest from database.
-            </summary>
-        </member>
-        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
-            <summary>
-            GeneratedInternalTypeHelper
-            </summary>
-        </member>
-        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
-            <summary>
-            CreateInstance
-            </summary>
-        </member>
-        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
-            <summary>
-            GetPropertyValue
-            </summary>
-        </member>
-        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
-            <summary>
-            SetPropertyValue
-            </summary>
-        </member>
-        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
-            <summary>
-            CreateDelegate
-            </summary>
-        </member>
-        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
-            <summary>
-            AddEventHandler
             </summary>
         </member>
     </members>

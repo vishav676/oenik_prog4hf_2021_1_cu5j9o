@@ -234,7 +234,6 @@
             <summary>
             This function inserts the new guest to the database.
             </summary>
-            <param name="guest">Guest type parameter.</param>
         </member>
         <member name="M:EventManagement.Logic.GuestLogic.Delete(EventManagement.Data.Models.Guest)">
             <summary>
@@ -359,6 +358,18 @@
             <param name="password">Password.</param>
             <returns>Boolean Value.</returns>
         </member>
+        <member name="T:EventManagement.Logic.Interfaces.IEditorService">
+            <summary>
+            This acts as sevice to edit the guest.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Logic.Interfaces.IEditorService.EditGuest(EventManagement.Data.Models.Guest)">
+            <summary>
+            This functions edits the selected guest.
+            </summary>
+            <param name="guest">Guest type.</param>
+            <returns>boolean value.</returns>
+        </member>
         <member name="T:EventManagement.Logic.Interfaces.IGuestLogic">
             <summary>
             This interface contains methods for logic specified for guest table.
@@ -374,7 +385,6 @@
             <summary>
             This function inserts the new guest to the database.
             </summary>
-            <param name="guest">Guest type parameter.</param>
         </member>
         <member name="M:EventManagement.Logic.Interfaces.IGuestLogic.Delete(EventManagement.Data.Models.Guest)">
             <summary>
