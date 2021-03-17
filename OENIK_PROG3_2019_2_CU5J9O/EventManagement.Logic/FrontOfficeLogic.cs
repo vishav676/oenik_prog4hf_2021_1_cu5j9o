@@ -5,7 +5,6 @@
     using System.Linq;
     using System.Text;
     using EventManagement.Data.Models;
-    using EventManagement.Logic.Interfaces;
     using EventManagement.Repository;
     using GalaSoft.MvvmLight.Messaging;
 

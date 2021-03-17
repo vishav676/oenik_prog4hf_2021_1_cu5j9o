@@ -1,4 +1,4 @@
-﻿namespace EventManagement.Logic.Interfaces
+﻿namespace EventManagement.WPF.Logic
 {
     using System;
     using System.Collections.Generic;
@@ -6,6 +6,7 @@
     using System.Text;
     using System.Threading.Tasks;
     using EventManagement.Data.Models;
+    using EventManagement.WPF.Data;
 
     /// <summary>
     /// This acts as sevice to edit the guest.
@@ -17,6 +18,6 @@
         /// </summary>
         /// <param name="guest">Guest type.</param>
         /// <returns>boolean value.</returns>
-        public bool EditGuest(Guest guest);
+        public bool EditGuest(GuestModel guest);
     }
 }

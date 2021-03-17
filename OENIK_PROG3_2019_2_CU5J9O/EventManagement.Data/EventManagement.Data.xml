@@ -221,12 +221,6 @@
             </summary>
             <returns>int value (HashCode).</returns>
         </member>
-        <member name="M:EventManagement.Data.Models.Guest.CopyFrom(EventManagement.Data.Models.Guest)">
-            <summary>
-            This method creates the copy of the guest which needs to be edited.
-            </summary>
-            <param name="other">Guest object.</param>
-        </member>
         <member name="T:EventManagement.Data.Models.Ticket">
             <summary>
             This class is represents table in the Database.

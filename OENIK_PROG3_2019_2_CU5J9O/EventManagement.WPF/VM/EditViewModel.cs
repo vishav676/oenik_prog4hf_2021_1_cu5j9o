@@ -6,6 +6,7 @@
     using System.Text;
     using System.Threading.Tasks;
     using EventManagement.Data.Models;
+    using EventManagement.WPF.Data;
     using GalaSoft.MvvmLight;
 
     /// <summary>
@@ -13,14 +14,14 @@
     /// </summary>
     public class EditViewModel : ViewModelBase
     {
-        private Guest guest;
+        private GuestModel guest;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="EditViewModel"/> class.
         /// </summary>
         public EditViewModel()
         {
-            this.guest = new Guest();
+            this.guest = new GuestModel();
 
             if (this.IsInDesignMode)
             {
@@ -32,7 +33,7 @@
         /// <summary>
         /// Gets or sets Guest.
         /// </summary>
-        public Guest Guest
+        public GuestModel Guest
         {
             get { return this.guest; }
             set { this.Set(ref this.guest, value); }

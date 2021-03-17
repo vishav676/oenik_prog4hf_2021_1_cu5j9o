@@ -1,10 +1,10 @@
-﻿namespace EventManagement.Logic
+﻿namespace EventManagement.WPF.Logic
 {
     using System.Collections.Generic;
     using System.Linq;
     using EventManagement.Data.Models;
-    using EventManagement.Logic.Interfaces;
     using EventManagement.Repository;
+    using EventManagement.WPF.Data;
     using GalaSoft.MvvmLight.Messaging;
 
     /// <summary>
@@ -32,30 +32,49 @@
         /// <summary>
         /// This function inserts the new guest to the database.
         /// </summary>
-        public void Add()
+        /// <param name="guests">List of guests.</param>
+        public void Add(IList<GuestModel> guests)
         {
-            Guest newGuest = new Guest();
-            if (this.editorService.EditGuest(newGuest) == true)
+            if (guests != null)
             {
-                this.guestRepository.Insert(newGuest);
-                this.messengerService.Send("Add Ok");
+                GuestModel newGuest = new GuestModel();
+                if (this.editorService.EditGuest(newGuest) == true)
+                {
+                    guests.Add(newGuest);
+                    Guest guest = new Guest()
+                    {
+                        Name = newGuest.Name,
+                        ID = newGuest.ID,
+                        City = newGuest.City,
+                        Email = newGuest.Email,
+                        Gender = newGuest.Gender,
+                        Contact = newGuest.Contact,
+                    };
+                    this.guestRepository.Insert(guest);
+                    this.messengerService.Send("Add Ok");
+                }
             }
         }
 
         /// <summary>
         /// This function is used to delete the selected guest from the database.
         /// </summary>
-        /// <param name="guest">Guest type parameter.</param>
-        public void Delete(Guest guest)
+        /// <param name="guests">List of guests.</param>
+        /// <param name="guest">Guest Object.</param>
+        public void Delete(IList<GuestModel> guests, GuestModel guest)
         {
-            this.guestRepository.Remove(guest);
+            if (guests != null && guest != null)
+            {
+                this.guestRepository.Remove(guest.ID);
+                guests.Remove(guest);
+            }
         }
 
         /// <summary>
         /// This function is used to edit the detail of selected Guest.
         /// </summary>
         /// <param name="guest">Guest type parameter.</param>
-        public void Edit(Guest guest)
+        public void Edit(GuestModel guest)
         {
             if (guest == null)
             {
@@ -63,7 +82,7 @@
                 return;
             }
 
-            Guest clone = new Guest();
+            GuestModel clone = new GuestModel();
             clone.CopyFrom(guest);
 
             if (this.editorService.EditGuest(clone) == true)

@@ -28,6 +28,145 @@
             Application Entry Point.
             </summary>
         </member>
+        <member name="T:EventManagement.WPF.Data.GuestModel">
+            <summary>
+            Data model class.
+            </summary>
+        </member>
+        <member name="P:EventManagement.WPF.Data.GuestModel.ID">
+            <summary>
+            Gets or sets Id.
+            this property of Class represents Id for table guests.
+            It is unique for every instance and is automatically generated.
+            </summary>
+        </member>
+        <member name="P:EventManagement.WPF.Data.GuestModel.Name">
+            <summary>
+            Gets or Sets Name attribute of the class.
+            This field stores the Guest Name for the Event.
+            This is manadatory property and it's Max Length can be 50.
+            </summary>
+        </member>
+        <member name="P:EventManagement.WPF.Data.GuestModel.Contact">
+            <summary>
+            Gets or Sets Contact attribute of the class.
+            This field stores the Contact Info of the Guest.
+            This is manadatory property and it's Max Length can be 50.
+            </summary>
+        </member>
+        <member name="P:EventManagement.WPF.Data.GuestModel.Email">
+            <summary>
+            Gets or Sets Email attribute of the class.
+            This field stores the Email Id of the Guest.
+            This is manadatory property and it's Max Length can be 50.
+            </summary>
+        </member>
+        <member name="P:EventManagement.WPF.Data.GuestModel.City">
+            <summary>
+            Gets or Sets City attribute of the class.
+            This field stores the City Name where the Guest is from.
+            This is manadatory property and it's Max Length can be 50.
+            </summary>
+        </member>
+        <member name="P:EventManagement.WPF.Data.GuestModel.Gender">
+            <summary>
+            Gets or Sets Gender attribute of the class.
+            This field stores the Gender of the Guest.
+            This is manadatory property and it's Max Length can be 50.
+            </summary>
+        </member>
+        <member name="M:EventManagement.WPF.Data.GuestModel.ToString">
+            <summary>
+            Override public function to generate string from object data.
+            </summary>
+            <returns> String.</returns>
+        </member>
+        <member name="M:EventManagement.WPF.Data.GuestModel.CopyFrom(EventManagement.WPF.Data.GuestModel)">
+            <summary>
+            This method creates the copy of the guest which needs to be edited.
+            </summary>
+            <param name="other">Guest object.</param>
+        </member>
+        <member name="T:EventManagement.WPF.Logic.GuestLogic">
+            <summary>
+            This class connects the repository layer with wpf windows.
+            </summary>
+        </member>
+        <member name="M:EventManagement.WPF.Logic.GuestLogic.#ctor(EventManagement.WPF.Logic.IEditorService,GalaSoft.MvvmLight.Messaging.IMessenger,EventManagement.Repository.IGuestRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.WPF.Logic.GuestLogic"/> class.
+            </summary>
+            <param name="editorService">EditorService Type.</param>
+            <param name="messengerService">IMessenger Type.</param>
+            <param name="guestRepository">IGuestRepository Type.</param>
+        </member>
+        <member name="M:EventManagement.WPF.Logic.GuestLogic.Add(System.Collections.Generic.IList{EventManagement.WPF.Data.GuestModel})">
+            <summary>
+            This function inserts the new guest to the database.
+            </summary>
+            <param name="guests">List of guests.</param>
+        </member>
+        <member name="M:EventManagement.WPF.Logic.GuestLogic.Delete(System.Collections.Generic.IList{EventManagement.WPF.Data.GuestModel},EventManagement.WPF.Data.GuestModel)">
+            <summary>
+            This function is used to delete the selected guest from the database.
+            </summary>
+            <param name="guests">List of guests.</param>
+            <param name="guest">Guest Object.</param>
+        </member>
+        <member name="M:EventManagement.WPF.Logic.GuestLogic.Edit(EventManagement.WPF.Data.GuestModel)">
+            <summary>
+            This function is used to edit the detail of selected Guest.
+            </summary>
+            <param name="guest">Guest type parameter.</param>
+        </member>
+        <member name="M:EventManagement.WPF.Logic.GuestLogic.GetAllGuests">
+            <summary>
+            This function gets the list of guests from the database.
+            </summary>
+            <returns>IList of Guest type.</returns>
+        </member>
+        <member name="T:EventManagement.WPF.Logic.IEditorService">
+            <summary>
+            This acts as sevice to edit the guest.
+            </summary>
+        </member>
+        <member name="M:EventManagement.WPF.Logic.IEditorService.EditGuest(EventManagement.WPF.Data.GuestModel)">
+            <summary>
+            This functions edits the selected guest.
+            </summary>
+            <param name="guest">Guest type.</param>
+            <returns>boolean value.</returns>
+        </member>
+        <member name="T:EventManagement.WPF.Logic.IGuestLogic">
+            <summary>
+            This interface contains methods for logic specified for guest table.
+            </summary>
+        </member>
+        <member name="M:EventManagement.WPF.Logic.IGuestLogic.GetAllGuests">
+            <summary>
+            This function gets the list of guests from the database.
+            </summary>
+            <returns>IList of Guest type.</returns>
+        </member>
+        <member name="M:EventManagement.WPF.Logic.IGuestLogic.Add(System.Collections.Generic.IList{EventManagement.WPF.Data.GuestModel})">
+            <summary>
+            This function inserts the new guest to the database.
+            </summary>
+            <param name="guests">List of guests.</param>
+        </member>
+        <member name="M:EventManagement.WPF.Logic.IGuestLogic.Delete(System.Collections.Generic.IList{EventManagement.WPF.Data.GuestModel},EventManagement.WPF.Data.GuestModel)">
+            <summary>
+            This function is used to delete the selected guest from the database.
+            </summary>
+            <param name="guests">List of guests.</param>
+            <param name="guest">Guest object.</param>
+        </member>
+        <member name="M:EventManagement.WPF.Logic.IGuestLogic.Edit(EventManagement.WPF.Data.GuestModel)">
+            <summary>
+            This function is used to edit the detail of selected Guest.
+            </summary>
+            <param name="guest">Guest type parameter.</param>
+        </member>
         <member name="T:EventManagement.WPF.MainWindow">
             <summary>
             Interaction logic for MainWindow.xaml.
@@ -62,7 +201,7 @@
             This class acts as editing service for the editing window.
             </summary>
         </member>
-        <member name="M:EventManagement.WPF.UI.EditorSeviceViaWin.EditGuest(EventManagement.Data.Models.Guest)">
+        <member name="M:EventManagement.WPF.UI.EditorSeviceViaWin.EditGuest(EventManagement.WPF.Data.GuestModel)">
             <summary>
             This initiate the editing window and display message accordingly.
             </summary>
@@ -82,7 +221,7 @@
             Initializes a new instance of the <see cref="T:EventManagement.WPF.UI.EditorWindow"/> class.
             </summary>
         </member>
-        <member name="M:EventManagement.WPF.UI.EditorWindow.#ctor(EventManagement.Data.Models.Guest)">
+        <member name="M:EventManagement.WPF.UI.EditorWindow.#ctor(EventManagement.WPF.Data.GuestModel)">
             <summary>
             Initializes a new instance of the <see cref="T:EventManagement.WPF.UI.EditorWindow"/> class.
             </summary>
@@ -118,7 +257,7 @@
             This class act as viewmodel for the main window.
             </summary>
         </member>
-        <member name="M:EventManagement.WPF.VM.MainViewModel.#ctor(EventManagement.Logic.Interfaces.IGuestLogic)">
+        <member name="M:EventManagement.WPF.VM.MainViewModel.#ctor(EventManagement.WPF.Logic.IGuestLogic)">
             <summary>
             Initializes a new instance of the <see cref="T:EventManagement.WPF.VM.MainViewModel"/> class.
             This constructor takes a parameter of interface IGuestLogic.

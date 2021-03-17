@@ -217,42 +217,6 @@
             <param name="discount">Discount Value.</param>
             <returns>Price to be Paid.</returns>
         </member>
-        <member name="T:EventManagement.Logic.GuestLogic">
-            <summary>
-            This class connects the repository layer with wpf windows.
-            </summary>
-        </member>
-        <member name="M:EventManagement.Logic.GuestLogic.#ctor(EventManagement.Logic.Interfaces.IEditorService,GalaSoft.MvvmLight.Messaging.IMessenger,EventManagement.Repository.IGuestRepository)">
-            <summary>
-            Initializes a new instance of the <see cref="T:EventManagement.Logic.GuestLogic"/> class.
-            </summary>
-            <param name="editorService">EditorService Type.</param>
-            <param name="messengerService">IMessenger Type.</param>
-            <param name="guestRepository">IGuestRepository Type.</param>
-        </member>
-        <member name="M:EventManagement.Logic.GuestLogic.Add">
-            <summary>
-            This function inserts the new guest to the database.
-            </summary>
-        </member>
-        <member name="M:EventManagement.Logic.GuestLogic.Delete(EventManagement.Data.Models.Guest)">
-            <summary>
-            This function is used to delete the selected guest from the database.
-            </summary>
-            <param name="guest">Guest type parameter.</param>
-        </member>
-        <member name="M:EventManagement.Logic.GuestLogic.Edit(EventManagement.Data.Models.Guest)">
-            <summary>
-            This function is used to edit the detail of selected Guest.
-            </summary>
-            <param name="guest">Guest type parameter.</param>
-        </member>
-        <member name="M:EventManagement.Logic.GuestLogic.GetAllGuests">
-            <summary>
-            This function gets the list of guests from the database.
-            </summary>
-            <returns>IList of Guest type.</returns>
-        </member>
         <member name="T:EventManagement.Logic.IAdminstratorLogic">
             <summary>
             This public interface contains all the methods that will be implemented for the Adminstrator office.
@@ -357,46 +321,6 @@
             <param name="name">Username.</param>
             <param name="password">Password.</param>
             <returns>Boolean Value.</returns>
-        </member>
-        <member name="T:EventManagement.Logic.Interfaces.IEditorService">
-            <summary>
-            This acts as sevice to edit the guest.
-            </summary>
-        </member>
-        <member name="M:EventManagement.Logic.Interfaces.IEditorService.EditGuest(EventManagement.Data.Models.Guest)">
-            <summary>
-            This functions edits the selected guest.
-            </summary>
-            <param name="guest">Guest type.</param>
-            <returns>boolean value.</returns>
-        </member>
-        <member name="T:EventManagement.Logic.Interfaces.IGuestLogic">
-            <summary>
-            This interface contains methods for logic specified for guest table.
-            </summary>
-        </member>
-        <member name="M:EventManagement.Logic.Interfaces.IGuestLogic.GetAllGuests">
-            <summary>
-            This function gets the list of guests from the database.
-            </summary>
-            <returns>IList of Guest type.</returns>
-        </member>
-        <member name="M:EventManagement.Logic.Interfaces.IGuestLogic.Add">
-            <summary>
-            This function inserts the new guest to the database.
-            </summary>
-        </member>
-        <member name="M:EventManagement.Logic.Interfaces.IGuestLogic.Delete(EventManagement.Data.Models.Guest)">
-            <summary>
-            This function is used to delete the selected guest from the database.
-            </summary>
-            <param name="guest">Guest type parameter.</param>
-        </member>
-        <member name="M:EventManagement.Logic.Interfaces.IGuestLogic.Edit(EventManagement.Data.Models.Guest)">
-            <summary>
-            This function is used to edit the detail of selected Guest.
-            </summary>
-            <param name="guest">Guest type parameter.</param>
         </member>
         <member name="T:EventManagement.Logic.IFactoryLogic">
             <summary>

@@ -6,13 +6,12 @@
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
     using System.Text;
-    using GalaSoft.MvvmLight;
 
     /// <summary>
     /// This class represents a table of name guests in the Database..
     /// </summary>
     [Table("guests")]
-    public class Guest : ObservableObject
+    public class Guest
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Guest"/> class.
@@ -119,16 +118,6 @@
         public override int GetHashCode()
         {
             return this.ID + this.Gender.GetHashCode() + this.Email.GetHashCode();
-        }
-
-        /// <summary>
-        /// This method creates the copy of the guest which needs to be edited.
-        /// </summary>
-        /// <param name="other">Guest object.</param>
-        public void CopyFrom(Guest other)
-        {
-            this.GetType().GetProperties().ToList().ForEach(
-                prop => prop.SetValue(this, prop.GetValue(other)));
         }
     }
 }

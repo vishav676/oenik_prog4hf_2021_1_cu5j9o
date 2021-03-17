@@ -7,7 +7,6 @@
     using System.Text;
     using System.Threading.Tasks;
     using EventManagement.Data.Models;
-    using EventManagement.Logic.Interfaces;
     using EventManagement.Repository;
     using EventManagement.Repository.Interfaces;
     using GalaSoft.MvvmLight.Messaging;

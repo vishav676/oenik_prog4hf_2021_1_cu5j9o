@@ -14,6 +14,7 @@
     using System.Windows.Media.Imaging;
     using System.Windows.Shapes;
     using EventManagement.Data.Models;
+    using EventManagement.WPF.Data;
     using EventManagement.WPF.VM;
 
     /// <summary>
@@ -36,7 +37,7 @@
         /// Initializes a new instance of the <see cref="EditorWindow"/> class.
         /// </summary>
         /// <param name="oldGuest">Guest type parameter.</param>
-        public EditorWindow(Guest oldGuest)
+        public EditorWindow(GuestModel oldGuest)
             : this()
         {
             this.vm.Guest = oldGuest;
@@ -45,7 +46,7 @@
         /// <summary>
         /// Gets guest object.
         /// </summary>
-        public Guest Guest { get => this.vm.Guest; }
+        public GuestModel Guest { get => this.vm.Guest; }
 
         private void OkClick(object sender, RoutedEventArgs e)
         {

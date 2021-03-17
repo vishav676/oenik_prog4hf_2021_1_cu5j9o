@@ -10,8 +10,8 @@
     using CommonServiceLocator;
     using EventManagement.Data.Models;
     using EventManagement.Logic;
-    using EventManagement.Logic.Interfaces;
     using EventManagement.Repository;
+    using EventManagement.WPF.Logic;
     using EventManagement.WPF.UI;
     using GalaSoft.MvvmLight.Ioc;
     using GalaSoft.MvvmLight.Messaging;

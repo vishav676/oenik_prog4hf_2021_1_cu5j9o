@@ -6,7 +6,8 @@
     using System.Text;
     using System.Threading.Tasks;
     using EventManagement.Data.Models;
-    using EventManagement.Logic.Interfaces;
+    using EventManagement.WPF.Data;
+    using EventManagement.WPF.Logic;
 
     /// <summary>
     /// This class acts as editing service for the editing window.
@@ -18,7 +19,7 @@
         /// </summary>
         /// <param name="guest">Guest object.</param>
         /// <returns>Boolean value.</returns>
-        public bool EditGuest(Guest guest)
+        public bool EditGuest(GuestModel guest)
         {
             EditorWindow win = new EditorWindow(guest);
             return win.ShowDialog() ?? false;

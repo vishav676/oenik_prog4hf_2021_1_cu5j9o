@@ -1,16 +1,10 @@
 ﻿namespace EventManagement.WPF.VM
 {
-    using System;
-    using System.Collections.Generic;
     using System.Collections.ObjectModel;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using System.Windows.Input;
     using CommonServiceLocator;
-    using EventManagement.Data.Models;
-    using EventManagement.Logic;
-    using EventManagement.Logic.Interfaces;
+    using EventManagement.WPF.Data;
+    using EventManagement.WPF.Logic;
     using GalaSoft.MvvmLight;
     using GalaSoft.MvvmLight.Command;
 
@@ -21,7 +15,7 @@
     {
         private IGuestLogic logic;
 
-        private Guest guestSelected;
+        private GuestModel guestSelected;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MainViewModel"/> class.
@@ -32,20 +26,20 @@
         {
             this.logic = logic;
 
-            this.Guests = new ObservableCollection<Guest>(this.logic.GetAllGuests());
+            this.Guests = new ObservableCollection<GuestModel>();
 
             if (this.IsInDesignMode)
             {
-                Guest g = new Guest() { Name = "Bill Gates" };
-                Guest g1 = new Guest() { Name = "Elon Musk" };
+                GuestModel g = new GuestModel() { Name = "Bill Gates" };
+                GuestModel g1 = new GuestModel() { Name = "Elon Musk" };
 
                 this.Guests.Add(g);
                 this.Guests.Add(g1);
             }
 
-            this.AddCmd = new RelayCommand(() => this.logic.Add());
+            this.AddCmd = new RelayCommand(() => this.logic.Add(this.Guests));
             this.ModCmd = new RelayCommand(() => this.logic.Edit(this.GuestSelected));
-            this.DelCmd = new RelayCommand(() => this.logic.Delete(this.GuestSelected));
+            this.DelCmd = new RelayCommand(() => this.logic.Delete(this.Guests, this.GuestSelected));
         }
 
         /// <summary>
@@ -60,7 +54,7 @@
         /// <summary>
         /// Gets or sets this is a getter / setter for the object guestSelected.
         /// </summary>
-        public Guest GuestSelected
+        public GuestModel GuestSelected
         {
             get => this.guestSelected;
             set => this.Set(ref this.guestSelected, value);
@@ -69,7 +63,7 @@
         /// <summary>
         /// Gets this contains the list of guests which will shown to user.
         /// </summary>
-        public ObservableCollection<Guest> Guests
+        public ObservableCollection<GuestModel> Guests
         {
             get; private set;
         }
