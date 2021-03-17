@@ -85,6 +85,14 @@
             <param name="newName">New Guest Name.</param>
             <returns>bool value if guest is updated or not.</returns>
         </member>
+        <member name="M:EventManagement.Repository.GuestRepository.EditGuest(System.Int32,EventManagement.Data.Models.Guest)">
+            <summary>
+            This is the implementation of the method from the <see cref="T:EventManagement.Repository.IGuestRepository"/>.
+            </summary>
+            <param name="id">Guest ID.</param>
+            <param name="guest">New guest values.</param>
+            <returns>boolean value.</returns>
+        </member>
         <member name="M:EventManagement.Repository.GuestRepository.GetOne(System.Int32)">
             <summary>
             This is overriden method from <see cref="T:EventManagement.Repository.Repo`1"/> class.

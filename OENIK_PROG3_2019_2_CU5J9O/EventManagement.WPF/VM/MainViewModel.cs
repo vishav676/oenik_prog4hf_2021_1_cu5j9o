@@ -31,8 +31,24 @@
 
             if (this.IsInDesignMode)
             {
-                GuestModel g = new GuestModel() { Name = "Bill Gates" };
-                GuestModel g1 = new GuestModel() { Name = "Elon Musk" };
+                GuestModel g = new GuestModel()
+                {
+                    ID = 1,
+                    Name = "Bill Gates",
+                    City = "California",
+                    Contact = "+36 203174735",
+                    Gender = Gender.Male,
+                    Email = "gates@gmail.com",
+                };
+                GuestModel g1 = new GuestModel()
+                {
+                    ID = 2,
+                    Name = "Elon Musk",
+                    City = "USa00",
+                    Contact = "+36 203174735",
+                    Gender = Gender.Male,
+                    Email = "gates@gmail.com",
+                };
 
                 this.Guests.Add(g);
                 this.Guests.Add(g1);

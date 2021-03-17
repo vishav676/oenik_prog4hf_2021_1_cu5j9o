@@ -41,6 +41,29 @@
         }
 
         /// <summary>
+        /// This is the implementation of the method from the <see cref="IGuestRepository"/>.
+        /// </summary>
+        /// <param name="id">Guest ID.</param>
+        /// <param name="guest">New guest values.</param>
+        /// <returns>boolean value.</returns>
+        public bool EditGuest(int id, Guest guest)
+        {
+            var guestToModify = this.GetOne(id);
+            if (guestToModify == null || guest == null)
+            {
+                return false;
+            }
+
+            guestToModify.Name = guest.Name;
+            guestToModify.City = guest.City;
+            guestToModify.Contact = guest.Contact;
+            guestToModify.Email = guest.Email;
+            guestToModify.Gender = guest.Gender;
+            this.ctx.SaveChanges();
+            return true;
+        }
+
+        /// <summary>
         /// This is overriden method from <see cref="Repo{T}"/> class.
         /// </summary>
         /// <param name="id">Get the Guest Id.</param>

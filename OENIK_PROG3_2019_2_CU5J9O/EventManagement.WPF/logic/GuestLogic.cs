@@ -3,6 +3,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using EventManagement.Data.Models;
+    using EventManagement.Logic;
     using EventManagement.Repository;
     using EventManagement.WPF.Data;
     using GalaSoft.MvvmLight.Messaging;
@@ -15,6 +16,7 @@
         private IGuestRepository guestRepository;
         private IEditorService editorService;
         private IMessenger messengerService;
+        private IFactoryLogic factoryLogic;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GuestLogic"/> class.
@@ -22,11 +24,13 @@
         /// <param name="editorService">EditorService Type.</param>
         /// <param name="messengerService">IMessenger Type.</param>
         /// <param name="guestRepository">IGuestRepository Type.</param>
-        public GuestLogic(IEditorService editorService, IMessenger messengerService, IGuestRepository guestRepository)
+        /// <param name="factoryLogic">IFactory type.</param>
+        public GuestLogic(IEditorService editorService, IMessenger messengerService, IGuestRepository guestRepository, IFactoryLogic factoryLogic)
         {
             this.editorService = editorService;
             this.messengerService = messengerService;
             this.guestRepository = guestRepository;
+            this.factoryLogic = factoryLogic;
         }
 
         /// <summary>
@@ -41,17 +45,12 @@
                 if (this.editorService.EditGuest(newGuest) == true)
                 {
                     guests.Add(newGuest);
-                    Guest guest = new Guest()
-                    {
-                        Name = newGuest.Name,
-                        ID = newGuest.ID,
-                        City = newGuest.City,
-                        Email = newGuest.Email,
-                        Gender = newGuest.Gender,
-                        Contact = newGuest.Contact,
-                    };
-                    this.guestRepository.Insert(guest);
-                    this.messengerService.Send("Add Ok");
+                    this.factoryLogic.GetFrontOfficeLogic().Add(newGuest.Name, newGuest.Contact, newGuest.City, newGuest.Email, newGuest.Gender.ToString());
+                    this.messengerService.Send("Add Ok", "LogicResult");
+                }
+                else
+                {
+                    this.messengerService.Send("Add Canceled", "LogicResult");
                 }
             }
         }
@@ -65,8 +64,13 @@
         {
             if (guests != null && guest != null)
             {
-                this.guestRepository.Remove(guest.ID);
+                this.factoryLogic.GetAdminstratorLogic().RemoveGuest(guest.ID);
                 guests.Remove(guest);
+                this.messengerService.Send("Successfuly Deleted", "LogicResult");
+            }
+            else
+            {
+                this.messengerService.Send("Delete Failed", "LogicResult");
             }
         }
 
@@ -78,7 +82,7 @@
         {
             if (guest == null)
             {
-                this.messengerService.Send("Edit failed", "Logic Result");
+                this.messengerService.Send("Edit failed", "LogicResult");
                 return;
             }
 
@@ -88,11 +92,20 @@
             if (this.editorService.EditGuest(clone) == true)
             {
                 guest.CopyFrom(clone);
-                this.messengerService.Send("Edit Ok", "Logic Result");
+                Guest guestModified = new Guest()
+                {
+                    City = guest.City,
+                    Name = guest.Name,
+                    Contact = guest.Contact,
+                    Email = guest.Email,
+                    Gender = guest.Gender.ToString(),
+                };
+                this.guestRepository.EditGuest(guest.ID, guestModified);
+                this.messengerService.Send("Edit Ok", "LogicResult");
             }
             else
             {
-                this.messengerService.Send("Edit failed", "Logic Result");
+                this.messengerService.Send("Edit failed", "LogicResult");
             }
         }
 
@@ -113,7 +126,7 @@
                 guestModel.City = item.City;
                 guestModel.Contact = item.Contact;
                 guestModel.Email = item.Email;
-                guestModel.Gender = item.Gender;
+                guestModel.Gender = Gender.Male;
 
                 guestModels.Add(guestModel);
             }

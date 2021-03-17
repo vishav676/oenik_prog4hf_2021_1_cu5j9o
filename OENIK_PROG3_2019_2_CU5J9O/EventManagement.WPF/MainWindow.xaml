@@ -13,22 +13,33 @@
         <vm:MainViewModel x:Key="VM"/>
 
         <DataTemplate x:Key="listTemplate" DataType="{x:Type data:Guest}">
-            <DockPanel>
-                <Label Content="{Binding Path=ID}" DockPanel.Dock="Top" HorizontalAlignment="Left"/>
-                <Label Content="{Binding Path=Name}" DockPanel.Dock="Top" HorizontalAlignment="Center"/>
-                <Label Content="{Binding Path=Gender}" DockPanel.Dock="Top" HorizontalAlignment="Right"/>
-                <Label Content="{Binding Path=Contact}" DockPanel.Dock="Left" HorizontalAlignment="Left"/>
-                <Label Content="{Binding Path=Email}" DockPanel.Dock="Left" HorizontalAlignment="Right"/>
-                <Label Content="{Binding Path=Contact}" DockPanel.Dock="Bottom" HorizontalAlignment="Left"/>
+            <StackPanel Orientation="Vertical">
+                <Label Content="{Binding Path=Name}" FontSize="16" DockPanel.Dock="Top" HorizontalAlignment="Left"/>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Gender: " DockPanel.Dock="Top" HorizontalAlignment="Left" />
+                    <Label Content="{Binding Path=Gender}" DockPanel.Dock="Left" HorizontalAlignment="Left"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Conatct: " DockPanel.Dock="Top" HorizontalAlignment="Left" />
+                    <Label Content="{Binding Path=Contact}" DockPanel.Dock="Left" HorizontalAlignment="Left"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Email: "/>
+                    <Label Content="{Binding Path=Email}" DockPanel.Dock="Left" HorizontalAlignment="Left"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="City" DockPanel.Dock="Top" HorizontalAlignment="Left" />
+                    <Label Content="{Binding Path=City}" DockPanel.Dock="Left" HorizontalAlignment="Left"/>
+                </StackPanel>
                 <Label></Label>
-            </DockPanel>
+            </StackPanel>
         </DataTemplate>
     </Window.Resources>
     <Grid DataContext="{StaticResource VM}">
         <ListBox ItemTemplate="{StaticResource listTemplate}"
                  ItemsSource="{Binding Path=Guests}" SelectedItem="{Binding Path=GuestSelected}"
                  HorizontalAlignment="Left" Height="251" Margin="10,10,10,10" VerticalAlignment="Top"
-                 Width="210"/>
+                 Width="210" BorderThickness="1"/>
         <Button Command="{Binding Path=AddCmd}" Content="ADD" HorizontalAlignment="Left"
                 Margin="225,40,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Command="{Binding Path=DelCmd}" Content="Delete" HorizontalAlignment="Left"

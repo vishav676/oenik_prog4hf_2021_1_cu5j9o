@@ -26,8 +26,16 @@
             if (this.IsInDesignMode)
             {
                 this.guest.Name = "Vishav";
-                this.guest.Gender = "Male";
+                this.guest.Gender = Data.Gender.Male;
             }
+        }
+
+        /// <summary>
+        /// Gets selecting gender.
+        /// </summary>
+        public Array Gender
+        {
+            get { return Enum.GetValues(typeof(Gender)); }
         }
 
         /// <summary>

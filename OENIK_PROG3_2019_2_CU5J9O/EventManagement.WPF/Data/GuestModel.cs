@@ -23,7 +23,7 @@
 
         private string city;
 
-        private string gender;
+        private Gender gender;
 
         /// <summary>
         /// Gets or sets Id.
@@ -85,7 +85,7 @@
         /// This field stores the Gender of the Guest.
         /// This is manadatory property and it's Max Length can be 50.
         /// </summary>
-        public string Gender
+        public Gender Gender
         {
             get { return this.gender; }
             set { this.Set(ref this.gender, value); }

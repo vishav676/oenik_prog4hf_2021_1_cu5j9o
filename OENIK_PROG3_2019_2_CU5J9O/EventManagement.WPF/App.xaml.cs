@@ -34,6 +34,7 @@
             MyIoc.Instance.Register<IMessenger>(() => Messenger.Default);
             MyIoc.Instance.Register<IGuestRepository, GuestRepository>();
             MyIoc.Instance.Register<DbContext, EventDbContext>();
+            MyIoc.Instance.Register<IFactoryLogic, FactoryLogic>();
         }
     }
 }

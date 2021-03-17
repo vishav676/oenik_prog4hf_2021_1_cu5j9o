@@ -28,6 +28,11 @@
             Application Entry Point.
             </summary>
         </member>
+        <member name="T:EventManagement.WPF.Data.Gender">
+            <summary>
+            Enum for selecting gender.
+            </summary>
+        </member>
         <member name="T:EventManagement.WPF.Data.GuestModel">
             <summary>
             Data model class.
@@ -92,7 +97,7 @@
             This class connects the repository layer with wpf windows.
             </summary>
         </member>
-        <member name="M:EventManagement.WPF.Logic.GuestLogic.#ctor(EventManagement.WPF.Logic.IEditorService,GalaSoft.MvvmLight.Messaging.IMessenger,EventManagement.Repository.IGuestRepository)">
+        <member name="M:EventManagement.WPF.Logic.GuestLogic.#ctor(EventManagement.WPF.Logic.IEditorService,GalaSoft.MvvmLight.Messaging.IMessenger,EventManagement.Repository.IGuestRepository,EventManagement.Logic.IFactoryLogic)">
             <summary>
             Initializes a new instance of the <see cref="T:EventManagement.WPF.Logic.GuestLogic"/> class.
             </summary>
@@ -245,6 +250,11 @@
         <member name="M:EventManagement.WPF.VM.EditViewModel.#ctor">
             <summary>
             Initializes a new instance of the <see cref="T:EventManagement.WPF.VM.EditViewModel"/> class.
+            </summary>
+        </member>
+        <member name="P:EventManagement.WPF.VM.EditViewModel.Gender">
+            <summary>
+            Gets selecting gender.
             </summary>
         </member>
         <member name="P:EventManagement.WPF.VM.EditViewModel.Guest">
