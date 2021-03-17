@@ -1,5 +1,6 @@
 ﻿namespace EventManagement.WPF.VM
 {
+    using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.Windows.Input;
     using CommonServiceLocator;
@@ -35,6 +36,14 @@
 
                 this.Guests.Add(g);
                 this.Guests.Add(g1);
+            }
+            else
+            {
+                IList<GuestModel> lists = this.logic.GetAllGuests();
+                foreach (var item in lists)
+                {
+                    this.Guests.Add(item);
+                }
             }
 
             this.AddCmd = new RelayCommand(() => this.logic.Add(this.Guests));

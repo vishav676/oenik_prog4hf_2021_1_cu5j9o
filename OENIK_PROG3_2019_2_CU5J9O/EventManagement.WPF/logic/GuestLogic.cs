@@ -100,9 +100,25 @@
         /// This function gets the list of guests from the database.
         /// </summary>
         /// <returns>IList of Guest type.</returns>
-        public IList<Guest> GetAllGuests()
+        public IList<GuestModel> GetAllGuests()
         {
-            return this.guestRepository.GetAll().ToList();
+            IList<Guest> entityList = this.guestRepository.GetAll().ToList();
+            IList<GuestModel> guestModels = new List<GuestModel>();
+
+            foreach (var item in entityList)
+            {
+                GuestModel guestModel = new GuestModel();
+                guestModel.ID = item.ID;
+                guestModel.Name = item.Name;
+                guestModel.City = item.City;
+                guestModel.Contact = item.Contact;
+                guestModel.Email = item.Email;
+                guestModel.Gender = item.Gender;
+
+                guestModels.Add(guestModel);
+            }
+
+            return guestModels;
         }
     }
 }

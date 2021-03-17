@@ -17,7 +17,7 @@
         /// This function gets the list of guests from the database.
         /// </summary>
         /// <returns>IList of Guest type.</returns>
-        public IList<Guest> GetAllGuests();
+        public IList<GuestModel> GetAllGuests();
 
         /// <summary>
         /// This function inserts the new guest to the database.
