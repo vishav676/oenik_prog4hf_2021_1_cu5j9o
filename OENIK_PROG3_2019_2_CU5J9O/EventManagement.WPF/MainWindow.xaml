@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:EventManagement.WPF.VM"
-        xmlns:data="clr-namespace:EventManagement.Data.Models;assembly=EventManagement.Data"
+        xmlns:data="clr-namespace:EventManagement.WPF.Data"
         xmlns:ui="clr-namespace:EventManagement.WPF.UI"
         mc:Ignorable="d"
         Title="MainWindow" Height="329" Width="360"
@@ -12,7 +12,7 @@
     <Window.Resources>
         <vm:MainViewModel x:Key="VM"/>
 
-        <DataTemplate x:Key="listTemplate" DataType="{x:Type data:Guest}">
+        <DataTemplate x:Key="listTemplate" DataType="{x:Type data:GuestModel}">
             <StackPanel Orientation="Vertical">
                 <Label Content="{Binding Path=Name}" FontSize="16" DockPanel.Dock="Top" HorizontalAlignment="Left"/>
                 <StackPanel Orientation="Horizontal">

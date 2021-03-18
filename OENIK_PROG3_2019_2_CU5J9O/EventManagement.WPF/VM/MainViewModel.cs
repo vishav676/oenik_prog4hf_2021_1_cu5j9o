@@ -44,7 +44,7 @@
                 {
                     ID = 2,
                     Name = "Elon Musk",
-                    City = "USa00",
+                    City = "USA",
                     Contact = "+36 203174735",
                     Gender = Gender.Male,
                     Email = "gates@gmail.com",

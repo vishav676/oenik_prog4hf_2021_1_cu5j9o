@@ -27,6 +27,12 @@
         /// <returns>bool value if Guest is updated or not.</returns>
         bool ChangeName(int id, string newName);
 
+        /// <summary>
+        /// This method is used to edit the details of the Guest.
+        /// </summary>
+        /// <param name="id">Guest ID.</param>
+        /// <param name="guest">Guest Type.</param>
+        /// <returns>Boolean return value.</returns>
         bool EditGuest(int id, Guest guest);
     }
 }
