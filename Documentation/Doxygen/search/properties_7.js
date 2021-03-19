@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['password_267',['Password',['../class_event_management_1_1_data_1_1_models_1_1_admin_user.html#a212756964a86618ae17440fcedf05529',1,'EventManagement::Data::Models::AdminUser']]],
-  ['place_268',['Place',['../class_event_management_1_1_data_1_1_models_1_1_events.html#ad9b9b835a00cc8a535a572f1e14314d9',1,'EventManagement::Data::Models::Events']]],
-  ['pricepaid_269',['PricePaid',['../class_event_management_1_1_data_1_1_models_1_1_ticket.html#a904a4708f5bdbbc6dfd5706b6ac9062e',1,'EventManagement::Data::Models::Ticket']]]
+  ['name_282',['Name',['../class_event_management_1_1_data_1_1_models_1_1_events.html#a424f0734e9adec3c0229572b5f566802',1,'EventManagement.Data.Models.Events.Name()'],['../class_event_management_1_1_data_1_1_models_1_1_guest.html#a3b568aa3327a4c821816ea64f8d19f3e',1,'EventManagement.Data.Models.Guest.Name()'],['../class_event_management_1_1_w_p_f_1_1_data_1_1_guest_model.html#aa932b0b8c1b867c1ee06438bad3bbf90',1,'EventManagement.WPF.Data.GuestModel.Name()']]],
+  ['nooffemales_283',['NoOfFemales',['../class_event_management_1_1_logic_1_1_no_of_males_females_in_event.html#a60986a723aa415e39bbb4cd8489b790a',1,'EventManagement::Logic::NoOfMalesFemalesInEvent']]],
+  ['noofmales_284',['NoOfMales',['../class_event_management_1_1_logic_1_1_no_of_males_females_in_event.html#a520f0de71b83dd2c68fee8675c4ed9c0',1,'EventManagement::Logic::NoOfMalesFemalesInEvent']]]
 ];

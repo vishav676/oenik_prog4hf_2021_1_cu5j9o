@@ -26,7 +26,11 @@ var NAVTREE =
 [
   [ "Event Management", "index.html", [
     [ "Packages", "namespaces.html", [
-      [ "Packages", "namespaces.html", "namespaces_dup" ]
+      [ "Packages", "namespaces.html", "namespaces_dup" ],
+      [ "Package Functions", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Enumerations", "namespacemembers_enum.html", null ]
+      ] ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -48,7 +52,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_admin_user_8cs_source.html",
-"interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html#a7ee1f1118bcae7681c84990c3069f259"
+"dir_48c6052d094a74e7805757c3c794c066.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

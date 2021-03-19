@@ -33,6 +33,16 @@
             Enum for selecting gender.
             </summary>
         </member>
+        <member name="F:EventManagement.WPF.Data.Gender.Male">
+            <summary>
+            Male.
+            </summary>
+        </member>
+        <member name="F:EventManagement.WPF.Data.Gender.Female">
+            <summary>
+            Female.
+            </summary>
+        </member>
         <member name="T:EventManagement.WPF.Data.GuestModel">
             <summary>
             Data model class.
@@ -104,6 +114,7 @@
             <param name="editorService">EditorService Type.</param>
             <param name="messengerService">IMessenger Type.</param>
             <param name="guestRepository">IGuestRepository Type.</param>
+            <param name="factoryLogic">IFactory type.</param>
         </member>
         <member name="M:EventManagement.WPF.Logic.GuestLogic.Add(System.Collections.Generic.IList{EventManagement.WPF.Data.GuestModel})">
             <summary>
@@ -303,36 +314,6 @@
         <member name="P:EventManagement.WPF.VM.MainViewModel.ModCmd">
             <summary>
             Gets this command will edit guest from database.
-            </summary>
-        </member>
-        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
-            <summary>
-            GeneratedInternalTypeHelper
-            </summary>
-        </member>
-        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
-            <summary>
-            CreateInstance
-            </summary>
-        </member>
-        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
-            <summary>
-            GetPropertyValue
-            </summary>
-        </member>
-        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
-            <summary>
-            SetPropertyValue
-            </summary>
-        </member>
-        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
-            <summary>
-            CreateDelegate
-            </summary>
-        </member>
-        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
-            <summary>
-            AddEventHandler
             </summary>
         </member>
     </members>

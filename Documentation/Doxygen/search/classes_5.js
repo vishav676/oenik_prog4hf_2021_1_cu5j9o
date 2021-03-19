@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['noofmalesfemalesinevent_153',['NoOfMalesFemalesInEvent',['../class_event_management_1_1_logic_1_1_no_of_males_females_in_event.html',1,'EventManagement::Logic']]]
+  ['mainviewmodel_169',['MainViewModel',['../class_event_management_1_1_w_p_f_1_1_v_m_1_1_main_view_model.html',1,'EventManagement::WPF::VM']]],
+  ['mainwindow_170',['MainWindow',['../class_event_management_1_1_w_p_f_1_1_main_window.html',1,'EventManagement::WPF']]],
+  ['myioc_171',['MyIoc',['../class_event_management_1_1_w_p_f_1_1_my_ioc.html',1,'EventManagement::WPF']]]
 ];

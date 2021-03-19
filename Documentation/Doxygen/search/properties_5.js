@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['name_262',['Name',['../class_event_management_1_1_data_1_1_models_1_1_events.html#a424f0734e9adec3c0229572b5f566802',1,'EventManagement.Data.Models.Events.Name()'],['../class_event_management_1_1_data_1_1_models_1_1_guest.html#a3b568aa3327a4c821816ea64f8d19f3e',1,'EventManagement.Data.Models.Guest.Name()']]],
-  ['nooffemales_263',['NoOfFemales',['../class_event_management_1_1_logic_1_1_no_of_males_females_in_event.html#a60986a723aa415e39bbb4cd8489b790a',1,'EventManagement::Logic::NoOfMalesFemalesInEvent']]],
-  ['noofmales_264',['NoOfMales',['../class_event_management_1_1_logic_1_1_no_of_males_females_in_event.html#a520f0de71b83dd2c68fee8675c4ed9c0',1,'EventManagement::Logic::NoOfMalesFemalesInEvent']]]
+  ['id_279',['ID',['../class_event_management_1_1_data_1_1_models_1_1_guest.html#a12891875fa84ce6bdbd727114b5bd14e',1,'EventManagement.Data.Models.Guest.ID()'],['../class_event_management_1_1_w_p_f_1_1_data_1_1_guest_model.html#a1a066c225252a1802bb12afcb6cfac96',1,'EventManagement.WPF.Data.GuestModel.ID()'],['../class_event_management_1_1_data_1_1_models_1_1_admin_user.html#a13855161724687b3d4282112e5d10bee',1,'EventManagement.Data.Models.AdminUser.Id()'],['../class_event_management_1_1_data_1_1_models_1_1_events.html#a5c4c83fd349c4fcc96afe5d1ac0fac7e',1,'EventManagement.Data.Models.Events.Id()'],['../class_event_management_1_1_data_1_1_models_1_1_ticket.html#a56b7d2c926b93c99480aea63a815929d',1,'EventManagement.Data.Models.Ticket.Id()']]],
+  ['instance_280',['Instance',['../class_event_management_1_1_w_p_f_1_1_my_ioc.html#a098b8c13903abdd819e0a34cc4a8a853',1,'EventManagement::WPF::MyIoc']]]
 ];

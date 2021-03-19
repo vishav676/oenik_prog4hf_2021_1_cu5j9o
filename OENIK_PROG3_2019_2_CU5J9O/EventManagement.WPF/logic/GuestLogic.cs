@@ -126,7 +126,14 @@
                 guestModel.City = item.City;
                 guestModel.Contact = item.Contact;
                 guestModel.Email = item.Email;
-                guestModel.Gender = Gender.Male;
+                if (item.Gender == "Male")
+                {
+                    guestModel.Gender = Gender.Male;
+                }
+                else
+                {
+                    guestModel.Gender = Gender.Female;
+                }
 
                 guestModels.Add(guestModel);
             }

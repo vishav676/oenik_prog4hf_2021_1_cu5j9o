@@ -170,6 +170,14 @@
             <param name="newName">Updated Guest Name.</param>
             <returns>bool value if Guest is updated or not.</returns>
         </member>
+        <member name="M:EventManagement.Repository.IGuestRepository.EditGuest(System.Int32,EventManagement.Data.Models.Guest)">
+            <summary>
+            This method is used to edit the details of the Guest.
+            </summary>
+            <param name="id">Guest ID.</param>
+            <param name="guest">Guest Type.</param>
+            <returns>Boolean return value.</returns>
+        </member>
         <member name="T:EventManagement.Repository.IRepository`1">
             <summary>
             This is general interface which contains all the generic methods for all Tables of the Database.

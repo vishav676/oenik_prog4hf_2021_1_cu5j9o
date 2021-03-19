@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['username_274',['Username',['../class_event_management_1_1_data_1_1_models_1_1_admin_user.html#aaf7f01bf43b7004357b19e62688a83c2',1,'EventManagement::Data::Models::AdminUser']]]
+  ['startdate_290',['StartDate',['../class_event_management_1_1_data_1_1_models_1_1_events.html#adc3021e7b4f8b5bbe175d5bb4726882c',1,'EventManagement::Data::Models::Events']]]
 ];

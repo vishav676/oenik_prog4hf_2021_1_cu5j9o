@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['oganizarname_265',['OganizarName',['../class_event_management_1_1_data_1_1_models_1_1_events.html#aa8e954c55863387d43fe535df78109c1',1,'EventManagement::Data::Models::Events']]],
-  ['orderinfo_266',['OrderInfo',['../class_event_management_1_1_data_1_1_models_1_1_ticket.html#ae3f334b86421f581168c838b3d652b2c',1,'EventManagement::Data::Models::Ticket']]]
+  ['modcmd_281',['ModCmd',['../class_event_management_1_1_w_p_f_1_1_v_m_1_1_main_view_model.html#ab8292159be4cd54199fa9fb99bde716f',1,'EventManagement::WPF::VM::MainViewModel']]]
 ];

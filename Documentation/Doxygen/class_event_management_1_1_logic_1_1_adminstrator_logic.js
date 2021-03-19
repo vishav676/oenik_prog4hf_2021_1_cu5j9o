@@ -1,7 +1,7 @@
 var class_event_management_1_1_logic_1_1_adminstrator_logic =
 [
     [ "AdminstratorLogic", "class_event_management_1_1_logic_1_1_adminstrator_logic.html#a0dbbaaccaf404610fca7e3363bcae4ea", null ],
-    [ "Add", "class_event_management_1_1_logic_1_1_adminstrator_logic.html#a9b686ee4877c05dd6ca549efc26791c4", null ],
+    [ "Add", "class_event_management_1_1_logic_1_1_adminstrator_logic.html#ae2e705520cd1f66dc3e7c3fbba2276ae", null ],
     [ "ChangeName", "class_event_management_1_1_logic_1_1_adminstrator_logic.html#a9216d285139e610c47ccac241d2a5277", null ],
     [ "ChangeTicketDiscount", "class_event_management_1_1_logic_1_1_adminstrator_logic.html#a45135655717805a0b31bc36acc5e2bff", null ],
     [ "GetEventSale", "class_event_management_1_1_logic_1_1_adminstrator_logic.html#a5561666cc457acb1abba540de36fc386", null ],

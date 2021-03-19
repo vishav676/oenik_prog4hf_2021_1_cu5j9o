@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['main_78',['Main',['../class_o_e_n_i_k___p_r_o_g3__2020__2___c_u5_j9_o_1_1_program.html#aee337c27639d141d2c8793ce645083bc',1,'OENIK_PROG3_2020_2_CU5J9O::Program']]]
+  ['name_99',['Name',['../class_event_management_1_1_data_1_1_models_1_1_events.html#a424f0734e9adec3c0229572b5f566802',1,'EventManagement.Data.Models.Events.Name()'],['../class_event_management_1_1_data_1_1_models_1_1_guest.html#a3b568aa3327a4c821816ea64f8d19f3e',1,'EventManagement.Data.Models.Guest.Name()'],['../class_event_management_1_1_w_p_f_1_1_data_1_1_guest_model.html#aa932b0b8c1b867c1ee06438bad3bbf90',1,'EventManagement.WPF.Data.GuestModel.Name()']]],
+  ['nooffemales_100',['NoOfFemales',['../class_event_management_1_1_logic_1_1_no_of_males_females_in_event.html#a60986a723aa415e39bbb4cd8489b790a',1,'EventManagement::Logic::NoOfMalesFemalesInEvent']]],
+  ['noofmales_101',['NoOfMales',['../class_event_management_1_1_logic_1_1_no_of_males_females_in_event.html#a520f0de71b83dd2c68fee8675c4ed9c0',1,'EventManagement::Logic::NoOfMalesFemalesInEvent']]],
+  ['noofmalesfemalesinevent_102',['NoOfMalesFemalesInEvent',['../class_event_management_1_1_logic_1_1_no_of_males_females_in_event.html',1,'EventManagement::Logic']]]
 ];
