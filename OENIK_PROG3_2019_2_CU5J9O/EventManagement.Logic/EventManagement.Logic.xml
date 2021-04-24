@@ -195,6 +195,13 @@
             <param name="id">Ticket ID.</param>
             <returns>instance of <see cref="T:EventManagement.Data.Models.Ticket"/>.</returns>
         </member>
+        <member name="M:EventManagement.Logic.FrontOfficeLogic.GetOneGuest(System.Int32)">
+            <summary>
+            This mehtod will return the guest with specific id.
+            </summary>
+            <param name="id">Guest Id.</param>
+            <returns>instance of <see cref="T:EventManagement.Data.Models.Guest"/>.</returns>
+        </member>
         <member name="M:EventManagement.Logic.FrontOfficeLogic.SearchGuest(System.String)">
             <summary>
             This method will search the Guest with the given name.
@@ -392,6 +399,13 @@
             </summary>
             <param name="id">Ticket Id.</param>
             <returns>Ticket.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.IFrontOffice.GetOneGuest(System.Int32)">
+            <summary>
+            This method will return guest with specifc Id.
+            </summary>
+            <param name="id">Guest Id.</param>
+            <returns>Guest.</returns>
         </member>
         <member name="M:EventManagement.Logic.IFrontOffice.GetAllTickets">
             <summary>

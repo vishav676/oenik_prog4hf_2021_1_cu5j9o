@@ -1,0 +1,36 @@
+﻿@model IEnumerable<EventManagement.Web.Models.Guest>
+
+<h2>GuestList</h2>
+
+@if (Model.Count() == 0)
+{
+    <p>No data in the database!</p>
+}
+else
+{
+    <table border="1">
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.First().ID)</th>
+            <th>@Html.DisplayNameFor(m => m.First().Name)</th>
+            <th>@Html.DisplayNameFor(m => m.First().City)</th>
+            <th>@Html.DisplayNameFor(m => m.First().Contact)</th>
+            <th>@Html.DisplayNameFor(m => m.First().Gender)</th>
+            <th>Datasheet</th>
+            <th>Delete</th>
+            <th>Modify</th>
+        </tr>
+        @foreach(var item in Model)
+         {
+            <tr>
+                <td>@Html.DisplayFor(m => item.ID)</td>
+                <td>@Html.DisplayFor(m => item.Name)</td>
+                <td>@Html.DisplayFor(m => item.City)</td>
+                <td>@Html.DisplayFor(m => item.Contact)</td>
+                <td>@Html.DisplayFor(m => item.Gender)</td>
+                <td>@Html.ActionLink("[SHOW]", "Details", new { id = item.ID })</td>
+                <td>@Html.ActionLink("[DELETE]", "Remove", new { id = item.ID })</td>
+                <td>@Html.ActionLink("[EDIT]", "Edit", new { id = item.ID })</td>
+            </tr>
+         }
+    </table>
+}

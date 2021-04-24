@@ -110,5 +110,17 @@
         /// <param name="password">Password.</param>
         /// <returns>Boolean Value.</returns>
         bool IsPasswordCorrect(string name, string password);
+
+        /// <summary>
+        /// This mehtod is used to edit the details of the guest.
+        /// </summary>
+        /// <param name="id">ID.</param>
+        /// <param name="name">Name.</param>
+        /// <param name="email">Email.</param>
+        /// <param name="contact">Contact.</param>
+        /// <param name="gender">Gender.</param>
+        /// <param name="city">City.</param>
+        /// <returns>Boolean value.</returns>
+        bool EditGuest(int id, string name, string email, string contact, string gender, string city);
     }
 }

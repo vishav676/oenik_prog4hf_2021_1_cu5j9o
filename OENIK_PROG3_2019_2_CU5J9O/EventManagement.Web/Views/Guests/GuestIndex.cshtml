@@ -1,0 +1,13 @@
+﻿@model EventManagement.Web.Models.GuestListViewModel
+
+@{
+    ViewData["Title"] = "Guest Index";
+}
+
+<h2>Guests Index</h2>
+
+<p style="color:red">@TempData["editResult"]</p>
+
+@await Html.PartialAsync("GuestsEdit", Model.EditedGuest)
+
+@await Html.PartialAsync("GuestsList", Model.ListOfGuests)

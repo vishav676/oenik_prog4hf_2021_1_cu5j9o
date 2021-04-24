@@ -60,6 +60,13 @@
         Ticket GetOneTicket(int id);
 
         /// <summary>
+        /// This method will return guest with specifc Id.
+        /// </summary>
+        /// <param name="id">Guest Id.</param>
+        /// <returns>Guest.</returns>
+        Guest GetOneGuest(int id);
+
+        /// <summary>
         /// This mehtod will provide list of Tickets in the Database.
         /// </summary>
         /// <returns>Ilist of Tickets.</returns>

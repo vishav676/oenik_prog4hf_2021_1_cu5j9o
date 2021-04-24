@@ -114,6 +114,16 @@
         }
 
         /// <summary>
+        /// This mehtod will return the guest with specific id.
+        /// </summary>
+        /// <param name="id">Guest Id.</param>
+        /// <returns>instance of <see cref="Guest"/>.</returns>
+        public Guest GetOneGuest(int id)
+        {
+            return this.guestRepository.GetOne(id);
+        }
+
+        /// <summary>
         /// This method will search the Guest with the given name.
         /// </summary>
         /// <param name="name">Guest Name.</param>

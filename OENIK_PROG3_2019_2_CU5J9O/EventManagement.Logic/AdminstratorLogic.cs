@@ -217,5 +217,19 @@
         {
             return this.adminRepository.PasswordCorrect(name, password);
         }
+
+        /// <inheritdoc/>
+        public bool EditGuest(int id, string name, string email, string contact, string gender, string city)
+        {
+            Guest guest = new Guest
+            {
+                Name = name,
+                Contact = contact,
+                Email = email,
+                Gender = gender,
+                City = city,
+            };
+            return this.guestRepository.EditGuest(id, guest);
+        }
     }
 }

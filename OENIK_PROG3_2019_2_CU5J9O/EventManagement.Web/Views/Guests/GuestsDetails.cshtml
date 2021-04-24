@@ -1,0 +1,40 @@
+﻿@model EventManagement.Web.Models.Guest
+
+@{
+    ViewData["Title"] = "Guest Details";
+}
+
+<h2>Datasheet of one Guest</h2>
+
+@Html.ActionLink("Back to the list", "Index");
+
+<table border="1">
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.ID)</td>
+        <td>@Html.DisplayFor(m => m.ID)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Name)</td>
+        <td>@Html.DisplayFor(m => m.Name)</td>
+    </tr>
+
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Email)</td>
+        <td>@Html.DisplayFor(m => m.Email)</td>
+    </tr>
+
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Contact)</td>
+        <td>@Html.DisplayFor(m => m.Contact)</td>
+    </tr>
+
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.City)</td>
+        <td>@Html.DisplayFor(m => m.City)</td>
+    </tr>
+
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Gender)</td>
+        <td>@Html.DisplayFor(m => m.Gender)</td>
+    </tr>
+</table>
