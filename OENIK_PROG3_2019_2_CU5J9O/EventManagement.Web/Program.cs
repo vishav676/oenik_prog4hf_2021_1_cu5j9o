@@ -14,11 +14,10 @@ namespace EventManagement.Web
     /// </summary>
     public class Program
     {
-
         /// <summary>
         /// Main method which gets executed when application starts.
         /// </summary>
-        /// <param name="args"></param>
+        /// <param name="args">String array.</param>
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();

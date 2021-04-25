@@ -113,6 +113,9 @@
         <member name="M:EventManagement.Logic.AdminstratorLogic.IsPasswordCorrect(System.String,System.String)">
             <inheritdoc/>
         </member>
+        <member name="M:EventManagement.Logic.AdminstratorLogic.EditGuest(System.Int32,System.String,System.String,System.String,System.String,System.String)">
+            <inheritdoc/>
+        </member>
         <member name="T:EventManagement.Logic.FactoryLogic">
             <summary>
             This logic class will generate the specific logic as required.
@@ -328,6 +331,18 @@
             <param name="name">Username.</param>
             <param name="password">Password.</param>
             <returns>Boolean Value.</returns>
+        </member>
+        <member name="M:EventManagement.Logic.IAdminstratorLogic.EditGuest(System.Int32,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            This mehtod is used to edit the details of the guest.
+            </summary>
+            <param name="id">ID.</param>
+            <param name="name">Name.</param>
+            <param name="email">Email.</param>
+            <param name="contact">Contact.</param>
+            <param name="gender">Gender.</param>
+            <param name="city">City.</param>
+            <returns>Boolean value.</returns>
         </member>
         <member name="T:EventManagement.Logic.IFactoryLogic">
             <summary>

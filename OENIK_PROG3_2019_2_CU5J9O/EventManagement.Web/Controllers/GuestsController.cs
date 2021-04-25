@@ -14,9 +14,9 @@
     /// </summary>
     public class GuestsController : Controller
     {
-        IFactoryLogic logic;
-        IMapper mapper;
-        GuestListViewModel vm;
+        private IFactoryLogic logic;
+        private IMapper mapper;
+        private GuestListViewModel vm;
 
         public GuestsController(IFactoryLogic logic, IMapper mapper)
         {
@@ -29,12 +29,6 @@
             var guests = logic.GetFrontOfficeLogic().GetAllGuests();
             this.vm.ListOfGuests = mapper.Map<IList<Data.Models.Guest>,
                 List<Models.Guest>>(guests);
-        }
-
-        private Models.Guest GetGuestModel(int id)
-        {
-            Data.Models.Guest oneGuest = this.logic.GetFrontOfficeLogic().GetOneGuest(id);
-            return this.mapper.Map<Data.Models.Guest, Models.Guest>(oneGuest);
         }
 
         public IActionResult Index()
@@ -94,8 +88,12 @@
                 this.vm.EditedGuest = guest;
                 return this.View("GuestIndex", this.vm);
             }
-
         }
 
+        private Models.Guest GetGuestModel(int id)
+        {
+            Data.Models.Guest oneGuest = this.logic.GetFrontOfficeLogic().GetOneGuest(id);
+            return this.mapper.Map<Data.Models.Guest, Models.Guest>(oneGuest);
+        }
     }
 }

@@ -38,7 +38,6 @@ namespace EventManagement.Web
             services.AddScoped<ITicketRepository, TicketRepository>();
             services.AddScoped<IEventRepository, EventRepository>();
             services.AddScoped<IMapper>(provide => MapperFactory.CreateMapper());
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

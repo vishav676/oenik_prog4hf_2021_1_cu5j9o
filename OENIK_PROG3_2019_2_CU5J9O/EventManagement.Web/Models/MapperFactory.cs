@@ -11,7 +11,6 @@
     /// </summary>
     public class MapperFactory
     {
-
         /// <summary>
         /// This method created the IMapper object from Enitity model to web model.
         /// </summary>
