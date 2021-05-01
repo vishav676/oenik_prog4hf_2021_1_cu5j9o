@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EventManagement.Web</name>
+    </assembly>
+    <members>
+        <member name="T:EventManagement.Web.Controllers.GuestsController">
+            <summary>
+            This class controll the view for the Guest.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Web.Models.GuestListViewModel">
+            <summary>
+            This class is the viewmodel for the Guest model.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Web.Models.GuestListViewModel.EditedGuest">
+            <summary>
+            Gets or sets the edited Guest.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Web.Models.GuestListViewModel.ListOfGuests">
+            <summary>
+            Gets or sets the list of the guests.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Web.Models.MapperFactory">
+            <summary>
+            This class help to convert entity model to web model.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Web.Models.MapperFactory.CreateMapper">
+            <summary>
+            This method created the IMapper object from Enitity model to web model.
+            </summary>
+            <returns><see cref="T:AutoMapper.IMapper"/>.</returns>
+        </member>
+        <member name="T:EventManagement.Web.Program">
+            <summary>
+            Main class for the web application.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Web.Program.Main(System.String[])">
+            <summary>
+            Main method which gets executed when application starts.
+            </summary>
+            <param name="args">String array.</param>
+        </member>
+        <member name="M:EventManagement.Web.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Creates the host.
+            </summary>
+            <param name="args">String array.</param>
+            <returns>IHostBuidler.</returns>
+        </member>
+    </members>
+</doc>

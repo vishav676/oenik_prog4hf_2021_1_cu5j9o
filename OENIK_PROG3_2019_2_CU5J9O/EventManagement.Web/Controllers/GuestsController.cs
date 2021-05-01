@@ -18,6 +18,11 @@
         private IMapper mapper;
         private GuestListViewModel vm;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GuestsController"/> class.
+        /// </summary>
+        /// <param name="logic">IFactoryLogic.</param>
+        /// <param name="mapper">IMapper.</param>
         public GuestsController(IFactoryLogic logic, IMapper mapper)
         {
             this.logic = logic;
@@ -31,17 +36,31 @@
                 List<Models.Guest>>(guests);
         }
 
+        /// <summary>
+        /// Renders index page.
+        /// </summary>
+        /// <returns>IActionResult.</returns>
         public IActionResult Index()
         {
             this.ViewData["editAction"] = "AddNew";
             return this.View("GuestIndex", this.vm);
         }
 
+        /// <summary>
+        /// Renders details page.
+        /// </summary>
+        /// <param name="id">guest id.</param>
+        /// <returns>IActionResult.</returns>
         public IActionResult Details(int id)
         {
             return this.View("GuestsDetails", this.GetGuestModel(id));
         }
 
+        /// <summary>
+        /// Remove the guesta and redirect to index page.
+        /// </summary>
+        /// <param name="id">Guest Id.</param>
+        /// <returns>IActionResult.</returns>
         public IActionResult Remove(int id)
         {
             this.TempData["editResult"] = "Delete Fail";
@@ -54,6 +73,11 @@
             return this.RedirectToAction(nameof(this.Index));
         }
 
+        /// <summary>
+        /// This renders edit view in the page.
+        /// </summary>
+        /// <param name="id">Guest ID.</param>
+        /// <returns>IActionResult.</returns>
         public IActionResult Edit(int id)
         {
             this.ViewData["editAction"] = "Edit";
@@ -61,6 +85,12 @@
             return this.View("GuestIndex", this.vm);
         }
 
+        /// <summary>
+        /// Edit the guest or add new guest.
+        /// </summary>
+        /// <param name="guest">Guest to be edited.</param>
+        /// <param name="editAction">String.</param>
+        /// <returns>IActionResult.</returns>
         [HttpPost]
         public IActionResult Edit(Models.Guest guest, string editAction)
         {

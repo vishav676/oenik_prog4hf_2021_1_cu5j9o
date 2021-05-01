@@ -6,7 +6,9 @@
 
 <h2>Guests Index</h2>
 
-<p style="color:red">@TempData["editResult"]</p>
+<p style="color:red">
+    @TempData["editResult"]
+</p>
 
 @await Html.PartialAsync("GuestsEdit", Model.EditedGuest)
 
