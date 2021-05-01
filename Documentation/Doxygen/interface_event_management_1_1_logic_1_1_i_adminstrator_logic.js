@@ -3,6 +3,7 @@ var interface_event_management_1_1_logic_1_1_i_adminstrator_logic =
     [ "Add", "interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html#aaf9a4c05bd6e0b7743bd5e2c372a7ba5", null ],
     [ "ChangeName", "interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html#a2109c48735385f6f9f2f1837cfd68094", null ],
     [ "ChangeTicketDiscount", "interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html#a45c9a1690634049ac7b98a337b39f207", null ],
+    [ "EditGuest", "interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html#afa3bd97d597020a854c137c89edf3e42", null ],
     [ "GetEventSale", "interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html#a40d909fb5b37f033862c5df73b39002c", null ],
     [ "GetNoOfMalesAsync", "interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html#a7ee1f1118bcae7681c84990c3069f259", null ],
     [ "GetNoOfMalesFemalesList", "interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html#a10b5f064699a5572cb954d82c3f0562a", null ],

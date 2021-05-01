@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['modcmd_281',['ModCmd',['../class_event_management_1_1_w_p_f_1_1_v_m_1_1_main_view_model.html#ab8292159be4cd54199fa9fb99bde716f',1,'EventManagement::WPF::VM::MainViewModel']]]
+  ['listofguests_353',['ListOfGuests',['../class_event_management_1_1_web_1_1_models_1_1_guest_list_view_model.html#a4119295a61c03483dc3b6b61de948a28',1,'EventManagement::Web::Models::GuestListViewModel']]]
 ];

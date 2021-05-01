@@ -24,7 +24,8 @@
 */
 var NAVTREE =
 [
-  [ "Event Management", "index.html", [
+  [ "My Project", "index.html", [
+    [ "The MIT License (MIT)", "md__c___users__vishav__documents_oenik_prog4hf_2021_1_cu5j9o__o_e_n_i_k__p_r_o_g3_2019_2__c_u5_j8198b7ea9debadb18526a2282d7bb194.html", null ],
     [ "Packages", "namespaces.html", [
       [ "Packages", "namespaces.html", "namespaces_dup" ],
       [ "Package Functions", "namespacemembers.html", [
@@ -37,7 +38,7 @@ var NAVTREE =
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
+        [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
         [ "Properties", "functions_prop.html", null ]
@@ -51,8 +52,9 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_admin_user_8cs_source.html",
-"dir_48c6052d094a74e7805757c3c794c066.html"
+"___layout_8cshtml_8g_8cs_source.html",
+"class_event_management_1_1_logic_1_1_no_of_males_females_in_event.html#a520f0de71b83dd2c68fee8675c4ed9c0",
+"interface_event_management_1_1_repository_1_1_interfaces_1_1_i_admin_user_repository.html#adbcff6f813454320b33275efe218e397"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Event Management: EventManagement.Logic/AdminstratorLogic.cs Source File</title>
+<title>My Project: C:/Users/Vishav/Documents/oenik_prog4hf_2021_1_cu5j9o/OENIK_PROG3_2019_2_CU5J9O/EventManagement.Logic/AdminstratorLogic.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,9 +25,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Event Management
+   <div id="projectname">My Project
    </div>
-   <div id="projectbrief">Prog 4 homework</div>
   </td>
  </tr>
  </tbody>
@@ -228,15 +227,30 @@ $(document).ready(function(){initNavTree('_adminstrator_logic_8cs_source.html','
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        {</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="keywordflow">return</span> this.adminRepository.<a class="code" href="interface_event_management_1_1_repository_1_1_interfaces_1_1_i_admin_user_repository.html#ab0f625debf8f424e88bdbe318127116a">PasswordCorrect</a>(name, password);</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        }</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    }</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;}</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="class_event_management_1_1_logic_1_1_adminstrator_logic.html#a1b684558a9550af4dcd56d42731a7907">  222</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_event_management_1_1_logic_1_1_adminstrator_logic.html#a1b684558a9550af4dcd56d42731a7907">EditGuest</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">string</span> name, <span class="keywordtype">string</span> email, <span class="keywordtype">string</span> contact, <span class="keywordtype">string</span> gender, <span class="keywordtype">string</span> city)</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            <a class="code" href="class_event_management_1_1_data_1_1_models_1_1_guest.html">Guest</a> guest = <span class="keyword">new</span> <a class="code" href="class_event_management_1_1_data_1_1_models_1_1_guest.html">Guest</a></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                Name = name,</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                Contact = contact,</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                Email = email,</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                Gender = gender,</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                City = city,</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            };</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            <span class="keywordflow">return</span> this.guestRepository.<a class="code" href="interface_event_management_1_1_repository_1_1_i_guest_repository.html#a162e33131d2a7894c1d30946e48e480e">EditGuest</a>(<span class="keywordtype">id</span>, guest);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="anamespace_event_management_1_1_data_html"><div class="ttname"><a href="namespace_event_management_1_1_data.html">EventManagement.Data</a></div><div class="ttdef"><b>Definition:</b> <a href="_admin_user_8cs_source.html#l00001">AdminUser.cs:2</a></div></div>
 <div class="ttc" id="aclass_event_management_1_1_logic_1_1_adminstrator_logic_html_a2be4fb30dd91faf70a152d6e049756e2"><div class="ttname"><a href="class_event_management_1_1_logic_1_1_adminstrator_logic.html#a2be4fb30dd91faf70a152d6e049756e2">EventManagement.Logic.AdminstratorLogic.GetNoOfMalesFemalesList</a></div><div class="ttdeci">IList&lt; NoOfMalesFemalesInEvent &gt; GetNoOfMalesFemalesList()</div><div class="ttdoc">Method to get the number of males and females in the Event.</div><div class="ttdef"><b>Definition:</b> <a href="_adminstrator_logic_8cs_source.html#l00088">AdminstratorLogic.cs:88</a></div></div>
 <div class="ttc" id="anamespace_system_1_1_collections_1_1_generic_html"><div class="ttname"><a href="namespace_system_1_1_collections_1_1_generic.html">Generic</a></div></div>
+<div class="ttc" id="ainterface_event_management_1_1_repository_1_1_i_guest_repository_html_a162e33131d2a7894c1d30946e48e480e"><div class="ttname"><a href="interface_event_management_1_1_repository_1_1_i_guest_repository.html#a162e33131d2a7894c1d30946e48e480e">EventManagement.Repository.IGuestRepository.EditGuest</a></div><div class="ttdeci">bool EditGuest(int id, Guest guest)</div><div class="ttdoc">This method is used to edit the details of the Guest.</div></div>
 <div class="ttc" id="aclass_event_management_1_1_logic_1_1_adminstrator_logic_html_a0dbbaaccaf404610fca7e3363bcae4ea"><div class="ttname"><a href="class_event_management_1_1_logic_1_1_adminstrator_logic.html#a0dbbaaccaf404610fca7e3363bcae4ea">EventManagement.Logic.AdminstratorLogic.AdminstratorLogic</a></div><div class="ttdeci">AdminstratorLogic(ITicketRepository ticketRepo, IEventRepository eventRepository, IGuestRepository guestRepository, IAdminUserRepository adminRepository)</div><div class="ttdoc">Initializes a new instance of the AdminstratorLogic class.</div><div class="ttdef"><b>Definition:</b> <a href="_adminstrator_logic_8cs_source.html#l00031">AdminstratorLogic.cs:31</a></div></div>
 <div class="ttc" id="anamespace_event_management_1_1_data_1_1_models_html"><div class="ttname"><a href="namespace_event_management_1_1_data_1_1_models.html">EventManagement.Data.Models</a></div><div class="ttdef"><b>Definition:</b> <a href="_admin_user_8cs_source.html#l00001">AdminUser.cs:2</a></div></div>
+<div class="ttc" id="aclass_event_management_1_1_data_1_1_models_1_1_guest_html"><div class="ttname"><a href="class_event_management_1_1_data_1_1_models_1_1_guest.html">EventManagement.Data.Models.Guest</a></div><div class="ttdoc">This class represents a table of name guests in the Database..</div><div class="ttdef"><b>Definition:</b> <a href="_event_management_8_data_2_models_2_guest_8cs_source.html#l00014">Guest.cs:15</a></div></div>
 <div class="ttc" id="aclass_event_management_1_1_logic_1_1_adminstrator_logic_html_ae4a9159aa8804e90536fdc49ee8dc55b"><div class="ttname"><a href="class_event_management_1_1_logic_1_1_adminstrator_logic.html#ae4a9159aa8804e90536fdc49ee8dc55b">EventManagement.Logic.AdminstratorLogic.RemoveEvent</a></div><div class="ttdeci">bool RemoveEvent(int id)</div><div class="ttdoc">Mehtod to remove the event from the database.</div><div class="ttdef"><b>Definition:</b> <a href="_adminstrator_logic_8cs_source.html#l00149">AdminstratorLogic.cs:149</a></div></div>
 <div class="ttc" id="aclass_event_management_1_1_logic_1_1_adminstrator_logic_html"><div class="ttname"><a href="class_event_management_1_1_logic_1_1_adminstrator_logic.html">EventManagement.Logic.AdminstratorLogic</a></div><div class="ttdoc">Public class implementing IAdminstratorLogic interface.</div><div class="ttdef"><b>Definition:</b> <a href="_adminstrator_logic_8cs_source.html#l00017">AdminstratorLogic.cs:18</a></div></div>
 <div class="ttc" id="anamespace_event_management_html"><div class="ttname"><a href="namespace_event_management.html">EventManagement</a></div><div class="ttdef"><b>Definition:</b> <a href="_admin_user_8cs_source.html#l00001">AdminUser.cs:2</a></div></div>
@@ -268,6 +282,7 @@ $(document).ready(function(){initNavTree('_adminstrator_logic_8cs_source.html','
 <div class="ttc" id="anamespace_event_management_1_1_repository_html"><div class="ttname"><a href="namespace_event_management_1_1_repository.html">EventManagement.Repository</a></div><div class="ttdef"><b>Definition:</b> <a href="_admin_user_repository_8cs_source.html#l00001">AdminUserRepository.cs:2</a></div></div>
 <div class="ttc" id="aclass_event_management_1_1_logic_1_1_adminstrator_logic_html_aafce5af72d1293f0f9134b2e83de5c76"><div class="ttname"><a href="class_event_management_1_1_logic_1_1_adminstrator_logic.html#aafce5af72d1293f0f9134b2e83de5c76">EventManagement.Logic.AdminstratorLogic.RemoveGuest</a></div><div class="ttdeci">bool RemoveGuest(int id)</div><div class="ttdoc">Mehtod to remove the guest from the database.</div><div class="ttdef"><b>Definition:</b> <a href="_adminstrator_logic_8cs_source.html#l00159">AdminstratorLogic.cs:159</a></div></div>
 <div class="ttc" id="ainterface_event_management_1_1_repository_1_1_i_ticket_repository_html_ac963c6da19561aa160e15ff9d968da05"><div class="ttname"><a href="interface_event_management_1_1_repository_1_1_i_ticket_repository.html#ac963c6da19561aa160e15ff9d968da05">EventManagement.Repository.ITicketRepository.ChangeDiscount</a></div><div class="ttdeci">bool ChangeDiscount(int id, int newDiscount)</div><div class="ttdoc">This method is used to update the discount value in the table of specific ticket.</div></div>
+<div class="ttc" id="aclass_event_management_1_1_logic_1_1_adminstrator_logic_html_a1b684558a9550af4dcd56d42731a7907"><div class="ttname"><a href="class_event_management_1_1_logic_1_1_adminstrator_logic.html#a1b684558a9550af4dcd56d42731a7907">EventManagement.Logic.AdminstratorLogic.EditGuest</a></div><div class="ttdeci">bool EditGuest(int id, string name, string email, string contact, string gender, string city)</div><div class="ttdoc">This mehtod is used to edit the details of the guest.</div><div class="ttdef"><b>Definition:</b> <a href="_adminstrator_logic_8cs_source.html#l00222">AdminstratorLogic.cs:222</a></div></div>
 <div class="ttc" id="aclass_event_management_1_1_data_1_1_models_1_1_events_html"><div class="ttname"><a href="class_event_management_1_1_data_1_1_models_1_1_events.html">EventManagement.Data.Models.Events</a></div><div class="ttdoc">This class is marked as table in the Database. This represents events Table in local Database.</div><div class="ttdef"><b>Definition:</b> <a href="_events_8cs_source.html#l00014">Events.cs:15</a></div></div>
 <div class="ttc" id="anamespace_event_management_1_1_logic_html"><div class="ttname"><a href="namespace_event_management_1_1_logic.html">EventManagement.Logic</a></div><div class="ttdef"><b>Definition:</b> <a href="_adminstrator_logic_8cs_source.html#l00001">AdminstratorLogic.cs:2</a></div></div>
 <div class="ttc" id="aclass_event_management_1_1_logic_1_1_no_of_males_females_in_event_html"><div class="ttname"><a href="class_event_management_1_1_logic_1_1_no_of_males_females_in_event.html">EventManagement.Logic.NoOfMalesFemalesInEvent</a></div><div class="ttdoc">public class to store the no of males and females in the event.</div><div class="ttdef"><b>Definition:</b> <a href="_no_of_males_females_in_event_8cs_source.html#l00011">NoOfMalesFemalesInEvent.cs:12</a></div></div>
@@ -276,7 +291,7 @@ $(document).ready(function(){initNavTree('_adminstrator_logic_8cs_source.html','
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_b328c94eca134598258794d482c2f7e4.html">EventManagement.Logic</a></li><li class="navelem"><b>AdminstratorLogic.cs</b></li>
+    <li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_b79084257f006c7d5cd10b3cfda44881.html">Vishav</a></li><li class="navelem"><a class="el" href="dir_d4c1802c2c52b80a7ac976ea4fdd3b88.html">Documents</a></li><li class="navelem"><a class="el" href="dir_f862b53006993f4d3025903d49686589.html">oenik_prog4hf_2021_1_cu5j9o</a></li><li class="navelem"><a class="el" href="dir_b684e218bb1087f2c41deac47a1ca5d2.html">OENIK_PROG3_2019_2_CU5J9O</a></li><li class="navelem"><a class="el" href="dir_bae475fc197995bfff515802b84b4796.html">EventManagement.Logic</a></li><li class="navelem"><b>AdminstratorLogic.cs</b></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

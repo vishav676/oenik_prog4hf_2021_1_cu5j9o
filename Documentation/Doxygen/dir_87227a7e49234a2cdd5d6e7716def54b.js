@@ -1,0 +1,4 @@
+var dir_87227a7e49234a2cdd5d6e7716def54b =
+[
+    [ "net5.0-windows", "dir_a05c68b0d1b66905820084134c165a77.html", "dir_a05c68b0d1b66905820084134c165a77" ]
+];

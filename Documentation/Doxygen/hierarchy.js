@@ -4,11 +4,18 @@ var hierarchy =
     [ "Application", null, [
       [ "EventManagement.WPF.App", "class_event_management_1_1_w_p_f_1_1_app.html", null ]
     ] ],
+    [ "Controller", null, [
+      [ "EventManagement.Web.Controllers.GuestsController", "class_event_management_1_1_web_1_1_controllers_1_1_guests_controller.html", null ],
+      [ "EventManagement.Web.Controllers.HomeController", "class_event_management_1_1_web_1_1_controllers_1_1_home_controller.html", null ]
+    ] ],
     [ "DbContext", null, [
       [ "EventManagement.Data.Models.EventDbContext", "class_event_management_1_1_data_1_1_models_1_1_event_db_context.html", null ]
     ] ],
+    [ "EventManagement.Web.Models.ErrorViewModel", "class_event_management_1_1_web_1_1_models_1_1_error_view_model.html", null ],
     [ "EventManagement.Data.Models.Events", "class_event_management_1_1_data_1_1_models_1_1_events.html", null ],
     [ "EventManagement.Data.Models.Guest", "class_event_management_1_1_data_1_1_models_1_1_guest.html", null ],
+    [ "EventManagement.Web.Models.Guest", "class_event_management_1_1_web_1_1_models_1_1_guest.html", null ],
+    [ "EventManagement.Web.Models.GuestListViewModel", "class_event_management_1_1_web_1_1_models_1_1_guest_list_view_model.html", null ],
     [ "EventManagement.Logic.IAdminstratorLogic", "interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html", [
       [ "EventManagement.Logic.AdminstratorLogic", "class_event_management_1_1_logic_1_1_adminstrator_logic.html", null ]
     ] ],
@@ -57,9 +64,26 @@ var hierarchy =
     [ "IServiceLocator", null, [
       [ "EventManagement.WPF.MyIoc", "class_event_management_1_1_w_p_f_1_1_my_ioc.html", null ]
     ] ],
+    [ "EventManagement.Web.Models.MapperFactory", "class_event_management_1_1_web_1_1_models_1_1_mapper_factory.html", null ],
     [ "EventManagement.Logic.NoOfMalesFemalesInEvent", "class_event_management_1_1_logic_1_1_no_of_males_females_in_event.html", null ],
     [ "ObservableObject", null, [
       [ "EventManagement.WPF.Data.GuestModel", "class_event_management_1_1_w_p_f_1_1_data_1_1_guest_model.html", null ]
+    ] ],
+    [ "EventManagement.Web.Program", "class_event_management_1_1_web_1_1_program.html", null ],
+    [ "RazorPage", null, [
+      [ "AspNetCore.Views__ViewImports", "class_asp_net_core_1_1_views_____view_imports.html", null ],
+      [ "AspNetCore.Views__ViewStart", "class_asp_net_core_1_1_views_____view_start.html", null ],
+      [ "AspNetCore.Views_Guests_GuestIndex", "class_asp_net_core_1_1_views___guests___guest_index.html", null ],
+      [ "AspNetCore.Views_Guests_GuestsDetails", "class_asp_net_core_1_1_views___guests___guests_details.html", null ],
+      [ "AspNetCore.Views_Guests_GuestsEdit", "class_asp_net_core_1_1_views___guests___guests_edit.html", null ],
+      [ "AspNetCore.Views_Home_Index", "class_asp_net_core_1_1_views___home___index.html", null ],
+      [ "AspNetCore.Views_Home_Privacy", "class_asp_net_core_1_1_views___home___privacy.html", null ],
+      [ "AspNetCore.Views_Shared__Layout", "class_asp_net_core_1_1_views___shared_____layout.html", null ],
+      [ "AspNetCore.Views_Shared__ValidationScriptsPartial", "class_asp_net_core_1_1_views___shared_____validation_scripts_partial.html", null ],
+      [ "AspNetCore.Views_Shared_Error", "class_asp_net_core_1_1_views___shared___error.html", null ]
+    ] ],
+    [ "RazorPage< IEnumerable< EventManagement.Web.Models.Guest >>", null, [
+      [ "AspNetCore.Views_Guests_GuestsList", "class_asp_net_core_1_1_views___guests___guests_list.html", null ]
     ] ],
     [ "EventManagement.Repository.Repo< AdminUser >", "class_event_management_1_1_repository_1_1_repo.html", [
       [ "EventManagement.Repository.AdminUserRepository", "class_event_management_1_1_repository_1_1_admin_user_repository.html", null ]
@@ -76,6 +100,7 @@ var hierarchy =
     [ "SimpleIoc", null, [
       [ "EventManagement.WPF.MyIoc", "class_event_management_1_1_w_p_f_1_1_my_ioc.html", null ]
     ] ],
+    [ "EventManagement.Web.Startup", "class_event_management_1_1_web_1_1_startup.html", null ],
     [ "EventManagement.Data.Models.Ticket", "class_event_management_1_1_data_1_1_models_1_1_ticket.html", null ],
     [ "EventManagement.Logic.TicketsByGuest", "class_event_management_1_1_logic_1_1_tickets_by_guest.html", null ],
     [ "EventManagement.Logic.TotalEventSale", "class_event_management_1_1_logic_1_1_total_event_sale.html", null ],
@@ -84,10 +109,10 @@ var hierarchy =
       [ "EventManagement.WPF.VM.MainViewModel", "class_event_management_1_1_w_p_f_1_1_v_m_1_1_main_view_model.html", null ]
     ] ],
     [ "Window", null, [
-      [ "EventManagement.WPF.MainWindow", "class_event_management_1_1_w_p_f_1_1_main_window.html", null ]
-    ] ],
-    [ "Window", null, [
       [ "EventManagement.WPF.UI.EditorServiceViaWindow", "class_event_management_1_1_w_p_f_1_1_u_i_1_1_editor_service_via_window.html", null ],
       [ "EventManagement.WPF.UI.EditorWindow", "class_event_management_1_1_w_p_f_1_1_u_i_1_1_editor_window.html", null ]
+    ] ],
+    [ "Window", null, [
+      [ "EventManagement.WPF.MainWindow", "class_event_management_1_1_w_p_f_1_1_main_window.html", null ]
     ] ]
 ];

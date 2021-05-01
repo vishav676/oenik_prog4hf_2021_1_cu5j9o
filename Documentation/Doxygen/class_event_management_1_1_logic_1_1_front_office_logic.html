@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Event Management: EventManagement.Logic.FrontOfficeLogic Class Reference</title>
+<title>My Project: EventManagement.Logic.FrontOfficeLogic Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,9 +25,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Event Management
+   <div id="projectname">My Project
    </div>
-   <div id="projectbrief">Prog 4 homework</div>
   </td>
  </tr>
  </tbody>
@@ -125,6 +124,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a313395b44d20ee4e98c975413e57a65b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_event_management_1_1_data_1_1_models_1_1_ticket.html">Ticket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_logic_1_1_front_office_logic.html#a313395b44d20ee4e98c975413e57a65b">GetOneTicket</a> (int id)</td></tr>
 <tr class="memdesc:a313395b44d20ee4e98c975413e57a65b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This mehtod will return the Ticket with specific ticket id.  <a href="class_event_management_1_1_logic_1_1_front_office_logic.html#a313395b44d20ee4e98c975413e57a65b">More...</a><br /></td></tr>
 <tr class="separator:a313395b44d20ee4e98c975413e57a65b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48c5f999660e4cd8937beb0450d76153"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_event_management_1_1_data_1_1_models_1_1_guest.html">Guest</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_logic_1_1_front_office_logic.html#a48c5f999660e4cd8937beb0450d76153">GetOneGuest</a> (int id)</td></tr>
+<tr class="memdesc:a48c5f999660e4cd8937beb0450d76153"><td class="mdescLeft">&#160;</td><td class="mdescRight">This mehtod will return the guest with specific id.  <a href="class_event_management_1_1_logic_1_1_front_office_logic.html#a48c5f999660e4cd8937beb0450d76153">More...</a><br /></td></tr>
+<tr class="separator:a48c5f999660e4cd8937beb0450d76153"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbfc4aefbb914f5f3dc82692cc72ffed"><td class="memItemLeft" align="right" valign="top">IList&lt; <a class="el" href="class_event_management_1_1_data_1_1_models_1_1_guest.html">Guest</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_management_1_1_logic_1_1_front_office_logic.html#afbfc4aefbb914f5f3dc82692cc72ffed">SearchGuest</a> (string name)</td></tr>
 <tr class="memdesc:afbfc4aefbb914f5f3dc82692cc72ffed"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will search the Guest with the given name.  <a href="class_event_management_1_1_logic_1_1_front_office_logic.html#afbfc4aefbb914f5f3dc82692cc72ffed">More...</a><br /></td></tr>
 <tr class="separator:afbfc4aefbb914f5f3dc82692cc72ffed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -363,7 +365,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_event_management_1_1_logic_1_1_i_front_office.html#aa255ab0253dcb21ea4e1eeae36fb62ef">EventManagement.Logic.IFrontOffice</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_front_office_logic_8cs_source.html#l00142">142</a> of file <a class="el" href="_front_office_logic_8cs_source.html">FrontOfficeLogic.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_front_office_logic_8cs_source.html#l00152">152</a> of file <a class="el" href="_front_office_logic_8cs_source.html">FrontOfficeLogic.cs</a>.</p>
 
 </div>
 </div>
@@ -439,6 +441,37 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a48c5f999660e4cd8937beb0450d76153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48c5f999660e4cd8937beb0450d76153">&#9670;&nbsp;</a></span>GetOneGuest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_event_management_1_1_data_1_1_models_1_1_guest.html">Guest</a> EventManagement.Logic.FrontOfficeLogic.GetOneGuest </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This mehtod will return the guest with specific id. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Guest Id.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>instance of Guest.</dd></dl>
+
+<p>Implements <a class="el" href="interface_event_management_1_1_logic_1_1_i_front_office.html#ac166166f82d774dfb844ddfd8e3be907">EventManagement.Logic.IFrontOffice</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_front_office_logic_8cs_source.html#l00121">121</a> of file <a class="el" href="_front_office_logic_8cs_source.html">FrontOfficeLogic.cs</a>.</p>
+
+</div>
+</div>
 <a id="a313395b44d20ee4e98c975413e57a65b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a313395b44d20ee4e98c975413e57a65b">&#9670;&nbsp;</a></span>GetOneTicket()</h2>
 
@@ -497,7 +530,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_event_management_1_1_logic_1_1_i_front_office.html#a856b27d0ee405a6afa61cf6738ef77d4">EventManagement.Logic.IFrontOffice</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_front_office_logic_8cs_source.html#l00131">131</a> of file <a class="el" href="_front_office_logic_8cs_source.html">FrontOfficeLogic.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_front_office_logic_8cs_source.html#l00141">141</a> of file <a class="el" href="_front_office_logic_8cs_source.html">FrontOfficeLogic.cs</a>.</p>
 
 </div>
 </div>
@@ -528,12 +561,12 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_event_management_1_1_logic_1_1_i_front_office.html#a930a5373f3486d361397aef36d624e2f">EventManagement.Logic.IFrontOffice</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_front_office_logic_8cs_source.html#l00121">121</a> of file <a class="el" href="_front_office_logic_8cs_source.html">FrontOfficeLogic.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_front_office_logic_8cs_source.html#l00131">131</a> of file <a class="el" href="_front_office_logic_8cs_source.html">FrontOfficeLogic.cs</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>EventManagement.Logic/<a class="el" href="_front_office_logic_8cs_source.html">FrontOfficeLogic.cs</a></li>
+<li>C:/Users/Vishav/Documents/oenik_prog4hf_2021_1_cu5j9o/OENIK_PROG3_2019_2_CU5J9O/EventManagement.Logic/<a class="el" href="_front_office_logic_8cs_source.html">FrontOfficeLogic.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

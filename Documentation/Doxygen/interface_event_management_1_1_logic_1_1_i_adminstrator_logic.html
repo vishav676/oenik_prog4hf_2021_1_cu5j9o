@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Event Management: EventManagement.Logic.IAdminstratorLogic Interface Reference</title>
+<title>My Project: EventManagement.Logic.IAdminstratorLogic Interface Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,9 +25,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Event Management
+   <div id="projectname">My Project
    </div>
-   <div id="projectbrief">Prog 4 homework</div>
   </td>
  </tr>
  </tbody>
@@ -146,6 +145,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af994bdf10c2ddf0b4ec95ba099d3be39"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html#af994bdf10c2ddf0b4ec95ba099d3be39">IsPasswordCorrect</a> (string name, string password)</td></tr>
 <tr class="memdesc:af994bdf10c2ddf0b4ec95ba099d3be39"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method will check is the password and username and correct.  <a href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html#af994bdf10c2ddf0b4ec95ba099d3be39">More...</a><br /></td></tr>
 <tr class="separator:af994bdf10c2ddf0b4ec95ba099d3be39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa3bd97d597020a854c137c89edf3e42"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html#afa3bd97d597020a854c137c89edf3e42">EditGuest</a> (int id, string name, string email, string contact, string gender, string city)</td></tr>
+<tr class="memdesc:afa3bd97d597020a854c137c89edf3e42"><td class="mdescLeft">&#160;</td><td class="mdescRight">This mehtod is used to edit the details of the guest.  <a href="interface_event_management_1_1_logic_1_1_i_adminstrator_logic.html#afa3bd97d597020a854c137c89edf3e42">More...</a><br /></td></tr>
+<tr class="separator:afa3bd97d597020a854c137c89edf3e42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This public interface contains all the methods that will be implemented for the Adminstrator office. </p>
@@ -296,6 +298,74 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>bool value if Ticket is updated or not.</dd></dl>
 
 <p>Implemented in <a class="el" href="class_event_management_1_1_logic_1_1_adminstrator_logic.html#a45135655717805a0b31bc36acc5e2bff">EventManagement.Logic.AdminstratorLogic</a>.</p>
+
+</div>
+</div>
+<a id="afa3bd97d597020a854c137c89edf3e42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa3bd97d597020a854c137c89edf3e42">&#9670;&nbsp;</a></span>EditGuest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EventManagement.Logic.IAdminstratorLogic.EditGuest </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>email</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>contact</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>gender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>city</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This mehtod is used to edit the details of the guest. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>ID.</td></tr>
+    <tr><td class="paramname">name</td><td>Name.</td></tr>
+    <tr><td class="paramname">email</td><td>Email.</td></tr>
+    <tr><td class="paramname">contact</td><td>Contact.</td></tr>
+    <tr><td class="paramname">gender</td><td>Gender.</td></tr>
+    <tr><td class="paramname">city</td><td>City.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Boolean value.</dd></dl>
+
+<p>Implemented in <a class="el" href="class_event_management_1_1_logic_1_1_adminstrator_logic.html#a1b684558a9550af4dcd56d42731a7907">EventManagement.Logic.AdminstratorLogic</a>.</p>
 
 </div>
 </div>
@@ -599,7 +669,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this interface was generated from the following file:<ul>
-<li>EventManagement.Logic/Interfaces/<a class="el" href="_i_adminstrator_logic_8cs_source.html">IAdminstratorLogic.cs</a></li>
+<li>C:/Users/Vishav/Documents/oenik_prog4hf_2021_1_cu5j9o/OENIK_PROG3_2019_2_CU5J9O/EventManagement.Logic/Interfaces/<a class="el" href="_i_adminstrator_logic_8cs_source.html">IAdminstratorLogic.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

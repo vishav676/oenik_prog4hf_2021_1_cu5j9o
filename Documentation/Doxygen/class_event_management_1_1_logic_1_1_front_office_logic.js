@@ -7,6 +7,7 @@ var class_event_management_1_1_logic_1_1_front_office_logic =
     [ "GetAllEvent", "class_event_management_1_1_logic_1_1_front_office_logic.html#a3787a8595dbb448a1a4ae7b63c517b0b", null ],
     [ "GetAllGuests", "class_event_management_1_1_logic_1_1_front_office_logic.html#a3a98f9ba78e6b50280095eb077c2f71c", null ],
     [ "GetAllTickets", "class_event_management_1_1_logic_1_1_front_office_logic.html#ad49e4753e6e6e48fc2c07aac5c71ece6", null ],
+    [ "GetOneGuest", "class_event_management_1_1_logic_1_1_front_office_logic.html#a48c5f999660e4cd8937beb0450d76153", null ],
     [ "GetOneTicket", "class_event_management_1_1_logic_1_1_front_office_logic.html#a313395b44d20ee4e98c975413e57a65b", null ],
     [ "SearchEvent", "class_event_management_1_1_logic_1_1_front_office_logic.html#a0da28b269a3442f098e1e903ad8dbab8", null ],
     [ "SearchGuest", "class_event_management_1_1_logic_1_1_front_office_logic.html#afbfc4aefbb914f5f3dc82692cc72ffed", null ]

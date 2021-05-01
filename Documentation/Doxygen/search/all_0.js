@@ -6,5 +6,6 @@ var searchData=
   ['adminstratorlogic_3',['AdminstratorLogic',['../class_event_management_1_1_logic_1_1_adminstrator_logic.html',1,'EventManagement.Logic.AdminstratorLogic'],['../class_event_management_1_1_logic_1_1_adminstrator_logic.html#a0dbbaaccaf404610fca7e3363bcae4ea',1,'EventManagement.Logic.AdminstratorLogic.AdminstratorLogic()']]],
   ['adminuser_4',['AdminUser',['../class_event_management_1_1_data_1_1_models_1_1_admin_user.html',1,'EventManagement::Data::Models']]],
   ['adminuserrepository_5',['AdminUserRepository',['../class_event_management_1_1_repository_1_1_admin_user_repository.html',1,'EventManagement.Repository.AdminUserRepository'],['../class_event_management_1_1_repository_1_1_admin_user_repository.html#abc33c8d388aac73809b81d1b59f50d92',1,'EventManagement.Repository.AdminUserRepository.AdminUserRepository()']]],
-  ['app_6',['App',['../class_event_management_1_1_w_p_f_1_1_app.html',1,'EventManagement.WPF.App'],['../class_event_management_1_1_w_p_f_1_1_app.html#a3ce490c14747bcf0f4a259143bf23b69',1,'EventManagement.WPF.App.App()']]]
+  ['app_6',['App',['../class_event_management_1_1_w_p_f_1_1_app.html',1,'EventManagement.WPF.App'],['../class_event_management_1_1_w_p_f_1_1_app.html#a3ce490c14747bcf0f4a259143bf23b69',1,'EventManagement.WPF.App.App()']]],
+  ['aspnetcore_7',['AspNetCore',['../namespace_asp_net_core.html',1,'']]]
 ];
