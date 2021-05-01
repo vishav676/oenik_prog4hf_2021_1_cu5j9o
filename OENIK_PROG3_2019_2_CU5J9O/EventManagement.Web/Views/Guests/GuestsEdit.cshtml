@@ -1,6 +1,6 @@
 ﻿@model EventManagement.Web.Models.Guest
 
-<h2>Edit Guest</h2>
+<h2>GuestEdit</h2>
 
 @using (Html.BeginForm("Edit", "Guests"))
 {
@@ -9,23 +9,24 @@
     @Html.AntiForgeryToken()
 
     @Html.HiddenFor(m => m.ID)
+    @Html.Hidden("editAction", ViewData["editAction"].ToString());
 
-    @Html.Hidden("editAction", ViewData["editAction"]).ToString(); 
-
-    <div class="editor-label">@Html.LabelFor(m=>m.Name)</div>
+    <div class="editor-label">@Html.LabelFor(m => m.Name)</div>
     <div class="editor-field">@Html.EditorFor(m => m.Name)</div>
 
-    <div class="editor-label">@Html.LabelFor(m=>m.Contact)</div>
-    <div class="editor-field">@Html.EditorFor(m => m.Contact)</div>
-
-    <div class="editor-label">@Html.LabelFor(m=>m.Email)</div>
+    <div class="editor-label">@Html.LabelFor(m => m.Email)</div>
     <div class="editor-field">@Html.EditorFor(m => m.Email)</div>
 
-    <div class="editor-label">@Html.LabelFor(m=>m.Gender)</div>
+    <div class="editor-label">@Html.LabelFor(m => m.Contact)</div>
+    <div class="editor-field">@Html.EditorFor(m => m.Contact)</div>
+
+    <div class="editor-label">@Html.LabelFor(m => m.Gender)</div>
     <div class="editor-field">@Html.EditorFor(m => m.Gender)</div>
 
-    <div class="editor-label">@Html.LabelFor(m=>m.City)</div>
+    <div class="editor-label">@Html.LabelFor(m => m.City)</div>
     <div class="editor-field">@Html.EditorFor(m => m.City)</div>
 
     <input type="submit" value="SEND" />
 }
+
+
