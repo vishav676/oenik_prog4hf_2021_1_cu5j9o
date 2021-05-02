@@ -9,6 +9,127 @@
             This class controll the view for the Guest.
             </summary>
         </member>
+        <member name="M:EventManagement.Web.Controllers.GuestsController.#ctor(EventManagement.Logic.IFactoryLogic,AutoMapper.IMapper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.Web.Controllers.GuestsController"/> class.
+            </summary>
+            <param name="logic">IFactoryLogic.</param>
+            <param name="mapper">IMapper.</param>
+        </member>
+        <member name="M:EventManagement.Web.Controllers.GuestsController.Index">
+            <summary>
+            Renders index page.
+            </summary>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="M:EventManagement.Web.Controllers.GuestsController.Details(System.Int32)">
+            <summary>
+            Renders details page.
+            </summary>
+            <param name="id">guest id.</param>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="M:EventManagement.Web.Controllers.GuestsController.Remove(System.Int32)">
+            <summary>
+            Remove the guesta and redirect to index page.
+            </summary>
+            <param name="id">Guest Id.</param>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="M:EventManagement.Web.Controllers.GuestsController.Edit(System.Int32)">
+            <summary>
+            This renders edit view in the page.
+            </summary>
+            <param name="id">Guest ID.</param>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="M:EventManagement.Web.Controllers.GuestsController.Edit(EventManagement.Web.Models.Guest,System.String)">
+            <summary>
+            Edit the guest or add new guest.
+            </summary>
+            <param name="guest">Guest to be edited.</param>
+            <param name="editAction">String.</param>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="T:EventManagement.Web.Controllers.HomeController">
+            <summary>
+            Homepage Controller class.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Web.Controllers.HomeController.#ctor(Microsoft.Extensions.Logging.ILogger{EventManagement.Web.Controllers.HomeController})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.Web.Controllers.HomeController"/> class.
+            </summary>
+            <param name="logger">Ilogger.</param>
+        </member>
+        <member name="M:EventManagement.Web.Controllers.HomeController.Index">
+            <summary>
+            Renders indexpage.
+            </summary>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="M:EventManagement.Web.Controllers.HomeController.Privacy">
+            <summary>
+            Renders Privacy page.
+            </summary>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="M:EventManagement.Web.Controllers.HomeController.Error">
+            <summary>
+            Renders Error Page.
+            </summary>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="T:EventManagement.Web.Models.ErrorViewModel">
+            <summary>
+            Class for errors.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Web.Models.ErrorViewModel.RequestId">
+            <summary>
+            Gets or sets RequestID.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Web.Models.ErrorViewModel.ShowRequestId">
+            <summary>
+            Gets a value indicating whether RequestID is not null or empty.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Web.Models.Guest">
+            <summary>
+            Guest Model for web.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Web.Models.Guest.ID">
+            <summary>
+            Gets or sets ID.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Web.Models.Guest.Name">
+            <summary>
+            Gets or sets Name.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Web.Models.Guest.Contact">
+            <summary>
+            Gets or sets Contact.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Web.Models.Guest.Email">
+            <summary>
+            Gets or sets Email.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Web.Models.Guest.City">
+            <summary>
+            Gets or sets City.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Web.Models.Guest.Gender">
+            <summary>
+            Gets or sets Gender.
+            </summary>
+        </member>
         <member name="T:EventManagement.Web.Models.GuestListViewModel">
             <summary>
             This class is the viewmodel for the Guest model.
@@ -52,6 +173,35 @@
             </summary>
             <param name="args">String array.</param>
             <returns>IHostBuidler.</returns>
+        </member>
+        <member name="T:EventManagement.Web.Startup">
+            <summary>
+            This class stores the startup configuratio of application.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Web.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.Web.Startup"/> class.
+            </summary>
+            <param name="configuration">IConfiguration.</param>
+        </member>
+        <member name="P:EventManagement.Web.Startup.Configuration">
+            <summary>
+            Gets configuration.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Web.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services">IServiceCollection.</param>
+        </member>
+        <member name="M:EventManagement.Web.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app">IApplicationBuilder.</param>
+            <param name="env">IWebHostEnvironment.</param>
         </member>
     </members>
 </doc>
