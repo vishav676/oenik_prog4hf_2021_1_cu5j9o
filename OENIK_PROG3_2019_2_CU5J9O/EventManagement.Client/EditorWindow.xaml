@@ -12,12 +12,12 @@
         <Label Content="Phone No." HorizontalAlignment="Left" Margin="2,60,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <Label Content="Email" HorizontalAlignment="Left" Margin="2,110,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <Label Content="Gender" HorizontalAlignment="Left" Margin="2,160,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <TextBox Text ="{Binding Path=Guest.Name}" HorizontalAlignment="Left" Margin="67,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox Text ="{Binding Path=Guest.Contact}" HorizontalAlignment="Left" Margin="67,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox Text ="{Binding Path=Guest.Email}" HorizontalAlignment="Left" Margin="67,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <ComboBox ItemsSource ="{Binding Path=Gender}" SelectedItem="{Binding Path=Guest.Gender}" Margin="67,165,0,0"  VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox Text ="{Binding Path=Name}" HorizontalAlignment="Left" Margin="67,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox Text ="{Binding Path=Contact}" HorizontalAlignment="Left" Margin="67,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox Text ="{Binding Path=Email}" HorizontalAlignment="Left" Margin="67,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox Text ="{Binding Path=Gender}" HorizontalAlignment="Left" Margin="67,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <Label Content="City" HorizontalAlignment="Left" Margin="2,210,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <TextBox Text ="{Binding Path=Guest.City}" HorizontalAlignment="Left" Margin="67,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox Text ="{Binding Path=City}" HorizontalAlignment="Left" Margin="67,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <Button Content="OK" Click="OkClick" HorizontalAlignment="Left" Height="34" Margin="2,260,0,0" VerticalAlignment="Top" Width="81" Grid.Column="1"/>
         <Button Content="Cancel" Click="CancelClick" HorizontalAlignment="Left" Height="34" Margin="106,260,0,0" VerticalAlignment="Top" Width="81" Grid.Column="1"/>
     </Grid>

@@ -30,12 +30,12 @@ namespace EventManagement.Client
         }
         private void CancelClick(object sender, RoutedEventArgs e)
         {
-            DialogResult = true;
+            DialogResult = false;
         }
 
         private void OkClick(object sender, RoutedEventArgs e)
         {
-            DialogResult = false;
+            DialogResult = true;
         }
     }
 }

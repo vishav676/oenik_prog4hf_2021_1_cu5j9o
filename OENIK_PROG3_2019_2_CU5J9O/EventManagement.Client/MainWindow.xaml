@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EventManagement.Client"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="441" Width="504"
+        Loaded="Window_Loaded" Closing="Window_Closing">
+    <Window.DataContext>
+        <local:MainVM/>
+    </Window.DataContext>
     <Grid>
-
+        <DataGrid IsReadOnly="True" SelectedItem="{Binding Path=SelectedGuest}" ItemsSource="{Binding Path=AllGuests}"
+                  HorizontalAlignment="Left" Height="362" Margin="10, 10, 0, 0" VerticalAlignment="Top" Width="311"/>
+        <Button Command="{Binding Path=AddCmd}" Content="ADD" HorizontalAlignment="Left"
+                Margin="350,40,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Command="{Binding Path=DelCmd}" Content="Delete" HorizontalAlignment="Left"
+                Margin="350,90,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Command="{Binding Path=ModCmd}" Content="Modify" HorizontalAlignment="Left"
+                Margin="350,140,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Command="{Binding Path=LoadCmd}" Content="Load" HorizontalAlignment="Left"
+                Margin="350,190,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Window>

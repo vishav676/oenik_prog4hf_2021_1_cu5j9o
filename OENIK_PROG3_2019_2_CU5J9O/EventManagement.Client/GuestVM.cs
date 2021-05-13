@@ -19,7 +19,7 @@ namespace EventManagement.Client
 
         private string city;
 
-        private Gender gender;
+        private string gender;
 
         /// <summary>
         /// Gets or sets Id.
@@ -81,7 +81,7 @@ namespace EventManagement.Client
         /// This field stores the Gender of the Guest.
         /// This is manadatory property and it's Max Length can be 50.
         /// </summary>
-        public Gender Gender
+        public string Gender
         {
             get { return this.gender; }
             set { this.Set(ref this.gender, value); }

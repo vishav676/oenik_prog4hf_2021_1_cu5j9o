@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Messaging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,25 @@ namespace EventManagement.Client
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Messenger.Default.Register<string>(this, "GuestResult", msg => {
+                (DataContext as MainVM).LoadCmd.Execute(null);
+                MessageBox.Show(msg);
+            });
+
+            (DataContext as MainVM).EditorFunc = (guest) =>
+            {
+                EditorWindow win = new EditorWindow(guest);
+                return win.ShowDialog() == true;
+            };
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Messenger.Default.Unregister(this);
         }
     }
 }
