@@ -1,12 +1,15 @@
-﻿using GalaSoft.MvvmLight;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EventManagement.Client
+﻿namespace EventManagement.Client
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using GalaSoft.MvvmLight;
+
+    /// <summary>
+    /// This class acts as the data model for the client layer.
+    /// </summary>
     public class GuestVM : ObservableObject
     {
         private int id;

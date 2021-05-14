@@ -4,6 +4,55 @@
         <name>EventManagement.Web</name>
     </assembly>
     <members>
+        <member name="T:EventManagement.Web.Controllers.GuestsApiController">
+            <summary>
+            This class is used to apply the CRUD operations on Guest table through the api.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Web.Controllers.GuestsApiController.#ctor(EventManagement.Logic.IFactoryLogic,AutoMapper.IMapper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.Web.Controllers.GuestsApiController"/> class.
+            </summary>
+            <param name="logic">Factory logic.</param>
+            <param name="mapper">IMapper.</param>
+        </member>
+        <member name="M:EventManagement.Web.Controllers.GuestsApiController.GetAll">
+            <summary>
+            This method fetch all the guest from the database.
+            </summary>
+            <returns>IEnumerable.</returns>
+        </member>
+        <member name="M:EventManagement.Web.Controllers.GuestsApiController.DelOneGuest(System.Int32)">
+            <summary>
+            This method deletes the Guest from database.
+            </summary>
+            <param name="id">Guest Id.</param>
+            <returns>Api result.</returns>
+        </member>
+        <member name="M:EventManagement.Web.Controllers.GuestsApiController.AddOneGuest(EventManagement.Web.Models.Guest)">
+            <summary>
+            This method adds the guest to database.
+            </summary>
+            <param name="guest">Guest.</param>
+            <returns>ApiResult.</returns>
+        </member>
+        <member name="M:EventManagement.Web.Controllers.GuestsApiController.ModOneGuest(EventManagement.Web.Models.Guest)">
+            <summary>
+            This method is used to modify the guest.
+            </summary>
+            <param name="guest">Guest.</param>
+            <returns>Api result.</returns>
+        </member>
+        <member name="T:EventManagement.Web.Controllers.GuestsApiController.ApiResult">
+            <summary>
+            Class to store the result of the query.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Web.Controllers.GuestsApiController.ApiResult.OperationResult">
+            <summary>
+            Gets or sets a value indicating whether query was succesful.
+            </summary>
+        </member>
         <member name="T:EventManagement.Web.Controllers.GuestsController">
             <summary>
             This class controll the view for the Guest.

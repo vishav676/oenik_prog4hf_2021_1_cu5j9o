@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EventManagement.Client</name>
+    </assembly>
+    <members>
+        <member name="T:EventManagement.Client.App">
+            <summary>
+            Interaction logic for App.xaml.
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:EventManagement.Client.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:EventManagement.Client.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Client.EditorWindow">
+            <summary>
+            Interaction logic for EditorWindow.xaml.
+            </summary>
+            <summary>
+            EditorWindow
+            </summary>
+        </member>
+        <member name="M:EventManagement.Client.EditorWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.Client.EditorWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Client.EditorWindow.#ctor(EventManagement.Client.GuestVM)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.Client.EditorWindow"/> class.
+            </summary>
+            <param name="guest">Guest.</param>
+        </member>
+        <member name="M:EventManagement.Client.EditorWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:EventManagement.Client.GuestVM">
+            <summary>
+            This class acts as the data model for the client layer.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Client.GuestVM.ID">
+            <summary>
+            Gets or sets Id.
+            this property of Class represents Id for table guests.
+            It is unique for every instance and is automatically generated.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Client.GuestVM.Name">
+            <summary>
+            Gets or Sets Name attribute of the class.
+            This field stores the Guest Name for the Event.
+            This is manadatory property and it's Max Length can be 50.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Client.GuestVM.Contact">
+            <summary>
+            Gets or Sets Contact attribute of the class.
+            This field stores the Contact Info of the Guest.
+            This is manadatory property and it's Max Length can be 50.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Client.GuestVM.Email">
+            <summary>
+            Gets or Sets Email attribute of the class.
+            This field stores the Email Id of the Guest.
+            This is manadatory property and it's Max Length can be 50.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Client.GuestVM.City">
+            <summary>
+            Gets or Sets City attribute of the class.
+            This field stores the City Name where the Guest is from.
+            This is manadatory property and it's Max Length can be 50.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Client.GuestVM.Gender">
+            <summary>
+            Gets or Sets Gender attribute of the class.
+            This field stores the Gender of the Guest.
+            This is manadatory property and it's Max Length can be 50.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Client.GuestVM.ToString">
+            <summary>
+            Override public function to generate string from object data.
+            </summary>
+            <returns> String.</returns>
+        </member>
+        <member name="M:EventManagement.Client.GuestVM.CopyFrom(EventManagement.Client.GuestVM)">
+            <summary>
+            This method creates the copy of the guest which needs to be edited.
+            </summary>
+            <param name="other">Guest object.</param>
+        </member>
+        <member name="T:EventManagement.Client.MainLogic">
+            <summary>
+            This class implements the api methods to apply CRUD operations on Guest table.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Client.MainLogic.ApiGetGuests">
+            <summary>
+            This method gets the guests from the api.
+            </summary>
+            <returns>List of Guests.</returns>
+        </member>
+        <member name="M:EventManagement.Client.MainLogic.ApiDelGuest(EventManagement.Client.GuestVM)">
+            <summary>
+            This method delete the Guest from database.
+            </summary>
+            <param name="guest">Guest.</param>
+        </member>
+        <member name="M:EventManagement.Client.MainLogic.EditGuest(EventManagement.Client.GuestVM,System.Func{EventManagement.Client.GuestVM,System.Boolean})">
+            <summary>
+            This method edits or adds the Guest to the database.
+            </summary>
+            <param name="guest">Guest.</param>
+            <param name="editor">Func.</param>
+        </member>
+        <member name="T:EventManagement.Client.MainVM">
+            <summary>
+            This is main viewmodel which handles call the logic to make changes to ui.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Client.MainVM.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.Client.MainVM"/> class.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Client.MainVM.AllGuests">
+            <summary>
+            Gets or sets All Guests.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Client.MainVM.SelectedGuest">
+            <summary>
+            Gets or sets Selected Guest.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Client.MainVM.AddCmd">
+            <summary>
+            Gets the AddCmd.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Client.MainVM.DelCmd">
+            <summary>
+            Gets the DelCmd.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Client.MainVM.ModCmd">
+            <summary>
+            Gets the ModCmd.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Client.MainVM.LoadCmd">
+            <summary>
+            Gets the LoadCmd.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Client.MainVM.EditorFunc">
+            <summary>
+            Gets or sets the EditorFunc.
+            </summary>
+        </member>
+        <member name="T:EventManagement.Client.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml.
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:EventManagement.Client.MainWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.Client.MainWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:EventManagement.Client.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>

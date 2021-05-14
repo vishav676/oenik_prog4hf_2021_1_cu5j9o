@@ -14,3 +14,5 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Design", "CA1002:Do not expose generic lists", Justification = "<Pending>", Scope = "member", Target = "~P:EventManagement.Web.Models.GuestListViewModel.ListOfGuests")]
 [assembly: SuppressMessage("Usage", "CA2227:Collection properties should be read only", Justification = "<Pending>", Scope = "member", Target = "~P:EventManagement.Web.Models.GuestListViewModel.ListOfGuests")]
 [assembly: SuppressMessage("Design", "CA1014:Mark assemblies with CLSCompliant", Justification ="<Pending>")]
+[assembly: SuppressMessage("Design", "CA1034:Nested types should not be visible", Justification = "<Pending>", Scope = "type", Target = "~T:EventManagement.Web.Controllers.GuestsApiController.ApiResult")]
+[assembly: SuppressMessage("Style", "IDE0059:Unnecessary assignment of a value", Justification = "<Pending>", Scope = "member", Target = "~M:EventManagement.Web.Controllers.GuestsApiController.AddOneGuest(EventManagement.Web.Models.Guest)~EventManagement.Web.Controllers.GuestsApiController.ApiResult")]

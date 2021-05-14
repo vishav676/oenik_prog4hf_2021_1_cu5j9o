@@ -10,3 +10,4 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("StyleCop.CSharp.MaintainabilityRules", "SA1404:Code analysis suppression should have justification", Justification = "<Pending>")]
 [assembly: SuppressMessage("Globalization", "CA1307:Specify StringComparison", Justification = "<Pending>", Scope = "member", Target = "~M:EventManagement.Data.Models.Guest.GetHashCode~System.Int32")]
 [assembly: SuppressMessage("Usage", "CA2227:Collection properties should be read only", Justification = "<Pending>", Scope = "member", Target = "~P:EventManagement.Data.Models.Guest.Tickets")]
+[assembly: SuppressMessage("Design", "CA1014:Mark assemblies with CLSCompliant", Justification = "<Pending>")]

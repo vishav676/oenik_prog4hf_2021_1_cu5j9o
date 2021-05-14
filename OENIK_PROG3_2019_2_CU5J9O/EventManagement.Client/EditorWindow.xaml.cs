@@ -1,41 +1,50 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-
-namespace EventManagement.Client
+﻿namespace EventManagement.Client
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Windows;
+    using System.Windows.Controls;
+    using System.Windows.Data;
+    using System.Windows.Documents;
+    using System.Windows.Input;
+    using System.Windows.Media;
+    using System.Windows.Media.Imaging;
+    using System.Windows.Shapes;
+
     /// <summary>
-    /// Interaction logic for EditorWindow.xaml
+    /// Interaction logic for EditorWindow.xaml.
     /// </summary>
     public partial class EditorWindow : Window
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EditorWindow"/> class.
+        /// </summary>
         public EditorWindow()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
-        public EditorWindow(GuestVM guest): this()
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EditorWindow"/> class.
+        /// </summary>
+        /// <param name="guest">Guest.</param>
+        public EditorWindow(GuestVM guest)
+            : this()
         {
             this.DataContext = guest;
         }
+
         private void CancelClick(object sender, RoutedEventArgs e)
         {
-            DialogResult = false;
+            this.DialogResult = false;
         }
 
         private void OkClick(object sender, RoutedEventArgs e)
         {
-            DialogResult = true;
+            this.DialogResult = true;
         }
     }
 }

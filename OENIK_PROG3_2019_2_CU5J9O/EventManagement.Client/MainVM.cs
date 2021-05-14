@@ -1,49 +1,79 @@
-﻿using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-
-namespace EventManagement.Client
+﻿namespace EventManagement.Client
 {
-    class MainVM : ViewModelBase
+    using System;
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Windows.Input;
+    using GalaSoft.MvvmLight;
+    using GalaSoft.MvvmLight.Command;
+
+    /// <summary>
+    /// This is main viewmodel which handles call the logic to make changes to ui.
+    /// </summary>
+    public class MainVM : ViewModelBase
     {
-        MainLogic logic;
+        private MainLogic logic;
         private GuestVM selectedGuest;
 
         private ObservableCollection<GuestVM> allGuests;
 
-        public ObservableCollection<GuestVM> AllGuests
-        {
-            get { return allGuests; }
-            set { Set(ref allGuests, value); }
-        }
-
-        public GuestVM SelectedGuest
-        {
-            get { return selectedGuest; }
-            set { Set(ref selectedGuest, value); }
-        }
-
-        public ICommand AddCmd { get; private set; }
-        public ICommand DelCmd { get; private set; }
-        public ICommand ModCmd { get; private set; }
-        public ICommand LoadCmd { get; private set; }
-
-        public Func<GuestVM, bool> EditorFunc { get; set; }
-
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MainVM"/> class.
+        /// </summary>
         public MainVM()
         {
-            logic = new MainLogic();
+            this.logic = new MainLogic();
 
-            LoadCmd = new RelayCommand(() => AllGuests = new ObservableCollection<GuestVM>(logic.ApiGetGuests()));
-            DelCmd = new RelayCommand(() => logic.ApiDelGuest(selectedGuest));
-            AddCmd = new RelayCommand(() => logic.EditGuest(null, EditorFunc));
-            ModCmd = new RelayCommand(() => logic.EditGuest(selectedGuest, EditorFunc)); 
+            this.LoadCmd = new RelayCommand(() => this.AllGuests = new ObservableCollection<GuestVM>(this.logic.ApiGetGuests()));
+            this.DelCmd = new RelayCommand(() => this.logic.ApiDelGuest(this.selectedGuest));
+            this.AddCmd = new RelayCommand(() => this.logic.EditGuest(null, this.EditorFunc));
+            this.ModCmd = new RelayCommand(() => this.logic.EditGuest(this.selectedGuest, this.EditorFunc));
         }
+
+        /// <summary>
+        /// Gets or sets All Guests.
+        /// </summary>
+        public ObservableCollection<GuestVM> AllGuests
+        {
+            get { return this.allGuests; }
+            set { this.Set(ref this.allGuests, value); }
+        }
+
+        /// <summary>
+        /// Gets or sets Selected Guest.
+        /// </summary>
+        public GuestVM SelectedGuest
+        {
+            get { return this.selectedGuest; }
+            set { this.Set(ref this.selectedGuest, value); }
+        }
+
+        /// <summary>
+        /// Gets the AddCmd.
+        /// </summary>
+        public ICommand AddCmd { get; private set; }
+
+        /// <summary>
+        /// Gets the DelCmd.
+        /// </summary>
+        public ICommand DelCmd { get; private set; }
+
+        /// <summary>
+        /// Gets the ModCmd.
+        /// </summary>
+        public ICommand ModCmd { get; private set; }
+
+        /// <summary>
+        /// Gets the LoadCmd.
+        /// </summary>
+        public ICommand LoadCmd { get; private set; }
+
+        /// <summary>
+        /// Gets or sets the EditorFunc.
+        /// </summary>
+        public Func<GuestVM, bool> EditorFunc { get; set; }
     }
 }
